@@ -1,9 +1,9 @@
-
-    <div id="settings">
-        <h3 class="text-center pt-5"></h3>
+<body class="bg-dark">
+    <div id="settings" >
+     
         <div class="container">
-            <div id="login-row" class="row justify-content-center align-items-center">
-                <div id="login-column" class="col-md-6">
+            <div id="login-row" class=" row justify-content-center align-items-center">
+                <div id="login-column" class="  card pt-4 col-md-6">
                     <div id="login-box" class="col-md-12">
                         <form id="login-form" class="form" action="" method="post">
                             <h3 class="text-center text-info">Settings</h3>
@@ -30,12 +30,13 @@
                             <div class="form-group text-center">
                                  <input type="submit" name="submit" class="btn btn-info btn-lg" value="Submit">
                             </div>
-                          
+                   
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="pb-5"></div>
 </body>
 
