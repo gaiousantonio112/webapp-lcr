@@ -1,6 +1,6 @@
 var global  = {
     settings : {
-      url : 'http://localhost/webapp-lcr/'
+      url : 'http://localhost:3000'
     },
 
 }

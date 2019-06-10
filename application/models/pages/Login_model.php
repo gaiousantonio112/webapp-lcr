@@ -1,18 +1,26 @@
 <?php
   class Login_model extends CI_Model {
 
-      public function loginTest($username,$password)
+      public function __construct()
       {
-        $query = $this->db->select('*')->where(
-          ['username' => $username,
-          'password' => $password]
-          )->get('usercredentials');
+              parent::__construct();
+              $this->load->database();
+              $this->load->library('session');
+      }
+
+      public function login_user($inputData)
+      {
+
+          $query = $this->db->select('*')->where([
+          'username' => $inputData['username'],
+          'password' => $inputData['password']
+          ])->get('usercredentials');
 
           $dataArray = array();
           foreach ($query->result() as $r) {
+            $this->session->set_userdata('user_id',$r->id);
             array_push($dataArray,$r);
           }
-
           return $dataArray;
       }
 
