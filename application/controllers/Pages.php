@@ -8,9 +8,15 @@ class Pages extends CI_Controller {
     }
 
     public function index() {
+        $this->load->view('pages/nav/nav');
         $this->load->view('pages/index');
+        $this->load->view('pages/footer/foot');
     
     }
-
+    public function login() {
+        $this->load->view('pages/nav/nav');
+        $this->load->view('pages/login/login');
+     $this->load->view('pages/footer/foot');
+    }
 
 }
