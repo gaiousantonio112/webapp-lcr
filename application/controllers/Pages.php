@@ -19,5 +19,16 @@ class Pages extends CI_Controller {
         $this->load->view('pages/login/login');
      $this->load->view('pages/footer/foot');
     }
+    public function dash($page){
+        $this->load->view('pages/dashboard/sidenav');
+        $this->load->view('pages/dashboard/'.$page);
+        $this->load->view('pages/dashboard/dashfooter');
+
+    }
+    public function settings(){
+        $this->load->view('pages/nav/nav');
+        $this->load->view('pages/settings/settings');
+
+    }
 
 }
