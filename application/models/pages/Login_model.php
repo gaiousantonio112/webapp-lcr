@@ -4,8 +4,8 @@
       public function loginTest($username,$password)
       {
         $query = $this->db->select('*')->where(
-          'username' => $username
-          'password' => $password
+          ['username' => $username,
+          'password' => $password]
           )->get('usercredentials');
 
           $dataArray = array();

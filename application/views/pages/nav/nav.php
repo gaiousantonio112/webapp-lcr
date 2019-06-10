@@ -17,10 +17,10 @@
         <a class="nav-link" href="#">Link</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link float-right" href="<?php echo base_url() ?>/login">Login</a>
-      </li>    
+        <a class="nav-link float-right" href="<?php echo base_url().'pages/login'; ?>">Login</a>
+      </li>
     </ul>
-  </div>  
+  </div>
 </nav>
 
 <script src="../../../../assets/jquery/jquery-3.4.1.min.js"></script>

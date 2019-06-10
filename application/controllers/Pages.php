@@ -11,17 +11,13 @@ class Pages extends CI_Controller {
     public function index() {
         $this->load->view('pages/nav/nav');
         $this->load->view('pages/index');
-<<<<<<< HEAD
         $this->load->view('pages/footer/foot');
-    
     }
+    
     public function login() {
         $this->load->view('pages/nav/nav');
         $this->load->view('pages/login/login');
      $this->load->view('pages/footer/foot');
-=======
-
->>>>>>> 72e3648ccaa4fafc58d4202270bfa78ed43d3b63
     }
 
 }
