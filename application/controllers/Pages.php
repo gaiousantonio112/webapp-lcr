@@ -10,7 +10,7 @@ class Pages extends CI_Controller {
 
     public function index() {
         $this->load->view('pages/nav/nav');
-        $this->load->view('pages/index');
+        $this->load->view('pages/login/login');
         $this->load->view('pages/footer/foot');
     }
     
@@ -18,7 +18,7 @@ class Pages extends CI_Controller {
         $this->load->view('pages/nav/nav');
         $this->load->view('pages/login/login');
      $this->load->view('pages/footer/foot');
-    }
+    }   
     public function dash($page){
         $this->load->view('pages/dashboard/sidenav');
         $this->load->view('pages/dashboard/'.$page);
