@@ -17,7 +17,7 @@
         <a class="nav-link" href="#">Link</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link float-right" href="<?php base_url() ?>/login">Login</a>
+        <a class="nav-link float-right" href="<?php echo base_url() ?>/login">Login</a>
       </li>    
     </ul>
   </div>  
