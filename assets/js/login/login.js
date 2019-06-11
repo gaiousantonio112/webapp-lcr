@@ -1,7 +1,8 @@
 $(document).ready(function(){
   $('#login_form').submit(function(e){
     // console.log(global.settings.url+'/lcr_works/login_user');
-    // console.log();
+
+
     e.preventDefault();
     $.ajax({
       url : global.settings.url+'/lcr_works/login_user',
@@ -9,7 +10,7 @@ $(document).ready(function(){
       data : $(this).serialize(),
       dataType : 'json',
       success : function(res){
-        // console.log(res.length);
+        // console.log(res.length);        
         if(res.length == 1){
           // goto next page
           window.location.href = global.settings.url + '/pages/dash/index'

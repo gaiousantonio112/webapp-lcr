@@ -5,7 +5,7 @@ class Pages extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->helper('url');
-        $this->load->model('pages/Login_model','login');
+        $this->load->model('pages/Lcr_model','login');
     }
 
     public function index() {
@@ -13,12 +13,12 @@ class Pages extends CI_Controller {
         $this->load->view('pages/login/login');
         $this->load->view('pages/footer/foot');
     }
-    
+
     public function login() {
         $this->load->view('pages/nav/nav');
         $this->load->view('pages/login/login');
      $this->load->view('pages/footer/foot');
-    }   
+    }
     public function dash($page){
         $this->load->view('pages/dashboard/sidenav');
         $this->load->view('pages/dashboard/'.$page);
