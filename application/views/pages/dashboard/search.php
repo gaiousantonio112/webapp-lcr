@@ -56,20 +56,20 @@
 	<div class="row">
 		<div class="col-3">
 			<div class="md-form">
-				<input type="text" id="refno" class="form-control">
+				<input type="text" id="refno" class="form-control" value="---">
 				<label for="refno">Reference No</label>
 			</div>
 		</div>
 		<div class="col-3">
 			<div class="md-form">
-				<input type="text" id="name" class="form-control">
+				<input type="text" id="name" class="form-control" value="---">
 				<label for="name">Name</label>
 			</div>
 		</div>
 		<div class="col-3">
 			<div class="dates">
 				<div class="md-form">
-				<input type="date" id="usr1" class="form-control">
+				<input type="date" id="date" class="form-control">
 					<label for="usr1">Date</label>
 			</div>
 	</div>	</div>

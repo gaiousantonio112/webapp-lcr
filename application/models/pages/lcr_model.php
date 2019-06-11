@@ -44,7 +44,7 @@
         $length = intval($this->input->get("length"));
 
         $query = $this->db->query("SELECT * FROM lcr_bday LIMIT 0 , 20000");
-        $date = date('m-d-Y');
+        $date = date('Y-m-d');
         $data = [];
         foreach ($query->result() as $r) {
           $data[] = array(
@@ -52,7 +52,7 @@
             'refno' => $r->refno,
             'birthday' => $r->birthday,
             'full_name' => $r->First_name.' '.$r->Middle_name.' '.$r->Last_name,
-            'btn' => $r->btn='<button onclick="view('.$r->id.','.$r->refno.',\''.$r->First_name.' '.$r->Middle_name.' '.$r->Last_name.'\','.$date.')" data-code="'.$r->id.'" type="button" class="btn btn-primary"><i class="fas fa-search"></i> View</button>'
+            'btn' => $r->btn='<button onclick="view('.$r->id.',\''.$r->refno.'\',\''.$r->First_name.' '.$r->Middle_name.' '.$r->Last_name.'\',\''.$date.'\')" data-code="'.$r->id.'" type="button" class="btn btn-primary"><i class="fas fa-search"></i> View</button>'
           );
         }
         $result = array(
@@ -125,7 +125,7 @@
         $length = intval($this->input->get("length"));
 
         $query = $this->db->query("SELECT * FROM lcr_death");
-        $date = date('m-d-Y');
+        $date = date('Y-m-d');
         $data = [];
         foreach ($query->result() as $r) {
           $data[] = array(
@@ -133,7 +133,7 @@
             'refno' => $r->refno,
             'date_of_death' => $r->date_of_death,
             'full_name' => $r->First_name.' '.$r->Middle_name.' '.$r->Last_name,
-            'btn' => $r->btn='<button onclick="view('.$r->id.','.$r->refno.','.$r->First_name.' '.$r->Middle_name.' '.$r->Last_name.','.$date.')" data-code="'.$r->id.'" type="button" class="btn btn-primary"><i class="fas fa-search"></i> View</button>'
+            'btn' => $r->btn='<button onclick="view('.$r->id.',\''.$r->refno.'\',\''.$r->First_name.' '.$r->Middle_name.' '.$r->Last_name.'\',\''.$date.'\')" data-code="'.$r->id.'" type="button" class="btn btn-primary"><i class="fas fa-search"></i> View</button>'
           );
         }
         $result = array(
@@ -203,7 +203,7 @@
         $length = intval($this->input->get("length"));
 
         $query = $this->db->query("SELECT * FROM lcr_marriage");
-        $date = date('m-d-Y');
+        $date = date('Y-m-d');
         $data = [];
         foreach ($query->result() as $r) {
           $data[] = array(
