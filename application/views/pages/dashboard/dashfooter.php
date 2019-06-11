@@ -13,12 +13,29 @@
   $('.dataTables_length').addClass('bs-select');
   });
 
+  $(document).ready(function() {
+     $('#birth').hide();
+          $('#death').hide();
+               $('#merage').hide();
+  });
+function show(page){
+     $('#'+page).show();
+
+if(page == 'birth'){
+  $('#death').hide();
+       $('#merage').hide();
+
+}
+if(page == 'death'){
+     $('#birth').hide();
+       $('#merage').hide();
+}if(page == 'merage'){
+
+  $('#birth').hide();
+       $('#death').hide();
+}
+
+
+}
+
           </script>
-<script>
-
-
-    $("#menu-toggle").click(function(e) {
-      e.preventDefault();
-      $("#wrapper").toggleClass("toggled");
-    });
-  </script>

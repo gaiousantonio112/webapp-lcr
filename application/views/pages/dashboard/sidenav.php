@@ -31,7 +31,7 @@
       <div class="list-group list-group-flush">
         <a href="<?php echo base_url() . 'pages/dash/index'  ?>" class="list-group-item list-group-item-action bg-light">Dashboard</a>
         <a href="<?php echo base_url() . 'pages/dash/search'  ?>" class="list-group-item list-group-item-action bg-light">Search and  Payment</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Generate</a>
+        <a href="<?php echo base_url() . 'pages/dash/add'  ?>" class="list-group-item list-group-item-action bg-light">Add</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Print</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Warning</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Birthday</a>
