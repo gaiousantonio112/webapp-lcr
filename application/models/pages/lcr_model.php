@@ -29,7 +29,7 @@
         $this->db->where('id',$id);
         $query = $this->db->get('usercredentials');
         $dataArray = array();
-        foreach ($query as $r) {
+        foreach ($query->result() as $r) {
           array_push($dataArray,$r);
         }
 
@@ -39,14 +39,32 @@
       // LCR BDAY CRUD
       public function showAllbday()
       {
-        $query = $this->db->get('lcr_bday');
+        $draw = intval($this->input->get("draw"));
+        $start = intval($this->input->get("start"));
+        $length = intval($this->input->get("length"));
 
-        $dataArray = array();
-        foreach ($query->result() as $key => $value) {
-          // code...
+        $query = $this->db->query("SELECT * FROM lcr_bday LIMIT 0 , 20000");
+
+        $data = [];
+        foreach ($query->result() as $r) {
+          $data[] = array(
+            'id' => $r->id,
+            'refno' => $r->refno,
+            'birthday' => $r->birthday,
+            'full_name' => $r->First_name.' '.$r->Middle_name.' '.$r->Last_name,
+            'btn' => $r->btn='<button onclick="view('.$r->id.')" data-code="'.$r->id.'" type="button" class="btn btn-primary"><i class="fas fa-search"></i> View</button>'
+          );
         }
+        $result = array(
+                  "draw" => $draw,
+                  "recordsTotal" => $query->num_rows(),
+                  "recordsFiltered" => $query->num_rows(),
+                  "data" => $data
+              );
 
-        return $dataArray;
+
+        return $result;
+
       }
       // NEW
       public function addBday($inputData)
@@ -102,14 +120,31 @@
       // LCR DEATH
       public function showDeath()
       {
-        $qry = $this->db->get('lcr_death');
-        $dataArray = array();
+        $draw = intval($this->input->get("draw"));
+        $start = intval($this->input->get("start"));
+        $length = intval($this->input->get("length"));
 
-        foreach ($qry->result() as $r) {
-          array_push($dataArray,$r);
+        $query = $this->db->query("SELECT * FROM lcr_bday");
+
+        $data = [];
+        foreach ($query->result() as $r) {
+          $data[] = array(
+            'id' => $r->id,
+            'refno' => $r->refno,
+            'full_name' => $r->First_name.' '.$r->Middle_name.' '.$r->Last_name,
+            'btn' => $r->btn='<button onclick="view('.$r->id.')" data-code="'.$r->id.'" type="button" class="btn btn-primary"><i class="fas fa-search"></i> View</button>'
+          );
         }
+        $result = array(
+                  "draw" => $draw,
+                  "recordsTotal" => $query->num_rows(),
+                  "recordsFiltered" => $query->num_rows(),
+                  "data" => $data
+              );
 
-        return $dataArray;
+
+        return $result;
+
       }
 
       public function addDeath($inputData)
