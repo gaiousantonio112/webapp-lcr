@@ -44,7 +44,7 @@
         $length = intval($this->input->get("length"));
 
         $query = $this->db->query("SELECT * FROM lcr_bday LIMIT 0 , 20000");
-
+        $date = date('m-d-Y');
         $data = [];
         foreach ($query->result() as $r) {
           $data[] = array(
@@ -52,7 +52,7 @@
             'refno' => $r->refno,
             'birthday' => $r->birthday,
             'full_name' => $r->First_name.' '.$r->Middle_name.' '.$r->Last_name,
-            'btn' => $r->btn='<button onclick="view('.$r->id.')" data-code="'.$r->id.'" type="button" class="btn btn-primary"><i class="fas fa-search"></i> View</button>'
+            'btn' => $r->btn='<button onclick="view('.$r->id.','.$r->refno.',\''.$r->First_name.' '.$r->Middle_name.' '.$r->Last_name.'\','.$date.')" data-code="'.$r->id.'" type="button" class="btn btn-primary"><i class="fas fa-search"></i> View</button>'
           );
         }
         $result = array(
@@ -124,15 +124,16 @@
         $start = intval($this->input->get("start"));
         $length = intval($this->input->get("length"));
 
-        $query = $this->db->query("SELECT * FROM lcr_bday");
-
+        $query = $this->db->query("SELECT * FROM lcr_death");
+        $date = date('m-d-Y');
         $data = [];
         foreach ($query->result() as $r) {
           $data[] = array(
             'id' => $r->id,
             'refno' => $r->refno,
+            'date_of_death' => $r->date_of_death,
             'full_name' => $r->First_name.' '.$r->Middle_name.' '.$r->Last_name,
-            'btn' => $r->btn='<button onclick="view('.$r->id.')" data-code="'.$r->id.'" type="button" class="btn btn-primary"><i class="fas fa-search"></i> View</button>'
+            'btn' => $r->btn='<button onclick="view('.$r->id.','.$r->refno.','.$r->First_name.' '.$r->Middle_name.' '.$r->Last_name.','.$date.')" data-code="'.$r->id.'" type="button" class="btn btn-primary"><i class="fas fa-search"></i> View</button>'
           );
         }
         $result = array(
@@ -197,14 +198,30 @@
       // LCR MARRIAGE CRUD
       public function showMarriage()
       {
-        $qry = $this->db->get('lcr_marriage');
-        $dataArray = array();
-        foreach ($qry->result() as $r) {
-          array_push($dataArray,$r);
+        $draw = intval($this->input->get("draw"));
+        $start = intval($this->input->get("start"));
+        $length = intval($this->input->get("length"));
+
+        $query = $this->db->query("SELECT * FROM lcr_marriage");
+        $date = date('m-d-Y');
+        $data = [];
+        foreach ($query->result() as $r) {
+          $data[] = array(
+            'id' => $r->id,
+            'refno' => $r->refno,
+            'full_name' => $r->First_name.' '.$r->Middle_name.' '.$r->Last_name,
+            'btn' => $r->btn='<button onclick="view('.$r->id.','.$r->refno.','.$r->First_name.' '.$r->Middle_name.' '.$r->Last_name.','.$date.')" data-code="'.$r->id.'" type="button" class="btn btn-primary"><i class="fas fa-search"></i> View</button>'
+          );
         }
+        $result = array(
+                  "draw" => $draw,
+                  "recordsTotal" => $query->num_rows(),
+                  "recordsFiltered" => $query->num_rows(),
+                  "data" => $data
+              );
 
-        return $dataArray;
 
+        return $result;
       }
 
       public function addMarriage($inputData)

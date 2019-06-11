@@ -24,7 +24,7 @@
 	      </th>
 	      <th class="th-sm">Reference No.
 	      </th>
-	      <th class="th-sm" class="whatType">Date of Birth
+	      <th class="th-sm" id="whatType">Date of Birth
 	      </th>
 	      <th class="th-sm">Name
 	      </th>
@@ -41,7 +41,7 @@
 	      </th>
 	      <th class="th-sm">Reference No.
 	      </th>
-	      <th class="th-sm" class="whatType">Date of Birth
+	      <th class="th-sm" id="whatType2">Date of Birth
 	      </th>
 	      <th class="th-sm">Name
 	      </th>

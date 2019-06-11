@@ -16,9 +16,8 @@ $(document).ready(function(){
     });
 
     // primary table loader
-    $('#whatType').html('Date of Birth');
-
-    var srch_dataTable = $('#tb_mainlcr').DataTable({
+    $('#tb_mainlcr').DataTable().clear().destroy();
+    $('#tb_mainlcr').DataTable({
         "ajax" : {
           "url" : global.settings.url + '/Lcr_works/loadTableBday',
           dataSrc : 'data'
@@ -35,6 +34,8 @@ $(document).ready(function(){
             "data" : "btn"
         }]
       });
+      $('#whatType').html('Date of Birth');
+      $('#whatType2').html('Date of Birth');
 
 
     // $('#tb_mainlcr').DataTable();
@@ -43,8 +44,9 @@ $(document).ready(function(){
     $('input[name="lcr_type"]').change(function(){
       switch ($(this).val()) {
         case 'birthday' :
-          $('.whatType').html('Date of Birth');
-          srch_dataTable = $('#tb_mainlcr').DataTable({
+
+          $('#tb_mainlcr').DataTable().clear().destroy();
+          $('#tb_mainlcr').DataTable({
             "ajax" : {
               "url" : global.settings.url + '/Lcr_works/loadTableBday',
               dataSrc : 'data'
@@ -61,10 +63,12 @@ $(document).ready(function(){
                 "data" : "btn"
             }]
           });
+          $('#whatType').html('Date of Birth');
+          $('#whatType2').html('Date of Birth');
           break;
         case 'death' :
-          $('.whatType').html('Date of Death');
-          srch_dataTable = $('#tb_mainlcr').DataTable({
+          $('#tb_mainlcr').DataTable().clear().destroy();
+          $('#tb_mainlcr').DataTable({
             "ajax" : {
               "url" : global.settings.url + '/Lcr_works/loadTableDeath',
               dataSrc : 'data'
@@ -74,17 +78,19 @@ $(document).ready(function(){
             }, {
                 "data" : "refno"
             }, {
-                "data" : "birthday"
+                "data" : "date_of_death"
             }, {
                 "data" : "full_name"
             }, {
                 "data" : "btn"
             }]
           });
+          $('#whatType').html('Date of Death');
+          $('#whatType2').html('Date of Death');
           break;
         case 'marriage' :
-          $('.whatType').html('Date of Marriage');
-          srch_dataTable = $('#tb_mainlcr').DataTable({
+          $('#tb_mainlcr').DataTable().clear().destroy();
+          $('#tb_mainlcr').DataTable({
             "ajax" : {
               "url" : global.settings.url + '/Lcr_works/loadTableMarr',
               dataSrc : 'data'
@@ -101,16 +107,24 @@ $(document).ready(function(){
                 "data" : "btn"
             }]
           });
-
+          $('#whatType').html('Date of Marriage');
+          $('#whatType2').html('Date of Marriage');
           break;
         default:
 
       }
     });
-    
+
     $("#menu-toggle").click(function(e) {
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
     });
 
 });
+
+
+function view(id,refno,full_name,current_date) {
+  $('#refno').val(refno);
+  $('#name').val(full_name);
+  $('#date').val(current_date);
+}
