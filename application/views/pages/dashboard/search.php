@@ -35,9 +35,9 @@
 </div>
 
 
-<div class="container d-flex">
-	<table class="table table-striped ">
-		<thead>
+<div class="container ">
+	<table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
+	  <thead>
 			<tr>
 				<th scope="col">Id No.</th>
 				<th scope="col">Reference No.</th>
@@ -96,9 +96,6 @@
 
 
 	<div class="container-fluid">
-
-
-
 <div class="row">
 				<div class="col-6">
 

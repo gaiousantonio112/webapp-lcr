@@ -4,7 +4,8 @@
 <link rel="stylesheet" href="../../../../assets/css/simple-sidebar.css">
 <link rel="stylesheet" href="../../../../assets/MBD/css/mdb.min.css">
 <link rel="stylesheet" href="../../../../assets/MBD/css/style.css">
-
+<link rel="stylesheet" href="../../../../assets/MBD/css/addons/datatables.min.css">
+<link rel="stylesheet" href="../../../../assets/MBD/css/addons/datatables-select.min.css">
 <!DOCTYPE html>
 <html lang="en">
 
