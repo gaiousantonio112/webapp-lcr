@@ -1,32 +1,42 @@
 
-<body class="bg-dark">
+<body class="bg-light">
     <div id="login">
-      
-        <div class="container pt-5">
-            <div id="login-row" class="row justify-content-center align-items-center">
-                <div id="login-column" class=" card pt-5 col-md-6">
-                    <div id="login-box" class="col-md-12">
-                        <form id="login_form">
-                            <h3 class="text-center text-info">Login</h3>
-                            <div class="form-group">
-                                <label for="username" class="text-info">Username:</label><br>
-                                <input type="text" name="login[username]" id="username" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="password" class="text-info">Password:</label><br>
-                                <input type="text" name="login[password]" id="password" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
-                                <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
-                            </div>
-                            <div id="register-link" class="text-right">
-                                <a href="#" class="text-info">Register here</a>
-                            </div>
-                        </form>
-                    </div>
+
+        <div class="container pt-5 col">
+
+
+<div class="container login-container">
+            <div class="row text-center">
+                <div class="col-md-6 login-form-1 text">
+
+
+
+                </div>
+                <div class="col-md-6 login-form-2">
+                  <form id="login_form">
+                
+                      <h3 class="text-center text-info">eCRIS Login</h3>
+                      <div class="form-group">
+                        <div class="md-form ">
+                              <input type="text"  id="username" name="login[username]" class="form-control" required>
+                                  <label for="username">Username</label>
+                                  </div>
+
+                      </div>
+                      <div class="form-group">
+                        <div class="md-form">
+                              <input type="text"  id="password" name="login[password]" class="form-control" required>
+                                  <label for="password">Password</label>
+                                  </div>
+
+                      </div>
+                      <div class="form-group">
+                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Login">
+                      </div>
+
+                  </form>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-    </div>
-</body>
