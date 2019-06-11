@@ -23,5 +23,21 @@ class Lcr_works extends CI_Controller {
     }
 
 
+    public function loadTableBday()
+    {
+      echo json_encode($this->works->showAllbday());
+    }
+
+    public function loadTableDeath()
+    {
+      echo json_encode($this->works->showDeath());
+    }
+
+    public function loadTableMarr()
+    {
+      echo json_encode($this->works->showMarriage());
+    }
+
+
 }
  ?>

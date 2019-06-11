@@ -1,70 +1,59 @@
 <div class="container d-flex">
-
-
 	<div class="container-fluid p-4">
 		<div class="form-check form-check-inline">
-			<input class="form-check-input" type="radio" name="inlineRadioOptions" id="Birthday" value="option1" checked>
+			<input class="form-check-input" type="radio" name="lcr_type" value="birthday" checked>
 			<label class="form-check-label" for="Birthday">Birthday</label>
 		</div>
 		<div class="form-check form-check-inline">
-			<input class="form-check-input" type="radio" name="inlineRadioOptions" id="Death" value="option2">
+			<input class="form-check-input" type="radio" name="lcr_type" value="death">
 			<label class="form-check-label" for="Death">Death</label>
 		</div>
 		<div class="form-check form-check-inline">
-			<input class="form-check-input" type="radio" name="inlineRadioOptions" id="Marriage" value="option3">
+			<input class="form-check-input" type="radio" name="lcr_type" value="marriage">
 			<label class="form-check-label" for="Marriage">Marriage</label>
-		</div>
-
-		<div class="d-flex  flex-column bd-highlight col-5 pt-4">
-			<div class="container flex-column">
-				<div class="input-group mb-3 md-form">
-					<input type="text" id="Reference" class="form-control">
-					<label for="Reference">Reference</label>
-
-					<div class="input-group-append">
-						<button class="btn btn-md btn-outline-default m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2"><i class="fas fa-search"></i> Search</button>
-					</div>
-				</div>
-
-
-
-			</div>
-
 		</div>
 	</div>
 </div>
 
+<<<<<<< HEAD
 
 <div class="container	 ">
 	<table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
+=======
+<div class="container ">
+	<table id="tb_mainlcr" class="table table-striped table-bordered" cellspacing="0" width="100%">
+>>>>>>> 1ae0fafc4213e31c5472f426b6a490b57db5227f
 	  <thead>
-			<tr>
-				<th scope="col">Id No.</th>
-				<th scope="col">Reference No.</th>
-				<th scope="col">Date of Birth</th>
-				<th scope="col">Name</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<th scope="row">1</th>
-				<td>Mark</td>
-				<td>Otto</td>
-				<td>@mdo</td>
-			</tr>
-			<tr>
-				<th scope="row">2</th>
-				<td>Jacob</td>
-				<td>Thornton</td>
-				<td>@fat</td>
-			</tr>
-			<tr>
-				<th scope="row">3</th>
-				<td>Larry</td>
-				<td>the Bird</td>
-				<td>@twitter</td>
-			</tr>
-		</tbody>
+	    <tr>
+	      <th class="th-sm">ID
+	      </th>
+	      <th class="th-sm">Reference No.
+	      </th>
+	      <th class="th-sm" class="whatType">Date of Birth
+	      </th>
+	      <th class="th-sm">Name
+	      </th>
+	      <th class="th-sm">Action
+	      </th>
+	    </tr>
+	  </thead>
+	  <tbody>
+
+	  </tbody>
+	  <tfoot>
+	    <tr>
+				<th class="th-sm">ID
+	      </th>
+	      <th class="th-sm">Reference No.
+	      </th>
+	      <th class="th-sm" class="whatType">Date of Birth
+	      </th>
+	      <th class="th-sm">Name
+	      </th>
+	      <th class="th-sm">Action
+	      </th>
+	    </tr>
+	  </tfoot>
 	</table>
 </div>
 
