@@ -1,6 +1,6 @@
 <body class="bg-dark">
     <div id="settings" >
-     
+
         <div class="container">
             <div id="login-row" class=" row justify-content-center align-items-center">
                 <div id="login-column" class="  card pt-4 col-md-6">
@@ -28,9 +28,21 @@
                                 <input type="text" name="password" id="password" class="form-control">
                             </div>
                             <div class="form-group text-center">
-                                 <input type="submit" name="submit" class="btn btn-info btn-lg" value="Submit">
+                              <div class="row">
+                                <div class="col-lg-5 col-md-5 col-sm-12">
+                                  <input type="submit" name="submit" class="btn btn-info btn-lg" value="Submit">
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-12">
+
+                                </div>
+                                <div class="col-lg-5 col-md-5 col-sm-12">
+                                  <a href="<?php print(base_url().'/'); ?>" class="btn btn-danger btn-lg">
+                                    Back
+                                  </a>
+                                </div>
+                              </div>
                             </div>
-                   
+
                         </form>
                     </div>
                 </div>
@@ -39,4 +51,3 @@
     </div>
     <div class="pb-5"></div>
 </body>
-
