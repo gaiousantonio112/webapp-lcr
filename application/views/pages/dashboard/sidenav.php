@@ -2,7 +2,8 @@
 <link rel="stylesheet" href="../../../../assets/bootstrap/css/bootstrap-grid.css">
 <link rel="stylesheet" href="../../../../assets/fontawesome-5.9.0/css/all.min.css">
 <link rel="stylesheet" href="../../../../assets/css/simple-sidebar.css">
-
+<link rel="stylesheet" href="../../../../assets/MBD/css/mdb.min.css">
+<link rel="stylesheet" href="../../../../assets/MBD/css/style.css">
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +29,7 @@
       <div class="sidebar-heading">ECRIS </div>
       <div class="list-group list-group-flush">
         <a href="<?php echo base_url() . 'pages/dash/index'  ?>" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-        <a href="<?php echo base_url() . 'pages/dash/search'  ?>" class="list-group-item list-group-item-action bg-light">Search</a>
+        <a href="<?php echo base_url() . 'pages/dash/search'  ?>" class="list-group-item list-group-item-action bg-light">Search and  Payment</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Generate</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Print</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Warning</a>
@@ -52,7 +53,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-        
+
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 User
@@ -69,5 +70,3 @@
       </nav>
 
     <!-- /#page-content-wrapper -->
-
-
