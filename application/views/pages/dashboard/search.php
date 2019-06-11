@@ -67,11 +67,13 @@
 			</div>
 		</div>
 		<div class="col-3">
-			<div class="md-form">
-				<input type="text" id="date" class="form-control">
-				<label for="date">Date</label>
+			<div class="dates">
+				<div class="md-form">
+				<input type="date" id="usr1" class="form-control">
+					<label for="usr1">Date</label>
 			</div>
-		</div>
+	</div>	</div>
+
 		<div class=" col-3 text-center p-4">
 			<button class="btn btn-lg btn-outline-default m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2"><i class="fas fa-search"></i> preview</button>
 		</div>

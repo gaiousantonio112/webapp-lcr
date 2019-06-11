@@ -5,6 +5,7 @@
 <script src="<?php print(base_url()); ?>/assets/MBD/js/mdb.min.js" ></script>
 <script src="<?php print(base_url()); ?>/assets/MBD/js/addons/datatables.min.js "></script>
 <script src="<?php print(base_url()); ?>/assets/MBD/js/addons/datatables-select.min.js "></script>
+<script src="<?php print(base_url()); ?>/assets/datepicker/calendar/lib/bootstrap-datepicker.js"></script>
 <script type="text/javascript">
   var userid = '<?php print($this->session->userdata('user_id')); ?>';
 </script>
@@ -13,7 +14,18 @@
 </script>
 <script type="text/javascript" src="<?php print(base_url().'/assets/js/dashboard/main.js'); ?>"></script>
 
+<script>
 
+			$(function() {
+
+			$('.dates #usr1').datepicker({
+				'format': 'yyyy-mm-dd',
+				'autoclose': true
+			});
+
+
+		});
+			</script>
 <script>
 $(document).ready(function() {
    $('#birth').hide();

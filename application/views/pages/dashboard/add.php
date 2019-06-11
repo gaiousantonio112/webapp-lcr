@@ -52,10 +52,13 @@
 		</div>
 		<div class="container">
 			<div class="">
-				<div class="md-form ">
-					<input type="date" id="datepicker" class="form-control">
-					<label for="datepicker">Date of Birth</label>
+				<div class="dates">
+					<div class="md-form">
+					<input type="date" id="usr1" class="form-control">
+						<label >Date of Birth</label>
 				</div>
+		</div>
+			
 			</div>
 			<div class="text-center">
 				<button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2">Submit</button>
@@ -103,10 +106,13 @@
 		</div>
 		<div class="container">
 			<div class="">
-				<div class="md-form ">
-					<input type="date" id="datepicker" class="form-control">
-					<label for="datepicker">Date of Death</label>
+				<div class="dates">
+					<div class="md-form">
+					<input type="date" id="usr1" class="form-control">
+						<label >Date of Death</label>
 				</div>
+		</div>
+
 			</div>
 			<div class="text-center">
 				<button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2">Submit</button>
@@ -180,10 +186,13 @@
 		</div>
 		<div class="container">
 			<div class="">
-				<div class="md-form ">
-					<input type="date" id="datepicker" class="form-control">
-					<label for="datepicker">Date of Marriage</label>
+				<div class="dates">
+					<div class="md-form">
+					<input type="date" id="usr1" class="form-control">
+						<label >Date of Marriage</label>
 				</div>
+			</div>
+
 			</div>
 			<div class="text-center">
 				<button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2">Submit</button>
