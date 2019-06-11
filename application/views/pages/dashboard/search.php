@@ -3,23 +3,23 @@
 
 	<div class="container-fluid p-4">
 		<div class="form-check form-check-inline">
-			<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
-			<label class="form-check-label" for="inlineRadio1">Birthday</label>
+			<input class="form-check-input" type="radio" name="inlineRadioOptions" id="Birthday" value="option1" checked>
+			<label class="form-check-label" for="Birthday">Birthday</label>
 		</div>
 		<div class="form-check form-check-inline">
-			<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-			<label class="form-check-label" for="inlineRadio2">Death</label>
+			<input class="form-check-input" type="radio" name="inlineRadioOptions" id="Death" value="option2">
+			<label class="form-check-label" for="Death">Death</label>
 		</div>
 		<div class="form-check form-check-inline">
-			<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-			<label class="form-check-label" for="inlineRadio3">Marriage</label>
+			<input class="form-check-input" type="radio" name="inlineRadioOptions" id="Marriage" value="option3">
+			<label class="form-check-label" for="Marriage">Marriage</label>
 		</div>
 
 		<div class="d-flex  flex-column bd-highlight col-5 pt-4">
 			<div class="container flex-column">
 				<div class="input-group mb-3 md-form">
-					<input type="text" id="inputMDEx" class="form-control">
-					<label for="inputMDEx">Reference</label>
+					<input type="text" id="Reference" class="form-control">
+					<label for="Reference">Reference</label>
 
 					<div class="input-group-append">
 						<button class="btn btn-md btn-outline-default m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2"><i class="fas fa-search"></i> Search</button>
@@ -72,20 +72,20 @@
 	<div class="row">
 		<div class="col-3">
 			<div class="md-form">
-				<input type="text" id="inputMDEx" class="form-control">
-				<label for="inputMDEx">Reference No</label>
+				<input type="text" id="refno" class="form-control">
+				<label for="refno">Reference No</label>
 			</div>
 		</div>
 		<div class="col-3">
 			<div class="md-form">
-				<input type="text" id="inputMDEx" class="form-control">
-				<label for="inputMDEx">Name</label>
+				<input type="text" id="name" class="form-control">
+				<label for="name">Name</label>
 			</div>
 		</div>
 		<div class="col-3">
 			<div class="md-form">
-				<input type="text" id="inputMDEx" class="form-control">
-				<label for="inputMDEx">Date</label>
+				<input type="text" id="date" class="form-control">
+				<label for="date">Date</label>
 			</div>
 		</div>
 		<div class=" col-3 text-center p-4">
@@ -116,16 +116,16 @@
 									</div>
 
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
-						<label class="form-check-label" for="inlineRadio1">Deafult</label>
+						<input class="form-check-input" type="radio" name="inlineRadioOptions" id="default" value="option1" checked>
+						<label class="form-check-label" for="default">Default</label>
 					</div>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-						<label class="form-check-label" for="inlineRadio2">Specific</label>
+						<input class="form-check-input" type="radio" name="inlineRadioOptions" id="specific" value="option2">
+						<label class="form-check-label" for="specific">Specific</label>
 					</div>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-						<label class="form-check-label" for="inlineRadio3">Range</label>
+						<input class="form-check-input" type="radio" name="inlineRadioOptions" id="range" value="option3">
+						<label class="form-check-label" for="range">Range</label>
 					</div>
 
 						<div class="col">
@@ -155,13 +155,13 @@
 				</div>
 				<div class="">
 					<div class="md-form">
-						<input type="number" id="cashten" class="form-control">
-						<label for="cashten">Total Amount Recieved</label>
+						<input type="number" id="totalam" class="form-control">
+						<label for="totalam">Total Amount Recieved</label>
 					</div>
 					<div class="">
 						<div class="md-form">
-							<input type="number" id="cashten" class="form-control">
-							<label for="cashten">Changed</label>
+							<input type="number" id="changed" class="form-control">
+							<label for="changed">Changed</label>
 						</div>
 						<div class="text-center">
 						<button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2">Submit</button>
