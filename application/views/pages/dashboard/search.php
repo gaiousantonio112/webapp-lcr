@@ -15,14 +15,9 @@
 	</div>
 </div>
 
-<<<<<<< HEAD
-
-<div class="container	 ">
-	<table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
-=======
 <div class="container ">
 	<table id="tb_mainlcr" class="table table-striped table-bordered" cellspacing="0" width="100%">
->>>>>>> 1ae0fafc4213e31c5472f426b6a490b57db5227f
+
 	  <thead>
 	    <tr>
 	      <th class="th-sm">ID
