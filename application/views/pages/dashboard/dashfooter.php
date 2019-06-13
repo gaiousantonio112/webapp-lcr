@@ -6,7 +6,14 @@
 <script src="<?php print(base_url()); ?>/assets/MBD/js/addons/datatables.min.js "></script>
 <script src="<?php print(base_url()); ?>/assets/MBD/js/addons/datatables-select.min.js "></script>
 <script src="<?php print(base_url()); ?>/assets/datepicker/calendar/lib/bootstrap-datepicker.js"></script>
+
 <script type="text/javascript">
+if(PDFObject.supportsPDFs){
+console.log("Yay, this browser supports inline PDFs.");
+} else {
+console.log("Boo, inline PDFs are not supported by this browser");
+}
+
   var userid = '<?php print($this->session->userdata('user_id')); ?>';
 </script>
 <script type="text/javascript" src="<?php print(base_url().'/assets/js/global.js'); ?>">
