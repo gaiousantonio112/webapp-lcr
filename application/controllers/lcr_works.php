@@ -39,5 +39,30 @@ class Lcr_works extends CI_Controller {
     }
 
 
+    public function addBirthday()
+    {
+      $inputData = $this->input->post('bday');
+      // UPLOAD
+
+      // END UPLOAD
+
+      echo json_encode($this->works->addBday($inputData,"dump.pdf"));
+    }
+
+    public function addDeath()
+    {
+      $inputData = $this->input->post('death');
+
+      echo json_encode($this->works->addDeath($inputData,"dump_death.pdf"));
+    }
+
+    public function addMarriage()
+    {
+      $inputData = $this->input->post('marr');
+
+      echo json_encode($this->works->addMarriage($inputData,"dump_marriage.pdf"));
+    }
+
+
 }
  ?>
