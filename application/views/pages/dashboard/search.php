@@ -1,4 +1,9 @@
-<div class="container d-flex">
+<style>
+html {
+  scroll-behavior: smooth;
+}
+</style>
+<div class="container d-flex" >
 	<div class="container-fluid p-4">
 		<div class="form-check form-check-inline">
 			<input class="form-check-input" type="radio" name="lcr_type" value="birthday" checked>
@@ -15,7 +20,7 @@
 	</div>
 </div>
 
-<div class="container ">
+<div class="container " >
 	<table id="tb_mainlcr" class="table table-striped table-bordered" cellspacing="0" width="100%">
 
 	  <thead>
@@ -52,7 +57,7 @@
 	</table>
 </div>
 
-<div class="container-fluid p-4">
+<div class="container-fluid p-4" >
 	<div class="row">
 		<div class="col-3">
 			<div class="md-form">
@@ -81,7 +86,7 @@
 
 
 
-	<div class="container-fluid">
+	<div class="container-fluid" >
 <div class="row">
 				<div class="col-6">
 
@@ -125,7 +130,7 @@
 						</div>
 					</div>
 
-	<div class="col-6">
+	<div class="col-6 pb-5">
 		<div class="">
 			<div class="md-form">
 				<input type="number" id="totalpay" class="form-control">
@@ -159,6 +164,9 @@
 
 			</div>
 		</div>
+	</div>
+	<div class="pt-5 pb-5">
+
 	</div>
 
 	<div class="modal fade" id="viewdocu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
