@@ -16,12 +16,12 @@
           <div class="modal-header">
             <h4 class="modal-title w-100" id="myModalLabel">PDF</h4>
 
-              <span aria-hidden="true">&times;</span>
+          
             </button>
           </div>
           <div class="modal-body">
 
-                <embed src="../../../../assets/pdf/pdftron-sdk.pdf#toolbar=0&zoom=50" type="application/pdf" width="100%" height="60%">
+      <iframe width="100%" height="65%" src="<?php echo base_url('pages/viewpdf') ?>#toolbar=0&zoom=60%"></iframe>
 
           </div>
           <div class="modal-footer">

@@ -31,4 +31,9 @@ class Pages extends CI_Controller {
 
     }
 
+  public function viewpdf()
+    {
+      $this->load->view('pages/dashboard/pdfmerge');
+    }
+
 }
