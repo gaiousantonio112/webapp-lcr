@@ -1,7 +1,7 @@
 <div class="container">
 		<div class="container-fluid p-4">
 			<div class="form-check form-check-inline">
-				<input class="form-check-input" type="radio" name="radioselect" id="Birthday" value="Birth" onclick="show('birth');">
+				<input class="form-check-input" type="radio" name="radioselect" id="Birthday" value="Birth" onclick="show('birth');" checked>
 				<label class="form-check-label" for="Birthday">Birthday</label>
 			</div>
 			<div class="form-check form-check-inline">
@@ -12,9 +12,15 @@
 				<input class="form-check-input" type="radio" name="radioselect" id="Marriage" value="Marriage" onclick="show('merage');">
 				<label class="form-check-label" for="Marriage">Marriage</label>
 			</div>
+
+			</div>
+
+<div class="container">
+
+</div>
 <form id="addBirthForm">
 	<div class="" id="birth">
-		<div class="container p-4">
+		<div class="container">
 			<div class="md-form">
 				<input type="number" name="bday[refno]" id="form1" class="form-control">
 				<label for="form1">REFERENCE NUMBER</label>
@@ -71,7 +77,7 @@
 <!-- DEATH -->
 <form id="addDeathForm">
 	<div class="" id="death">
-		<div class="container p-4">
+		<div class="container">
 			<div class="md-form">
 				<input type="number" name="death[refno]" id="form1" class="form-control">
 				<label for="form1">REFERENCE NUMBER</label>
@@ -127,12 +133,9 @@
 </form>
 
 
-
-<!-- MARRIAGE -->
-
 <form id="addMarrForm">
 	<div class="" id="merage">
-		<div class="container p-4">
+		<div class="container">
 			<div class="md-form">
 				<input type="number" name="marr[refno]" id="form1" class="form-control">
 				<label for="form1">REFERENCE NUMBER</label>
@@ -212,6 +215,7 @@
 
 		</div>
 	</div>
+</div>
 
 	</form>
 	</div>

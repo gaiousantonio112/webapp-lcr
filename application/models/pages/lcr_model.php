@@ -52,7 +52,7 @@
             'refno' => $r->refno,
             'birthday' => $r->birthday,
             'full_name' => $r->First_name.' '.$r->Middle_name.' '.$r->Last_name,
-            'btn' => $r->btn='<button onclick="view('.$r->id.',\''.$r->refno.'\',\''.$r->First_name.' '.$r->Middle_name.' '.$r->Last_name.'\',\''.$date.'\')" data-code="'.$r->id.'" type="button" class="btn btn-primary"><i class="fas fa-search"></i> View</button>'
+            'btn' => $r->btn='<button onclick="view('.$r->id.',\''.$r->refno.'\',\''.$r->First_name.' '.$r->Middle_name.' '.$r->Last_name.'\',\''.$date.'\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-primary btn-sm"><i class="fas fa-search"></i> View</button>'
           );
         }
         $result = array(
@@ -139,7 +139,7 @@
             'refno' => $r->refno,
             'date_of_death' => $r->date_of_death,
             'full_name' => $r->First_name.' '.$r->Middle_name.' '.$r->Last_name,
-            'btn' => $r->btn='<button onclick="view('.$r->id.',\''.$r->refno.'\',\''.$r->First_name.' '.$r->Middle_name.' '.$r->Last_name.'\',\''.$date.'\')" data-code="'.$r->id.'" type="button" class="btn btn-primary"><i class="fas fa-search"></i> View</button>'
+            'btn' => $r->btn='<button onclick="view('.$r->id.',\''.$r->refno.'\',\''.$r->First_name.' '.$r->Middle_name.' '.$r->Last_name.'\',\''.$date.'\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-primary btn-sm"><i class="fas fa-search"></i> View</button>'
           );
         }
         $result = array(
@@ -217,7 +217,7 @@
             'id' => $r->id,
             'refno' => $r->refno,
             'full_name' => $r->First_name.' '.$r->Middle_name.' '.$r->Last_name,
-            'btn' => $r->btn='<button onclick="view('.$r->id.','.$r->refno.','.$r->First_name.' '.$r->Middle_name.' '.$r->Last_name.','.$date.')" data-code="'.$r->id.'" type="button" class="btn btn-primary"><i class="fas fa-search"></i> View</button>'
+            'btn' => $r->btn='<button onclick="view('.$r->id.','.$r->refno.','.$r->First_name.' '.$r->Middle_name.' '.$r->Last_name.','.$date.')" data-code="'.$r->id.'" type="button" class="btn btn-outline-primary btn-sm"><i class="fas fa-search"></i> View</button>'
           );
         }
         $result = array(

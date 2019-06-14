@@ -8,6 +8,12 @@
 <script src="<?php print(base_url()); ?>/assets/datepicker/calendar/lib/bootstrap-datepicker.js"></script>
 
 <script type="text/javascript">
+
+$(document).ready(function () {
+$('#dtBasicExample').DataTable();
+$('.dataTables_length').addClass('bs-select');
+});
+
 if(PDFObject.supportsPDFs){
 console.log("Yay, this browser supports inline PDFs.");
 } else {
@@ -35,7 +41,7 @@ console.log("Boo, inline PDFs are not supported by this browser");
 			</script>
 <script>
 $(document).ready(function() {
-   $('#birth').hide();
+   $('#birth').show();
         $('#death').hide();
              $('#merage').hide();
 });
