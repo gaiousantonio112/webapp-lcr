@@ -17,7 +17,7 @@ class Pages extends CI_Controller {
     public function login() {
         $this->load->view('pages/nav/nav');
         $this->load->view('pages/login/login');
-     $this->load->view('pages/footer/foot');
+        $this->load->view('pages/footer/foot');
     }
 
     public function dash($page){
@@ -42,11 +42,18 @@ class Pages extends CI_Controller {
 
     public function is_login()
     {
+
       return $this->session->userdata('user_id') ? true : false;
+
     }
+
+
     public function viewpdf()
-      {
-        $this->load->view('pages/dashboard/pdfmerge');
-      }
+    {
+        $data = array(
+          'whome' => 'Gaious Panaligan',
+        );
+        $this->load->view('pages/dashboard/pdfmerge',$data);
+    }
 
 }

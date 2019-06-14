@@ -2,6 +2,7 @@ var full_name;
 // CREDENTIALS
 $(document).ready(function(){
     // userid
+    console.log(userid);
     $.ajax({
       url : global.settings.url+'/Lcr_works/getUserCredentials',
       type : 'POST',
@@ -105,7 +106,7 @@ $(document).ready(function(){
             }, {
                 "data" : "refno"
             }, {
-                "data" : "birthday"
+                "data" : "date_of_marriage"
             }, {
                 "data" : "full_name"
             }, {
