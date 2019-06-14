@@ -209,15 +209,16 @@
         $start = intval($this->input->get("start"));
         $length = intval($this->input->get("length"));
 
-        $query = $this->db->query("SELECT * FROM lcr_marriage");
+        $query = $this->db->query("SELECT * FROM lcr_marriage LIMIT 0 , 20000");
         $date = date('Y-m-d');
         $data = [];
         foreach ($query->result() as $r) {
           $data[] = array(
             'id' => $r->id,
             'refno' => $r->refno,
-            'full_name' => $r->First_name.' '.$r->Middle_name.' '.$r->Last_name,
-            'btn' => $r->btn='<button onclick="view('.$r->id.','.$r->refno.','.$r->First_name.' '.$r->Middle_name.' '.$r->Last_name.','.$date.')" data-code="'.$r->id.'" type="button" class="btn btn-primary"><i class="fas fa-search"></i> View</button>'
+            'date_of_marriage' => $r->date_of_marriage,
+            'full_name' => $r->First_name_h.' '.$r->Middle_name_h.' '.$r->Last_name_h.' and '.$r->First_name_w.' '.$r->Middle_name_w.' '.$r->Last_name_w,
+            'btn' => $r->btn='<button onclick="view('.$r->id.',\''.$r->refno.'\',\''.$r->First_name_h.' '.$r->Middle_name_h.' '.$r->Last_name_h.'\',\''.$date.'\')" data-code="'.$r->id.'" type="button" class="btn btn-primary"><i class="fas fa-search"></i> View</button>'
           );
         }
         $result = array(
@@ -286,6 +287,5 @@
 
         return $qry;
       }
-
   }
  ?>
