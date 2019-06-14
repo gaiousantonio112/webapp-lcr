@@ -19,10 +19,19 @@ class Pages extends CI_Controller {
         $this->load->view('pages/login/login');
      $this->load->view('pages/footer/foot');
     }
+
     public function dash($page){
-        $this->load->view('pages/dashboard/sidenav');
-        $this->load->view('pages/dashboard/'.$page);
-        $this->load->view('pages/dashboard/dashfooter');
+      if ($this->is_login()) {
+        if ($page == "") {
+          $this->index();
+        }else{
+          $this->load->view('pages/dashboard/sidenav');
+          $this->load->view('pages/dashboard/'.$page);
+          $this->load->view('pages/dashboard/dashfooter');
+        }
+      }else{
+        $this->login();
+      }
 
     }
     public function settings(){
@@ -31,9 +40,13 @@ class Pages extends CI_Controller {
 
     }
 
-  public function viewpdf()
+    public function is_login()
     {
-      $this->load->view('pages/dashboard/pdfmerge');
+      return $this->session->userdata('user_id') ? true : false;
     }
+    public function viewpdf()
+      {
+        $this->load->view('pages/dashboard/pdfmerge');
+      }
 
 }

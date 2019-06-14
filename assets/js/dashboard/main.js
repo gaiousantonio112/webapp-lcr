@@ -1,3 +1,5 @@
+var full_name;
+// CREDENTIALS
 $(document).ready(function(){
     // userid
     $.ajax({
@@ -8,13 +10,16 @@ $(document).ready(function(){
       },
       dataType : 'json',
       success : function (res){
-        console.log(res);
+        console.table(res[0]);
+        full_name = jsUcfirst(res[0].firstname) + ' ' + jsUcfirst(res[0].middlename) + ' ' + jsUcfirst(res[0].lastname);
+        $('.bday_encoder').val(full_name);
       },
       error: function(){
 
       }
     });
 
+// SEARCH PAGE
     // primary table loader
     $('#tb_mainlcr').DataTable().clear().destroy();
     $('#tb_mainlcr').DataTable({
@@ -115,13 +120,80 @@ $(document).ready(function(){
       }
     });
 
+    // END SEARCH PAGE
+
     $("#menu-toggle").click(function(e) {
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
     });
 
+// ADD PAGES
+    $('#addBirthForm').submit(function(e){
+      e.preventDefault();
+
+      $.ajax({
+        url : global.settings.url + '/Lcr_works/addBirthday',
+        type : 'POST',
+        data : $(this).serialize(),
+        dataType : 'json',
+        success : function(res){
+          alert('Adding Birthday Success');
+
+          $('#addBirthForm')[0].reset();
+        },
+        error : function(){
+          console.log('Error in addBirthday');
+        }
+      });
+    });
+
+    $('#addDeathForm').submit(function(e) {
+      e.preventDefault();
+
+      $.ajax({
+        url : global.settings.url + '/Lcr_works/addDeath',
+        type : 'POST',
+        data : $(this).serialize(),
+        dataType : 'json',
+        success : function(res){
+          alert('Adding Death Information Success');
+          console.log(res);
+          $('#addDeathForm')[0].reset();
+        },
+        error : function () {
+          console.log('Error in addDeathForm');
+        }
+      });
+    });
+
+    $('#addMarrForm').submit(function(e){
+      e.preventDefault();
+      $.ajax({
+        url : global.settings.url + '/Lcr_works/addMarriage',
+        type : 'POST',
+        data : $(this).serialize(),
+        dataType : 'json',
+        success : function(res){
+          alert('Adding Marriage Information Success!');
+          console.log(res);
+          $('#addMarrForm')[0].reset();
+        },
+        error : function(){
+
+        }
+      });
+    });
+
+
+
+    // END ADD PAGE
+
 });
 
+function jsUcfirst(string)
+{
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
 function view(id,refno,full_name,current_date) {
   $('#refno').val(refno);
