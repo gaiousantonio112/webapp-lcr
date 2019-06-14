@@ -6,15 +6,15 @@ html {
 <div class="container d-flex" >
 	<div class="container-fluid p-4">
 		<div class="form-check form-check-inline">
-			<input class="form-check-input" type="radio" name="lcr_type" value="birthday" checked>
+			<input class="form-check-input" type="radio" name="lcr_type" value="birthday" onclick="show('searchbirth')" checked>
 			<label class="form-check-label" for="Birthday">Birthday</label>
 		</div>
 		<div class="form-check form-check-inline">
-			<input class="form-check-input" type="radio" name="lcr_type" value="death">
+			<input class="form-check-input" type="radio" name="lcr_type" value="death" onclick="show('searchdeath')">
 			<label class="form-check-label" for="Death">Death</label>
 		</div>
 		<div class="form-check form-check-inline">
-			<input class="form-check-input" type="radio" name="lcr_type" value="marriage">
+			<input class="form-check-input" type="radio" name="lcr_type" value="marriage"  onclick="show('searchmerage')">
 			<label class="form-check-label" for="Marriage">Marriage</label>
 		</div>
 	</div>
@@ -65,8 +65,9 @@ html {
 				<label for="refno">Reference No</label>
 			</div>
 		</div>
-		<div class="col-3">
-			<div class="md-form">
+
+		<div class="col-3" >
+			<div class="md-form" >
 				<input type="text" id="name" class="form-control" value="---">
 				<label for="name">Name</label>
 			</div>
@@ -82,8 +83,25 @@ html {
 		<div class=" col-3 text-center p-4">
 			<button class="btn btn-lg btn-outline-default m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2" data-toggle="modal" data-target="#viewdocu"><i class="fas fa-search"></i> preview</button>
 		</div>
-	</div>
+	</div>	</div>
 
+
+<div class="container" id="birthdeath">
+  	<div class="row">
+  <div class="col-3" >
+    <div class="md-form" hidden>
+      <input type="text" class="form-control" value="---">
+
+    </div>
+  </div>
+   <div class="col-3">
+      <div class="md-form" >
+        <input type="text" id="name2" class="form-control" value="---">
+        <label for="name2">Name2</label>
+      </div>
+    </div>
+</div>
+</div>
 
 
 	<div class="container-fluid" >

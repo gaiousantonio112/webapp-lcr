@@ -41,6 +41,8 @@ console.log("Boo, inline PDFs are not supported by this browser");
 			</script>
 <script>
 $(document).ready(function() {
+
+  $('#birthdeath').hide();
    $('#birth').show();
         $('#death').hide();
              $('#merage').hide();
@@ -61,6 +63,24 @@ if(page == 'death'){
 $('#birth').hide();
      $('#death').hide();
 }
+
+
+
+if(page == 'searchbirth'){
+
+  $('#birthdeath').hide();
+}
+if(page == 'searchdeath'){
+
+  $('#birthdeath').hide();
+}
+if(page == 'searchmerage'){
+
+  $('#birthdeath').show();
+}
+
+
+
 }
 
 </script>
