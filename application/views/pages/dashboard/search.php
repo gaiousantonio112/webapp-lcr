@@ -61,21 +61,21 @@ html {
 	<div class="row">
 		<div class="col-3">
 			<div class="md-form">
-				<input type="text" id="refno" class="form-control" value="---">
+				<input type="text" id="refno" class="form-control" value="---" disabled>
 				<label for="refno">Reference No</label>
 			</div>
 		</div>
 
 		<div class="col-3" >
 			<div class="md-form" >
-				<input type="text" id="name" class="form-control" value="---">
-				<label for="name">Name</label>
+				<input type="text" id="name" class="form-control" value="---" disabled>
+				<label id="name_husband" for="name">Name</label>
 			</div>
 		</div>
 		<div class="col-3">
 			<div class="dates">
 				<div class="md-form">
-				<input type="date" id="date" class="form-control">
+				<input type="date" id="date" class="form-control" disabled>
 					<label for="usr1">Date</label>
 			</div>
 	</div>	</div>
@@ -96,8 +96,8 @@ html {
   </div>
    <div class="col-3">
       <div class="md-form" >
-        <input type="text" id="name2" class="form-control" value="---">
-        <label for="name2">Name2</label>
+        <input type="text" id="name2" class="form-control" value="---" disabled>
+        <label id="name_wife" for="name2">Name2</label>
       </div>
     </div>
 </div>

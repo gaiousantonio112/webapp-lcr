@@ -50,7 +50,8 @@ $(document).ready(function(){
     $('input[name="lcr_type"]').change(function(){
       switch ($(this).val()) {
         case 'birthday' :
-
+          $('#name_husband').html('Name');
+          $('#name_wife').html('Name');
           $('#tb_mainlcr').DataTable().clear().destroy();
           $('#tb_mainlcr').DataTable({
             "ajax" : {
@@ -72,7 +73,9 @@ $(document).ready(function(){
           $('#whatType').html('Date of Birth');
           $('#whatType2').html('Date of Birth');
           break;
-        case 'death' :
+        case 'death':
+        $('#name_husband').html('Name');
+        $('#name_wife').html('Name');
           $('#tb_mainlcr').DataTable().clear().destroy();
           $('#tb_mainlcr').DataTable({
             "ajax" : {
@@ -95,6 +98,8 @@ $(document).ready(function(){
           $('#whatType2').html('Date of Death');
           break;
         case 'marriage' :
+          $('#name_husband').html('Name of Husband');
+          $('#name_wife').html('Name of Wife');
           $('#tb_mainlcr').DataTable().clear().destroy();
           $('#tb_mainlcr').DataTable({
             "ajax" : {
@@ -196,8 +201,10 @@ function jsUcfirst(string)
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-function view(id,refno,full_name,current_date) {
+function view(id,refno,full_name,current_date,name_wife) {
   $('#refno').val(refno);
   $('#name').val(full_name);
   $('#date').val(current_date);
+  $('#name2').val(name_wife);
+
 }
