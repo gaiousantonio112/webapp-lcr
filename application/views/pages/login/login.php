@@ -11,11 +11,12 @@
 
 
 
+
                 </div>
                 <div class="col-md-6 login-form-2">
                   <form id="login_form">
-                
-                      <h3 class="text-center text-info">eCRIS Login</h3>
+
+                      <h3 class="text-center text-info">Login</h3>
                       <div class="form-group">
                         <div class="md-form ">
                               <input type="text"  id="username" name="login[username]" class="form-control" required>
