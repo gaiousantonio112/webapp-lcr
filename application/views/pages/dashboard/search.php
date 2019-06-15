@@ -66,13 +66,13 @@ html {
 			</div>
 		</div>
 
-		<div class="col-3" >
+		<div class="col-4" >
 			<div class="md-form" >
 				<input type="text" id="name" class="form-control" value="---">
 				<label for="name">Name</label>
 			</div>
 		</div>
-		<div class="col-3">
+		<div class="col-2">
 			<div class="dates">
 				<div class="md-form">
 				<input type="date" id="date" class="form-control">
@@ -94,7 +94,7 @@ html {
 
     </div>
   </div>
-   <div class="col-3">
+   <div class="col-4">
       <div class="md-form" >
         <input type="text" id="name2" class="form-control" value="---">
         <label for="name2">Name2</label>
@@ -140,6 +140,7 @@ html {
 								<label for="pageno">Page No.</label>
 							</div>
 						</div>
+
 						<div class="col">
 							<div class="md-form">
 								<input type="number" id="nocopy" class="form-control">
@@ -173,10 +174,7 @@ html {
 						<button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2">Submit</button>
 						<button class="btn btn-lg btn-outline-warning m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2">Clear All</button>
 </div>
-
-
-
-	</div>
+</div>
 
 
 
