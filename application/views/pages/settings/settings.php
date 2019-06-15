@@ -1,7 +1,7 @@
 <body class="bg-dark">
     <div id="settings" >
 
-        <div class="container">
+        <div class="login container">
             <div id="login-row" class=" row justify-content-center align-items-center">
                 <div id="login-column" class="  card pt-4 col-md-6">
                     <div id="login-box" class="col-md-12">

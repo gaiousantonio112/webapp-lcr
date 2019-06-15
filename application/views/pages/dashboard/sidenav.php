@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../../../assets/MBD/css/addons/datatables.min.css">
 <link rel="stylesheet" href="../../../../assets/MBD/css/addons/datatables-select.min.css">
 <link rel="stylesheet" href="../../../../assets/datepicker/calendar/lib/bootstrap-datepicker.css">
+<link rel="stylesheet" href="../../../../assets/datepicker/calendar/lib/daterangepicker.css">
 <!DOCTYPE html>
 <html lang="en">
 

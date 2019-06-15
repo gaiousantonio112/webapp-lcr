@@ -4,7 +4,7 @@ html {
 }
 </style>
 <div class="container d-flex" >
-	<div class="container-fluid p-4">
+	<div class="container-fluid pt-4">
 		<div class="form-check form-check-inline">
 			<input class="form-check-input" type="radio" name="lcr_type" value="birthday" onclick="show('searchbirth')" checked>
 			<label class="form-check-label" for="Birthday">Birthday</label>
@@ -18,6 +18,23 @@ html {
 			<label class="form-check-label" for="Marriage">Marriage</label>
 		</div>
 	</div>
+<div class="container-fluid row">
+    <div class="col-4 yearpick">
+      <div class="md-form">
+      <input type="text" id="year" class="form-control" required>
+        <label for="date">Start *</label>
+  </div>
+</div>
+<div class="col-1">
+<label class="text-center pt-5">-</label>
+</div>
+  <div class="col-4 yearpick">
+    <div class="md-form">
+    <input type="text" id="year" class="form-control" required>
+      <label for="date">End *</label>
+  </div>
+</div>
+</div>
 </div>
 
 <div class="container " >
@@ -57,7 +74,7 @@ html {
 	</table>
 </div>
 
-<div class="container-fluid p-4" >
+<div class="container p-4" >
 	<div class="row">
 		<div class="col-3">
 			<div class="md-form">
@@ -104,7 +121,7 @@ html {
 </div>
 
 
-	<div class="container-fluid" >
+	<div class="container" >
 <div class="row">
 				<div class="col-6">
 

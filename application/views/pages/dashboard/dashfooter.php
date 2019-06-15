@@ -30,14 +30,28 @@ console.log("Boo, inline PDFs are not supported by this browser");
 <script>
 
 			$(function() {
+        $('.yearpick #year').datepicker({
+          format: "yyyy",
+      viewMode: "years",
+      minViewMode: "years",
+      autoclose: true
+        });
 
 			$('.dates #usr1').datepicker({
+
+
 				'format': 'yyyy-mm-dd',
 				'autoclose': true
 			});
 
 
+
 		});
+
+
+    	
+
+
 			</script>
 <script>
 $(document).ready(function() {
