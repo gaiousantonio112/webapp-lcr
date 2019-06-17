@@ -126,6 +126,29 @@ $(document).ready(function(){
       }
     });
 
+    $('input[name="printOption"]').change(function(){
+      console.log($(this).val());
+    });
+
+    // pageno
+    $('#nocopy').on('input',function(e){
+      if ($(this).val() == "") {
+         $('#totalpay').val(50);
+      }else $('#totalpay').val(50 * $(this).val());
+    });
+    // totalpay
+    $('#cashten').on('input',function(e){
+        $('#totalam').val($(this).val());
+        $('#changed').val($(this).val() - $('#totalpay').val());
+    });
+
+    $('#cashten').change(function(){
+      if($(this).val() == ""){
+        $(this).val(0);
+      }
+    });
+    // changed
+
     // END SEARCH PAGE
 
     $("#menu-toggle").click(function(e) {

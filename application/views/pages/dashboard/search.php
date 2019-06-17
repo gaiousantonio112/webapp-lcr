@@ -139,28 +139,28 @@ html {
 									</div>
 
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="inlineRadioOptions" id="default" value="option1" checked>
+						<input class="form-check-input" type="radio" name="printOption" id="default" value="default" checked>
 						<label class="form-check-label" for="default">Default</label>
 					</div>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="inlineRadioOptions" id="specific" value="option2">
+						<input class="form-check-input" type="radio" name="printOption" id="specific" value="specific">
 						<label class="form-check-label" for="specific">Specific</label>
 					</div>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="inlineRadioOptions" id="range" value="option3">
+						<input class="form-check-input" type="radio" name="printOption" id="range" value="range">
 						<label class="form-check-label" for="range">Range</label>
 					</div>
 
 						<div class="col">
 							<div class="md-form">
-								<input type="text" id="pageno" class="form-control">
+								<input type="text" id="pageno" value = "1-2" class="form-control">
 								<label for="pageno">Page No.</label>
 							</div>
 						</div>
 
 						<div class="col">
 							<div class="md-form">
-								<input type="number" id="nocopy" class="form-control">
+								<input type="number" id="nocopy" class="form-control" value="1">
 								<label for="nocopy">No Copies.</label>
 							</div>
 						</div>
@@ -169,22 +169,22 @@ html {
 	<div class="col-6 pb-5">
 		<div class="">
 			<div class="md-form">
-				<input type="number" id="totalpay" class="form-control">
+				<input type="number" id="totalpay" class="form-control" disabled value="50">
 				<label for="totalpay">TOTAL PAYMENT.</label>
 			</div>
 			<div class="">
 				<div class="md-form">
-					<input type="number" id="cashten" class="form-control">
+					<input type="number" id="cashten" class="form-control" >
 					<label for="cashten">Cash Tendered.</label>
 				</div>
 				<div class="">
 					<div class="md-form">
-						<input type="number" id="totalam" class="form-control">
+						<input type="number" id="totalam" class="form-control" disabled value="0">
 						<label for="totalam">Total Amount Recieved</label>
 					</div>
 					<div class="">
 						<div class="md-form">
-							<input type="number" id="changed" class="form-control">
+							<input type="number" id="changed" class="form-control" disabled value="0">
 							<label for="changed">Changed</label>
 						</div>
 						<div class="text-center">
