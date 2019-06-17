@@ -1,25 +1,11 @@
 var full_name;
 // CREDENTIALS
+var defaultAmnt = 50;
 $(document).ready(function(){
     // userid
     console.log(userid);
-    $.ajax({
-      url : global.settings.url+'/Lcr_works/getUserCredentials',
-      type : 'POST',
-      data : {
-        id : userid
-      },
-      dataType : 'json',
-      success : function (res){
-        console.table(res[0]);
-        full_name = jsUcfirst(res[0].firstname) + ' ' + jsUcfirst(res[0].middlename) + ' ' + jsUcfirst(res[0].lastname);
-        $('.bday_encoder').val(full_name);
-      },
-      error: function(){
 
-      }
-    });
-
+    getUserCredentials();
 // SEARCH PAGE
     // primary table loader
     $('#tb_mainlcr').DataTable().clear().destroy();
@@ -130,11 +116,35 @@ $(document).ready(function(){
       console.log($(this).val());
     });
 
-    // pageno
+    $('#pageno').on('input',function(e){
+      var s = $(this).val();
+
+      console.log(s[0]);
+
+      console.log(Math.abs(-345));
+      switch ($('input[name="printOption"]:checked').val()) {
+        case 'default':
+          console.log('all is default');
+          break;
+        case 'specific':
+          console.log('Specific page number moves same as default ');
+          break;
+        case 'range':
+          console.log('range is seleted');
+          var numPages = Math.abs(s[0] - s[s.length-1]) + 1;
+          var totalPages = numPages - 2;
+
+          defaultAmnt = (totalPages * 50) + 50;
+          break;
+        default:
+
+      }
+    });
+
     $('#nocopy').on('input',function(e){
       if ($(this).val() == "") {
-         $('#totalpay').val(50);
-      }else $('#totalpay').val(50 * $(this).val());
+         $('#totalpay').val(defaultAmnt);
+      }else $('#totalpay').val(defaultAmnt * $(this).val());
     });
     // totalpay
     $('#cashten').on('input',function(e){
@@ -232,4 +242,25 @@ function view(id,refno,full_name,current_date,name_wife) {
   $('#date').val(current_date);
   $('#name2').val(name_wife);
 
+}
+
+
+
+function getUserCredentials() {
+  $.ajax({
+    url : global.settings.url+'/Lcr_works/getUserCredentials',
+    type : 'POST',
+    data : {
+      id : userid
+    },
+    dataType : 'json',
+    success : function (res){
+      console.table(res[0]);
+      full_name = jsUcfirst(res[0].firstname) + ' ' + jsUcfirst(res[0].middlename) + ' ' + jsUcfirst(res[0].lastname);
+      $('.bday_encoder').val(full_name);
+    },
+    error: function(){
+
+    }
+  });
 }

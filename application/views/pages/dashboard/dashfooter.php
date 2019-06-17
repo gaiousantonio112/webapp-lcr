@@ -9,6 +9,8 @@
 
 <script type="text/javascript">
 
+var userid = '<?php print($this->session->userdata('user_id')); ?>';
+
 $(document).ready(function () {
 $('#dtBasicExample').DataTable();
 $('.dataTables_length').addClass('bs-select');
@@ -19,8 +21,6 @@ console.log("Yay, this browser supports inline PDFs.");
 } else {
 console.log("Boo, inline PDFs are not supported by this browser");
 }
-
-  var userid = '<?php print($this->session->userdata('user_id')); ?>';
 </script>
 <script type="text/javascript" src="<?php print(base_url().'/assets/js/global.js'); ?>">
 
