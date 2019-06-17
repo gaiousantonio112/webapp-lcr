@@ -105,107 +105,105 @@ html {
 		<div class=" col-3 text-center p-4">
 			<button class="btn btn-lg btn-outline-default m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2" data-toggle="modal" data-target="#viewdocu"><i class="fas fa-search"></i> preview</button>
 		</div>
-	</div>	</div>
+	</div>
+</div>
 
 
 <div class="container" id="birthdeath">
   	<div class="row">
-  <div class="col-3" >
-    <div class="md-form" hidden>
-      <input type="text" class="form-control" value="---">
+        <div class="col-3" >
+          <div class="md-form" hidden>
+            <input type="text" class="form-control" value="---">
 
-    </div>
-  </div>
-   <div class="col-4">
-      <div class="md-form" >
-        <input type="text" id="name2" class="form-control" value="---" disabled>
-        <label id="name_wife" for="name2">Name2</label>
+          </div>
+        </div>
+       <div class="col-4">
+          <div class="md-form" >
+            <input type="text" id="name2" class="form-control" value="---" disabled>
+            <label id="name_wife" for="name2">Name2</label>
+          </div>
+        </div>
       </div>
-    </div>
-</div>
 </div>
 
-
-	<div class="container" >
-<div class="row">
+<form id="printReciept">
+	<div class="container">
+      <div class="row">
 				<div class="col-6">
-
 									<div class="">
 										<div class="md-form">
-											<input type="number" id="orno" class="form-control">
+											<input type="number" id="orno" name="reciept[orno]" class="form-control">
 											<label for="orno">OR No.</label>
 										</div>
 									</div>
 									<div class="">
 										<div class="md-form">
-											<input type="number" id="payor" class="form-control">
+											<input type="text" id="payor" name="reciept[payor]" class="form-control">
 											<label for="payor">Payor</label>
 										</div>
 									</div>
-
-					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="printOption" id="default" value="default" checked>
-						<label class="form-check-label" for="default">Default</label>
-					</div>
-					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="printOption" id="specific" value="specific">
-						<label class="form-check-label" for="specific">Specific</label>
-					</div>
-					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="printOption" id="range" value="range">
-						<label class="form-check-label" for="range">Range</label>
-					</div>
-
-						<div class="col">
-							<div class="md-form">
-								<input type="text" id="pageno" value = "1-2" class="form-control">
-								<label for="pageno">Page No.</label>
-							</div>
-						</div>
-
-						<div class="col">
-							<div class="md-form">
-								<input type="number" id="nocopy" class="form-control" value="1">
-								<label for="nocopy">No Copies.</label>
-							</div>
-						</div>
+        					<div class="form-check form-check-inline">
+        						<input class="form-check-input" type="radio" name="printOption" id="default" value="default" checked>
+        						<label class="form-check-label" for="default">Default</label>
+        					</div>
+        					<div class="form-check form-check-inline">
+        						<input class="form-check-input" type="radio" name="printOption" id="specific" value="specific">
+        						<label class="form-check-label" for="specific">Specific</label>
+        					</div>
+        					<div class="form-check form-check-inline">
+        						<input class="form-check-input" type="radio" name="printOption" id="range" value="range">
+        						<label class="form-check-label" for="range">Range</label>
+        					</div>
+      						<div class="col">
+      							<div class="md-form">
+      								<input type="text" id="pageno" value = "1-2" name="reciept[pageno]" class="form-control">
+      								<label for="pageno">Page No.</label>
+      							</div>
+      						</div>
+      						<div class="col">
+      							<div class="md-form">
+      								<input type="number" id="nocopy" name="reciept[nocopy]" class="form-control" value="1">
+      								<label for="nocopy">No Copies.</label>
+      							</div>
+      						</div>
 					</div>
 
-	<div class="col-6 pb-5">
-		<div class="">
-			<div class="md-form">
-				<input type="number" id="totalpay" class="form-control" disabled value="50">
-				<label for="totalpay">TOTAL PAYMENT.</label>
-			</div>
-			<div class="">
-				<div class="md-form">
-					<input type="number" id="cashten" class="form-control" >
-					<label for="cashten">Cash Tendered.</label>
-				</div>
-				<div class="">
-					<div class="md-form">
-						<input type="number" id="totalam" class="form-control" disabled value="0">
-						<label for="totalam">Total Amount Recieved</label>
-					</div>
-					<div class="">
-						<div class="md-form">
-							<input type="number" id="changed" class="form-control" disabled value="0">
-							<label for="changed">Changed</label>
-						</div>
-						<div class="text-center">
-						<button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2" data-toggle="modal" data-target="#reciept">Submit</button>
-						<button class="btn btn-lg btn-outline-warning m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2">Clear All</button>
-</div>
-</div>
+        	<div class="col-6 pb-5">
+        		<div class="">
+        			<div class="md-form">
+        				<input type="number" id="totalpay" name="reciept[totalpay]" class="form-control" disabled value="50">
+        				<label for="totalpay">TOTAL PAYMENT.</label>
+        			</div>
+        			<div class="">
+        				<div class="md-form">
+        					<input type="number" id="cashten" name="reciept[cashten]" class="form-control" >
+        					<label for="cashten">Cash Tendered.</label>
+        				</div>
+        				<div class="">
+        					<div class="md-form">
+        						<input type="number" id="totalam" name="reciept[totalam]" class="form-control" disabled value="0">
+        						<label for="totalam">Total Amount Recieved</label>
+        					</div>
+        					<div class="">
+        						<div class="md-form">
+        							<input type="number" id="changed" name="reciept[changed]" class="form-control" disabled value="0">
+        							<label for="changed">Changed</label>
+        						</div>
+        						<div class="text-center">
+          						<button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="submit" id="button-addon2" data-toggle="modal" data-target="#reciept" >Submit</button>
+          						<button class="btn btn-lg btn-outline-warning m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon">Clear All</button>
+                    </div>
+                  </div>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+      	<div class="pt-5 pb-5">
+      	</div>
+      </div>
+    </div>
+</form>
 
-
-
-			</div>
-		</div>
-	</div>
-	<div class="pt-5 pb-5">
-
-	</div>
 
 	<div class="modal fade" id="viewdocu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
 		aria-hidden="true">
@@ -251,8 +249,7 @@ html {
         </div>
         <div class="modal-body">
           <!-- <embed src="../../../../assets/pdf/rec.pdf#toolbar=0&zoom=70" type="application/pdf" width="100%" height="60%"> -->
-
-    <iframe width="100%" height="65%" src="<?php echo base_url('pages/viewreciept') ?>#toolbar=0&zoom=60%"></iframe>
+          <iframe width="100%" id="recieptframe" height="65%" src="#fucmke"></iframe>
 
         </div>
         <div class="modal-footer">
