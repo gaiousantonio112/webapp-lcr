@@ -119,18 +119,18 @@ $(document).ready(function(){
     $('#pageno').on('input',function(e){
       var s = $(this).val();
 
-      console.log(s[0]);
+      //console.log(s[0]);
 
-      console.log(Math.abs(-345));
+      //console.log(Math.abs(-345));
       switch ($('input[name="printOption"]:checked').val()) {
         case 'default':
-          console.log('all is default');
+          //console.log('all is default');
           break;
         case 'specific':
-          console.log('Specific page number moves same as default ');
+          //console.log('Specific page number moves same as default ');
           break;
         case 'range':
-          console.log('range is seleted');
+          //console.log('range is seleted');
           var numPages = Math.abs(s[0] - s[s.length-1]) + 1;
           var totalPages = numPages - 2;
 
@@ -158,6 +158,32 @@ $(document).ready(function(){
       }
     });
     // changed
+
+
+    $('#printReciept').submit(function(e){
+      // recieptframe
+      e.preventDefault();
+      $.ajax({
+        url : global.settings.url + '/Lcr_works/viewPrint',
+        type : 'POST',
+        data : {
+          'rec[what]' : $('input[name="lcr_type"]:checked').val(),
+          'rec[orno]' : $('#orno').val(),
+          'rec[totalpay]' : $('#totalpay').val(),
+          'rec[payor]' : $('#payor').val()
+        },
+        dataType :'json',
+        success : function(res){
+          console.log(res);
+          $('#recieptframe').attr('src',res);
+        },
+        error : function(xhr){
+          console.log('Error in printReciept '+xhr.responseText);
+          $('#recieptframe').attr('src',xhr.responseText);
+        }
+      });
+
+    });
 
     // END SEARCH PAGE
 

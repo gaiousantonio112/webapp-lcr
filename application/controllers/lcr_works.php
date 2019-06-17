@@ -63,6 +63,14 @@ class Lcr_works extends CI_Controller {
       echo json_encode($this->works->addMarriage($inputData,"dump_marriage.pdf"));
     }
 
+    public function viewPrint()
+    {
+      $ins = $this->input->post('rec');
+      // $ins['what']
+      // $ins['orno']
+      // $ins['totalpay']
 
+      echo base_url().'/pages/viewreciepter/?orno='.$ins['orno'].'&totalpay='.$ins['totalpay'].'&what='.$ins['what'].'&payor='.$ins['payor'].'#toolbar=0&zoom=60%';
+    }
 }
  ?>

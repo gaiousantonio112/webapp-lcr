@@ -56,9 +56,10 @@ class Pages extends CI_Controller {
         $this->load->view('pages/dashboard/pdfmerge',$data);
     }
 
-    public function viewreciept()
+    public function viewreciepter()
     {
+      
         $this->load->view('pages/dashboard/viewreciept');
 
-}
+    }
 }
