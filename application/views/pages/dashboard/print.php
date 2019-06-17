@@ -1,3 +1,9 @@
+
+<div class="container-fluid pt-4">
+<h3><b><i class="fas fa-print"></i> Print</h3>
+</b>
+</div>
+
 <div class="container pt-4">
 
   <table id="dtBasicExample" class="table table-sm table-striped table-bordered" cellspacing="0" width="100%">

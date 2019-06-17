@@ -1,3 +1,9 @@
+
+<div class="container-fluid pt-4">
+<h3><b><i class="fas fa-user-plus"></i> Add</h3>
+</b>
+</div>
+
 <div class="container">
 		<div class="container-fluid p-4">
 			<div class="form-check form-check-inline">

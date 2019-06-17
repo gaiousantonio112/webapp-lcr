@@ -3,6 +3,11 @@ html {
   scroll-behavior: smooth;
 }
 </style>
+
+<div class="container-fluid pt-4">
+<h3><b><i class="fas fa-search"></i> Search and Payment</h3>
+</b>
+</div>
 <div class="container d-flex" >
 	<div class="container-fluid pt-4">
 		<div class="form-check form-check-inline">

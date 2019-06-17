@@ -1,63 +1,63 @@
-<div class="container p-4">
-  <div class="container">
-    <div class="alert alert-primary" role="alert">
-      A simple primary alert—check it out!
-    </div>
-    <div class="alert alert-secondary" role="alert">
-      A simple secondary alert—check it out!
-    </div>
-    <div class="alert alert-success" role="alert">
-      A simple success alert—check it out!
-    </div>
-    <div class="alert alert-danger" role="alert">
-      A simple danger alert—check it out!
-    </div>
-    <div class="alert alert-warning" role="alert">
-      A simple warning alert—check it out!
-    </div>
-    <div class="alert alert-info" role="alert">
-      A simple info alert—check it out!
-    </div>
-    <div class="alert alert-light" role="alert">
-      A simple light alert—check it out!
-    </div>
-    <div class="alert alert-dark" role="alert">
-      A simple dark alert—check it out!
-    </div>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#centralModalSm">
-      Launch demo modal
-    </button>
-
-    <div class="modal fade" id="centralModalSm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-      aria-hidden="true">
-
-      <!-- Change class .modal-sm to change the size of the modal -->
-      <div class="modal-dialog modal-lg" role="document">
-
-
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title w-100" id="myModalLabel">PDF</h4>
-
-
-            </button>
-          </div>
-          <div class="modal-body">
-            <!-- <embed src="../../../../assets/pdf/rec.pdf#toolbar=0&zoom=70" type="application/pdf" width="100%" height="60%"> -->
-
-      <iframe width="100%" height="65%" src="<?php echo base_url('pages/viewreciept') ?>#toolbar=0&zoom=60%"></iframe> 
-
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary btn-sm">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-
-
+<div class="container-fluid pt-4">
+<h3><b><i class="fas fa-columns"></i> Dashboard</h3>
+</b>
 </div>
+
+<div class="container p-3">
+  <!--Carousel Wrapper-->
+<div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
+  <!--Indicators-->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-1z" data-slide-to="1"></li>
+    <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+  </ol>
+  <!--/.Indicators-->
+  <!--Slides-->
+  <div class="carousel-inner" role="listbox">
+    <!--First slide-->
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(130).jpg"
+        alt="First slide">
+    </div>
+    <!--/First slide-->
+    <!--Second slide-->
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg"
+        alt="Second slide">
+    </div>
+    <!--/Second slide-->
+    <!--Third slide-->
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg"
+        alt="Third slide">
+    </div>
+    <!--/Third slide-->
+  </div>
+  <!--/.Slides-->
+  <!--Controls-->
+  <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  <!--/.Controls-->
+</div>
+<!--/.Carousel Wrapper-->
+</div>
+<div class="container p-2">
+<div class="d-flex flex-row">
+
+  <div class="container card col-6">
+<canvas id="myChart"  style="max-width: 500px;"></canvas>
+</div>
+
+  <div class="container card col-5">
+<canvas id="pieChart"></canvas>
+</div>
+</div>
+</div>
+<div class="p-5"></div>
