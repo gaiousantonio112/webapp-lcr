@@ -74,7 +74,7 @@ html {
 	</table>
 </div>
 
-<div class="container p-4" >
+<div class="container p-4" id="inputpage" >
 	<div class="row">
 		<div class="col-3">
 			<div class="md-form">
@@ -121,7 +121,7 @@ html {
 </div>
 
 
-	<div class="container  " >
+	<div class="container" >
 <div class="row">
 				<div class="col-6">
 

@@ -24,7 +24,12 @@
       <td>Edinburgh</td>
       <td>61</td>
       <td>2011/04/25</td>
-      <td>$320,800</td>
+      <td>
+
+
+
+        	<button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2" data-toggle="modal" data-target="#reciept">Print</button>
+      </td>
     </tr>
     <tr>
       <td>Garrett Winters</td>
@@ -85,3 +90,65 @@
 
 
 </div>
+
+
+
+<div class="modal fade" id="reciept" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+
+  <!-- Change class .modal-sm to change the size of the modal -->
+  <div class="modal-dialog modal-lg" role="document">
+
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title w-50" id="myModalLabel">PDF</h4>
+
+
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- <embed src="../../../../assets/pdf/rec.pdf#toolbar=0&zoom=70" type="application/pdf" width="100%" height="60%"> -->
+
+  <iframe width="100%" height="65%" src="<?php echo base_url('pages/viewpdf') ?>#toolbar=0&zoom=60%"></iframe>
+
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#done" >Print</button>
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container">
+<div class="modal fade" id="done" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+
+  <!-- Change class .modal-sm to change the size of the modal -->
+  <div class="modal-dialog modal-sm" role="document">
+
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title w-100" id="myModalLabel">Alert!</h4>
+
+
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- <embed src="../../../../assets/pdf/rec.pdf#toolbar=0&zoom=70" type="application/pdf" width="100%" height="60%"> -->
+
+Done Printing?
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">Yes</button>
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">No</button>
+
+      </div>
+    </div>
+  </div>
+</div></div>
