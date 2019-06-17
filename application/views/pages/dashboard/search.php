@@ -103,7 +103,7 @@ html {
 	</div>	</div>
 
 
-<div class="container-fluid" id="birthdeath">
+<div class="container" id="birthdeath">
   	<div class="row">
   <div class="col-3" >
     <div class="md-form" hidden>
@@ -121,7 +121,7 @@ html {
 </div>
 
 
-	<div class="container" >
+	<div class="container  " >
 <div class="row">
 				<div class="col-6">
 

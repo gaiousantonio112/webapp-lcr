@@ -13,7 +13,7 @@
 
 
                 </div>
-                <div class="card login col-md-6 login-form-2 pt-4">
+                <div class=" card login col-md-6 login-form-2 pt-4">
                   <form id="login_form">
 
                       <h3 class="text-center text-info"><strong>Login</strong></h3>
