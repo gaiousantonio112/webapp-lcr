@@ -225,6 +225,8 @@ function jsUcfirst(string)
 }
 
 function view(id,refno,full_name,current_date,name_wife) {
+
+  document.getElementById('inputpage').scrollIntoView();
   $('#refno').val(refno);
   $('#name').val(full_name);
   $('#date').val(current_date);

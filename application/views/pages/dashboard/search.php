@@ -74,7 +74,7 @@ html {
 	</table>
 </div>
 
-<div class="container p-4" >
+<div class="container p-4" id="inputpage" >
 	<div class="row">
 		<div class="col-3">
 			<div class="md-form">
@@ -121,7 +121,7 @@ html {
 </div>
 
 
-	<div class="container  " >
+	<div class="container" >
 <div class="row">
 				<div class="col-6">
 
@@ -188,7 +188,7 @@ html {
 							<label for="changed">Changed</label>
 						</div>
 						<div class="text-center">
-						<button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2">Submit</button>
+						<button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2" data-toggle="modal" data-target="#reciept">Submit</button>
 						<button class="btn btn-lg btn-outline-warning m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2">Clear All</button>
 </div>
 </div>
@@ -218,7 +218,7 @@ html {
 				</div>
 				<div class="modal-body">
 
-							<embed src="../../../../assets/pdf/pdftron-sdk.pdf#toolbar=0&zoom=50" type="application/pdf" width="100%" height="60%">
+          <embed src="../../../../assets/pdf/pdftron-sdk.pdf#toolbar=0&zoom=50" type="application/pdf" width="100%" height="60%">
 
 				</div>
 				<div class="modal-footer">
@@ -228,3 +228,64 @@ html {
 			</div>
 		</div>
 	</div>
+
+
+  <div class="modal fade" id="reciept" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+
+    <!-- Change class .modal-sm to change the size of the modal -->
+    <div class="modal-dialog modal-lg" role="document">
+
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title w-50" id="myModalLabel">PDF</h4>
+
+
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- <embed src="../../../../assets/pdf/rec.pdf#toolbar=0&zoom=70" type="application/pdf" width="100%" height="60%"> -->
+
+    <iframe width="100%" height="65%" src="<?php echo base_url('pages/viewreciept') ?>#toolbar=0&zoom=60%"></iframe>
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#done" >Print</button>
+          <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="modal fade" id="done" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+
+    <!-- Change class .modal-sm to change the size of the modal -->
+    <div class="modal-dialog modal-sm" role="document">
+
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title w-100" id="myModalLabel">Alert!</h4>
+
+
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- <embed src="../../../../assets/pdf/rec.pdf#toolbar=0&zoom=70" type="application/pdf" width="100%" height="60%"> -->
+
+  Done Printing?
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">Yes</button>
+          <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">No</button>
+
+        </div>
+      </div>
+    </div>
+  </div>

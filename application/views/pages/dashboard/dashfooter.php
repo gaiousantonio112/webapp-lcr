@@ -29,6 +29,8 @@ console.log("Boo, inline PDFs are not supported by this browser");
 
 <script>
 
+
+
 			$(function() {
         $('.yearpick #year').datepicker({
           format: "yyyy",
@@ -46,14 +48,19 @@ console.log("Boo, inline PDFs are not supported by this browser");
 
 
 
+
 		});
 
 
-    	
+
 
 
 			</script>
 <script>
+
+
+
+
 $(document).ready(function() {
 
   $('#birthdeath').hide();
