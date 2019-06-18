@@ -6,85 +6,54 @@
 
 <div class="container pt-4">
 
-  <table id="dtBasicExample" class="table table-sm table-striped table-bordered" cellspacing="0" width="100%">
+  <table id="printable" class="table table-sm table-striped table-bordered" cellspacing="0" width="100%">
   <thead>
     <tr>
-      <th class="th-sm">Name
+      <th class="th-sm">id
       </th>
-      <th class="th-sm">Position
+      <th class="th-sm">ref_num
       </th>
-      <th class="th-sm">Office
+      <th class="th-sm">or_num
       </th>
-      <th class="th-sm">Age
+      <th class="th-sm">name
       </th>
-      <th class="th-sm">Start date
+      <th class="th-sm">type date
       </th>
-      <th class="th-sm">Salary
+      <th class="th-sm">date
       </th>
+      <th class="th-sm">page
+      </th>
+      <th class="th-sm">no_copy
+      </th>
+      <th class="th-sm">action
+      </th>
+
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>Tiger Nixon</td>
-      <td>System Architect</td>
-      <td>Edinburgh</td>
-      <td>61</td>
-      <td>2011/04/25</td>
-      <td>
-
-
-
-        	<button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2" data-toggle="modal" data-target="#reciept">Print</button>
-      </td>
-    </tr>
-    <tr>
-      <td>Garrett Winters</td>
-      <td>Accountant</td>
-      <td>Tokyo</td>
-      <td>63</td>
-      <td>2011/07/25</td>
-      <td>$170,750</td>
-    </tr>
-    <tr>
-      <td>Ashton Cox</td>
-      <td>Junior Technical Author</td>
-      <td>San Francisco</td>
-      <td>66</td>
-      <td>2009/01/12</td>
-      <td>$86,000</td>
-    </tr>
-    <tr>
-      <td>Cedric Kelly</td>
-      <td>Senior Javascript Developer</td>
-      <td>Edinburgh</td>
-      <td>22</td>
-      <td>2012/03/29</td>
-      <td>$433,060</td>
-    </tr>
-    <tr>
-      <td>Airi Satou</td>
-      <td>Accountant</td>
-      <td>Tokyo</td>
-      <td>33</td>
-      <td>2008/11/28</td>
-      <td>$162,700</td>
-    </tr>
 
   </tbody>
   <tfoot>
     <tr>
-      <th>Name
+      <th>id
       </th>
-      <th>Position
+      <th>ref_num
       </th>
-      <th>Office
+      <th>or_num
       </th>
-      <th>Age
+      <th>name
       </th>
-      <th>Start date
+      <th>type date
       </th>
-      <th>Salary
+      <th>date
       </th>
+      <th>page
+      </th>
+      <th>no_copy
+      </th>
+      <th>action
+      </th>
+
     </tr>
   </tfoot>
 </table>

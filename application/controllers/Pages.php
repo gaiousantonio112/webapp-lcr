@@ -58,8 +58,9 @@ class Pages extends CI_Controller {
 
     public function viewreciepter()
     {
-      
+
         $this->load->view('pages/dashboard/viewreciept');
 
     }
+    
 }

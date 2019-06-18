@@ -288,5 +288,49 @@
 
         return $qry;
       }
+
+
+
+
+
+
+
+//TABLEPRINT FUNCTION JANDEAN
+
+public function showprint()
+{
+  $draw = intval($this->input->get("draw"));
+  $start = intval($this->input->get("start"));
+  $length = intval($this->input->get("length"));
+
+  $query = $this->db->query("SELECT * FROM lcr_history where cash_rep = 'not done'");
+  $date = date('Y-m-d');
+  $data = [];
+  foreach ($query->result() as $r) {
+    $data[] = array(
+      'id' => $r->id,
+      'ref_num' => $r->ref_num,
+      'or_num' => $r->or_num,
+      'name' => $r->name,
+      'type' => $r->type,
+        'date' => $r->date,
+      'page' => $r->page,
+        'no_copy' => $r->no_copy,
+        'btn' => $r->btn = '<button  data-toggle="modal" data-target="#reciept" type="button" class="btn btn-outline-primary btn-sm" "><i class="fas fa-search"></i>Print</button>'
+    );
+  }
+  $result = array(
+            "draw" => $draw,
+            "recordsTotal" => $query->num_rows(),
+            "recordsFiltered" => $query->num_rows(),
+            "data" => $data
+        );
+
+
+  return $result;
+
+}
+
+
   }
  ?>

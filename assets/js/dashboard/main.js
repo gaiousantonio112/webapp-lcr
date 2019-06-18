@@ -253,6 +253,34 @@ $(document).ready(function(){
 
     // END ADD PAGE
 
+//TABLE PRINT JANDEAN
+    $('#printable').DataTable().clear().destroy();
+    $('#printable').DataTable({
+        "ajax" : {
+          "url" : global.settings.url + '/Lcr_works/showprint',
+          dataSrc : 'data'
+        },
+        "columns" : [{
+            "data" : "id"
+        }, {
+            "data" : "ref_num"
+        }, {
+            "data" : "or_num"
+        }, {
+            "data" : "name"
+        }, {
+            "data" : "type"
+            }, {
+                "data" : "date"
+              }, {
+                  "data" : "page"
+                }, {
+                    "data" : "no_copy"
+                  }, {
+                      "data" : "btn"
+        }]
+      });
+
 });
 
 function jsUcfirst(string)

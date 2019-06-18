@@ -2,18 +2,18 @@
 <body class="bg-light">
     <div id="login" class="container pt-5">
 
-        <div class="container pt-5 ">
+        <div class="container  ">
 
 
 <div class="container login-container">
             <div class="row text-center">
-                <div class="col-md-6 login-form-1 text">
+                <div class="container col-6 login-form-1 ">
+<!-- <img src="../../../../assets/img/cirtem.png" height="70%"> -->
+
+      </div>
 
 
-
-
-                </div>
-                <div class=" card login col-md-6 login-form-2 pt-4">
+                <div class=" card login col-md-6 login-form-2 pt-5">
                   <form id="login_form">
 
                       <h3 class="text-center text-info"><strong>Login</strong></h3>
@@ -24,6 +24,7 @@
                                   <label for="username">Username</label>
                                   </div>
 
+                                
                       </div>
                       <div class="form-group">
                         <div class="md-form">
@@ -37,8 +38,9 @@
                       </div>
 
                   </form>
-                        </div>
+
                     </form>
+                        </div>
                 </div>
             </div>
         </div>

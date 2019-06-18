@@ -72,5 +72,13 @@ class Lcr_works extends CI_Controller {
 
       echo base_url().'/pages/viewreciepter/?orno='.$ins['orno'].'&totalpay='.$ins['totalpay'].'&what='.$ins['what'].'&payor='.$ins['payor'].'#toolbar=0&zoom=60%';
     }
+
+    //TABLEPRINT
+    public function showprint()
+    {
+      echo json_encode($this->works->showprint());
+    }
+
+
 }
  ?>
