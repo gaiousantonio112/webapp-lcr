@@ -62,5 +62,11 @@ class Pages extends CI_Controller {
         $this->load->view('pages/dashboard/viewreciept');
 
     }
-    
+    public function printreciept()
+    {
+
+        $this->load->view('pages/dashboard/printreciept');
+
+    }
+
 }
