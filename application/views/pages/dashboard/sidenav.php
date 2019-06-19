@@ -29,7 +29,7 @@
 
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading">ECRIS </div>
+      <div class="sidebar-heading py-3">ECRIS </div>
       <div class="list-group list-group-flush">
         <a href="<?php echo base_url() . 'pages/dash/index'  ?>" class="list-group-item list-group-item-action bg-light"><i class="fas fa-columns "></i> Dashboard</a>
         <a href="<?php echo base_url() . 'pages/dash/search'  ?>" class="list-group-item list-group-item-action bg-light"><i class="fas fa-search-dollar "></i> Search and Payment</a>
@@ -48,7 +48,7 @@
     <div id="page-content-wrapper">
 
       <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <button class="btn btn-outline-primary" id="menu-toggle"><i class="fas fa-bars "></i></button>
+        <button class="btn btn-outline-dark" id="menu-toggle"><i class="fas fa-bars "></i></button>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
