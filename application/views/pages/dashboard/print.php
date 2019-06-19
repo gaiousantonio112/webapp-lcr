@@ -74,40 +74,6 @@
 
 <div class="modal fade" id="reciept" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
-
-  <!-- Change class .modal-sm to change the size of the modal -->
-  <div class="modal-dialog modal-lg" role="document">
-
-
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title w-50" id="myModalLabel">PDF</h4>
-
-
-        </button>
-      </div>
-      <div class="modal-body">
-        <!-- <embed src="../../../../assets/pdf/rec.pdf#toolbar=0&zoom=70" type="application/pdf" width="100%" height="60%"> -->
-
-  <iframe width="100%" height="65%" id="print_pageFrame" src="#oratyr"></iframe>
-
-      </div>
-      <div class="modal-footer">
-          <button type="button" class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#done" >Print</button>
-        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
-
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<div class="container">
-<div class="modal fade" id="done" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-  aria-hidden="true">
-
-  <!-- Change class .modal-sm to change the size of the modal -->
   <div class="modal-dialog modal-sm" role="document">
 
 
@@ -120,6 +86,7 @@
       </div>
       <div class="modal-body">
         <!-- <embed src="../../../../assets/pdf/rec.pdf#toolbar=0&zoom=70" type="application/pdf" width="100%" height="60%"> -->
+<iframe width="100%" height="65%" id="print_pageFrame" src="#oratyr" hidden></iframe>
 
 Done Printing?
       </div>
@@ -130,4 +97,3 @@ Done Printing?
       </div>
     </div>
   </div>
-</div></div>
