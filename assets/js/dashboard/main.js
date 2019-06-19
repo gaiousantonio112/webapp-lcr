@@ -172,7 +172,7 @@ $(document).ready(function(){
           'rec[totalpay]' : $('#totalpay').val(),
           'rec[payor]' : $('#payor').val()
         },
-        dataType :'json',
+        dataType :'text',
         success : function(res){
           console.log(res);
           $('#recieptframe').attr('src',res);
@@ -261,27 +261,63 @@ $(document).ready(function(){
           dataSrc : 'data'
         },
         "columns" : [{
-            "data" : "id"
-        }, {
             "data" : "ref_num"
         }, {
             "data" : "or_num"
         }, {
             "data" : "name"
+        },{
+            "data" : "encoder_name"
         }, {
             "data" : "type"
-            }, {
-                "data" : "date"
-              }, {
-                  "data" : "page"
-                }, {
-                    "data" : "no_copy"
-                  }, {
-                      "data" : "btn"
+        }, {
+            "data" : "date"
+        }, {
+            "data" : "page"
+        }, {
+            "data" : "no_copy"
+        }, {
+            "data" : "btn"
         }]
       });
 
+
+  // PRINT END
+
 });
+
+// FOR PRINT onclick
+function printPage(f_id,ref_num,or_no,name_cus,name_encoder,type,paid,page,copy,print) {
+    $('#reciept').modal("show");
+    $.ajax({
+      url : global.settings.url + '/Lcr_works/printPage',
+      type : 'POST',
+      data : {
+        'print[f_id]' : f_id,
+        'print[ref_num]' : ref_num,
+        'print[or_no]' : or_no,
+        'print[name_cus]' : name_cus,
+        'print[name_encoder]' : name_encoder,
+        'print[type]' : type,
+        'print[paid]' : paid,
+        'print[page]' : page,
+        'print[copy]' : copy,
+        'print[print]' : print
+      },
+      dataType : 'text',
+      success : function(res){
+        console.log(res);
+        $('#print_pageFrame').attr('src',res);
+      },
+      error : function(){
+        console.log('Error in printpage ajax');
+      }
+
+    });
+}
+
+// END
+
 
 function jsUcfirst(string)
 {
