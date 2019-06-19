@@ -308,15 +308,16 @@ public function showprint()
   $data = [];
   foreach ($query->result() as $r) {
     $data[] = array(
-      'id' => $r->id,
+      // 'id' => $r->id,
       'ref_num' => $r->ref_num,
       'or_num' => $r->or_num,
       'name' => $r->name,
+      'encoder_name' => $r->cs_encoder,
       'type' => $r->type,
-        'date' => $r->date,
+        'date' => $r->date_paid,
       'page' => $r->page,
         'no_copy' => $r->no_copy,
-        'btn' => $r->btn = '<button  data-toggle="modal" data-target="#reciept" type="button" class="btn btn-outline-primary btn-sm" "><i class="fas fa-search"></i>Print</button>'
+        'btn' => $r->btn = '<button onclick="printPage(\''.$r->id.'\',\''.$r->ref_num.'\',\''.$r->or_num.'\',\''.$r->name.'\',\''.$r->cs_encoder.'\',\''.$r->type.'\',\''.$r->date_paid.'\',\''.$r->page.'\',\''.$r->no_copy.'\',\''.$r->print.'\')" type="button" class="btn btn-outline-primary btn-sm" "><i class="fas fa-search"></i>Print</button>'
     );
   }
   $result = array(

@@ -50,10 +50,7 @@ class Pages extends CI_Controller {
 
     public function viewpdf()
     {
-        $data = array(
-          'whome' => 'Gaious Panaligan',
-        );
-        $this->load->view('pages/dashboard/pdfmerge',$data);
+        $this->load->view('pages/dashboard/pdfmerge');
     }
 
     public function viewreciepter()

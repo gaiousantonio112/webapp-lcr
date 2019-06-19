@@ -9,23 +9,25 @@
   <table id="printable" class="table table-sm table-striped table-bordered" cellspacing="0" width="100%">
   <thead>
     <tr>
-      <th class="th-sm">id
+      <!-- <th class="th-sm">id
+      </th> -->
+      <th class="th-sm">Reference Number
       </th>
-      <th class="th-sm">ref_num
+      <th class="th-sm">OR No.
       </th>
-      <th class="th-sm">or_num
+      <th class="th-sm">Name
       </th>
-      <th class="th-sm">name
+      <th class="th-sm">Encoder Name
       </th>
-      <th class="th-sm">type date
+      <th class="th-sm">Cert. Type
       </th>
-      <th class="th-sm">date
+      <th class="th-sm">Date Paid
       </th>
-      <th class="th-sm">page
+      <th class="th-sm">Page
       </th>
-      <th class="th-sm">no_copy
+      <th class="th-sm">Copies
       </th>
-      <th class="th-sm">action
+      <th class="th-sm">Action
       </th>
 
     </tr>
@@ -35,23 +37,25 @@
   </tbody>
   <tfoot>
     <tr>
-      <th>id
+      <!-- <th>id
+      </th> -->
+      <th>Reference Number
       </th>
-      <th>ref_num
+      <th>OR No.
       </th>
-      <th>or_num
+      <th>Name
       </th>
-      <th>name
+      <th>Encoder Name
       </th>
-      <th>type date
+      <th>Cert. Type
       </th>
-      <th>date
+      <th>Date Paid
       </th>
-      <th>page
+      <th>Page
       </th>
-      <th>no_copy
+      <th>Copies
       </th>
-      <th>action
+      <th>Action
       </th>
 
     </tr>
@@ -85,7 +89,7 @@
       <div class="modal-body">
         <!-- <embed src="../../../../assets/pdf/rec.pdf#toolbar=0&zoom=70" type="application/pdf" width="100%" height="60%"> -->
 
-  <iframe width="100%" height="65%" src="<?php echo base_url('pages/viewpdf') ?>#toolbar=0&zoom=60%"></iframe>
+  <iframe width="100%" height="65%" id="print_pageFrame" src="#oratyr"></iframe>
 
       </div>
       <div class="modal-footer">
