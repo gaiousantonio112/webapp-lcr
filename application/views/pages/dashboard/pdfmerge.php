@@ -76,6 +76,8 @@ for ($pageNo; $pageNo <= $pageCount; $pageNo++) {
   $pdf->StopTransform();
 
 }
+//print function
+$pdf->IncludeJS('print(true)');
 
 $pdf->Output('name.pdf', 'I');
 

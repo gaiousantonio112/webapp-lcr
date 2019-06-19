@@ -31,6 +31,9 @@ $date = date('m - d - Y');
 
   $pdf->Text(75,125 , ($_GET['totalpay'] == null ? '0' : $_GET['totalpay']));
 
+  $js .= 'print(true);';
+
+  // set javascript
 
    $pdf->Output('print.pdf', 'I');
 
