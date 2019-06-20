@@ -175,7 +175,10 @@ $(document).ready(function(){
         dataType :'text',
         success : function(res){
           console.log(res);
-          $('#recieptframe').attr('src',res);
+          $('#recieptframe').attr('src',global.settings.url+'/pages/viewreciepter/'+res);
+          $('#recieptframe_white').attr('src',global.settings.url+'/pages/printreciept/'+res);
+          //base_url().'/
+
         },
         error : function(xhr){
           console.log('Error in printReciept '+xhr.responseText);
