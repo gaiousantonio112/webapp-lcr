@@ -78,7 +78,7 @@ class Lcr_works extends CI_Controller {
     {
       $print = $this->input->post('print');
 
-      echo base_url()."pages/viewpdf/?f_id=".$print['f_id']."&ref_num=".$print['ref_num']."&or_no=".$print['or_no']."&name_cus=".$print['name_cus']."&name_encoder=".$print['name_encoder']."&type=".$print['type']."&paid=".$print['paid']."&page=".$print['page']."&copy=".$print['copy']."&print=".$print['print']."#toolbar=0&zoom=60%";
+      echo base_url()."pages/viewpdf/".$print['f_id']."#toolbar=0&zoom=60%";
     }
 
     //TABLEPRINT

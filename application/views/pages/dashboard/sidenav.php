@@ -66,7 +66,7 @@
                 <a class="dropdown-item" href="#">Account</a>
                 <a class="dropdown-item" href="#">Another action</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="<?php echo base_url() . 'pages/index'  ?>">Logout</a>
+                <a class="dropdown-item" href="<?php echo base_url() . 'pages/logout'  ?>">Logout</a>
               </div>
             </li>
           </ul>

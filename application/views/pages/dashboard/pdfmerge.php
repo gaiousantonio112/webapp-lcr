@@ -21,11 +21,12 @@ $pdf->setSourceFile(APPPATH.'/..//assets/pdf/1.pdf');
   // print
 
 // this will declare the number of pages
-$pageNo = 2;
+$pageNo = 1;
 $pageCount = 2;
-$stringData = 'Date Now:'.$date.' Reference Number:'.$_GET['ref_num'].' OR NO:'.$_GET['or_no'].' Date Paid:'.$_GET['paid'].' Encoder Name:'.$_GET['name_encoder'];
+$stringData = 'Date Now:'.$date.' Reference Number:'.$ref_num.' OR NO:'.$or_num.' Date Paid:'.$date_paid.' Encoder Name:'.$cs_encoder;
 
-switch ($_GET['print']) {
+// $stringData = 'Date Now:'.$date.' Reference Number:'.;
+switch ($print) {
   case 'Default':
     // two pages
     $pageNo =1;
@@ -33,13 +34,13 @@ switch ($_GET['print']) {
     break;
   case 'Specific':
     // on page
-    $pageNo = $_GET['page'];
-    $pageCount = $_GET['page'];
+    $pageNo = $page;
+    $pageCount = $page;
     break;
   case 'Ranges':
     // specific range
-    $pageNo = substr($_GET['page'], 0, 1);
-    $pageCount = substr($_GET['page'], -1);
+    $pageNo = substr($page, 0, 1);
+    $pageCount = substr($page, -1);
     break;
   default:
     // code...

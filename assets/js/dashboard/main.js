@@ -286,7 +286,7 @@ $(document).ready(function(){
 
 });
 
-// FOR PRINT onclick
+// FOR PRINT onclick https://www.youtube.com/watch?v=ku5FEPgZY-E
 function printPage(f_id,ref_num,or_no,name_cus,name_encoder,type,paid,page,copy,print) {
     $('#reciept').modal("show");
     $.ajax({
