@@ -1,1 +1,1 @@
-<h1>THe LOgin Page bitch</h1>
+<h1>THe LOgin Page</h1>
