@@ -1,5 +1,5 @@
 
-<div class="container-fluid pt-4">
+<div class="container-fluid pt-4 px-5">
 <h3><b><i class="fas fa-print"></i> Print</h3>
 </b>
 </div>

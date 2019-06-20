@@ -1,10 +1,15 @@
 
-<div class="container-fluid pt-4">
+<div class="container-fluid pt-4 px-5">
 <h3><b><i class="fas fa-user-plus"></i> Add</h3>
 </b>
 </div>
 
+
 <div class="container">
+
+	<div class="card  mb-3" >
+	  <div class="card-header bg-primary"></div>
+	  <div class="card-body">
 		<div class="container-fluid p-4">
 			<div class="form-check form-check-inline">
 				<input class="form-check-input" type="radio" name="radioselect" id="Birthday" value="Birth" onclick="show('birth');" checked>
@@ -28,7 +33,7 @@
 	<div class="" id="birth">
 		<div class="container">
 			<div class="md-form">
-				<input type="number" name="bday[refno]" id="form1" class="form-control">
+				<input type="number" name="bday[refno]" id="form1" class="form-control ">
 				<label for="form1">REFERENCE NUMBER</label>
 			</div>
 		</div>

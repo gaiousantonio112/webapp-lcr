@@ -4,7 +4,7 @@ html {
 }
 </style>
 
-<div class="container-fluid pt-4">
+<div class="container-fluid pt-4 px-5">
 <h3><b><i class="fas fa-search"></i> Search and Payment</h3>
 </b>
 </div>
@@ -80,6 +80,10 @@ html {
 </div>
 
 <div class="container p-4" id="inputpage" >
+
+  	<div class="card  mb-3" >
+  	  <div class="card-header bg-primary"></div>
+  	  <div class="card-body">
 	<div class="row">
 		<div class="col-3">
 			<div class="md-form">
