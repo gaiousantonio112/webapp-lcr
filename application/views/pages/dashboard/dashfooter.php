@@ -53,9 +53,6 @@ console.log("Boo, inline PDFs are not supported by this browser");
 		});
 
 
-
-
-
 			</script>
 <script>
 
@@ -63,6 +60,11 @@ console.log("Boo, inline PDFs are not supported by this browser");
 
 
 $(document).ready(function() {
+
+
+
+
+
 
   $('#birthdeath').hide();
    $('#birth').show();
@@ -99,6 +101,20 @@ if(page == 'searchdeath'){
 if(page == 'searchmerage'){
 
   $('#birthdeath').show();
+}
+if(page == 'default'){
+document.getElementById('pageno').value='1-2' ;
+document.getElementById('pageno').disabled = true;
+}
+if(page == 'specific'){
+	document.getElementById('pageno').disabled = false;
+document.getElementById('pageno').value='1' ;
+
+}
+if(page == 'range'){
+	document.getElementById('pageno').disabled = false;
+document.getElementById('pageno').value='1-2' ;
+
 }
 
 

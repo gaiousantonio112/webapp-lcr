@@ -147,20 +147,20 @@ html {
 										</div>
 									</div>
         					<div class="form-check form-check-inline">
-        						<input class="form-check-input" type="radio" name="printOption" id="default" value="default" checked>
+        						<input class="form-check-input" type="radio" name="printOption" id="default" onclick="show('default')" value="default" checked>
         						<label class="form-check-label" for="default">Default</label>
         					</div>
         					<div class="form-check form-check-inline">
-        						<input class="form-check-input" type="radio" name="printOption" id="specific" value="specific">
+        						<input class="form-check-input" type="radio" name="printOption" id="specific"  onclick="show('specific')" value="specific">
         						<label class="form-check-label" for="specific">Specific</label>
         					</div>
         					<div class="form-check form-check-inline">
-        						<input class="form-check-input" type="radio" name="printOption" id="range" value="range">
+        						<input class="form-check-input" type="radio" name="printOption" id="range"  onclick="show('range')" value="range">
         						<label class="form-check-label" for="range">Range</label>
         					</div>
       						<div class="col">
       							<div class="md-form">
-      								<input type="text" id="pageno" value = "1-2" name="reciept[pageno]" class="form-control">
+      								<input type="text" id="pageno" value = "1-2" name="reciept[pageno]" class="form-control" disabled>
       								<label for="pageno">Page No.</label>
       							</div>
       						</div>
@@ -254,10 +254,10 @@ html {
         <div class="modal-body">
           <!-- <embed src="../../../../assets/pdf/rec.pdf#toolbar=0&zoom=70" type="application/pdf" width="100%" height="60%"> -->
           <iframe width="100%" id="recieptframe" height="65%" src="#funk"></iframe>
-          <iframe width="100%" id="recieptframe_white" height="65%" src="#funk"></iframe>
+
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#done" >Print</button>
+            <button type="button" class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#done" href="" >Print</button>
           <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
 
         </div>
@@ -284,11 +284,11 @@ html {
         </div>
         <div class="modal-body">
           <!-- <embed src="../../../../assets/pdf/rec.pdf#toolbar=0&zoom=70" type="application/pdf" width="100%" height="60%"> -->
-
+      <iframe width="100%" id="recieptframe_white" height="65%" src="#funk" hidden></iframe>
   Done Printing?
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">Yes</button>
+            <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal" >Yes</button>
           <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">No</button>
 
         </div>

@@ -35,6 +35,8 @@ $date = date('m - d - Y');
 
   // set javascript
   ob_end_clean();
+
+
    $pdfv2->Output('print.pdf', 'I');
 
 ?>

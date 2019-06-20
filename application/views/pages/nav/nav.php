@@ -9,7 +9,7 @@
 
 <!-- Grey with black text -->
 
-
+<!--
 <nav class="navbar navbar-expand-md bg-primary navbar-dark">
     <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
         <ul class="navbar-nav mr-auto">
@@ -29,7 +29,7 @@
             </li>
         </ul>
     </div>
-</nav>
+</nav> -->
 <style>
 body {
   background: rgb(231,232,233); /* Old browsers */

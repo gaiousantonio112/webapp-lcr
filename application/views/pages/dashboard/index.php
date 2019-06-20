@@ -80,8 +80,9 @@
               </div>
             </div>
           </div>
-
-
+          <div class="container card col-10">
+        <canvas id="lineChart"></canvas>
+        </div>
 <div class="container p-2">
 <div class="d-flex flex-row">
 
@@ -94,4 +95,8 @@
 </div>
 </div>
 </div>
+
+
+
+
 <div class="p-5"></div>
