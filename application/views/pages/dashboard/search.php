@@ -249,8 +249,8 @@ html {
         </div>
         <div class="modal-body">
           <!-- <embed src="../../../../assets/pdf/rec.pdf#toolbar=0&zoom=70" type="application/pdf" width="100%" height="60%"> -->
-          <iframe width="100%" id="recieptframe" height="65%" src="#fucmke"></iframe>
-          <iframe width="100%" id="recieptframe" height="65%" src="/pages/dash/printreciept"></iframe>
+          <iframe width="100%" id="recieptframe" height="65%" src="#funk"></iframe>
+          <iframe width="100%" id="recieptframe_white" height="65%" src="#funk"></iframe>
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#done" >Print</button>
