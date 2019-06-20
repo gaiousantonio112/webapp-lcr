@@ -297,40 +297,78 @@
 
 //TABLEPRINT FUNCTION JANDEAN
 
-public function showprint()
-{
-  $draw = intval($this->input->get("draw"));
-  $start = intval($this->input->get("start"));
-  $length = intval($this->input->get("length"));
+    public function showprint()
+      {
+        $draw = intval($this->input->get("draw"));
+        $start = intval($this->input->get("start"));
+        $length = intval($this->input->get("length"));
 
-  $query = $this->db->query("SELECT * FROM lcr_history where cash_rep = 'not done'");
-  $date = date('Y-m-d');
-  $data = [];
-  foreach ($query->result() as $r) {
-    $data[] = array(
-      // 'id' => $r->id,
-      'ref_num' => $r->ref_num,
-      'or_num' => $r->or_num,
-      'name' => $r->name,
-      'encoder_name' => $r->cs_encoder,
-      'type' => $r->type,
-        'date' => $r->date_paid,
-      'page' => $r->page,
-        'no_copy' => $r->no_copy,
-        'btn' => $r->btn = '<button onclick="printPage(\''.$r->id.'\',\''.$r->ref_num.'\',\''.$r->or_num.'\',\''.$r->name.'\',\''.$r->cs_encoder.'\',\''.$r->type.'\',\''.$r->date_paid.'\',\''.$r->page.'\',\''.$r->no_copy.'\',\''.$r->print.'\')" type="button" class="btn btn-outline-primary btn-sm" "><i class="fas fa-search"></i>Print</button>'
-    );
-  }
-  $result = array(
-            "draw" => $draw,
-            "recordsTotal" => $query->num_rows(),
-            "recordsFiltered" => $query->num_rows(),
-            "data" => $data
-        );
+        $query = $this->db->query("SELECT * FROM lcr_history where cash_rep = 'not done'");
+        $date = date('Y-m-d');
+        $data = [];
+        foreach ($query->result() as $r) {
+          $data[] = array(
+            // 'id' => $r->id,
+            'ref_num' => $r->ref_num,
+            'or_num' => $r->or_num,
+            'name' => $r->name,
+            'encoder_name' => $r->cs_encoder,
+            'type' => $r->type,
+            'date' => $r->date_paid,
+            'page' => $r->page,
+            'no_copy' => $r->no_copy,
+            'btn' => $r->btn = '<button onclick="printPage(\''.$r->id.'\')" type="button" class="btn btn-outline-primary btn-sm" "><i class="fas fa-search"></i>Print</button>'
+          );
+        }
+        $result = array(
+                  "draw" => $draw,
+                  "recordsTotal" => $query->num_rows(),
+                  "recordsFiltered" => $query->num_rows(),
+                  "data" => $data
+              );
 
 
-  return $result;
+        return $result;
 
-}
+      }
+
+      public function getPrintHistory($id)
+      {
+        $qry = $this->db->select('*')->where(['id'=> $id])->get('lcr_history');
+
+        $data = array();
+        foreach ($qry->result() as $r) {
+          $data = array(
+            'id' => $r->id,
+            'ref_num' => $r->ref_num,
+            'or_num' => $r->or_num,
+            'req_name' => $r->req_name,
+            'name' => $r->name,
+            'type' => $r->type,
+            'date' => $r->date,
+            'page' => $r->page,
+            'no_copy' => $r->no_copy,
+            'verify_by' => $r->verify_by,
+            'dt_print' => $r->dt_print,
+            'date_paid' => $r->date_paid,
+            'st' => $r->st,
+            'remarks' => $r->remarks,
+            'print' => $r->print,
+            'cs_encoder' => $r->cs_encoder,
+            'printed_by' => $r->printed_by,
+            'or_amount' => $r->or_amount,
+            'wife_name' => $r->wife_name,
+            'time' => $r->time,
+            'cash_rep' => $r->cash_rep,
+            'rep_num' => $r->rep_num
+          );
+        }
+
+        return $data;
+
+      }
+
+    // END PRINT TABLE
 
 
   }

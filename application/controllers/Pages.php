@@ -48,9 +48,12 @@ class Pages extends CI_Controller {
     }
 
 
-    public function viewpdf()
+    public function viewpdf($id)
     {
-        $this->load->view('pages/dashboard/pdfmerge');
+
+        $data = $this->login->getPrintHistory($id);
+
+        $this->load->view('pages/dashboard/pdfmerge',$data);
     }
 
     public function viewreciepter()
@@ -64,6 +67,12 @@ class Pages extends CI_Controller {
 
         $this->load->view('pages/dashboard/printreciept');
 
+    }
+
+    public function logout()
+    {
+      $this->session->sess_destroy();
+      $this->login();
     }
 
 }
