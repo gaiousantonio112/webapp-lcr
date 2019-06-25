@@ -5,24 +5,30 @@ html {
 </style>
 
 <div class="container-fluid pt-4 px-5">
-<h3><b><i class="fas fa-search"></i> Search and Payment</h3>
+<h3 class="note note-primary"><b><i class="fas fa-search"></i> Search and Payment</h3>
 </b>
 </div>
 <div class="container d-flex" >
 	<div class="container-fluid pt-4">
-		<div class="form-check form-check-inline">
-			<input class="form-check-input" type="radio" name="lcr_type" value="birthday" onclick="show('searchbirth')" checked>
-			<label class="form-check-label" for="Birthday">Birthday</label>
-		</div>
-		<div class="form-check form-check-inline">
-			<input class="form-check-input" type="radio" name="lcr_type" value="death" onclick="show('searchdeath')">
-			<label class="form-check-label" for="Death">Death</label>
-		</div>
-		<div class="form-check form-check-inline">
-			<input class="form-check-input" type="radio" name="lcr_type" value="marriage"  onclick="show('searchmerage')">
-			<label class="form-check-label" for="Marriage">Marriage</label>
-		</div>
-	</div>
+
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" class="custom-control-input"id="Birthday" name="lcr_type" value="birthday" onclick="show('searchbirth')" checked >
+      <label class="custom-control-label" for="Birthday">Birthday</label>
+    </div>
+
+
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" class="custom-control-input" id="Death" name="lcr_type" value="death" onclick="show('searchdeath')">
+      <label class="custom-control-label" for="Death">Death</label>
+    </div>
+
+
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" class="custom-control-input" id="Marriage" name="lcr_type" value="marriage"  onclick="show('searchmerage')">
+      <label class="custom-control-label" for="Marriage">Marriage</label>
+    </div>    </div>
+
+
 <div class="container-fluid row">
     <div class="col-4 yearpick">
       <div class="md-form">
@@ -146,6 +152,26 @@ html {
 											<label for="payor">Payor</label>
 										</div>
 									</div>
+
+
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" class="custom-control-input" id="Default" name="printOption" id="default" onclick="show('default')" value="default" checked>
+  <label class="custom-control-label" for="Default">Default</label>
+</div>
+
+
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" class="custom-control-input" id="Specific" name="printOption" id="specific"  onclick="show('specific')" value="specific">
+  <label class="custom-control-label" for="Specific">Specific</label>
+</div>
+
+
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" class="custom-control-input" id="Range" name="printOption" id="range"  onclick="show('range')" value="range">
+  <label class="custom-control-label" for="Range">Range</label>
+</div>
+
+<!--
         					<div class="form-check form-check-inline">
         						<input class="form-check-input" type="radio" name="printOption" id="default" onclick="show('default')" value="default" checked>
         						<label class="form-check-label" for="default">Default</label>
@@ -157,7 +183,7 @@ html {
         					<div class="form-check form-check-inline">
         						<input class="form-check-input" type="radio" name="printOption" id="range"  onclick="show('range')" value="range">
         						<label class="form-check-label" for="range">Range</label>
-        					</div>
+        					</div> -->
       						<div class="col">
       							<div class="md-form">
       								<input type="text" id="pageno" value = "1-2" name="reciept[pageno]" class="form-control" disabled>
@@ -224,8 +250,7 @@ html {
 					</button>
 				</div>
 				<div class="modal-body">
-
-          <embed src="../../../../assets/pdf/pdftron-sdk.pdf#toolbar=0&zoom=50" type="application/pdf" width="100%" height="60%">
+<embed  id="viewpdf" src="../../../../assets/pdf/pdftron-sdk.pdf#toolbar=0&zoom=50"  type="application/pdf" width="100%" height="60%">
 
 				</div>
 				<div class="modal-footer">
@@ -254,17 +279,17 @@ html {
         <div class="modal-body">
           <!-- <embed src="../../../../assets/pdf/rec.pdf#toolbar=0&zoom=70" type="application/pdf" width="100%" height="60%"> -->
           <iframe width="100%" id="recieptframe" height="65%" src="#funk"></iframe>
-
+          <iframe width="100%" id="recieptframe_white" height="65%" src="#funk" hidden></iframe>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#done" href="" >Print</button>
+            <button type="button" class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#done"   >Print</button>
           <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+
 
         </div>
       </div>
     </div>
   </div>
-
 
 
 
@@ -284,8 +309,8 @@ html {
         </div>
         <div class="modal-body">
           <!-- <embed src="../../../../assets/pdf/rec.pdf#toolbar=0&zoom=70" type="application/pdf" width="100%" height="60%"> -->
-      <iframe width="100%" id="recieptframe_white" height="65%" src="#funk" hidden></iframe>
-  Done Printing?
+
+            Done Printing?
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal" >Yes</button>

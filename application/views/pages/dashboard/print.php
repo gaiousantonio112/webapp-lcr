@@ -1,12 +1,12 @@
 
 <div class="container-fluid pt-4 px-5">
-<h3><b><i class="fas fa-print"></i> Print</h3>
+<h3 class="note note-primary"><b><i class="fas fa-print"></i> Print</h3>
 </b>
 </div>
 
 <div class="container pt-4">
 
-  <table id="printable" class="table table-sm table-striped table-bordered" cellspacing="0" width="100%">
+  <table id="printable" class="table table-responsive table-sm table-striped table-bordered" cellspacing="0" width="100%">
   <thead>
     <tr>
       <!-- <th class="th-sm">id

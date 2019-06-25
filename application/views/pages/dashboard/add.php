@@ -1,6 +1,6 @@
 
 <div class="container-fluid pt-4 px-5">
-<h3><b><i class="fas fa-user-plus"></i> Add</h3>
+<h3 class="note note-primary"><b><i class="fas fa-user-plus"></i> Add</h3>
 </b>
 </div>
 
@@ -11,20 +11,24 @@
 	  <div class="card-header bg-primary"></div>
 	  <div class="card-body">
 		<div class="container-fluid p-4">
-			<div class="form-check form-check-inline">
-				<input class="form-check-input" type="radio" name="radioselect" id="Birthday" value="Birth" onclick="show('birth');" checked>
-				<label class="form-check-label" for="Birthday">Birthday</label>
-			</div>
-			<div class="form-check form-check-inline">
-				<input class="form-check-input" type="radio" name="radioselect" id="Death" value="Death" onclick="show('death');">
-				<label class="form-check-label" for="Death">Death</label>
-			</div>
-			<div class="form-check form-check-inline">
-				<input class="form-check-input" type="radio" name="radioselect" id="Marriage" value="Marriage" onclick="show('merage');">
-				<label class="form-check-label" for="Marriage">Marriage</label>
-			</div>
 
-			</div>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" class="custom-control-input" name="radioselect" id="Birthday" value="Birth" onclick="show('birth');" checked>
+  <label class="custom-control-label" for="Birthday">Birthday</label>
+</div>
+
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" class="custom-control-input" name="radioselect" id="Death" value="Death" onclick="show('death');">
+  <label class="custom-control-label" for="Death">Death</label>
+</div>
+
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" class="custom-control-input" name="radioselect" id="Marriage" value="Marriage" onclick="show('merage');">
+  <label class="custom-control-label" for="Marriage">Marriage</label>
+</div>
+
+
+
 
 <div class="container">
 

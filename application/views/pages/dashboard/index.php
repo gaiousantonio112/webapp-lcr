@@ -1,9 +1,11 @@
 <div class="container-fluid pt-4 px-5">
-<h3><b><i class="fas fa-columns"></i> Dashboard</h3>
+<h3 class="note note-primary"><b><i class="fas fa-columns"></i> Dashboard</h3>
 </b>
 </div>
 
+
 <div class="container  p-3">
+
 <div class="row">
     <div class="col-xl-3 col-md-6 mb-4">
       <div class="card  py-2">
