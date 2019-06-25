@@ -287,6 +287,28 @@ $(document).ready(function(){
 
   // PRINT END
 
+  $('#previewBtn').click(function(){
+    // console.log('clicked');
+    // console.log($('#refno').val());
+    $.ajax({
+      url : global.settings.url + '/Lcr_works/viewCerificate',
+      type : 'POST',
+      data : {
+          'what[refno]' : $('#refno').val(),
+          'what[categogry]' : $('input[name="lcr_type"]:checked').val()
+        },
+      dataType : 'text',
+      success : function(res){
+        $('#viewpdf').attr('src',global.settings.url+'/pages/viewCerts/'+res);
+      },
+      error : function(){
+
+      }
+    });
+
+
+  });
+
 });
 
 // FOR PRINT onclick https://www.youtube.com/watch?v=ku5FEPgZY-E
@@ -317,6 +339,8 @@ function printPage(f_id,ref_num,or_no,name_cus,name_encoder,type,paid,page,copy,
       }
 
     });
+
+
 }
 
 // END
@@ -336,6 +360,8 @@ function view(id,refno,full_name,current_date,name_wife) {
   $('#name2').val(name_wife);
 
 }
+
+
 
 
 

@@ -87,6 +87,14 @@ class Lcr_works extends CI_Controller {
       echo json_encode($this->works->showprint());
     }
 
+    public function viewCerificate()
+    {
+      $ref = $this->input->post('what');
+
+      //echo base_url()."pages/dashboard/viewCert/?ref=".$ref['refno']."&type=".$ref['categogry']."#toolbar=0&zoom=60%";
+      echo "?ref=".$ref['refno']."&type=".$ref['categogry']."#toolbar=0&zoom=60%";
+    }
+
 
 }
  ?>

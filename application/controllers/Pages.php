@@ -64,9 +64,13 @@ class Pages extends CI_Controller {
     }
     public function printreciept()
     {
-
         $this->load->view('pages/dashboard/printreciept');
+    }
 
+    public function viewCerts()
+    {
+
+        $this->load->view('pages/dashboard/viewCert');
     }
 
     public function logout()

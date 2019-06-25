@@ -113,7 +113,7 @@ html {
 	</div>	</div>
 
 		<div class=" col-3 text-center p-4">
-			<button class="btn btn-lg btn-outline-default m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2" data-toggle="modal" data-target="#viewdocu"><i class="fas fa-search"></i> preview</button>
+			<button id="previewBtn" class="btn btn-lg btn-outline-default m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2" data-toggle="modal" data-target="#viewdocu"><i class="fas fa-search"></i> Preview</button>
 		</div>
 	</div>
 </div>
@@ -250,8 +250,7 @@ html {
 					</button>
 				</div>
 				<div class="modal-body">
-<embed  id="viewpdf" src="../../../../assets/pdf/pdftron-sdk.pdf#toolbar=0&zoom=50"  type="application/pdf" width="100%" height="60%">
-
+          <iframe width="100%" id="viewpdf" height="65%" src="#funk"></iframe>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
