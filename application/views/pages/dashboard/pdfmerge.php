@@ -8,7 +8,7 @@ $date = date('Y-m-d');
 
 $pdf = new TCPDI(PDF_PAGE_ORIENTATION, 'mm', PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
-$pdf->setSourceFile(APPPATH.'/..//assets/pdf/1.pdf');
+$pdf->setSourceFile('\\\\192.168.100.164\\lcr\\'.$type.'\\'.$ref_num.'.pdf');
   // f_id
   // ref_num
   // or_no
