@@ -5,7 +5,7 @@ html {
 </style>
 
 <div class="container-fluid pt-4 px-5">
-<h3 class="note note-primary"><b><i class="fas fa-search"></i> Search and Payment</h3>
+<h3 class="text-right"><b><i class="fas fa-search"></i> Search and Payment</h3>
 </b>
 </div>
 <div class="container d-flex" >
@@ -219,6 +219,15 @@ html {
         							<input type="number" id="changed" name="reciept[changed]" class="form-control" disabled value="0">
         							<label for="changed">Changed</label>
         						</div>
+                  </div>
+                        </div>        </div>        </div>        </div>        </div>
+                  <div class="container col-12">
+                    <div class="md-form">
+                      <input type="text" id="remark" name="reciept[remark]" class="form-control" >
+                      <label for="remark">Remarks</label>
+                    </div>
+                  </div>
+
         						<div class="text-center">
           						<button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="submit" id="button-addon2" data-toggle="modal" data-target="#reciept" >Submit</button>
           						<button class="btn btn-lg btn-outline-warning m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon">Clear All</button>
@@ -244,7 +253,7 @@ html {
 
 			<div class="modal-content">
 				<div class="modal-header">
-					<h4 class="modal-title w-100" id="myModalLabel">PDF</h4>
+					<h4 class="modal-title w-100" id="myModalLabel">Live View</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
