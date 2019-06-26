@@ -1,5 +1,10 @@
-<div class="container-fluid pt-4 px-5">
-<h3 class="note note-primary"><b><i class="fas fa-columns"></i> Dashboard</h3>
+<div class="container-fluid  pt-4 px-5">
+<div class="container  text-right">
+
+
+<h3 ><b><i class="fas fa-columns"></i> Dashboard</h3>
+</div>
+
 </b>
 </div>
 

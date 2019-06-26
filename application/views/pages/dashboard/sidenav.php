@@ -9,6 +9,36 @@
 <link rel="stylesheet" href="../../../../assets/MBD/css/addons/datatables-select.min.css">
 <link rel="stylesheet" href="../../../../assets/datepicker/calendar/lib/bootstrap-datepicker.css">
 <link rel="stylesheet" href="../../../../assets/datepicker/calendar/lib/daterangepicker.css">
+
+<style media="screen">
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+									   color-stop(0.44, rgb(122,153,217)),
+									   color-stop(0.72, rgb(73,125,189)),
+									   color-stop(0.86, rgb(28,58,148)));
+}
+
+
+
+</style>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,6 +80,7 @@
 
       <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
         <button class="btn btn-flat " id="menu-toggle"><i class="fas fa-bars "></i></button>
+        <h4 class="pt-2">ELECTRONIC CIVIL REGISTRY INFORMATION SYSTEM</h4>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
