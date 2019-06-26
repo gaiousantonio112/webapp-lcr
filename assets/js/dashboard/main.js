@@ -4,7 +4,7 @@ var defaultAmnt = 50;
 $(document).ready(function(){
     // userid
     console.log(userid);
-
+      $('#type_receipt').val($('input[name="lcr_type"]:checked').val());
     getUserCredentials();
 // SEARCH PAGE
     // primary table loader
@@ -34,6 +34,8 @@ $(document).ready(function(){
     $('.dataTables_length').addClass('bs-select');
 
     $('input[name="lcr_type"]').change(function(){
+
+      $('#type_receipt').val($('input[name="lcr_type"]:checked').val());
       switch ($(this).val()) {
         case 'birthday' :
           $('#name_husband').html('Name');
@@ -185,6 +187,63 @@ $(document).ready(function(){
           $('#recieptframe').attr('src',xhr.responseText);
         }
       });
+
+      $.ajax({
+        url : global.settings.url + '/Lcr_works/getRequested_data',
+        type : 'POST',
+        data : {
+          'data_what[table]' : $('#data_id').val() ,
+          'data_what[id]' : $('#type_receipt').val() ,
+        }
+      });
+
+      $('input[name=reciept[print_type]]:checked').val();
+      ;
+      ;
+      $('#totalpay').val();
+      $('#cashten').val();
+      $('#totalam').val();
+      $('#changed').val();
+
+      $('#table_id').val();
+      $('#table_type').val();
+      $('#ref_num').val();
+      $('#or_num').val($('#orno').val());
+      $('#req_name').val($('#payor').val());
+      $('#name').val(); //get thru ajax
+      $('#type').val();
+      $('#date').val();
+      $('#page').val($('#pageno').val());
+      $('#no_copy').val($('#nocopy').val());
+      $('#verify_by').val($('#cs_encoder').val());
+      // $('#dt_print').val(); Curent date
+      $('#date_paid').val();
+      $('#st').val();
+      $('#remarks').val();
+      $('#print').val();
+      $('#cs_encoder').val();
+      $('#printed_by').val();
+      $('#or_amount').val($('#totalam').val());
+      $('#wife_name').val();
+      // $('#time').val(); current time
+      $('#cash_rep').val(); //insert to new table
+      $('#rep_num').val(); //insert to new table
+
+
+      // Save addHistory
+      // $.ajax({
+      //   url : global.settings.url + '/Lcr_works/addHistory',
+      //   type : 'POST',
+      //   data : $(this).serialize(),
+      //   dataType : 'json',
+      //   success : function(res){
+      //     console.log(res);
+      //   },
+      //   error: function(xhr){
+      //     console.log('error in adding history ' + xhr.responseText);
+      //   }
+      // });
+
 
     });
 
@@ -358,7 +417,7 @@ function view(id,refno,full_name,current_date,name_wife) {
   $('#name').val(full_name);
   $('#date').val(current_date);
   $('#name2').val(name_wife);
-
+  $('#data_id').val(id);
 }
 
 
@@ -377,6 +436,7 @@ function getUserCredentials() {
       console.table(res[0]);
       full_name = jsUcfirst(res[0].firstname) + ' ' + jsUcfirst(res[0].middlename) + ' ' + jsUcfirst(res[0].lastname);
       $('.bday_encoder').val(full_name);
+      $('#cs_encoder').val(full_name);
     },
     error: function(){
 

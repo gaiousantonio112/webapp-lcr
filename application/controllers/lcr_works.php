@@ -95,6 +95,20 @@ class Lcr_works extends CI_Controller {
       echo "?ref=".$ref['refno']."&type=".$ref['categogry']."#toolbar=0&zoom=60%";
     }
 
+    public function addHistory()
+    {
+      $inputData = $this->input->post('reciept');
+
+      echo json_encode($this->works->addHistory($inputData));
+      // echo $this->works->addHistory($inputData);
+    }
+
+    public function getRequested_data()
+    {
+      $inputData = $this->input->post('data_what');
+
+      echo json_encode($this->works->getRequested_data($inputData));
+    }
 
 }
  ?>

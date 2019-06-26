@@ -371,5 +371,24 @@
     // END PRINT TABLE
 
 
+    public function getRequested_data($what)
+    {
+      $tropa = array();
+      $tagay = $this->db->query("SELECT * FROM ".$what['table']." WHERE id = ".$what['id']);
+
+      foreach ($tagay->result() as $f) {
+        array_push($tropa,$f);
+      }
+
+      return $tropa;
+    }
+
+    public function addHistory($inputData)
+    {
+      return false;
+
+    }
+
+
   }
  ?>

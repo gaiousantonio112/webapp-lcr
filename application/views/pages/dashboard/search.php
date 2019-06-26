@@ -93,21 +93,21 @@ html {
 	<div class="row">
 		<div class="col-3">
 			<div class="md-form">
-				<input type="text" id="refno" class="form-control" value="---" disabled>
+				<input type="text" id="refno" class="form-control" value="---" readonly>
 				<label for="refno">Reference No</label>
 			</div>
 		</div>
 
 		<div class="col-4" >
 			<div class="md-form" >
-				<input type="text" id="name" class="form-control" value="---" disabled>
+				<input type="text" id="name" class="form-control" value="---" readonly>
 				<label id="name_husband" for="name">Name</label>
 			</div>
 		</div>
 		<div class="col-2">
 			<div class="dates">
 				<div class="md-form">
-				<input type="date" id="date" class="form-control" disabled>
+				<input type="date" id="date" class="form-control" readonly>
 					<label for="usr1">Date</label>
 			</div>
 	</div>	</div>
@@ -129,7 +129,7 @@ html {
         </div>
        <div class="col-4">
           <div class="md-form" >
-            <input type="text" id="name2" class="form-control" value="---" disabled>
+            <input type="text" id="name2" class="form-control" value="---" readonly>
             <label id="name_wife" for="name2">Name2</label>
           </div>
         </div>
@@ -142,6 +142,9 @@ html {
 				<div class="col-6">
 									<div class="">
 										<div class="md-form">
+                      <input type="hidden" name="reciept[data_id]" id="data_id">
+                      <input type="hidden" name="reciept[type]" id="type_receipt">
+                      <input type="hidden" name="reciept[cs_encoder]" id="cs_encoder">
 											<input type="number" id="orno" name="reciept[orno]" class="form-control">
 											<label for="orno">OR No.</label>
 										</div>
@@ -154,22 +157,22 @@ html {
 									</div>
 
 
-<div class="custom-control custom-radio custom-control-inline">
-  <input type="radio" class="custom-control-input" id="Default" name="printOption" id="default" onclick="show('default')" value="default" checked>
-  <label class="custom-control-label" for="Default">Default</label>
-</div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" class="custom-control-input" id="Default" name="reciept[print_type]" id="default" onclick="show('default')" value="default" checked>
+                    <label class="custom-control-label" for="Default">Default</label>
+                  </div>
 
 
-<div class="custom-control custom-radio custom-control-inline">
-  <input type="radio" class="custom-control-input" id="Specific" name="printOption" id="specific"  onclick="show('specific')" value="specific">
-  <label class="custom-control-label" for="Specific">Specific</label>
-</div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" class="custom-control-input" id="Specific" name="reciept[print_type]" id="specific"  onclick="show('specific')" value="specific">
+                    <label class="custom-control-label" for="Specific">Specific</label>
+                  </div>
 
 
-<div class="custom-control custom-radio custom-control-inline">
-  <input type="radio" class="custom-control-input" id="Range" name="printOption" id="range"  onclick="show('range')" value="range">
-  <label class="custom-control-label" for="Range">Range</label>
-</div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" class="custom-control-input" id="Range" name="reciept[print_type]" id="range"  onclick="show('range')" value="range">
+                    <label class="custom-control-label" for="Range">Range</label>
+                  </div>
 
 <!--
         					<div class="form-check form-check-inline">
@@ -186,7 +189,7 @@ html {
         					</div> -->
       						<div class="col">
       							<div class="md-form">
-      								<input type="text" id="pageno" value = "1-2" name="reciept[pageno]" class="form-control" disabled>
+      								<input type="text" id="pageno" value = "1-2" name="reciept[pageno]" class="form-control" readonly>
       								<label for="pageno">Page No.</label>
       							</div>
       						</div>
@@ -201,7 +204,7 @@ html {
         	<div class="col-6 pb-5">
         		<div class="">
         			<div class="md-form">
-        				<input type="number" id="totalpay" name="reciept[totalpay]" class="form-control" disabled value="50">
+        				<input type="number" id="totalpay" name="reciept[totalpay]" class="form-control" readonly value="50">
         				<label for="totalpay">TOTAL PAYMENT.</label>
         			</div>
         			<div class="">
@@ -211,17 +214,17 @@ html {
         				</div>
         				<div class="">
         					<div class="md-form">
-        						<input type="number" id="totalam" name="reciept[totalam]" class="form-control" disabled value="0">
+        						<input type="number" id="totalam" name="reciept[totalam]" class="form-control" readonly value="0">
         						<label for="totalam">Total Amount Recieved</label>
         					</div>
         					<div class="">
         						<div class="md-form">
-        							<input type="number" id="changed" name="reciept[changed]" class="form-control" disabled value="0">
+        							<input type="number" id="changed" name="reciept[changed]" class="form-control" readonly value="0">
         							<label for="changed">Changed</label>
         						</div>
         						<div class="text-center">
           						<button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="submit" id="button-addon2" data-toggle="modal" data-target="#reciept" >Submit</button>
-          						<button class="btn btn-lg btn-outline-warning m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon">Clear All</button>
+          						<button class="btn btn-lg btn-outline-warning m-0 px-3 py-2 z-depth-0 waves-effect" type="reset" id="button-addon">Clear All</button>
                     </div>
                   </div>
         			</div>
@@ -312,9 +315,35 @@ html {
             Done Printing?
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal" >Yes</button>
-          <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">No</button>
+          <form id="addHistoryForm">
+            <input type="hidden" name="history[table_id]" value="">
+            <input type="hidden" name="history[table_type]" value="">
+            <!-- For Birthday, Marriage, Death -->
 
+            <input type="hidden" name="history[ref_num]" value="">
+            <input type="hidden" name="history[or_num]" value="">
+            <input type="hidden" name="history[req_name]" value="">
+            <input type="hidden" name="history[name]" value="">
+            <input type="hidden" name="history[type]" value="">
+            <input type="hidden" name="history[date]" value="">
+            <input type="hidden" name="history[page]" value="">
+            <input type="hidden" name="history[no_copy]" value="">
+            <input type="hidden" name="history[verify_by]" value="">
+            <input type="hidden" name="history[dt_print]" value="">
+            <input type="hidden" name="history[date_paid]" value="">
+            <input type="hidden" name="history[st]" value="">
+            <input type="hidden" name="history[remarks]" value="">
+            <input type="hidden" name="history[print]" value="">
+            <input type="hidden" name="history[cs_encoder]" value="">
+            <input type="hidden" name="history[printed_by]" value="">
+            <input type="hidden" name="history[or_amount]" value="">
+            <input type="hidden" name="history[wife_name]" value="">
+            <input type="hidden" name="history[time]" value="">
+            <input type="hidden" name="history[cash_rep]" value="">
+            <input type="hidden" name="history[rep_num]" value="">
+            <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal" >Yes</button>
+            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">No</button>
+          </form>
         </div>
       </div>
     </div>
