@@ -1,6 +1,7 @@
 
 <div class="container-fluid pt-4 px-5">
-<h3 class="text-right"><b><i class="fas fa-print"></i> Print</h3>
+    	<div class=" container text-right">
+<h3 class="font-weight-bold"><b><img src="<?php echo base_url() .'/assets/svg/Print (ecris).svg' ?>" height="55px" alt=""> Print</h3>
 </b>
 </div>
 

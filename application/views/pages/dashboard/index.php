@@ -2,14 +2,11 @@
 <div class="container  text-right">
 
 
-<h3 ><b><i class="fas fa-columns"></i> Dashboard</h3>
+<h3 class="font-weight-bold"><b><img src="<?php echo base_url() .'/assets/svg/dashboard(ecris).svg' ?>" height="45px" alt=""> Dashboard</h3>
 </div>
 
 </b>
 </div>
-<button type="button" class="btn btn-secondary" onclick="notif()">
-  Toast
-</button>
 
 <div class="container  p-3">
 
@@ -23,7 +20,7 @@
               <div class="h5 mb-0 font-weight-bold text-gray-800" id="service_provided" >Loading...</div>
             </div>
             <div class="col-auto">
-              <i class="fas fa-calendar fa-2x text-light"></i>
+            <img src="<?php echo base_url() .'/assets/svg/service provided(ecris).svg' ?>" height="35px" alt="">
             </div>
           </div>
         </div>
@@ -40,7 +37,7 @@
               <div class="h5 mb-0 font-weight-bold text-gray-800" id="total_earnings" >Loading...</div>
             </div>
             <div class="col-auto pt-2">
-              <i class="fas fa-dollar-sign fa-2x text-light"></i>
+  <img src="<?php echo base_url() .'/assets/svg/earnings (ecris).svg' ?>" height="35px" alt="">
             </div>
           </div>
         </div>
@@ -66,7 +63,7 @@
               </div>
             </div>
             <div class="col-auto">
-              <i class="fas fa-clipboard-list fa-2x text-light py"></i>
+              <img src="<?php echo base_url() .'/assets/svg/task(ecris).svg' ?>" height="35px" alt="">
             </div>
           </div>
         </div>
@@ -82,7 +79,7 @@
                       <div class="h5 mb-0 font-weight-bold text-gray-800" id="pending_request" >Loading...</div>
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-comments fa-2x text-light"></i>
+                      <img src="<?php echo base_url() .'/assets/svg/pending request(ecris).svg' ?>" height="35px" alt="">
                     </div>
                   </div>
                 </div>

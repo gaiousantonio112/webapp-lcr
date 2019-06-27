@@ -1,6 +1,9 @@
 
 <div class="container-fluid pt-4 px-5">
-<h3 class="text-right"><b><i class="fas fa-user-plus"></i> Add</h3>
+	<div class=" container text-right">
+		<h3 class="font-weight-bold"><b><img src="<?php echo base_url() .'/assets/svg/add (ecris).svg' ?>" height="65px" alt=""> Add</h3>
+
+	</div>
 </b>
 </div>
 
