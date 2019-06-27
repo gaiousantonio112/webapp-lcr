@@ -9,8 +9,8 @@
 <script src="<?php print(base_url());?>/assets/js/dashboard/jquery.bootstrap-growl.min.js" charset="utf-8"></script>
 <script type="text/javascript">
 function notif(){
-                    $.bootstrapGrowl("Nice One", {
-                        type: 'success',
+                    $.bootstrapGrowl("<div><i  class='fas fa-file-alt' > </i> Nice One</div>", {
+                        type: 'danger',
                         align: 'right',
                         width: 'auto',
                         allow_dismiss: true
