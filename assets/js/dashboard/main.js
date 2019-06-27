@@ -3,6 +3,8 @@ var full_name;
 var defaultAmnt = 50;
 $(document).ready(function(){
 
+    curr_time();
+
     // FOR THE MAIN DASHBOARDs
     $('#service_provided').html('Loading..');
     $('#total_earnings').html('Loading..');
@@ -481,6 +483,39 @@ $(document).ready(function(){
 
 });
 
+
+function curr_time() {
+  setInterval(function(){
+    var currentTime = new Date(),
+    hours = currentTime.getHours(),
+    minutes = currentTime.getMinutes();
+    secs = currentTime.getSeconds();
+
+    if (minutes < 10) {
+      minutes = "0" + minutes;
+    }
+
+    var suffix = "AM";
+    if (hours >= 12) {
+      suffix = "PM";
+      hours = hours - 12;
+    }
+    if (hours == 0) {
+      hours = 12;
+    }
+
+    var currentDate = new Date(),
+    day = currentDate.getDate(),
+    month = currentDate.getMonth() + 1,
+    year = currentDate.getFullYear();
+
+    $('#current_time').html(month + "/" + day + "/" + year + "  " + hours + ":" + minutes + ":" + secs +" " + suffix + " ");
+  },1000);
+
+
+}
+
+
 // FOR PRINT onclick https://www.youtube.com/watch?v=ku5FEPgZY-E
 function printPage(f_id,ref_num,or_no,name_cus,name_encoder,type,paid,page,copy,print) {
     $('#reciept_print_page').modal("show");
@@ -555,6 +590,7 @@ function getUserCredentials() {
       full_name = jsUcfirst(res[0].firstname) + ' ' + jsUcfirst(res[0].middlename) + ' ' + jsUcfirst(res[0].lastname);
       $('.bday_encoder').val(full_name);
       $('#cs_encoder').val(full_name);
+      $('#curr_name').html('Name : '+full_name);
     },
     error: function(){
 
