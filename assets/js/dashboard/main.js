@@ -160,7 +160,7 @@ $(document).ready(function(){
       }
     });
     // changed
-
+    var ornum_exist = false;
     $('#print_btn').click(function(){
 
       $.ajax({
@@ -221,6 +221,52 @@ $(document).ready(function(){
       });
 
 
+      $.ajax({
+        url : global.settings.url + '/Lcr_works/ORnum_exist',
+        type : 'POST',
+        data : {
+          'or_no' : $('#orno').val()
+        },
+        dataType: 'json',
+        success : function(res){
+            // ornum_exist = null;
+            ornum_exist = res.response;
+            console.log(res.response);
+            console.log(ornum_exist);
+        },
+        error : function(xhr){
+          console.log(xhr.responseText);
+        }
+      });
+
+    });
+
+    $('#addHistoryForm').submit(function(e){
+      e.preventDefault();
+      if(ornum_exist){
+        $.ajax({
+          url : global.settings.url + '/Lcr_works/addHistory',
+          type : 'POST',
+          data : $(this).serialize(),
+          dataType : 'json',
+          success : function (res) {
+            console.log(res);
+            alert('Transaction Success Please proceed to the printing page to ');
+            $('#done').modal("hide");
+            $('#reciept').modal("hide");
+            $('#addHistoryForm')[0].reset();
+            $('#printReciept')[0].reset();
+          },
+          error : function(xhr){
+            console.log('Error in addHistoryForm '+xhr.responseText);
+          }
+        });
+      }else{
+        alert('OR number Already Exist Please Check your OR number');
+        $('#or_num').val('');
+        $('#done').modal("hide");
+        $('#reciept').modal("hide");
+      }
     });
 
     $('#printReciept').submit(function(e){
@@ -387,14 +433,28 @@ $(document).ready(function(){
 
   });
 
-  $('#addHistoryForm').submit(function(e){
+
+
+
+  $('#update_print').submit(function(e){
     e.preventDefault();
-    console.log('clicke');
-    console.table($(this).serializeArray());
-     // $.ajax({
-     //
-     // });
+
+    $.ajax({
+      url : global.settings.url + '/Lcr_works/updateHistory',
+      type : 'POST',
+      data : $(this).serialize(),
+      success : function(res){
+        console.log(res);
+        alert('You can go home its done yor done.');
+
+      $('#reciept_print_page').modal("hide");
+      },
+      error : function(xhr){
+        console.log('Error in udpate print form ' + xhr.responseText);
+      }
+    });
   });
+
 
 
 
@@ -402,7 +462,10 @@ $(document).ready(function(){
 
 // FOR PRINT onclick https://www.youtube.com/watch?v=ku5FEPgZY-E
 function printPage(f_id,ref_num,or_no,name_cus,name_encoder,type,paid,page,copy,print) {
-    $('#reciept').modal("show");
+    $('#reciept_print_page').modal("show");
+
+
+    $('#lcr_history_iid').val(f_id);
     $.ajax({
       url : global.settings.url + '/Lcr_works/printPage',
       type : 'POST',
