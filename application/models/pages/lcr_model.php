@@ -403,7 +403,7 @@
 
       $date = date('Y-m-d h:i:s a', time());
       $data_add_history = array(
-        'id' => $inputData['id'],
+        // 'id' => $inputData['id'],
         'ref_num' => $inputData['ref_num'],
         'or_num' => $inputData['or_num'],
         'req_name' => $inputData['req_name'],
@@ -422,7 +422,8 @@
         'printed_by' => $inputData['printed_by'],
         'or_amount' => $inputData['or_amount'],
         'wife_name' => $inputData['wife_name'],
-        'time' => date('h:i:s a', time())
+        'time' => date('h:i:s a', time()),
+        'cash_rep' => 'not done'
       );
 
       // $this->db->trans_start();
@@ -439,6 +440,35 @@
       // $this->db->trans_complete();
       // $last_id =  $this->db->insert_id();
       return $addhist;
+    }
+
+    public function ORnum_exist($or_num)
+    {
+      $qry = $this->db->select('count(or_num) as counts')->where([
+        'or_num' => $or_num,
+      ])->get('lcr_history');
+
+
+      return ($qry->row(0)->counts == 0) ? array('response' => true) : array('response' => false);
+
+    }
+
+
+    public function updateHistory($inputData)
+    {
+
+      $date = date('Y-m-d h:i:s a', time());
+
+      $data = array(
+        'st' => $inputData['st'],
+        'dt_print' => $date,
+        'cash_rep' => 'done'
+      );
+
+      $this->db->where('id',$inputData['id']);
+      $qry = $this->db->update('lcr_history', $data);
+
+      return $qry;
     }
 
 

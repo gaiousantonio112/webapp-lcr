@@ -100,7 +100,6 @@ class Lcr_works extends CI_Controller {
       $inputData = $this->input->post('history');
 
       echo json_encode($this->works->addHistory($inputData));
-      // echo $this->works->addHistory($inputData);
     }
 
     public function getRequested_data()
@@ -108,6 +107,20 @@ class Lcr_works extends CI_Controller {
       $inputData = $this->input->post('data_what');
 
       echo json_encode($this->works->getRequested_data($inputData));
+    }
+
+    public function ORnum_exist()
+    {
+      $or_num = $this->input->post('or_no');
+
+      echo json_encode($this->works->ORnum_exist($or_num));
+    }
+
+    public function updateHistory()
+    {
+      $inputData = $this->input->post('update');
+
+      echo json_encode($this->works->updateHistory($inputData));
     }
 
 }

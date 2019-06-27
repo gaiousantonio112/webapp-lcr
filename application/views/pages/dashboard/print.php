@@ -72,7 +72,7 @@
 
 
 
-<div class="modal fade" id="reciept" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+<div class="modal fade" id="reciept_print_page" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
   <div class="modal-dialog modal-sm" role="document">
 
@@ -91,9 +91,14 @@
 Done Printing?
       </div>
       <div class="modal-footer">
-          <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">Yes</button>
-        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">No</button>
 
+
+        <form id="update_print">
+          <input type="hidden" name="update[id]" id="lcr_history_iid" value="">
+          <input type="hidden" name="update[st]" value="done">
+            <button type="submit" class="btn btn-primary btn-sm">Yes</button>
+          <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">No</button>
+        </form>
       </div>
     </div>
   </div>
