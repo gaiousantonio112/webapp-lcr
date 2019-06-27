@@ -67,8 +67,13 @@ $(document).ready(function() {
 
   $('#birthdeath').hide();
    $('#birth').show();
+	    $('#birthdaymodal').show();
+			$('#deathmodal').hide();
+			$('#marriagemodal').hide();
+
         $('#death').hide();
              $('#merage').hide();
+
 });
 function show(page){
    $('#'+page).show();
@@ -92,14 +97,25 @@ $('#birth').hide();
 if(page == 'searchbirth'){
 
   $('#birthdeath').hide();
+	   $('#birthdaymodal').show();
+		 	   $('#deathmodal').hide();
+	 	   $('#marriagemodal').hide();
 }
 if(page == 'searchdeath'){
 
   $('#birthdeath').hide();
+	   $('#birthdaymodal').hide();
+		 	   $('#deathmodal').show();
+				  	   $('#marriagemodal').hide();
+
 }
 if(page == 'searchmerage'){
 
   $('#birthdeath').show();
+		   $('#birthdaymodal').hide();
+			 		 	   $('#deathmodal').hide();
+			 	   $('#marriagemodal').show();
+
 }
 if(page == 'default'){
 document.getElementById('pageno').value='1-2' ;

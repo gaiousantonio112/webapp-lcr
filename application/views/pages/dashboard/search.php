@@ -347,3 +347,250 @@ html {
       </form>
     </div>
   </div>
+
+
+
+
+
+
+
+
+  <!-- Central Modal Small -->
+<div class="modal fade" id="update" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+
+  <!-- Change class .modal-sm to change the size of the modal -->
+  <div class="modal-dialog modal-lg" role="document">
+
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title w-100" id="myModalLabel">Update</h4>
+
+      </div>
+      <div class="modal-body">
+
+
+
+
+<div id="birthdaymodal">
+  <form id="updateBirthForm">
+
+  		<div class="container">
+  			<div class="md-form">
+  				<input type="number" name="updatebday[refno]" id="form1" class="form-control ">
+  				<label for="form1">REFERENCE NUMBER</label>
+  			</div>
+  		</div>
+  		<div class="container">
+  			<div class="row">
+  				<div class="col-sm">
+  					<div class="md-form ">
+  						<input type="text" name="updatebday[first_name]" id="form2" class="form-control">
+  						<label for="form2">First Name</label>
+  					</div>
+  				</div>
+  				<div class="col-sm">
+  					<div class="md-form ">
+  						<input type="text" name="updatebday[middle_name]" id="form3" class="form-control">
+  						<label for="form3">Middle Name</label>
+  					</div>
+  				</div>
+  				<div class="col-sm">
+  					<div class="md-form ">
+  						<input type="text" name="updatebday[last_name]" id="Last" class="form-control">
+  						<label for="Last">Last Name</label>
+  					</div>
+  				</div>
+  				<div class="col-2">
+  					<div class="md-form ">
+  						<input type="number" name="updatebday[annex]" id="Annex" class="form-control">
+  						<label for="Annex">Annex</label>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  		<input type="hidden" name="updatebday[encoder]" class="bday_encoder">
+  		<div class="container">
+  			<div class="">
+  				<div class="dates">
+  					<div class="md-form">
+  					<input type="date" name="updatebday[bday_date]" id="usr1" class="form-control">
+  						<label >Date of Birth</label>
+  				</div>
+  		</div>
+
+
+
+  		</div>
+  	</div>
+    <div class="modal-footer">
+
+        <button type="button" class="btn btn-primary btn-sm">Save changes</button>
+            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+      </div>
+  </form>
+    </div>
+
+
+
+
+
+
+<div id="deathmodal">
+
+  <!-- DEATH -->
+  <form id="updateDeathForm">
+
+  		<div class="container">
+  			<div class="md-form">
+  				<input type="number" name="updatedeath[refno]" id="form1" class="form-control">
+  				<label for="form1">REFERENCE NUMBER</label>
+  			</div>
+  		</div>
+  		<div class="container">
+  			<div class="row">
+  				<div class="col-sm">
+  					<div class="md-form ">
+  						<input type="text" name="updatedeath[first_name]" id="form2" class="form-control">
+  						<label for="form2">First Name</label>
+  					</div>
+  				</div>
+  				<div class="col-sm">
+  					<div class="md-form ">
+  						<input type="text" name="updatedeath[middle_name]" id="form3" class="form-control">
+  						<label for="form3">Middle Name</label>
+  					</div>
+  				</div>
+  				<div class="col-sm">
+  					<div class="md-form ">
+  						<input type="text" name="updatedeath[last_name]" id="Last" class="form-control">
+  						<label for="Last">Last Name</label>
+  					</div>
+  				</div>
+  				<div class="col-2">
+  					<div class="md-form ">
+  						<input type="number" name="updatedeath[annex]" id="Annex" class="form-control">
+  						<label for="Annex">Annex</label>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  		<input type="hidden" name="updatedeath[encoder]" class="bday_encoder">
+  		<div class="container">
+  			<div class="">
+  				<div class="dates">
+  					<div class="md-form">
+  					<input type="date" name="updatedeath[death_date]" id="usr1" class="form-control">
+  						<label >Date of Death</label>
+  				</div>
+  		</div>
+
+  			</div>
+
+
+  		</div>
+      <div class="modal-footer">
+
+        <button type="button" class="btn btn-primary btn-sm">Save changes</button>
+          <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+      </div>
+      </form>
+  	</div>
+
+	
+
+
+
+<div id="marriagemodal">
+
+
+  <form id="updateMarrForm">
+
+  		<div class="container">
+  			<div class="md-form">
+  				<input type="number" name="updatemarr[refno]" id="form1" class="form-control">
+  				<label for="form1">REFERENCE NUMBER</label>
+  			</div>
+  		</div>
+  		<div class="container">
+  			<div class="row">
+  				<div class="col-sm">
+  					<div class="md-form ">
+  						<input type="text" name="updatemarr[First_name_h]" id="form2" class="form-control">
+  						<label for="form2">Firstname of Husband</label>
+  					</div>
+  				</div>
+  				<div class="col-sm">
+  					<div class="md-form ">
+  						<input type="text" name="updatemarr[Middle_name_h]" id="form3" class="form-control">
+  						<label for="form3">Middle Name</label>
+  					</div>
+  				</div>
+  				<div class="col-sm">
+  					<div class="md-form ">
+  						<input type="text" name="updatemarr[Last_name_h]" id="Last" class="form-control">
+  						<label for="Last">Last Name</label>
+  					</div>
+  				</div>
+  				<div class="col-2">
+  					<div class="md-form ">
+  						<input type="number" name="updatemarr[annexh]" id="Annex" class="form-control">
+  						<label for="Annex">Annex</label>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  		<div class="container">
+  			<div class="row">
+  				<div class="col-sm">
+  					<div class="md-form ">
+  						<input type="text" name="updatemarr[First_name_w]" id="form2" class="form-control">
+  						<label for="form2">Firstname of Wife</label>
+  					</div>
+  				</div>
+  				<div class="col-sm">
+  					<div class="md-form ">
+  						<input type="text" name="updatemarr[Middle_name_w]" id="form3" class="form-control">
+  						<label for="form3">Middle Name</label>
+  					</div>
+  				</div>
+  				<div class="col-sm">
+  					<div class="md-form ">
+  						<input type="text" name="updatemarr[Last_name_w]" id="Last" class="form-control">
+  						<label for="Last">Last Name</label>
+  					</div>
+  				</div>
+  				<div class="col-2">
+  					<div class="md-form ">
+  						<input type="number" name="updatemarr[annexw]" id="Annex" class="form-control">
+  						<label for="Annex">Annex</label>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  		<input type="hidden" name="updatemarr[encoder]" class="bday_encoder">
+  		<div class="container">
+  			<div class="">
+  				<div class="dates">
+  					<div class="md-form">
+  					<input type="date" name="updatemarr[date_of_marriage]" id="usr1" class="form-control">
+  						<label >Date of Marriage</label>
+  				</div>
+  			</div>
+
+  			</div>
+
+
+  		</div>
+      <div class="modal-footer">
+
+        <button type="button" class="btn btn-primary btn-sm">Save changes</button>
+                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+      </div>
+
+
+  	</form>
+  </div>
+</div>  </div>  </div>
+<!-- Central Modal Small -->
