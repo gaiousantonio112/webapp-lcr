@@ -1,6 +1,6 @@
 var global  = {
     settings : {
-      url : 'http://localhost:8000'
+      url : 'http://192.168.100.93:8000'
     },
 
 }

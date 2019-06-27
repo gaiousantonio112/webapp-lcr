@@ -5,7 +5,8 @@ html {
 </style>
 
 <div class="container-fluid pt-4 px-5">
-<h3 class="text-right"><b><i class="fas fa-search"></i> Search and Payment</h3>
+  	<div class=" container text-right">
+<h3 class="font-weight-bold"><b><img src="<?php echo base_url() .'/assets/svg/search and payment (eCRIS).svg' ?>" height="65px" alt=""> Search and Payment</h3>
 </b>
 </div>
 <div class="container d-flex" >
