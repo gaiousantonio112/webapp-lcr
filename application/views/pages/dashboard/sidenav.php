@@ -12,30 +12,12 @@
 
 <style media="screen">
 
-::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #F5F5F5;
-	border-radius: 10px;
-}
 
-::-webkit-scrollbar
-{
-	width: 10px;
-	background-color: #F5F5F5;
-}
 
-::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	background-image: -webkit-gradient(linear,
-									   left bottom,
-									   left top,
-									   color-stop(0.44, rgb(122,153,217)),
-									   color-stop(0.72, rgb(73,125,189)),
-									   color-stop(0.86, rgb(28,58,148)));
-}
-
+.navbar
+			{
+					border-bottom:5px solid  #1a8cff;
+			}
 
 
 </style>
@@ -60,7 +42,7 @@
 
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading py-3">ECRIS </div>
+      <div class="sidebar-heading py-3"><img src="<?php base_url()?>/assets/img/ecrislogo.svg" alt=""> </div>
       <div class="list-group list-group-flush">
         <a href="<?php echo base_url() . 'pages/dash/index'  ?>" class="list-group-item list-group-item-action bg-light"><i class="fas fa-columns "></i> Dashboard</a>
         <a href="<?php echo base_url() . 'pages/dash/search'  ?>" class="list-group-item list-group-item-action bg-light"><i class="fas fa-search-dollar "></i> Search and Payment</a>
@@ -78,7 +60,7 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light ">
         <button class="btn btn-flat " id="menu-toggle"><i class="fas fa-bars "></i></button>
         <h4 class="pt-2">ELECTRONIC CIVIL REGISTRY INFORMATION SYSTEM</h4>
 

@@ -39,7 +39,7 @@
     <tr>
       <!-- <th>id
       </th> -->
-      <th>Reference Number
+      <!-- <th>Reference Number
       </th>
       <th>OR No.
       </th>
@@ -56,7 +56,7 @@
       <th>Copies
       </th>
       <th>Action
-      </th>
+      </th> -->
 
     </tr>
   </tfoot>

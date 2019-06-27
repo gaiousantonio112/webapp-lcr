@@ -7,7 +7,9 @@
 
 </b>
 </div>
-
+<button type="button" class="btn btn-secondary" onclick="notif()">
+  Toast
+</button>
 
 <div class="container  p-3">
 

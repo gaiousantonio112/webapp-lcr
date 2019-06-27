@@ -6,8 +6,16 @@
 <script src="<?php print(base_url()); ?>/assets/MBD/js/addons/datatables.min.js "></script>
 <script src="<?php print(base_url()); ?>/assets/MBD/js/addons/datatables-select.min.js "></script>
 <script src="<?php print(base_url()); ?>/assets/datepicker/calendar/lib/bootstrap-datepicker.js"></script>
-
+<script src="<?php print(base_url());?>/assets/js/dashboard/jquery.bootstrap-growl.min.js" charset="utf-8"></script>
 <script type="text/javascript">
+function notif(){
+                    $.bootstrapGrowl("<div><i  class='fas fa-file-alt' > </i> Nice One</div>", {
+                        type: 'danger',
+                        align: 'right',
+                        width: 'auto',
+                        allow_dismiss: true
+                    }, 1000);
+                }
 
 var userid = '<?php print($this->session->userdata('user_id')); ?>';
 
