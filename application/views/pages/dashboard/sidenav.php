@@ -52,39 +52,10 @@ background-color: #17242D;
     <!-- Sidebar -->
     <div class="bg-ecris border-right" id="sidebar-wrapper">
       <div class="sidebar-heading py-3"><img src="<?php base_url()?>/assets/img/ecrislogo.svg" alt=""></div>
-			<div class="text-white text-center">
+			<div class="text-white text-center" id="curr_name">
 				Name: Eduardo Dalisay
-
 			</div>
-			<div class="text-white text-center">
-				<script>
-				var currentTime = new Date(),
-			      hours = currentTime.getHours(),
-			      minutes = currentTime.getMinutes();
-
-				if (minutes < 10) {
-				 minutes = "0" + minutes;
-			  }
-
-				var suffix = "AM";
-				if (hours >= 12) {
-			    suffix = "PM";
-			    hours = hours - 12;
-				}
-				if (hours == 0) {
-				 hours = 12;
-				}
-
-				document.write(hours + ":" + minutes + " " + suffix + " ")
-
-	var currentDate = new Date(),
-			day = currentDate.getDate(),
-			month = currentDate.getMonth() + 1,
-			year = currentDate.getFullYear();
-	document.write(day + "/" + month + "/" + year)
-
-
-</script>
+			<div id="current_time" class="text-white text-center">
 			</div>
       <div class="list-group list-group-flush pt-2">
         <a href="<?php echo base_url() . 'pages/dash/index'  ?>" class="font-weight-bold boder text-center list-group-item list-group-item-action bg-ecris text-white "><img src="<?php echo base_url() .'/assets/svg/dashboard(ecris).svg' ?>" height="25px" class="float-left" alt="">Dashboard</a>
