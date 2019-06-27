@@ -293,7 +293,7 @@ html {
           <iframe width="100%" id="recieptframe_white" height="65%" src="#funk" hidden></iframe>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#done"   >Print</button>
+            <button id="print_btn" type="button" class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#done"   >Print</button>
           <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
 
 
@@ -311,49 +311,38 @@ html {
     <div class="modal-dialog modal-sm" role="document">
 
 
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title w-100" id="myModalLabel">Alert!</h4>
+      <form id="addHistoryForm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title w-100" id="myModalLabel">Alert!</h4>
+          </div>
+          <div class="modal-body">
+              Done Printing?
+          </div>
+          <div class="modal-footer">
+              <input type="hidden" name="history[ref_num]" id="ref_num" >
+              <input type="hidden" name="history[or_num]" id="or_num" >
+              <input type="hidden" name="history[req_name]" id="req_name" >
+              <input type="hidden" name="history[name]" id="name_history" >
+              <input type="hidden" name="history[type]" id="type" >
+              <input type="hidden" name="history[date]" id="dt_history" >
+              <input type="hidden" name="history[page]" id="page" >
+              <input type="hidden" name="history[no_copy]" id="no_copy" >
+              <input type="hidden" name="history[verify_by]" id="verify_by" >
 
 
-          </button>
+
+              <input type="hidden" name="history[remarks]" id="remarks" >
+              <input type="hidden" name="history[print]" id="print" >
+              <input type="hidden" name="history[cs_encoder]" id="cs_encoder1" >
+              <input type="hidden" name="history[printed_by]" id="printed_by" >
+              <input type="hidden" name="history[or_amount]" id="or_amount" >
+              <input type="hidden" name="history[wife_name]" id="wife_name" >
+
+              <button type="submit" class="btn btn-primary btn-sm">Yes</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">No</button>
+          </div>
         </div>
-        <div class="modal-body">
-          <!-- <embed src="../../../../assets/pdf/rec.pdf#toolbar=0&zoom=70" type="application/pdf" width="100%" height="60%"> -->
-
-            Done Printing?
-        </div>
-        <div class="modal-footer">
-          <form id="addHistoryForm">
-            <input type="hidden" name="history[table_id]" value="">
-            <input type="hidden" name="history[table_type]" value="">
-            <!-- For Birthday, Marriage, Death -->
-
-            <input type="hidden" name="history[ref_num]" value="">
-            <input type="hidden" name="history[or_num]" value="">
-            <input type="hidden" name="history[req_name]" value="">
-            <input type="hidden" name="history[name]" value="">
-            <input type="hidden" name="history[type]" value="">
-            <input type="hidden" name="history[date]" value="">
-            <input type="hidden" name="history[page]" value="">
-            <input type="hidden" name="history[no_copy]" value="">
-            <input type="hidden" name="history[verify_by]" value="">
-            <input type="hidden" name="history[dt_print]" value="">
-            <input type="hidden" name="history[date_paid]" value="">
-            <input type="hidden" name="history[st]" value="">
-            <input type="hidden" name="history[remarks]" value="">
-            <input type="hidden" name="history[print]" value="">
-            <input type="hidden" name="history[cs_encoder]" value="">
-            <input type="hidden" name="history[printed_by]" value="">
-            <input type="hidden" name="history[or_amount]" value="">
-            <input type="hidden" name="history[wife_name]" value="">
-            <input type="hidden" name="history[time]" value="">
-            <input type="hidden" name="history[cash_rep]" value="">
-            <input type="hidden" name="history[rep_num]" value="">
-            <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal" >Yes</button>
-            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">No</button>
-          </form>
-        </div>
-      </div>
+      </form>
     </div>
   </div>

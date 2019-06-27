@@ -161,6 +161,67 @@ $(document).ready(function(){
     });
     // changed
 
+    $('#print_btn').click(function(){
+
+      $.ajax({
+        url : global.settings.url + '/Lcr_works/getRequested_data',
+        type : 'POST',
+        data : {
+          'data_what[id]' : $('#data_id').val() ,
+          'data_what[table]': $('#type_receipt').val() ,
+        },
+        dataType : 'json',
+        success : function(res){
+          res = res[0];
+
+          console.log(res);
+            var typers = $('#type_receipt').val();
+            console.log(typers);
+          $('#ref_num').val(res.refno);
+          $('#or_num').val($('#orno').val());
+          $('#req_name').val($('#payor').val());
+          var name = (typers == 'marriage') ? res.First_name_h + ' ' + res.Middle_name_h + ' ' + res.Last_name_h : res.First_name + ' ' + res.Middle_name + ' ' + res.Last_name;
+          $('#name_history').val(name); //get thru ajax
+          $('#type').val($('#type_receipt').val());
+           // BOrthday or date
+          $('#page').val($('#pageno').val());
+          $('#no_copy').val($('#nocopy').val());
+          $('#verify_by').val($('#cs_encoder').val());
+
+          switch (typers) {
+            case 'birthday':
+              $('#dt_history').val(res.birthday);
+              break;
+            case 'death':
+              $('#dt_history').val(res.date_of_death);
+              break;
+            case 'marriage':
+              $('#dt_history').val(res.date_of_marriage);
+              break;
+            default:
+
+          }
+
+
+          $('#st').val('Printing'); //updating upon print
+          $('#remarks').val($('#remark').val());
+          $('#print').val($('input[name="reciept[print_type]"]:checked').val());
+          $('#cs_encoder1').val($('#cs_encoder').val());
+          $('#printed_by').val($('#cs_encoder').val());
+          $('#or_amount').val($('#totalpay').val());
+
+
+          $('#wife_name').val(($('#type_receipt').val() == 'marriage') ? res.First_name_w + res.Middle_name_w + res.Last_name_w : 'No Wife');
+          // $('#time').val(); current time
+
+        },
+        error : function (xhr) {
+          console.log(xhr.responseText);
+        }
+      });
+
+
+    });
 
     $('#printReciept').submit(function(e){
       // recieptframe
@@ -187,49 +248,6 @@ $(document).ready(function(){
           $('#recieptframe').attr('src',xhr.responseText);
         }
       });
-
-      $.ajax({
-        url : global.settings.url + '/Lcr_works/getRequested_data',
-        type : 'POST',
-        data : {
-          'data_what[table]' : $('#data_id').val() ,
-          'data_what[id]' : $('#type_receipt').val() ,
-        }
-      });
-
-      $('input[name=reciept[print_type]]:checked').val();
-      ;
-      ;
-      $('#totalpay').val();
-      $('#cashten').val();
-      $('#totalam').val();
-      $('#changed').val();
-
-      $('#table_id').val();
-      $('#table_type').val();
-      $('#ref_num').val();
-      $('#or_num').val($('#orno').val());
-      $('#req_name').val($('#payor').val());
-      $('#name').val(); //get thru ajax
-      $('#type').val();
-      $('#date').val();
-      $('#page').val($('#pageno').val());
-      $('#no_copy').val($('#nocopy').val());
-      $('#verify_by').val($('#cs_encoder').val());
-      // $('#dt_print').val(); Curent date
-      $('#date_paid').val();
-      $('#st').val();
-      $('#remarks').val();
-      $('#print').val();
-      $('#cs_encoder').val();
-      $('#printed_by').val();
-      $('#or_amount').val($('#totalam').val());
-      $('#wife_name').val();
-      // $('#time').val(); current time
-      $('#cash_rep').val(); //insert to new table
-      $('#rep_num').val(); //insert to new table
-
-
       // Save addHistory
       // $.ajax({
       //   url : global.settings.url + '/Lcr_works/addHistory',
@@ -246,6 +264,7 @@ $(document).ready(function(){
 
 
     });
+
 
     // END SEARCH PAGE
 
@@ -367,6 +386,17 @@ $(document).ready(function(){
 
 
   });
+
+  $('#addHistoryForm').submit(function(e){
+    e.preventDefault();
+    console.log('clicke');
+    console.table($(this).serializeArray());
+     // $.ajax({
+     //
+     // });
+  });
+
+
 
 });
 

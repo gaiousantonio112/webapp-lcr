@@ -374,6 +374,21 @@
     public function getRequested_data($what)
     {
       $tropa = array();
+      switch ($what['table']) {
+        case 'birthday':
+          $what['table'] = 'lcr_bday';
+          break;
+        case 'death':
+          $what['table'] = 'lcr_death';
+          break;
+        case 'marriage':
+          $what['table'] = 'lcr_marriage';
+          break;
+        default:
+          // code...
+          break;
+      }
+
       $tagay = $this->db->query("SELECT * FROM ".$what['table']." WHERE id = ".$what['id']);
 
       foreach ($tagay->result() as $f) {
@@ -385,8 +400,45 @@
 
     public function addHistory($inputData)
     {
-      return false;
 
+      $date = date('Y-m-d h:i:s a', time());
+      $data_add_history = array(
+        'id' => $inputData['id'],
+        'ref_num' => $inputData['ref_num'],
+        'or_num' => $inputData['or_num'],
+        'req_name' => $inputData['req_name'],
+        'name' => $inputData['name'],
+        'type' => $inputData['type'],
+        'date' => $inputData['date'],
+        'page' => $inputData['page'],
+        'no_copy' => $inputData['no_copy'],
+        'verify_by' => $inputData['verify_by'],
+        'dt_print' => $date,
+        'date_paid' => $date,
+        'st' => 'printing',
+        'remarks' => $inputData['remarks'],
+        'print' => $inputData['print'],
+        'cs_encoder' => $inputData['cs_encoder'],
+        'printed_by' => $inputData['printed_by'],
+        'or_amount' => $inputData['or_amount'],
+        'wife_name' => $inputData['wife_name'],
+        'time' => date('h:i:s a', time())
+      );
+
+      // $this->db->trans_start();
+      $addhist = $this->db->insert('lcr_history',$data_add_history);
+
+      // $data_update = array(
+      //   'history_id'
+      //   'ref_num'
+      //   'date'
+      //   'encoder'
+      //
+      // );
+
+      // $this->db->trans_complete();
+      // $last_id =  $this->db->insert_id();
+      return $addhist;
     }
 
 

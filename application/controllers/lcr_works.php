@@ -97,7 +97,7 @@ class Lcr_works extends CI_Controller {
 
     public function addHistory()
     {
-      $inputData = $this->input->post('reciept');
+      $inputData = $this->input->post('history');
 
       echo json_encode($this->works->addHistory($inputData));
       // echo $this->works->addHistory($inputData);
