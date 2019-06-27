@@ -52,7 +52,8 @@
             'refno' => $r->refno,
             'birthday' => $r->birthday,
             'full_name' => $r->First_name.' '.$r->Middle_name.' '.$r->Last_name,
-            'btn' => $r->btn='<button onclick="view('.$r->id.',\''.$r->refno.'\',\''.$r->First_name.' '.$r->Middle_name.' '.$r->Last_name.'\',\''.$date.'\',\'---\') " data-code="'.$r->id.'" type="button" class="btn btn-outline-primary btn-sm" "><i class="fas fa-search"></i> View</button>'
+            'btn' => $r->btn='<button onclick="view('.$r->id.',\''.$r->refno.'\',\''.$r->First_name.' '.$r->Middle_name.' '.$r->Last_name.'\',\''.$date.'\',\'---\') " data-code="'.$r->id.'" type="button" class="btn btn-outline-primary btn-sm"><i class="fas fa-search"></i> View</button>'
+                              .'<button onclick="update('.$r->id.',\'lcr_bday\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i> Update</button>'
           );
         }
         $result = array(
@@ -130,7 +131,7 @@
         $start = intval($this->input->get("start"));
         $length = intval($this->input->get("length"));
 
-        $query = $this->db->query("SELECT * FROM lcr_death");
+        $query = $this->db->query("SELECT * FROM lcr_death LIMIT 0 , 20000");
         $date = date('Y-m-d');
         $data = [];
         foreach ($query->result() as $r) {
@@ -140,6 +141,7 @@
             'date_of_death' => $r->date_of_death,
             'full_name' => $r->First_name.' '.$r->Middle_name.' '.$r->Last_name,
             'btn' => $r->btn='<button onclick="view('.$r->id.',\''.$r->refno.'\',\''.$r->First_name.' '.$r->Middle_name.' '.$r->Last_name.'\',\''.$date.'\',\'---\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-primary btn-sm"><i class="fas fa-search"></i> View</button>'
+                              .'<button onclick="update('.$r->id.',\'lcr_death\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i> Update</button>'
           );
         }
         $result = array(
@@ -220,6 +222,7 @@
             'date_of_marriage' => $r->date_of_marriage,
             'full_name' => $r->First_name_h.' '.$r->Middle_name_h.' '.$r->Last_name_h.' and '.$r->First_name_w.' '.$r->Middle_name_w.' '.$r->Last_name_w,
             'btn' => $r->btn='<button onclick="view('.$r->id.',\''.$r->refno.'\',\''.$r->First_name_h.' '.$r->Middle_name_h.' '.$r->Last_name_h.'\',\''.$date.'\',\''.$varWifeName.'\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-primary btn-sm"><i class="fas fa-search"></i> View</button>'
+                              .'<button onclick="update('.$r->id.',\'lcr_marriage\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i> Update</button>'
           );
         }
         $result = array(
@@ -303,7 +306,7 @@
         $start = intval($this->input->get("start"));
         $length = intval($this->input->get("length"));
 
-        $query = $this->db->query("SELECT * FROM lcr_history where cash_rep = 'not done'");
+        $query = $this->db->query("SELECT * FROM lcr_history where cash_rep = 'not done' OR st = 'printing'");
         $date = date('Y-m-d');
         $data = [];
         foreach ($query->result() as $r) {
@@ -469,6 +472,45 @@
       $qry = $this->db->update('lcr_history', $data);
 
       return $qry;
+    }
+
+    public function dashboardStats()
+    {
+
+      $this->db->trans_start();
+
+      $srvc_prvdd = $this->db->query("SELECT count(*) AS done_trans FROM lcr_history where st='done'");
+
+      $ttl_rnngs = $this->db->query("SELECT sum(or_amount) AS earnings from lcr_history");
+
+      $total_trns = $this->db->query("SELECT COUNT(*) AS total_trans FROM lcr_history");
+
+      $pndng_rqst = $this->db->query("SELECT COUNT(*) AS pendings FROM lcr_history WHERE st = 'printing'");
+
+      $earnings = $ttl_rnngs->row(0)->earnings;
+
+      $total_trans = $total_trns->row(0)->total_trans;
+
+      $done_trans = $srvc_prvdd->row(0)->done_trans;
+
+      $pendings = $pndng_rqst->row(0)->pendings;
+
+      $percentage = abs($total_trans - $done_trans) / $total_trans;
+
+      $percentage = $percentage * 100;
+
+
+      $this->db->trans_complete();
+
+      $data = array(
+        'service_provided' => $total_trans,
+        'total_earnings' => $earnings,
+        'task_text_percent' => round($percentage),
+        'pending_request' => $pendings
+      );
+
+      return $data;
+
     }
 
 

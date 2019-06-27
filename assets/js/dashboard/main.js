@@ -2,12 +2,34 @@ var full_name;
 // CREDENTIALS
 var defaultAmnt = 50;
 $(document).ready(function(){
-    // userid
-    console.log(userid);
-      $('#type_receipt').val($('input[name="lcr_type"]:checked').val());
+
+    // FOR THE MAIN DASHBOARDs
+    $('#service_provided').html('Loading..');
+    $('#total_earnings').html('Loading..');
+    $('#task_text_percent').html('Loading..');
+    $('#task_bar_percent').attr('style','width : 1%;');
+    $('#pending_request').html('Loading..');
+
+    $.ajax({
+      url : global.settings.url + '/Lcr_works/dashboardStats',
+      dataType : 'json',
+      success : function(res){
+        // console.log(res);
+        // ;
+        $('#service_provided').html(res.service_provided);
+        $('#total_earnings').html('₱ '+numberWithCommas(res.total_earnings));
+        $('#task_text_percent').html(res.task_text_percent+'%');
+        $('#task_bar_percent').attr('style','width : '+res.task_text_percent+'%;');
+        $('#pending_request').html(res.pending_request);
+      },
+      error : function(xhr){
+        notif('Error in Dashboard Statistics','danger');
+      }
+    });
+
+    // END
+    $('#type_receipt').val($('input[name="lcr_type"]:checked').val());
     getUserCredentials();
-// SEARCH PAGE
-    // primary table loader
     $('#tb_mainlcr').DataTable().clear().destroy();
     $('#tb_mainlcr').DataTable({
         "ajax" : {
@@ -115,7 +137,7 @@ $(document).ready(function(){
     });
 
     $('input[name="printOption"]').change(function(){
-      console.log($(this).val());
+      // console.log($(this).val());
     });
 
     $('#pageno').on('input',function(e){
@@ -251,18 +273,18 @@ $(document).ready(function(){
           dataType : 'json',
           success : function (res) {
             console.log(res);
-            alert('Transaction Success Please proceed to the printing page to ');
+            notif('Transaction Success Please proceed to the printing page to finish Transaction','success');
             $('#done').modal("hide");
             $('#reciept').modal("hide");
             $('#addHistoryForm')[0].reset();
             $('#printReciept')[0].reset();
           },
           error : function(xhr){
-            console.log('Error in addHistoryForm '+xhr.responseText);
+            notif('Error in addHistoryForm '+xhr.responseText,'danger');
           }
         });
       }else{
-        alert('OR number Already Exist Please Check your OR number');
+        notif('OR number Already Exist Please Check your OR number','danger');
         $('#or_num').val('');
         $('#done').modal("hide");
         $('#reciept').modal("hide");
@@ -290,7 +312,7 @@ $(document).ready(function(){
 
         },
         error : function(xhr){
-          console.log('Error in printReciept '+xhr.responseText);
+          notif('Error in Viewing Reciept Kindl Report to the Administrators','danger');
           $('#recieptframe').attr('src',xhr.responseText);
         }
       });
@@ -329,12 +351,11 @@ $(document).ready(function(){
         data : $(this).serialize(),
         dataType : 'json',
         success : function(res){
-          alert('Adding Birthday Success');
-
+          notif('Adding Birthday Information Success','success');
           $('#addBirthForm')[0].reset();
         },
         error : function(){
-          console.log('Error in addBirthday');
+          notif('Error in Adding Birthday Information','danger');
         }
       });
     });
@@ -348,12 +369,12 @@ $(document).ready(function(){
         data : $(this).serialize(),
         dataType : 'json',
         success : function(res){
-          alert('Adding Death Information Success');
-          console.log(res);
+          notif('Adding Death Information Success','success');
+
           $('#addDeathForm')[0].reset();
         },
         error : function () {
-          console.log('Error in addDeathForm');
+          notif('Error in Adding Death Information','danger');
         }
       });
     });
@@ -366,12 +387,12 @@ $(document).ready(function(){
         data : $(this).serialize(),
         dataType : 'json',
         success : function(res){
-          alert('Adding Marriage Information Success!');
+          notif('Adding Marriage Information Success!','success');
           console.log(res);
           $('#addMarrForm')[0].reset();
         },
         error : function(){
-
+          notif('Error in Adding Marriage','danger');
         }
       });
     });
@@ -382,7 +403,7 @@ $(document).ready(function(){
 
 //TABLE PRINT JANDEAN
     $('#printable').DataTable().clear().destroy();
-    $('#printable').DataTable({
+    var print_datatable = $('#printable').DataTable({
         "ajax" : {
           "url" : global.settings.url + '/Lcr_works/showprint',
           dataSrc : 'data'
@@ -425,8 +446,8 @@ $(document).ready(function(){
       success : function(res){
         $('#viewpdf').attr('src',global.settings.url+'/pages/viewCerts/'+res);
       },
-      error : function(){
-
+      error : function(xhr){
+        notif('Error in Viewing Certificate','danger');
       }
     });
 
@@ -445,12 +466,12 @@ $(document).ready(function(){
       data : $(this).serialize(),
       success : function(res){
         console.log(res);
-        alert('You can go home its done yor done.');
-
+        notif('Transaction Completed!','success');
       $('#reciept_print_page').modal("hide");
+      print_datatable.ajax.reload();
       },
       error : function(xhr){
-        console.log('Error in udpate print form ' + xhr.responseText);
+        notif('Error in Updating Print Status '+xhr.responseText,'danger');
       }
     });
   });
@@ -483,16 +504,20 @@ function printPage(f_id,ref_num,or_no,name_cus,name_encoder,type,paid,page,copy,
       },
       dataType : 'text',
       success : function(res){
-        console.log(res);
         $('#print_pageFrame').attr('src',res);
       },
-      error : function(){
-        console.log('Error in printpage ajax');
+      error : function(xhr){
+        notif('Error in printpage '+xhr.responseText,'danger');
       }
-
     });
 
 
+}
+
+// update bday death marriage
+
+function update(id,table){
+  console.log(id + ' '+table);
 }
 
 // END
@@ -526,7 +551,7 @@ function getUserCredentials() {
     },
     dataType : 'json',
     success : function (res){
-      console.table(res[0]);
+      // console.table(res[0]);
       full_name = jsUcfirst(res[0].firstname) + ' ' + jsUcfirst(res[0].middlename) + ' ' + jsUcfirst(res[0].lastname);
       $('.bday_encoder').val(full_name);
       $('#cs_encoder').val(full_name);
@@ -535,4 +560,20 @@ function getUserCredentials() {
 
     }
   });
+}
+
+function numberWithCommas(x) {
+  var parts = x.toString().split(".");
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+  return parts.join(".");
+}
+
+function notif(msg,type){
+      $.bootstrapGrowl("<div><i  class='fas fa-file-alt'> </i> "+msg+"</div>", {
+        type: type,
+        align: 'right',
+        width: 'auto',
+        allow_dismiss: true
+      }, 1000);
 }

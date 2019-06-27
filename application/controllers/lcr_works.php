@@ -123,5 +123,10 @@ class Lcr_works extends CI_Controller {
       echo json_encode($this->works->updateHistory($inputData));
     }
 
+    public function dashboardStats()
+    {
+      echo json_encode($this->works->dashboardStats());
+    }
+
 }
  ?>
