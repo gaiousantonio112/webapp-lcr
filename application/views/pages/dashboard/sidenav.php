@@ -60,7 +60,7 @@
 
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading py-3">ECRIS </div>
+      <div class="sidebar-heading py-3"><img src="<?php base_url()?>/assets/img/ecrislogo.svg" alt=""> </div>
       <div class="list-group list-group-flush">
         <a href="<?php echo base_url() . 'pages/dash/index'  ?>" class="list-group-item list-group-item-action bg-light"><i class="fas fa-columns "></i> Dashboard</a>
         <a href="<?php echo base_url() . 'pages/dash/search'  ?>" class="list-group-item list-group-item-action bg-light"><i class="fas fa-search-dollar "></i> Search and Payment</a>

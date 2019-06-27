@@ -68,7 +68,7 @@ html {
 	  <tbody>
 
 	  </tbody>
-	  <tfoot>
+	  <!-- <tfoot>
 	    <tr>
 				<th class="th-sm">ID
 	      </th>
@@ -81,7 +81,7 @@ html {
 	      <th class="th-sm">Action
 	      </th>
 	    </tr>
-	  </tfoot>
+	  </tfoot> -->
 	</table>
 </div>
 
