@@ -378,7 +378,8 @@ html {
 
   		<div class="container">
   			<div class="md-form">
-  				<input type="number" name="updatebday[refno]" id="form1" class="form-control ">
+          <input type="hidden" name="updatebday[id]" id="updatebday_id" value="">
+  				<input type="text" name="updatebday[refno]" id="updatebday_refno" class="form-control" value="---">
   				<label for="form1">REFERENCE NUMBER</label>
   			</div>
   		</div>
@@ -386,36 +387,36 @@ html {
   			<div class="row">
   				<div class="col-sm">
   					<div class="md-form ">
-  						<input type="text" name="updatebday[first_name]" id="form2" class="form-control">
+  						<input type="text" name="updatebday[first_name]" id="updatebday_first_name" class="form-control" value="---">
   						<label for="form2">First Name</label>
   					</div>
   				</div>
   				<div class="col-sm">
   					<div class="md-form ">
-  						<input type="text" name="updatebday[middle_name]" id="form3" class="form-control">
+  						<input type="text" name="updatebday[middle_name]" id="updatebday_middle_name" class="form-control" value="---">
   						<label for="form3">Middle Name</label>
   					</div>
   				</div>
   				<div class="col-sm">
   					<div class="md-form ">
-  						<input type="text" name="updatebday[last_name]" id="Last" class="form-control">
+  						<input type="text" name="updatebday[last_name]" id="updatebday_last_name" class="form-control" value="---">
   						<label for="Last">Last Name</label>
   					</div>
   				</div>
   				<div class="col-2">
   					<div class="md-form ">
-  						<input type="number" name="updatebday[annex]" id="Annex" class="form-control">
+  						<input type="text" name="updatebday[annex]" id="updatebday_annex" class="form-control" value="---">
   						<label for="Annex">Annex</label>
   					</div>
   				</div>
   			</div>
   		</div>
-  		<input type="hidden" name="updatebday[encoder]" class="bday_encoder">
+  		<input type="hidden" name="updatebday[encoder]" id="updatebday_encoder" class="bday_encoder"  value="---">
   		<div class="container">
   			<div class="">
   				<div class="dates">
   					<div class="md-form">
-  					<input type="date" name="updatebday[bday_date]" id="usr1" class="form-control">
+  					<input type="text" name="updatebday[bday_date]" id="updatebday_bday_dt" class="form-control">
   						<label >Date of Birth</label>
   				</div>
   		</div>
@@ -426,7 +427,7 @@ html {
   	</div>
     <div class="modal-footer">
 
-        <button type="button" class="btn btn-primary btn-sm">Save changes</button>
+        <button type="submit" class="btn btn-primary btn-sm">Save changes</button>
             <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
       </div>
   </form>
@@ -444,7 +445,8 @@ html {
 
   		<div class="container">
   			<div class="md-form">
-  				<input type="number" name="updatedeath[refno]" id="form1" class="form-control">
+          <input type="hidden" name="updatedeath[id]" id="updatedeath_id" value="">
+  				<input type="text" name="updatedeath[refno]" id="updatedeath_refno" class="form-control">
   				<label for="form1">REFERENCE NUMBER</label>
   			</div>
   		</div>
@@ -452,36 +454,36 @@ html {
   			<div class="row">
   				<div class="col-sm">
   					<div class="md-form ">
-  						<input type="text" name="updatedeath[first_name]" id="form2" class="form-control">
+  						<input type="text" name="updatedeath[first_name]" id="updatedeath_first_name" class="form-control">
   						<label for="form2">First Name</label>
   					</div>
   				</div>
   				<div class="col-sm">
   					<div class="md-form ">
-  						<input type="text" name="updatedeath[middle_name]" id="form3" class="form-control">
+  						<input type="text" name="updatedeath[middle_name]" id="updatedeath_middle_name" class="form-control">
   						<label for="form3">Middle Name</label>
   					</div>
   				</div>
   				<div class="col-sm">
   					<div class="md-form ">
-  						<input type="text" name="updatedeath[last_name]" id="Last" class="form-control">
+  						<input type="text" name="updatedeath[last_name]" id="updatedeath_last_name" class="form-control">
   						<label for="Last">Last Name</label>
   					</div>
   				</div>
   				<div class="col-2">
   					<div class="md-form ">
-  						<input type="number" name="updatedeath[annex]" id="Annex" class="form-control">
+  						<input type="text" name="updatedeath[annex]" id="updatedeath_annex" class="form-control">
   						<label for="Annex">Annex</label>
   					</div>
   				</div>
   			</div>
   		</div>
-  		<input type="hidden" name="updatedeath[encoder]" class="bday_encoder">
+  		<input type="hidden" name="updatedeath[encoder]" id="updatedeath_encoder" class="bday_encoder">
   		<div class="container">
   			<div class="">
   				<div class="dates">
   					<div class="md-form">
-  					<input type="date" name="updatedeath[death_date]" id="usr1" class="form-control">
+  					<input type="text" name="updatedeath[death_date]" id="updatedeath_death_date" class="form-control" value="---">
   						<label >Date of Death</label>
   				</div>
   		</div>
@@ -492,13 +494,13 @@ html {
   		</div>
       <div class="modal-footer">
 
-        <button type="button" class="btn btn-primary btn-sm">Save changes</button>
+        <button type="submit" class="btn btn-primary btn-sm">Save changes</button>
           <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
       </div>
       </form>
   	</div>
 
-	
+
 
 
 
@@ -509,7 +511,8 @@ html {
 
   		<div class="container">
   			<div class="md-form">
-  				<input type="number" name="updatemarr[refno]" id="form1" class="form-control">
+          <input type="hidden" name="updatemarr[id]" id="updatemarr_id" value="">
+  				<input type="text" name="updatemarr[refno]" id="updatemarr_refno" class="form-control">
   				<label for="form1">REFERENCE NUMBER</label>
   			</div>
   		</div>
@@ -517,25 +520,25 @@ html {
   			<div class="row">
   				<div class="col-sm">
   					<div class="md-form ">
-  						<input type="text" name="updatemarr[First_name_h]" id="form2" class="form-control">
+  						<input type="text" name="updatemarr[First_name_h]" id="updatemarr_First_name_h" class="form-control">
   						<label for="form2">Firstname of Husband</label>
   					</div>
   				</div>
   				<div class="col-sm">
   					<div class="md-form ">
-  						<input type="text" name="updatemarr[Middle_name_h]" id="form3" class="form-control">
+  						<input type="text" name="updatemarr[Middle_name_h]" id="updatemarr_Middle_name_h" class="form-control">
   						<label for="form3">Middle Name</label>
   					</div>
   				</div>
   				<div class="col-sm">
   					<div class="md-form ">
-  						<input type="text" name="updatemarr[Last_name_h]" id="Last" class="form-control">
+  						<input type="text" name="updatemarr[Last_name_h]" id="updatemarr_Last_name_h" class="form-control">
   						<label for="Last">Last Name</label>
   					</div>
   				</div>
   				<div class="col-2">
   					<div class="md-form ">
-  						<input type="number" name="updatemarr[annexh]" id="Annex" class="form-control">
+  						<input type="text" name="updatemarr[annexh]" id="updatemarr_annexh" class="form-control">
   						<label for="Annex">Annex</label>
   					</div>
   				</div>
@@ -545,36 +548,36 @@ html {
   			<div class="row">
   				<div class="col-sm">
   					<div class="md-form ">
-  						<input type="text" name="updatemarr[First_name_w]" id="form2" class="form-control">
+  						<input type="text" name="updatemarr[First_name_w]" id="updatemarr_First_name_w" class="form-control">
   						<label for="form2">Firstname of Wife</label>
   					</div>
   				</div>
   				<div class="col-sm">
   					<div class="md-form ">
-  						<input type="text" name="updatemarr[Middle_name_w]" id="form3" class="form-control">
+  						<input type="text" name="updatemarr[Middle_name_w]" id="updatemarr_Middle_name_w" class="form-control">
   						<label for="form3">Middle Name</label>
   					</div>
   				</div>
   				<div class="col-sm">
   					<div class="md-form ">
-  						<input type="text" name="updatemarr[Last_name_w]" id="Last" class="form-control">
+  						<input type="text" name="updatemarr[Last_name_w]" id="updatemarr_Last_name_w" class="form-control">
   						<label for="Last">Last Name</label>
   					</div>
   				</div>
   				<div class="col-2">
   					<div class="md-form ">
-  						<input type="number" name="updatemarr[annexw]" id="Annex" class="form-control">
+  						<input type="number" name="updatemarr[annexw]" id="updatemarr_annexw" class="form-control">
   						<label for="Annex">Annex</label>
   					</div>
   				</div>
   			</div>
   		</div>
-  		<input type="hidden" name="updatemarr[encoder]" class="bday_encoder">
+  		<input type="hidden" name="updatemarr[encoder]" id="updatemarr_encoder" class="bday_encoder">
   		<div class="container">
   			<div class="">
   				<div class="dates">
   					<div class="md-form">
-  					<input type="date" name="updatemarr[date_of_marriage]" id="usr1" class="form-control">
+  					<input type="text" name="updatemarr[date_of_marriage]" id="updatemarr_date_of_marriage" class="form-control">
   						<label >Date of Marriage</label>
   				</div>
   			</div>
@@ -585,7 +588,7 @@ html {
   		</div>
       <div class="modal-footer">
 
-        <button type="button" class="btn btn-primary btn-sm">Save changes</button>
+        <button type="submit" class="btn btn-primary btn-sm">Save changes</button>
                 <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
       </div>
 
