@@ -23,7 +23,12 @@ background-color: white;
 
 }
 .bg-ecris{
-background-color: #17242D;
+background-color: #EFEDDF;
+border-bottom: 8px solid #163F54;
+
+}
+.bg-title{
+  color: #163F54;
 }
 .vl {
   border-left: 3px solid #494949;
@@ -46,7 +51,7 @@ img {
         <ul class="navbar-nav mr-auto ">
 
             <li class="nav-item ">
-              <h2 class="text-white font-weight-bold py-2">ELECTRONIC CIVIL REGISTRY INFOMATION SYSTEM</h2>
+              <h2 class="bg-title font-weight-bold py-2">ELECTRONIC CIVIL REGISTRY INFOMATION SYSTEM</h2>
             </li>
 
         </ul>

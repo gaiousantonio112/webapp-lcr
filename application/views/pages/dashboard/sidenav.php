@@ -14,10 +14,10 @@
 
 
 .bg-ecris{
-background-color: #17242D;
+background-color: #EFEDDF;
 }
 .navbar{
- border-bottom: 5px solid #163F54;
+ border-bottom: 6px solid #163F54;
 
 }
 .list-group a:hover{
@@ -27,6 +27,9 @@ background-color: #17242D;
 
 	border-top: 1px solid black ;
 		border-bottom: 1px solid black ;
+}
+.bg-title{
+  color: #163F54;
 }
 
 </style>
@@ -52,17 +55,19 @@ background-color: #17242D;
     <!-- Sidebar -->
     <div class="bg-ecris border-right" id="sidebar-wrapper">
       <div class="sidebar-heading py-3"><img src="<?php base_url()?>/assets/img/ecrislogo.svg" alt=""></div>
-			<div class="text-white text-center" id="curr_name">
+			<div class="font-weight-bold bg-title text-center" id="curr_name">
 				Name: Eduardo Dalisay
 			</div>
-			<div id="current_time" class="text-white text-center">
+			<div id="current_time" class=" font-weight-bold bg-title text-center">
 			</div>
       <div class="list-group list-group-flush pt-2">
-        <a href="<?php echo base_url() . 'pages/dash/index'  ?>" class="font-weight-bold boder text-center list-group-item list-group-item-action bg-ecris text-white "><img src="<?php echo base_url() .'/assets/svg/dashboard(ecris).svg' ?>" height="25px" class="float-left" alt="">Dashboard</a>
-        <a href="<?php echo base_url() . 'pages/dash/search'  ?>" class="font-weight-bold  text-center list-group-item list-group-item-action bg-ecris text-white"><img src="<?php echo base_url() .'/assets/svg/search and payment (eCRIS).svg' ?>" height="25px" class="float-left" alt=""></i> Search and Payment</a>
-        <a href="<?php echo base_url() . 'pages/dash/add'  ?>" class="font-weight-bold  text-center list-group-item list-group-item-action bg-ecris text-white"><img src="<?php echo base_url() .'/assets/svg/add (ecris).svg' ?>" height="25px" class="float-left" alt=""> Add</a>
-        <a href="<?php echo base_url() . 'pages/dash/print'  ?>" class="font-weight-bold  text-center list-group-item list-group-item-action bg-ecris text-white"><img src="<?php echo base_url() .'/assets/svg/Print (ecris).svg' ?>" height="25px" class="float-left" alt=""> Print</a>
-        <!-- <a href="#" class="list-group-item list-group-item-action bg-light">Warning</a>
+        <a href="<?php echo base_url() . 'pages/dash/index'  ?>" class="font-weight-bold boder text-center list-group-item list-group-item-action bg-ecris bg-title "><img src="<?php echo base_url() .'/assets/svg/dashboard(ecris).svg' ?>" height="25px" class="float-left" alt="">Dashboard</a>
+        <a href="<?php echo base_url() . 'pages/dash/search'  ?>" class="font-weight-bold  text-center list-group-item list-group-item-action bg-ecris bg-title"><img src="<?php echo base_url() .'/assets/svg/search and payment (eCRIS).svg' ?>" height="25px" class="float-left" alt=""></i> Search and Payment</a>
+        <a href="<?php echo base_url() . 'pages/dash/add'  ?>" class="font-weight-bold  text-center list-group-item list-group-item-action bg-ecris bg-title"><img src="<?php echo base_url() .'/assets/svg/add (ecris).svg' ?>" height="25px" class="float-left" alt=""> Add</a>
+        <a href="<?php echo base_url() . 'pages/dash/print'  ?>" class="font-weight-bold  text-center list-group-item list-group-item-action bg-ecris bg-title"><img src="<?php echo base_url() .'/assets/svg/Print (ecris).svg' ?>" height="25px" class="float-left" alt=""> Print</a>
+				<a href="<?php echo base_url() . 'pages/dash/formgen'  ?>" class="font-weight-bold  text-center list-group-item list-group-item-action bg-ecris bg-title"><img src="<?php echo base_url() .'/assets/svg/Print (ecris).svg' ?>" height="25px" class="float-left" alt="">LCR Form Generator</a>
+
+			  <!-- <a href="#" class="list-group-item list-group-item-action bg-light">Warning</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Birthday</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Death</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Marriage</a>
@@ -75,8 +80,8 @@ background-color: #17242D;
     <div id="page-content-wrapper">
 
       <nav class="navbar navbar-expand-lg navbar-light bg-ecris ">
-        <a class="btn btn-flat " id="menu-toggle"><i class="fas fa-bars "></i></a>
-        <h4 class="text-white font-weight-bold pt-2">ELECTRONIC CIVIL REGISTRY INFORMATION SYSTEM</h4>
+        <a class="px-3 " id="menu-toggle"><i class="fas fa-bars "></i></a>
+        <h4 class="bg-title font-weight-bold pt-2">ELECTRONIC CIVIL REGISTRY INFORMATION SYSTEM</h4>
 
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -87,13 +92,13 @@ background-color: #17242D;
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
 
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle bg-title" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 User
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Account</a>
+                <!-- <a class="dropdown-item" href="#">Account</a>
                 <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
+                <div class="dropdown-divider"></div> -->
                 <a class="dropdown-item" href="<?php echo base_url() . 'pages/logout'  ?>">Logout</a>
               </div>
             </li>

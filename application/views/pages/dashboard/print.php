@@ -36,31 +36,8 @@
   <tbody>
 
   </tbody>
-  <tfoot>
-    <tr>
-      <!-- <th>id
-      </th> -->
-      <!-- <th>Reference Number
-      </th>
-      <th>OR No.
-      </th>
-      <th>Name
-      </th>
-      <th>Encoder Name
-      </th>
-      <th>Cert. Type
-      </th>
-      <th>Date Paid
-      </th>
-      <th>Page
-      </th>
-      <th>Copies
-      </th>
-      <th>Action
-      </th> -->
 
-    </tr>
-  </tfoot>
+
 </table>
 
 </div>

@@ -52,8 +52,8 @@
             'refno' => $r->refno,
             'birthday' => $r->birthday,
             'full_name' => $r->First_name.' '.$r->Middle_name.' '.$r->Last_name,
-            'btn' => $r->btn='<button onclick="view('.$r->id.',\''.$r->refno.'\',\''.$r->First_name.' '.$r->Middle_name.' '.$r->Last_name.'\',\''.$date.'\',\'---\') " data-code="'.$r->id.'" type="button" class="btn btn-outline-primary btn-sm"><i class="fas fa-search"></i> View</button>'
-                              .'<button data-toggle="modal" data-target="#update" onclick="update('.$r->id.',\'lcr_bday\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i> Update</button>'
+            'btn' => $r->btn='<button onclick="view('.$r->id.',\''.$r->refno.'\',\''.$r->First_name.' '.$r->Middle_name.' '.$r->Last_name.'\',\''.$date.'\',\'---\') " data-code="'.$r->id.'" type="button" class="btn btn-outline-primary btn-sm"><img src=" '.base_url().'/assets/svg/open (ecris).svg  " style="height: 15px;"> Open</button>'
+                              .'<button data-toggle="modal" data-target="#update" onclick="update('.$r->id.',\'lcr_bday\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-info btn-sm">Update</button>'
           );
         }
         $result = array(
@@ -140,7 +140,7 @@
             'refno' => $r->refno,
             'date_of_death' => $r->date_of_death,
             'full_name' => $r->First_name.' '.$r->Middle_name.' '.$r->Last_name,
-            'btn' => $r->btn='<button onclick="view('.$r->id.',\''.$r->refno.'\',\''.$r->First_name.' '.$r->Middle_name.' '.$r->Last_name.'\',\''.$date.'\',\'---\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-primary btn-sm"><i class="fas fa-search"></i> View</button>'
+            'btn' => $r->btn='<button onclick="view('.$r->id.',\''.$r->refno.'\',\''.$r->First_name.' '.$r->Middle_name.' '.$r->Last_name.'\',\''.$date.'\',\'---\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-primary btn-sm"><img src=" '.base_url().'/assets/svg/open (ecris).svg  " style="height: 15px;"> Open</button>'
                               .'<button  data-toggle="modal" data-target="#update" onclick="update('.$r->id.',\'lcr_death\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i> Update</button>'
           );
         }
@@ -221,7 +221,7 @@
             'refno' => $r->refno,
             'date_of_marriage' => $r->date_of_marriage,
             'full_name' => $r->First_name_h.' '.$r->Middle_name_h.' '.$r->Last_name_h.' and '.$r->First_name_w.' '.$r->Middle_name_w.' '.$r->Last_name_w,
-            'btn' => $r->btn='<button onclick="view('.$r->id.',\''.$r->refno.'\',\''.$r->First_name_h.' '.$r->Middle_name_h.' '.$r->Last_name_h.'\',\''.$date.'\',\''.$varWifeName.'\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-primary btn-sm"><i class="fas fa-search"></i> View</button>'
+            'btn' => $r->btn='<button onclick="view('.$r->id.',\''.$r->refno.'\',\''.$r->First_name_h.' '.$r->Middle_name_h.' '.$r->Last_name_h.'\',\''.$date.'\',\''.$varWifeName.'\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-primary btn-sm"><img src=" '.base_url().'/assets/svg/open (ecris).svg  " style="height: 15px;"> Open</button>'
                               .'<button  data-toggle="modal" data-target="#update" onclick="update('.$r->id.',\'lcr_marriage\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i> Update</button>'
           );
         }
@@ -320,7 +320,7 @@
             'date' => $r->date_paid,
             'page' => $r->page,
             'no_copy' => $r->no_copy,
-            'btn' => $r->btn = '<button onclick="printPage(\''.$r->id.'\')" type="button" class="btn btn-outline-primary btn-sm" "><i class="fas fa-search"></i>Print</button>'
+            'btn' => $r->btn = '<button onclick="printPage(\''.$r->id.'\')" type="button" class="btn btn-outline-primary btn-sm" "><img src=" '.base_url().'/assets/svg/Print (ecris).svg "> Print</button>'
           );
         }
         $result = array(

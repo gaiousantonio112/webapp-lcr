@@ -114,7 +114,7 @@ html {
 	</div>	</div>
 
 		<div class=" col-3 text-center p-4">
-			<button id="previewBtn" class="btn btn-lg btn-outline-default m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2" data-toggle="modal" data-target="#viewdocu"><i class="fas fa-search"></i> Preview</button>
+			<button id="previewBtn" class="btn btn-lg btn-outline-default m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2" data-toggle="modal" data-target="#viewdocu"><img src="<?php echo base_url() . '/assets/svg/preview-button-ecris.svg' ?>" style="height: 20px;"alt=""> Preview</button>
 		</div>
 	</div>
 </div>
@@ -233,8 +233,8 @@ html {
                   </div>
 
         						<div class="text-center">
-          						<button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="submit" id="button-addon2" data-toggle="modal" data-target="#reciept" >Submit</button>
-          						<button class="btn btn-lg btn-outline-warning m-0 px-3 py-2 z-depth-0 waves-effect" type="reset" id="button-addon">Clear All</button>
+          						<button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="submit" id="button-addon2" data-toggle="modal" data-target="#reciept" ><img src="<?php echo base_url() . '/assets/svg/submmit button (ecris).svg' ?>" style="height: 15px;"alt=""> Submit</button>
+          						<button class="btn btn-lg btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="reset" id="button-addon"><img src="<?php echo base_url() . '/assets/svg/clear all button (ecris).svg' ?>" style="height: 15px;"alt=""> Clear</button>
                     </div>
                   </div>
         			</div>
@@ -498,7 +498,7 @@ html {
       </form>
   	</div>
 
-	
+
 
 
 

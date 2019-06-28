@@ -8,28 +8,30 @@
     <img src="../../../../assets/img/spclogo.png"  alt="">
 </div>
 <div  class="vl">
-
 </div>
 <div class="col-5 text-center ml-5">
   <form id="login_form" class="">
-
-<img src="<?php base_url()?>/assets/img/ecrislogo.svg"  alt="">
-
+  <img src="<?php base_url()?>/assets/img/ecrislogo.svg" style="width: 330px;" alt="">
       <div class="container col-9">
-      <div class="form-group ">
-        <div class="md-form ">
-              <input type="text"  id="username" name="login[username]" class="form-control" required>
-                  <label for="username">Username</label>
-                  </div>
-
-
-      </div>
-      <div class="form-group">
+        <div class="row">
+          <div class=" col-3">
+            <img src="<?php echo base_url() . '/assets/svg/USERLOGO.svg'?>" style="height: 100px;" alt="">
+          </div>
+<div class="p-0 col-9">
+<div class="md-form ">
+      <input type="text"  id="username" name="login[username]" class="form-control" required>
+          <label for="username">Username</label>
+          </div>
+</div>
+<div class="col-3">
+  <img src="<?php echo base_url() . '/assets/svg/PWLOGO.svg'?>"  style="height: 100px; " alt="">
+</div>
+      <div class=" p-0 col-9">
         <div class="md-form">
               <input type="password"  id="password" name="login[password]" class="form-control" required>
                   <label for="password">Password</label>
                   </div>
-
+        </div>
       </div>  </div>
       <div class="form-group">
                 <input type="submit" name="submit" class="btn btn-outline-primary btn-lg" value="Login">
