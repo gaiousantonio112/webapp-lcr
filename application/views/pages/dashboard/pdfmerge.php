@@ -5,8 +5,8 @@ require_once(APPPATH.'/../assets/pdfmerge/TCPDF-master/tcpdf.php');
 require_once(APPPATH.'/../assets/pdfmerge/tcpdi/tcpdi.php');
 date_default_timezone_set('Asia/Manila');
 $date = date('Y-m-d');
-
-$pdf = new TCPDI(PDF_PAGE_ORIENTATION, 'mm', PDF_PAGE_FORMAT, true, 'UTF-8', false);
+// $pdf = new TCPDI(PDF_PAGE_ORIENTATION, 'mm', PDF_PAGE_FORMAT, true, 'UTF-8', false);
+$pdf = new TCPDI();
 
 $pdf->setSourceFile('\\\\192.168.100.164\\lcr\\'.$type.'\\'.$ref_num.'.pdf');
   // f_id
@@ -50,14 +50,25 @@ switch ($print) {
 
 for ($pageNo; $pageNo <= $pageCount; $pageNo++) {
   //$tplIdx = $pdf->importPage(2);
+  //
+  // $tpl = $pdf->importPage($pageNo);
+  // $size = $pdf->getTemplateSize($tpl);
+  // $orientation = $size['h'] > $size['w'] ? 'P' : 'L';
+  // $pdf->setPrintHeader(false);
+  // $pdf->setPrintFooter(false);
+  // $pdf->addPage($orientation);
+  // $pdf->useTemplate($tpl, null, null, 0, 0, TRUE);
+
 
   $tpl = $pdf->importPage($pageNo);
   $size = $pdf->getTemplateSize($tpl);
-  $orientation = $size['h'] > $size['w'] ? 'P' : 'L';
+  // $orientation = $size['h'] > $size['w'] ? 'P' : 'L';
+
   $pdf->setPrintHeader(false);
   $pdf->setPrintFooter(false);
-  $pdf->addPage($orientation);
-  $pdf->useTemplate($tpl, null, null, 0, 0, TRUE);
+    $pdf->addPage();
+  // $pdf->useTemplate($tpl, null, null, 0, 0, TRUE);
+  $pdf ->useTemplate($tpl, null, null, $size['w'], 300, FALSE);
 
   // $pageCount = $pdf->setSourceFile("apps/Par.pdf"); .' Page no '.$pageNo.' Wha print'.$_GET['print']
 
