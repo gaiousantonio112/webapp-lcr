@@ -16,7 +16,7 @@ $(document).ready(function(){
       url : global.settings.url + '/Lcr_works/dashboardStats',
       dataType : 'json',
       success : function(res){
-        // console.log(res);
+        // //console.log(res);
         // ;
         $('#service_provided').html(res.service_provided);
         $('#total_earnings').html('₱ '+numberWithCommas(res.total_earnings));
@@ -56,7 +56,7 @@ $(document).ready(function(){
 
     // $('#tb_mainlcr').DataTable();
     $('.dataTables_length').addClass('bs-select');
-
+    var data_seacrh_table;
     $('input[name="lcr_type"]').change(function(){
 
       $('#type_receipt').val($('input[name="lcr_type"]:checked').val());
@@ -65,7 +65,7 @@ $(document).ready(function(){
           $('#name_husband').html('Name');
           $('#name_wife').html('Name');
           $('#tb_mainlcr').DataTable().clear().destroy();
-          $('#tb_mainlcr').DataTable({
+          data_seacrh_table = $('#tb_mainlcr').DataTable({
             "ajax" : {
               "url" : global.settings.url + '/Lcr_works/loadTableBday',
               dataSrc : 'data'
@@ -89,7 +89,7 @@ $(document).ready(function(){
         $('#name_husband').html('Name');
         $('#name_wife').html('Name');
           $('#tb_mainlcr').DataTable().clear().destroy();
-          $('#tb_mainlcr').DataTable({
+          data_seacrh_table = $('#tb_mainlcr').DataTable({
             "ajax" : {
               "url" : global.settings.url + '/Lcr_works/loadTableDeath',
               dataSrc : 'data'
@@ -113,7 +113,7 @@ $(document).ready(function(){
           $('#name_husband').html('Name of Husband');
           $('#name_wife').html('Name of Wife');
           $('#tb_mainlcr').DataTable().clear().destroy();
-          $('#tb_mainlcr').DataTable({
+          data_seacrh_table = $('#tb_mainlcr').DataTable({
             "ajax" : {
               "url" : global.settings.url + '/Lcr_works/loadTableMarr',
               dataSrc : 'data'
@@ -139,24 +139,24 @@ $(document).ready(function(){
     });
 
     $('input[name="printOption"]').change(function(){
-      // console.log($(this).val());
+      // //console.log($(this).val());
     });
 
     $('#pageno').on('input',function(e){
       var s = $(this).val();
 
-      //console.log(s[0]);
+      ////console.log(s[0]);
 
-      //console.log(Math.abs(-345));
+      ////console.log(Math.abs(-345));
       switch ($('input[name="printOption"]:checked').val()) {
         case 'default':
-          //console.log('all is default');
+          ////console.log('all is default');
           break;
         case 'specific':
-          //console.log('Specific page number moves same as default ');
+          ////console.log('Specific page number moves same as default ');
           break;
         case 'range':
-          //console.log('range is seleted');
+          ////console.log('range is seleted');
           var numPages = Math.abs(s[0] - s[s.length-1]) + 1;
           var totalPages = numPages - 2;
 
@@ -198,9 +198,9 @@ $(document).ready(function(){
         success : function(res){
           res = res[0];
 
-          console.log(res);
+          //console.log(res);
             var typers = $('#type_receipt').val();
-            console.log(typers);
+            //console.log(typers);
           $('#ref_num').val(res.refno);
           $('#or_num').val($('#orno').val());
           $('#req_name').val($('#payor').val());
@@ -240,7 +240,7 @@ $(document).ready(function(){
 
         },
         error : function (xhr) {
-          console.log(xhr.responseText);
+          //console.log(xhr.responseText);
         }
       });
 
@@ -255,11 +255,11 @@ $(document).ready(function(){
         success : function(res){
             // ornum_exist = null;
             ornum_exist = res.response;
-            console.log(res.response);
-            console.log(ornum_exist);
+            //console.log(res.response);
+            //console.log(ornum_exist);
         },
         error : function(xhr){
-          console.log(xhr.responseText);
+          //console.log(xhr.responseText);
         }
       });
 
@@ -274,7 +274,7 @@ $(document).ready(function(){
           data : $(this).serialize(),
           dataType : 'json',
           success : function (res) {
-            console.log(res);
+            //console.log(res);
             notif('Transaction Success Please proceed to the printing page to finish Transaction','success');
             $('#done').modal("hide");
             $('#reciept').modal("hide");
@@ -307,7 +307,7 @@ $(document).ready(function(){
         },
         dataType :'text',
         success : function(res){
-          console.log(res);
+          //console.log(res);
           $('#recieptframe').attr('src',global.settings.url+'/pages/viewreciepter/'+res);
           $('#recieptframe_white').attr('src',global.settings.url+'/pages/printreciept/'+res);
           //base_url().'/
@@ -325,10 +325,10 @@ $(document).ready(function(){
       //   data : $(this).serialize(),
       //   dataType : 'json',
       //   success : function(res){
-      //     console.log(res);
+      //     //console.log(res);
       //   },
       //   error: function(xhr){
-      //     console.log('error in adding history ' + xhr.responseText);
+      //     //console.log('error in adding history ' + xhr.responseText);
       //   }
       // });
 
@@ -390,7 +390,7 @@ $(document).ready(function(){
         dataType : 'json',
         success : function(res){
           notif('Adding Marriage Information Success!','success');
-          console.log(res);
+          //console.log(res);
           $('#addMarrForm')[0].reset();
         },
         error : function(){
@@ -435,8 +435,8 @@ $(document).ready(function(){
   // PRINT END
 
   $('#previewBtn').click(function(){
-    // console.log('clicked');
-    // console.log($('#refno').val());
+    // //console.log('clicked');
+    // //console.log($('#refno').val());
     $.ajax({
       url : global.settings.url + '/Lcr_works/viewCerificate',
       type : 'POST',
@@ -467,7 +467,7 @@ $(document).ready(function(){
       type : 'POST',
       data : $(this).serialize(),
       success : function(res){
-        console.log(res);
+        //console.log(res);
         notif('Transaction Completed!','success');
       $('#reciept_print_page').modal("hide");
       print_datatable.ajax.reload();
@@ -475,6 +475,74 @@ $(document).ready(function(){
       error : function(xhr){
         notif('Error in Updating Print Status '+xhr.responseText,'danger');
       }
+    });
+  });
+
+
+
+
+  // # main modal update modals
+
+  $('#updateBirthForm').submit(function(e){
+    e.preventDefault();
+
+    $.ajax({
+      url : global.settings.url + '/Lcr_works/updateBirth',
+      type : 'POST',
+      data : $(this).serialize(),
+      dataType : 'json',
+      success : function(res){
+        $('#update').modal("hide");
+        notif('Success in Updating Birthday Information ','success');
+        $('#updateBirthForm')[0].reset();
+        data_seacrh_table.ajax.reload();
+      },
+      error : function(xhr){
+        notif('Error in updateBirthForm '+ xhr.responseText);
+      }
+
+    });
+  });
+
+  $('#updateDeathForm').submit(function(e){
+    e.preventDefault();
+
+    $.ajax({
+      url : global.settings.url + '/Lcr_works/updateDeath',
+      type : 'POST',
+      data : $(this).serialize(),
+      dataType : 'json',
+      success : function(res){
+        $('#update').modal("hide");
+        notif('Success in Updating Death Information ','success');
+        $('#updateDeathForm')[0].reset();
+        data_seacrh_table.ajax.reload();
+      },
+      error : function(xhr){
+        notif('Error in updateDeathForm '+ xhr.responseText);
+      }
+
+    });
+  });
+
+  $('#updateMarrForm').submit(function(e){
+    e.preventDefault();
+
+    $.ajax({
+      url : global.settings.url + '/Lcr_works/updateMarr',
+      type : 'POST',
+      data : $(this).serialize(),
+      dataType : 'json',
+      success : function(res){
+        $('#update').modal("hide");
+        notif('Success in Updating Marriage Information','success');
+        $('#updateMarrForm')[0].reset();
+        data_seacrh_table.ajax.reload();
+      },
+      error : function(xhr){
+        notif('Error in updateMarrForm '+ xhr.responseText);
+      }
+
     });
   });
 
@@ -552,7 +620,102 @@ function printPage(f_id,ref_num,or_no,name_cus,name_encoder,type,paid,page,copy,
 // update bday death marriage
 
 function update(id,table){
-  console.log(id + ' '+table);
+  switch (table) {
+    case 'lcr_bday':
+      $('#updatebday_id').val(id);
+      $.ajax({
+        url : global.settings.url + '/Lcr_works/getRequested_data',
+        type : 'POST',
+        data : {
+          'data_what[table]' : 'birthday',
+          'data_what[id]' : id
+        },
+        dataType : 'json',
+        success : function(res){
+          res = res[0];
+          //console.log(res);
+          $('#updatebday_refno').val(res.refno);
+          $('#updatebday_first_name').val(res.First_name);
+          $('#updatebday_middle_name').val(res.Middle_name);
+          $('#updatebday_last_name').val(res.Last_name);
+          $('#updatebday_annex').val(res.annex);
+          $('#updatebday_encoder').val(full_name);
+          $('#updatebday_bday_dt').val(res.birthday);
+
+          // bday_date = new Date(res.birthday.toString("YYY"));
+
+          // //console.log(bday_date.getDate());
+
+        },
+        error : function(xhr){
+          notif('Error in getting credentials ' + xhr.responseText,'danger');
+        }
+      });
+      break;
+    case 'lcr_death':
+      $('#updatedeath_id').val(id);
+      $.ajax({
+        url : global.settings.url + '/Lcr_works/getRequested_data',
+        type : 'POST',
+        data : {
+          'data_what[table]' : 'death',
+          'data_what[id]' : id
+        },
+        dataType : 'json',
+        success : function(res){
+          res = res[0];
+          //console.log(res);
+
+          // $('#updatedeath_id').val(res.id);
+          $('#updatedeath_refno').val(res.refno);
+          $('#updatedeath_first_name').val(res.First_name);
+          $('#updatedeath_middle_name').val(res.Middle_name);
+          $('#updatedeath_last_name').val(res.Last_name);
+          $('#updatedeath_annex').val(res.annex);
+          $('#updatedeath_encoder').val(full_name);
+          $('#updatedeath_death_date').val(res.date_of_death);
+
+
+        },
+        error : function(xhr){
+          notif('Error in getting credentials ' + xhr.responseText,'danger');
+        }
+      });
+      break;
+    case 'lcr_marriage':
+      $('#updatemarr_id').val(id);
+      $.ajax({
+        url : global.settings.url + '/Lcr_works/getRequested_data',
+        type : 'POST',
+        data : {
+          'data_what[table]' : 'marriage',
+          'data_what[id]' : id
+        },
+        dataType : 'json',
+        success : function(res){
+          res = res[0];
+          //console.log(res);
+          $('#updatemarr_refno').val(res.refno);
+          $('#updatemarr_First_name_h').val(res.First_name_h);
+          $('#updatemarr_Middle_name_h').val(res.Middle_name_h);
+          $('#updatemarr_Last_name_h').val(res.Last_name_h);
+          $('#updatemarr_annexh').val(res.annexh);
+          $('#updatemarr_First_name_w').val(res.First_name_w);
+          $('#updatemarr_Middle_name_w').val(res.Middle_name_w);
+          $('#updatemarr_Last_name_w').val(res.Last_name_w);
+          $('#updatemarr_annexw').val(res.annexw);
+          $('#updatemarr_encoder').val(full_name);
+          $('#updatemarr_date_of_marriage').val(res.date_of_marriage);
+
+        },
+        error : function(xhr){
+          notif('Error in getting credentials ' + xhr.responseText,'danger');
+        }
+      });
+      break;
+    default:
+
+  }
 }
 
 // END

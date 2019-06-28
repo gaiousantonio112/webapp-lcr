@@ -75,7 +75,7 @@
         //
         // $newDate = date("m-d-Y", strtotime($origDate));
         // echo $newDate;
-        $date = date('d/m/Y');
+        $date = date('m/d/Y');
         $data = array(
           'refno' => $inputData['refno'],
           'First_name' => $inputData['first_name'],
@@ -95,15 +95,16 @@
       // UPDATE
       public function updateBday($inputData)
       {
+
+        $date = date('d/m/Y');
         $data = array(
           'refno' => $inputData['refno'],
-          'First_name' => $inputData['First_name'],
-          'Middle_name' => $inputData['Middle_name'],
-          'Last_name' => $inputData['Last_name'],
+          'First_name' => $inputData['first_name'],
+          'Middle_name' => $inputData['middle_name'],
+          'Last_name' => $inputData['last_name'],
           'annex' => $inputData['annex'],
-          'birthday' => $inputData['birthday'],
-          'date_encoded' => $inputData['date_encoded'],
-          'filepath' => $inputData['filepath'],
+          'birthday' => $inputData['bday_date'],
+          'date_encoded' => $date,
           'encoder' => $inputData['encoder'],
         );
 
@@ -178,15 +179,17 @@
 
       public function updateDeath($inputData)
       {
+
+
+        $date = date('d/m/Y');
         $data = array(
         'refno' => $inputData['refno'],
-        'First_name' => $inputData['First_name'],
-        'Middle_name' => $inputData['Middle_name'],
-        'Last_name' => $inputData['Last_name'],
+        'First_name' => $inputData['first_name'],
+        'Middle_name' => $inputData['middle_name'],
+        'Last_name' => $inputData['last_name'],
         'annex' => $inputData['annex'],
-        'date_of_death' => $inputData['date_of_death'],
-        'date_encoded' => $inputData['date_encoded'],
-        'filepath' => $inputData['filepath'],
+        'date_of_death' => $inputData['death_date'],
+        'date_encoded' => $date,
         'encoder' => $inputData['encoder']
         );
 
@@ -262,6 +265,8 @@
 
       public function updateMarriage($inputData)
       {
+
+        $date = date('d/m/Y');
         $data = array(
           'refno' => $inputData['refno'],
           'First_name_h' => $inputData['First_name_h'],
@@ -273,8 +278,7 @@
           'Last_name_w' => $inputData['Last_name_w'],
           'annexw' => $inputData['annexw'],
           'date_of_marriage' => $inputData['date_of_marriage'],
-          'date_encoded' => $inputData['date_encoded'],
-          'filepath' => $inputData['filepath'],
+          'date_encoded' => $date,          
           'encoder' => $inputData['encoder']
         );
         $this->db->where('id',$inputData['id']);

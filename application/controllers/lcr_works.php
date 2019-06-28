@@ -128,5 +128,29 @@ class Lcr_works extends CI_Controller {
       echo json_encode($this->works->dashboardStats());
     }
 
+
+
+    public function updateBirth()
+    {
+      $inputData = $this->input->post('updatebday');
+
+      echo json_encode($this->works->updateBday($inputData));
+    }
+
+    public function updateDeath()
+    {
+      $inputData = $this->input->post('updatedeath');
+
+      echo json_encode($this->works->updateDeath($inputData));
+    }
+
+    public function updateMarr()
+    {
+      $inputData = $this->input->post('updatemarr');
+
+      echo json_encode($this->works->updateMarriage($inputData));
+    }
+
+
 }
  ?>
