@@ -93,9 +93,9 @@
   <input type="text" name="formgenbday[first_name]" id="form2" class="form-control">
   <label for="form2">THIS CERTIFICATION is issued to upon his/her request</label>
 </div>
-<div class="md-form ">
-  <input type="text" name="formgenbday[first_name]" id="form2" class="form-control">
-  <label for="form2">Remarks</label>
+<div class="md-form">
+  <textarea id="form7" class="md-textarea form-control" rows="3"></textarea>
+  <label for="form7">Remarks</label>
 </div>
       </div>
 </div>
@@ -105,14 +105,48 @@
 
 
   </div>
-  <div class="pt-5">
-    <div class="float-right">
-      <button type="button" class="btn btn-outline-success" name="button"><</button>
-    <button type="button" class="btn btn-outline-success" name="button">></button>
-
+  <div class="rows">
+    <div class="container">
+      <div class="  ">
+  <div class="row">
+    <div class="">
+  <p>Book</p>
+    </div>
+    <div class="">
+      <select name="cars" >
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi">Audi</option>
+  </select>
     </div>
 
+    <div class=" ml-3">
+  <p>Page</p>
+    </div>
+    <div class="">
+      <select name="cars" >
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi">Audi</option>
+  </select>
+    </div>
+
+      <div class="container col-6 text-left">
+        <button type="button" class="btn btn-outline-success" name="button"><</button>
+      <button type="button" class="btn btn-outline-success" name="button">></button>
+
+
+      </div>
+
   </div>
+
+  </div>
+<!--
+  <div class="container">
+<button type="button" class="btn btn-outline-succes" name="button">Print</button>
+  </div> -->
 </div>
 
 </div>

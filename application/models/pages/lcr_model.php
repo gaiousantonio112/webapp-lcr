@@ -53,7 +53,7 @@
             'birthday' => $r->birthday,
             'full_name' => $r->First_name.' '.$r->Middle_name.' '.$r->Last_name,
             'btn' => $r->btn='<button onclick="view('.$r->id.',\''.$r->refno.'\',\''.$r->First_name.' '.$r->Middle_name.' '.$r->Last_name.'\',\''.$date.'\',\'---\') " data-code="'.$r->id.'" type="button" class="btn btn-outline-primary btn-sm"><img src=" '.base_url().'/assets/svg/open (ecris).svg  " style="height: 15px;"> Open</button>'
-                              .'<button data-toggle="modal" data-target="#update" onclick="update('.$r->id.',\'lcr_bday\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-info btn-sm">Update</button>'
+                              .'<button data-toggle="modal" data-target="#update" onclick="update('.$r->id.',\'lcr_bday\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-info btn-sm"><img src=" '.base_url().'/assets/svg/updatefinal.svg  " style="height: 15px;"> Update</button>'
           );
         }
         $result = array(
@@ -142,7 +142,7 @@
             'date_of_death' => $r->date_of_death,
             'full_name' => $r->First_name.' '.$r->Middle_name.' '.$r->Last_name,
             'btn' => $r->btn='<button onclick="view('.$r->id.',\''.$r->refno.'\',\''.$r->First_name.' '.$r->Middle_name.' '.$r->Last_name.'\',\''.$date.'\',\'---\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-primary btn-sm"><img src=" '.base_url().'/assets/svg/open (ecris).svg  " style="height: 15px;"> Open</button>'
-                              .'<button  data-toggle="modal" data-target="#update" onclick="update('.$r->id.',\'lcr_death\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i> Update</button>'
+                              .'<button  data-toggle="modal" data-target="#update" onclick="update('.$r->id.',\'lcr_death\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-info btn-sm"><img src=" '.base_url().'/assets/svg/updatefinal.svg  " style="height: 15px;"> Update</button>'
           );
         }
         $result = array(
@@ -225,7 +225,7 @@
             'date_of_marriage' => $r->date_of_marriage,
             'full_name' => $r->First_name_h.' '.$r->Middle_name_h.' '.$r->Last_name_h.' and '.$r->First_name_w.' '.$r->Middle_name_w.' '.$r->Last_name_w,
             'btn' => $r->btn='<button onclick="view('.$r->id.',\''.$r->refno.'\',\''.$r->First_name_h.' '.$r->Middle_name_h.' '.$r->Last_name_h.'\',\''.$date.'\',\''.$varWifeName.'\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-primary btn-sm"><img src=" '.base_url().'/assets/svg/open (ecris).svg  " style="height: 15px;"> Open</button>'
-                              .'<button  data-toggle="modal" data-target="#update" onclick="update('.$r->id.',\'lcr_marriage\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i> Update</button>'
+                              .'<button  data-toggle="modal" data-target="#update" onclick="update('.$r->id.',\'lcr_marriage\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-info btn-sm"><img src=" '.base_url().'/assets/svg/updatefinal.svg  " style="height: 15px;"> Update</button>'
           );
         }
         $result = array(
@@ -278,7 +278,7 @@
           'Last_name_w' => $inputData['Last_name_w'],
           'annexw' => $inputData['annexw'],
           'date_of_marriage' => $inputData['date_of_marriage'],
-          'date_encoded' => $date,          
+          'date_encoded' => $date,
           'encoder' => $inputData['encoder']
         );
         $this->db->where('id',$inputData['id']);
