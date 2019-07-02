@@ -137,10 +137,6 @@
   <label for="form2">THIS CERTIFICATION is issued to upon his/her request</label>
 </div>
 <div class="md-form">
-<<<<<<< HEAD
-  <textarea id="form7" class="md-textarea form-control" rows="3"></textarea>
-  <label for="form7">Remarks</label>
-=======
   <textarea id="form7" class="md-textarea form-control" rows="2"></textarea>
   <label for="form7">Remarks</label>
 </div>
@@ -227,7 +223,6 @@
 <div class="md-form">
 <textarea id="form7" class="md-textarea form-control" rows="2"></textarea>
 <label for="form7">Remarks</label>
->>>>>>> 2a752fced3b20b3f49370bcf9188e858ef1bad44
 </div>
 </div>
 
@@ -370,35 +365,9 @@
     <div class="container">
         <div class="row">
 
-<<<<<<< HEAD
-  </div>
-  <div class="rows">
-    <div class="container">
-      <div class="  ">
-  <div class="row">
-    <div class="">
-  <p>Book</p>
-    </div>
-    <div class="">
-      <select name="cars" >
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="fiat">Fiat</option>
-  <option value="audi">Audi</option>
-  </select>
-    </div>
 
-    <div class=" ml-3">
-  <p>Page</p>
-    </div>
-    <div class="">
-      <select name="cars" >
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="fiat">Fiat</option>
-  <option value="audi">Audi</option>
-  </select>
-=======
+
+
 <div class ="col-4" >
   <div class ="btn-group btn-group-justified" style ="margin-top:25px">
       <button type="button" class="btn btn-outline-success" name="button" /><</button>
@@ -417,7 +386,7 @@
             <li>2</a></li>
           </ul>
         </div>
->>>>>>> 2a752fced3b20b3f49370bcf9188e858ef1bad44
+
     </div>
   <div class="md-form">
     <div class="dropdown">
@@ -430,32 +399,17 @@
       </div>
   </div>
   </div>
-</div>
+</div></div>
 
 
-      <div class="container col-6 text-left">
-        <button type="button" class="btn btn-outline-success" name="button"><</button>
-      <button type="button" class="btn btn-outline-success" name="button">></button>
 
-
-      </div>
-
-  </div>
-
-  </div>
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 2a752fced3b20b3f49370bcf9188e858ef1bad44
 <!--
   <div class="container">
 <button type="button" class="btn btn-outline-succes" name="button">Print</button>
   </div> -->
-<<<<<<< HEAD
-=======
+
 </div>
->>>>>>> 2a752fced3b20b3f49370bcf9188e858ef1bad44
+
 </div>
 
 
