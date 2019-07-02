@@ -72,9 +72,21 @@ console.log("Boo, inline PDFs are not supported by this browser");
 $(document).ready(function() {
 
 
+	 $(".genform").hide();
+  $("#genform-birthday").show();
+  $("input[name$='radioselect']").click(function() {
+      var test = $(this).val();
+      $(".genform").hide();
+      $("#genform-"+test).show();
+  });
 
-
-
+$("#search-form").hide();
+	$("#post-war").click(function() {
+      $("#search-form").show();
+  });
+	$("#pre-war").click(function() {
+      $("#search-form").hide();
+  });
 
   $('#birthdeath').hide();
    $('#birth').show();
@@ -128,6 +140,8 @@ if(page == 'searchmerage'){
 			 	   $('#marriagemodal').show();
 
 }
+
+
 if(page == 'default'){
 document.getElementById('pageno').value='1-2' ;
 document.getElementById('pageno').disabled = true;

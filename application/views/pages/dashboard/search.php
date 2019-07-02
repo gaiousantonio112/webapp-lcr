@@ -122,14 +122,10 @@ html {
 }
 </style>
 
-
-
-
 <div id="loadit">
   <div class="container-fluid pt-4 px-5">
-
-    <div class="loading">Loading&#8230;</div>
     	<div class=" container text-right">
+          <div class="loading">Loading&#8230;</div>
   <h3 class="font-weight-bold"><b><img src="<?php echo base_url() .'/assets/svg/search and payment (eCRIS).svg' ?>" height="65px" alt=""> Search and Payment</h3>
   </b>
   </div>
