@@ -10,8 +10,19 @@
 <script type="text/javascript">
 var userid = '<?php print($this->session->userdata('user_id')); ?>';
 
+// $('#dtBasicExample').dataTable( {
+//   "initComplete": function( settings, json ) {
+//    $('.loading').fadeOut('slow');
+//   }
+// } );
+
 $(document).ready(function () {
-$('#dtBasicExample').DataTable();
+// $('#dtBasicExample').DataTable();
+// $('#tb_mainlcr').DataTable( {
+//   "initComplete": function(settings, json) {
+//     alert( 'DataTables has finished its initialisation.' );
+//   }
+// } );
 $('.dataTables_length').addClass('bs-select');
 });
 
