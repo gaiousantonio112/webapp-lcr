@@ -46,22 +46,8 @@
 
 <div class="col-6 ">
 
-<div class = "fields">
 
-<div class="">
-    <div class="row px-5" style ="float:none;margin: 10px auto" id="search-form">
-      <div class="col-9 px-0 py-2">
-        <input type="text" name="formgenbday[first_name]" id="form2" class="form-control">
-      </div>
-      <div class="col-3">
-      <button id="search" class="btn btn-primary">Search</button>
-      </div>
-    </div>
-</div>
-  <!-- birthday form -->
-  <div id ="genform-birthday" class="container genform px-5 py-2" style="margin-top: 10px">
-
-    <div class="text-center px-5" style="background-color:#edf3fc; padding: 15px">
+    <div class="text-center px-5" style="background-color:#edf3fc; padding: 15px; margin: 10px">
           <p>WE CERTIFY that, among others, the following facts of birth appear in our Register of Births On </p>
             <div class="row" style="margin: 0px auto;margin-left: 110px">
                 <label>Page No.</label>
@@ -70,6 +56,19 @@
                 <input type="number" name="page-no." id="form2" class="form-control" value="1" style= "width: 40px;  height: 30px; padding-right: 5px">
             </div>
       </div>
+
+<div class="">
+    <div class="row px-5" style ="float:none;margin: 10px auto" id="search-form">
+      <div class="col-9 px-0 py-2">
+        <input type="text" name="formgenbday[first_name]" id="form2" class="form-control" placeholder="Enter Reference Number...">
+      </div>
+      <div class="col-3">
+      <button id="search" class="btn btn-primary">Search</button>
+      </div>
+    </div>
+</div>
+  <!-- birthday form -->
+  <div id ="genform-birthday" class="container genform px-5 py-2" style="margin-top: 10px">
 
         <div class="md-form ">
           <input type="number" name="formgenbday[first_name]" id="form2" class="form-control">
@@ -145,15 +144,6 @@
 
 <div id ="genform-death" class="container genform px-5 py-2" style="margin-top: 10px">
 
-  <div class="text-center px-5" style="background-color:#edf3fc; padding: 15px">
-        <p>WE CERTIFY that, among others, the following facts of birth appear in our Register of Births On </p>
-          <div class="row" style="margin: 0px auto;margin-left: 110px">
-              <label>Page No.</label>
-              <input type="number" name="page-no." id="form2" class="form-control" value="1" style= "width: 40px; height: 30px; padding-right: 5px">
-              <label style ="padding-left: 10px">of Book No.</label>
-              <input type="number" name="page-no." id="form2" class="form-control" value="1" style= "width: 40px;  height: 30px; padding-right: 5px">
-          </div>
-    </div>
 
       <div class="md-form ">
         <input type="text" name="formgenbday[first_name]" id="form2" class="form-control">
@@ -227,15 +217,6 @@
 <!-- marriage form -->
 <div id ="genform-marriage" class="container genform px-5 py-2" style="margin-top: 10px">
 
-  <div class="text-center px-5" style="background-color:#edf3fc; padding: 15px">
-        <p>WE CERTIFY that, among others, the following facts of birth appear in our Register of Births On </p>
-          <div class="row" style="margin: 0px auto;margin-left: 110px">
-              <label>Page No.</label>
-              <input type="number" name="page-no." id="form2" class="form-control" value="1" style= "width: 40px; height: 30px; padding-right: 5px">
-              <label style ="padding-left: 10px">of Book No.</label>
-              <input type="number" name="page-no." id="form2" class="form-control" value="1" style= "width: 40px;  height: 30px; padding-right: 5px">
-          </div>
-    </div>
 
 <div class="row" >
     <div class="md-form col-6">
@@ -351,7 +332,7 @@
   </div>
 
 
-</div>
+
 </div>
 
 <div class="col-6 pt-5">
@@ -407,16 +388,16 @@
   </div> -->
 
 </div>
-
-</div>
-
-
-</div>
 <div class="btn-group btn-group-justified" style="margin-bottom: 15px; float: right; margin-left: 60px">
   <button type="button" class="btn btn-primary" name="button" />View</button>
   <button type="button" class="btn btn-primary" name="button" />Print</button>
   <button type="button" class="btn btn-primary" name="button" />Clear All</button>
 </div>
+</div>
+
+
+</div>
+
 
 
 </div>
