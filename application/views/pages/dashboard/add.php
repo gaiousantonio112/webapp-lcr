@@ -1,8 +1,6 @@
-
+<link rel="stylesheet" href="assets/fontawesome-5.9.0/css/font-awesome.min.css">
 <div class="container-fluid pt-4 px-5">
 	<div class=" container text-right">
-		<h3 class="font-weight-bold"><b><img src="<?php echo base_url() .'/assets/svg/add (ecris).svg' ?>" height="65px" alt=""> Add</h3>
-
 	</div>
 </b>
 </div>
@@ -11,31 +9,33 @@
 <div class="container">
 
 	<div class="card  mb-3" >
-	  <div class="card-header bg-primary"></div>
+	  <div class="card-header bg-primary" style="height:60px;">
+			<span><img src="<?php echo base_url() .'/assets/svg/add (ecris).svg' ?>" height="65px" alt="" style="float:right;"></span>
+			<p style = "color:white; float:right; padding-right: 15px;font-size: 30px;">Add</p>
+		</div>
 	  <div class="card-body">
 		<div class="container-fluid p-4">
 
-<div class="custom-control custom-radio custom-control-inline">
-  <input type="radio" class="custom-control-input" name="radioselect" id="Birthday" value="Birth" onclick="show('birth');" checked>
-  <label class="custom-control-label" for="Birthday">Birthday</label>
-</div>
-
-<div class="custom-control custom-radio custom-control-inline">
-  <input type="radio" class="custom-control-input" name="radioselect" id="Death" value="Death" onclick="show('death');">
-  <label class="custom-control-label" for="Death">Death</label>
-</div>
-
-<div class="custom-control custom-radio custom-control-inline">
-  <input type="radio" class="custom-control-input" name="radioselect" id="Marriage" value="Marriage" onclick="show('merage');">
-  <label class="custom-control-label" for="Marriage">Marriage</label>
-</div>
+			<div class = "container" >
 
 
+							<div class="custom-control custom-radio custom-control-inline">
+							  <input type="radio" class="custom-control-input" name="radioselect" id="Birthday" value="Birth" onclick="show('birth');" checked>
+							  <label class="custom-control-label" for="Birthday">Birthday</label>
+							</div>
+
+							<div class="custom-control custom-radio custom-control-inline">
+							  <input type="radio" class="custom-control-input" name="radioselect" id="Death" value="Death" onclick="show('death');">
+							  <label class="custom-control-label" for="Death">Death</label>
+							</div>
+
+							<div class="custom-control custom-radio custom-control-inline">
+							  <input type="radio" class="custom-control-input" name="radioselect" id="Marriage" value="Marriage" onclick="show('merage');">
+							  <label class="custom-control-label" for="Marriage">Marriage</label>
+							</div>
+					</div>
 
 
-<div class="container">
-
-</div>
 <form id="addBirthForm">
 	<div class="" id="birth">
 		<div class="container">
@@ -87,7 +87,7 @@
 				<button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="submit" id="button-addon2">
 					<img src="<?php echo base_url() . '/assets/svg/submmit button (ecris).svg' ?>" style="height: 15px;"alt=""> Submit</button>
 				<button class="btn btn-lg btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2">
-										<img src="<?php echo base_url() . '/assets/svg/clear all button (ecris).svg' ?>" style="height: 15px;"alt=""> Clear</button>
+					<img src="<?php echo base_url() . '/assets/svg/clear all button (ecris).svg' ?>" style="height: 15px;"alt=""> Clear</button>
 			</div>
 
 		</div>

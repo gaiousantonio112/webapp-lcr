@@ -1,8 +1,12 @@
 <div class="container-fluid  pt-4 px-5">
 <div class="container  text-right">
 
+  <div class="card-header bg-primary" style="height:58px;">
+    <img src="<?php echo base_url() .'/assets/svg/dashboard(ecris).svg' ?>" height="50px" alt="" style="float:right">
+    <p style = "color:white; float:right; padding-right: 15px;font-size: 30px;">Dashboard</p>
 
-<h3 class="font-weight-bold"><b><img src="<?php echo base_url() .'/assets/svg/dashboard(ecris).svg' ?>" height="45px" alt=""> Dashboard</h3>
+  </div>
+
 </div>
 
 </b>

@@ -72,6 +72,20 @@ class Pages extends CI_Controller {
 
         $this->load->view('pages/dashboard/viewCert');
     }
+    public function viewlcrform()
+    {
+      $this->load->view('pages/dashboard/birthformpreview.php');
+    }
+
+    public function viewdeathlcrform()
+    {
+      $this->load->view('pages/dashboard/deathformpreview.php');
+    }
+
+    public function viewmarriagelcrform()
+    {
+      $this->load->view('pages/dashboard/marriageformpreview.php');
+    }
 
     public function logout()
     {

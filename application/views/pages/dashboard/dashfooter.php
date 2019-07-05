@@ -63,22 +63,38 @@ console.log("Boo, inline PDFs are not supported by this browser");
 		});
 
 
-			</script>
-<script>
-
-
-
-
 $(document).ready(function() {
 
+	$(".genform").hide();
+	$(".previewbtn").hide();
+	$("#genform-birthday").show();
+  $("#birthday-btn").show();
+		  $("input[name$='radioselect']").click(function() {
+			      var test = $(this).val();
+					$(".genform").hide();
+		      $(".previewbtn").hide();
+					$("#"+test+"-btn").show();
+		      $("#genform-"+test).show();
+		  });
 
-	 $(".genform").hide();
-  $("#genform-birthday").show();
-  $("input[name$='radioselect']").click(function() {
-      var test = $(this).val();
-      $(".genform").hide();
-      $("#genform-"+test).show();
-  });
+	$('#Birthday').click(function(){
+			$('#certif').slideDown();
+			$('#certif3').fadeOut();
+			$('#certif2').fadeOut();
+	})
+
+	$('#Death').click(function(){
+			$('#certif2').slideDown();
+			$('#certif3').fadeOut();
+			$('#certif').fadeOut();
+
+	})
+
+	$('#Marriage').click(function(){
+			$('#certif3').slideDown();
+			$('#certif2').fadeOut();
+			$('#certif').fadeOut();
+	})
 
 $("#search-form").hide();
 	$("#post-war").click(function() {
@@ -87,6 +103,25 @@ $("#search-form").hide();
 	$("#pre-war").click(function() {
       $("#search-form").hide();
   });
+
+	$("#search-form2").hide();
+		$("#post-war").click(function() {
+	      $("#search-form2").show();
+	  });
+		$("#pre-war").click(function() {
+	      $("#search-form2").hide();
+	  });
+
+	$("#search-form3").hide();
+		$("#post-war").click(function() {
+	      $("#search-form3").show();
+	  });
+		$("#pre-war").click(function() {
+	      $("#search-form3").hide();
+	  });
+
+
+
 
   $('#birthdeath').hide();
    $('#birth').show();
@@ -156,8 +191,6 @@ if(page == 'range'){
 document.getElementById('pageno').value='1-2' ;
 
 }
-
-
 
 }
 
