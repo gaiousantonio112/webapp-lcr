@@ -436,7 +436,7 @@
   <iframe width="100%" class="prewar_view" id="marriage_prewar" height="75%" src="<?php echo base_url(). 'pages/viewmarriagelcrform' ?>#toolbar=0&navpanes=0&scrollbar=0"></iframe>
 </div>
 <div class ="" id = "" >
-  <iframe src="<?php echo base_url() ?>/pages/book"  class="postwar_view"   id="postwar_image" width="100%" height="100%"></iframe>
+  <iframe src="<?php echo base_url() ?>/pages/book"  class="postwar_view"   id="postwar_image" width="100%" height="80%"></iframe>
 
     <!-- <embed type="application/pdf" class="postwar_view" id="postwar_image" src="<?php echo base_url() . '/assets/pdf/samplereg.pdf#toolbar=0&navpanes=0&scrollbar=0' ?>"width="100%" height="100%"> -->
   <!-- <iframe width="100%" class="postwar_view" id="postwar_image" height="25%" src="<?php echo base_url(). 'pages/viewlcrform' ?>#toolbar=0&navpanes=0&scrollbar=0"></iframe> -->
@@ -488,9 +488,9 @@
           <img src="<?php echo base_url() . '/assets/svg/preview-button-ecris.svg' ?>" style="height: 15px;"alt="">
         Preview</a>
 
-        <button type="button" class="btn btn-lg btn-outline-success m-0 px-3 py-2 z-depth-0 waves-effect" name="button" />
+        <!-- <button type="button" class="btn btn-lg btn-outline-success m-0 px-3 py-2 z-depth-0 waves-effect" name="button" />
         <img src="<?php echo base_url() . '/assets/svg/Print (ecris).svg' ?>" style="height: 15px;"alt="">
-        Print</button>
+        Print</button> -->
         <button type="button" class="btn btn-lg btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" name="button" />
         <img src="<?php echo base_url() . '/assets/svg/clear all button (ecris).svg' ?>" style="height: 15px;"alt="">
         Clear All</button>
@@ -507,17 +507,23 @@
   <div class="modal-dialog modal-lg" style="max-width:950px" role="document">
     <div class="modal-content">
         <div class="modal-header p-2" style="background-color: tomato">
-              <h4 class="modal-title white-text w-100 font-weight-bold py-2">Preview Birthday</h4>
+              <h4 class="modal-title white-text w-100 font-weight-bold py-2">Preview</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true" class="white-text">&times;</span>
               </button>
             </div>
 
-        <div class="md-form mb-4" >
+        <div class="md-form m-0" >
           <iframe width="100%" id="" height="75%" src="<?php echo base_url(). 'pages/viewlcrform' ?>#toolbar=0&navpanes=0&scrollbar=0"></iframe>
         </div>
 
+        <div class="modal-footer m-0 P-0">
+      <button type="button" class="btn btn-sm btn-success" name="button">Save</button>
+        <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal" >Close</button>
+
+        </div>
     </div>
+
   </div>
 </div>
 
