@@ -16,7 +16,10 @@ var userid = '<?php print($this->session->userdata('user_id')); ?>';
 //   }
 // } );
 
+
 $(document).ready(function () {
+
+
 // $('#dtBasicExample').DataTable();
 // $('#tb_mainlcr').DataTable( {
 //   "initComplete": function(settings, json) {

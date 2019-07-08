@@ -1,6 +1,7 @@
 var full_name;
 // CREDENTIALS
 var defaultAmnt = 50;
+
 $(document).ready(function(){
 
     curr_time();
@@ -35,6 +36,7 @@ $(document).ready(function(){
     $('#tb_mainlcr').DataTable().clear().destroy();
     $('#tb_mainlcr').DataTable({
         "ajax" : {
+
           "url" : global.settings.url + '/Lcr_works/loadTableBday',
           dataSrc : 'data'
         },
@@ -49,6 +51,7 @@ $(document).ready(function(){
         }, {
             "data" : "btn"
         }]
+
       });
       $('#whatType').html('Date of Birth');
       $('#whatType2').html('Date of Birth');

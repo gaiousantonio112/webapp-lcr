@@ -92,5 +92,9 @@ class Pages extends CI_Controller {
       $this->session->sess_destroy();
       $this->login();
     }
+  public function book(){
+  $this->load->view('pages/turnjsbook');
+
+  }
 
 }
