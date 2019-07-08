@@ -436,8 +436,9 @@
   <iframe width="100%" class="prewar_view" id="marriage_prewar" height="75%" src="<?php echo base_url(). 'pages/viewmarriagelcrform' ?>#toolbar=0&navpanes=0&scrollbar=0"></iframe>
 </div>
 <div class ="" id = "" >
+  <iframe src="<?php echo base_url() ?>/pages/book"  class="postwar_view"   id="postwar_image" width="100%" height="100%"></iframe>
 
-    <embed type="application/pdf" class="postwar_view" id="postwar_image" src="<?php echo base_url() . '/assets/pdf/samplereg.pdf#toolbar=0&navpanes=0&scrollbar=0' ?>"width="100%" height="100%">
+    <!-- <embed type="application/pdf" class="postwar_view" id="postwar_image" src="<?php echo base_url() . '/assets/pdf/samplereg.pdf#toolbar=0&navpanes=0&scrollbar=0' ?>"width="100%" height="100%"> -->
   <!-- <iframe width="100%" class="postwar_view" id="postwar_image" height="25%" src="<?php echo base_url(). 'pages/viewlcrform' ?>#toolbar=0&navpanes=0&scrollbar=0"></iframe> -->
   </div>
 </div>
