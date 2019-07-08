@@ -10,6 +10,7 @@ $date = date('m - d - Y');
   $pdfbirth = new TCPDI(PDF_PAGE_ORIENTATION, 'mm', PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
   $pdfbirth->setSourceFile(APPPATH.'/..//assets/pdf/lcrform_birth.pdf');
+  $pdfbirth->SetDisplayMode(100);
   $tpl = $pdfbirth->importPage(1);
   $size = $pdfbirth->getTemplateSize($tpl);
   $orientation = $size['h'] > $size['w'] ? 'P' : 'L';
@@ -20,7 +21,7 @@ $date = date('m - d - Y');
 
   $pdfbirth->Text(160, 12, "No. Control Number");
   $pdfbirth->Text(175, 60, "Date printed");
-  $pdfbirth->Text(31, 82, "Page#");
+  $pdfbirth->Text(29, 82, "Page#");
   $pdfbirth->Text(75, 82, "Book#");
   $pdfbirth->Text(75, 93, "LCR Registry Number");
   $pdfbirth->Text(75, 101, "Date of registration");

@@ -67,61 +67,89 @@ $(document).ready(function() {
 
 	$(".genform").hide();
 	$(".previewbtn").hide();
+	$(".prewar_view").hide();
+	$(".postwar_view").hide();
+	$("#birthday_prewar").show();
 	$("#genform-birthday").show();
   $("#birthday-btn").show();
-		  $("input[name$='radioselect']").click(function() {
-			      var test = $(this).val();
+	$("#search-birthday").hide();
+	$("#search-death").hide();
+	$("#search-marriage").hide();
+
+
+
+$("input[name$='radioselect']").click(function() {
+	 			  var test = $(this).val();
 					$(".genform").hide();
-		      $(".previewbtn").hide();
+					$(".previewbtn").hide();
 					$("#"+test+"-btn").show();
-		      $("#genform-"+test).show();
-		  });
+					$("#genform-"+test).show();
+
+					$(".postwar_view").hide();
+					$(".prewar_view").hide();
+					$("#"+test+"_prewar").show();
+});
+
+ $("#post-war").click(function() {
+		 $("#search-birthday").show();
+		 $("#search-death").show();
+		 $("#search-marriage").show();
+
+			$(".prewar_view").hide();
+			$("#postwar_image").show();
+
+
+			$("input[name$='radioselect']").click(function() {
+			if ($('input[name=radioselectwar]:checked').val() == "postwar"){
+				$(".postwar_view").hide();
+				$(".prewar_view").hide();
+				$("#postwar_image").show();
+				}
+				});
+
+ });
+
+
+ $("#pre-war").click(function() {
+	 $("#search-birthday").hide();
+		$("#search-death").hide();
+		 $("#search-marriage").hide();
+
+
+			if ($('input[name=radioselect]:checked').val() == "birthday"){
+					$(".prewar_view").hide();
+					$("#birthday_prewar").show();
+			}
+			else if ($('input[name=radioselect]:checked').val() == "death"){
+					$(".prewar_view").hide();
+					$("#death_prewar").show();
+			}
+			else{
+					$(".prewar_view").hide();
+					$("#marriage_prewar").show();
+			}
+			$(".postwar_view").hide();
+ });
+
 
 	$('#Birthday').click(function(){
 			$('#certif').slideDown();
 			$('#certif3').fadeOut();
 			$('#certif2').fadeOut();
-	})
+	});
 
 	$('#Death').click(function(){
 			$('#certif2').slideDown();
 			$('#certif3').fadeOut();
 			$('#certif').fadeOut();
 
-	})
+	});
 
 	$('#Marriage').click(function(){
 			$('#certif3').slideDown();
 			$('#certif2').fadeOut();
 			$('#certif').fadeOut();
-	})
-
-$("#search-form").hide();
-	$("#post-war").click(function() {
-      $("#search-form").show();
-  });
-	$("#pre-war").click(function() {
-      $("#search-form").hide();
-  });
-
-	$("#search-form2").hide();
-		$("#post-war").click(function() {
-	      $("#search-form2").show();
-	  });
-		$("#pre-war").click(function() {
-	      $("#search-form2").hide();
-	  });
-
-	$("#search-form3").hide();
-		$("#post-war").click(function() {
-	      $("#search-form3").show();
-	  });
-		$("#pre-war").click(function() {
-	      $("#search-form3").hide();
-	  });
-
-
-
+	});
 
   $('#birthdeath').hide();
    $('#birth').show();

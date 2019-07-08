@@ -1,7 +1,7 @@
 
 <div class="container-fluid pt-4 px-5">
     	<div class=" container text-right">
-<div class="card-header bg-primary" style="height:60px;">
+<div class="card-header bg-primary" style="height:55px;">
       <span><img src="<?php echo base_url() .'/assets/svg/Print (ecris).svg' ?>" height="55px" alt="" style="float:right;"></span>
       <p style = "color:white; float:right; padding-right: 15px;font-size: 30px;">Print</p>
 </div>

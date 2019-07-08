@@ -10,6 +10,7 @@ $date = date('m - d - Y');
   $pdfmarriage = new TCPDI(PDF_PAGE_ORIENTATION, 'mm', PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
   $pdfmarriage->setSourceFile(APPPATH.'/..//assets/pdf/lcrform_marriage.pdf');
+  $pdfmarriage->SetDisplayMode(100);
   $tpl = $pdfmarriage->importPage(1);
   $size = $pdfmarriage->getTemplateSize($tpl);
   $orientation = $size['h'] > $size['w'] ? 'P' : 'L';
