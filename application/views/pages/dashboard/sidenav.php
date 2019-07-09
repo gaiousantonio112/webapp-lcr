@@ -13,6 +13,14 @@
 <style media="screen">
 
 
+.wrap
+{
+    width: 320px;
+    height: 192px;
+    padding: 0;
+    overflow: hidden;
+}
+
 .bg-ecris{
 background-color: #EFEDDF;
 }
@@ -64,8 +72,8 @@ background-color: #EFEDDF;
         <a href="<?php echo base_url() . 'pages/dash/index'  ?>" class="font-weight-bold boder text-center list-group-item list-group-item-action bg-ecris bg-title "><img src="<?php echo base_url() .'/assets/svg/dashboard(ecris).svg' ?>" height="25px" class="float-left" alt="">Dashboard</a>
         <a href="<?php echo base_url() . 'pages/dash/search'  ?>" class="font-weight-bold  text-center list-group-item list-group-item-action bg-ecris bg-title"><img src="<?php echo base_url() .'/assets/svg/search and payment (eCRIS).svg' ?>" height="25px" class="float-left" alt=""></i> Search and Payment</a>
         <a href="<?php echo base_url() . 'pages/dash/add'  ?>" class="font-weight-bold  text-center list-group-item list-group-item-action bg-ecris bg-title"><img src="<?php echo base_url() .'/assets/svg/add (ecris).svg' ?>" height="25px" class="float-left" alt=""> Add</a>
-        <a href="<?php echo base_url() . 'pages/dash/print'  ?>" class="font-weight-bold  text-center list-group-item list-group-item-action bg-ecris bg-title"><img src="<?php echo base_url() .'/assets/svg/Print (ecris).svg' ?>" height="25px" class="float-left" alt=""> Print</a>
-				<a href="<?php echo base_url() . 'pages/dash/formgen'  ?>" class="font-weight-bold  text-center list-group-item list-group-item-action bg-ecris bg-title"><img src="<?php echo base_url() .'/assets/svg/Print (ecris).svg' ?>" height="25px" class="float-left" alt="">LCR Form Generator</a>
+      			<a href="<?php echo base_url() . 'pages/dash/formgen'  ?>" class="font-weight-bold  text-center list-group-item list-group-item-action bg-ecris bg-title"><img src="<?php echo base_url() .'/assets/svg/Print (ecris).svg' ?>" height="25px" class="float-left" alt="">LCR Form Generator</a>
+            <a href="<?php echo base_url() . 'pages/dash/print'  ?>" class="font-weight-bold  text-center list-group-item list-group-item-action bg-ecris bg-title"><img src="<?php echo base_url() .'/assets/svg/Print (ecris).svg' ?>" height="25px" class="float-left" alt=""> Print</a>
 
 			  <!-- <a href="#" class="list-group-item list-group-item-action bg-light">Warning</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Birthday</a>
