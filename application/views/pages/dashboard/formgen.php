@@ -1,6 +1,6 @@
 
 
-<div class="container-fluid  teal lighten-5" >
+<div class="container-fluid grey lighten-5" >
 
   <div class = "card" style="margin-top: 5px" >
     <div class = "card-header">
@@ -50,7 +50,7 @@
   <!-- birthday form -->
   <div id ="genform-birthday" class="container genform" style="margin-top: 10px; ">
 
-    <div class="card mb-3" style="background-color:#FFEAD6">
+    <div class="card mb-3 rgba-cyan-slight" >
       <div class="card-body" >
         <div class="text-center px-5" style="color: #191818" id="certif">
             WE CERTIFY that, among others, the following facts of birth appear in our Register of Births On
@@ -164,7 +164,7 @@
 
 <div id ="genform-death" class="container genform " style="margin-top: 10px">
 
-  <div class="card mb-3" style="background-color:#FFEAD6">
+  <div class="card mb-3 rgba-cyan-slight">
     <div class="card-body" >
     <div class="text-center px-5" style="color: #191818" id="certif2">
       WE CERTIFY that, among others, the following facts of death appear in our Register of Death On
@@ -274,7 +274,7 @@
 <!-- marriage form -->
 <div id ="genform-marriage" class="container genform" style="margin-top: 10px">
 
-  <div class="card mb-3" style="background-color:#FFEAD6">
+  <div class="card mb-3 rgba-cyan-slight">
     <div class="card-body" >
     <div class="text-center px-5" style="color: #191818" id="certif3">
         WE CERTIFY that, among others, the following facts of marriage appear in our Register of Marraige On
@@ -431,26 +431,22 @@
   <div class="">
 
 <div class = "" id="" >
-  <iframe width="100%" class="postwar_view z-depth-1" id="postwar_image" height="75%" src="<?php echo base_url(). 'pages/viewlcrform' ?>#toolbar=0&navpanes=0&scrollbar=0"></iframe>
+  <iframe width="100%" class="postwar_view z-depth-1 mb-4" id="postwar_image" height="75%" src="<?php echo base_url(). 'pages/viewlcrform' ?>#toolbar=0&navpanes=0&scrollbar=0"></iframe>
 </div>
 <div class ="" id = "" >
-<<<<<<< HEAD
-  <iframe src="<?php echo base_url() ?>/pages/book"  class="prewar_view z-depth-1"   id="prewar_image" width="100%" height="100%"></iframe>
-=======
-  <iframe src="<?php echo base_url() ?>/pages/book"  class="postwar_view"   id="postwar_image" width="100%" height="80%"></iframe>
->>>>>>> 2c1f9f68e7b1fafad16ce6423a35d6ca683067a2
 
+  <iframe src="<?php echo base_url() ?>/pages/book"  class="prewar_view z-depth-1 mb-4" id="prewar_image" width="100%" height="100%"></iframe>
     </div>
 </div>
 
-<div class="rows">
+<div class="rows ">
 
-<div class = "card m-4">
+<div class = "card ">
 <div class ="card-body">
 <div class="container">
     <div class="row" >
 
-        <div class = "col-3">
+        <!-- <div class = "col-3">
             <div class="md-form ">
               <input type="number" name="page_no" id="page_no." class="form-control">
               <label for="page_no.">Page No.</label>
@@ -473,7 +469,7 @@
         </div>
       </div>
 
-<hr class="my-4">
+<hr class="my-4"> -->
 <div class="container" >
     <div class="row text-center">
 
@@ -513,13 +509,13 @@
               </button>
             </div>
 
-<<<<<<< HEAD
+
         <div class="md-form mb-4" >
           <iframe width="100%" id="" height="75%" src="<?php echo base_url(). 'pages/viewlcrform' ?>#toolbar=0&navpanes=0&scrollbar=0&view=fitH,100"></iframe>
-=======
+
         <div class="md-form m-0" >
           <iframe width="100%" id="" height="75%" src="<?php echo base_url(). 'pages/viewlcrform' ?>#toolbar=0&navpanes=0&scrollbar=0"></iframe>
->>>>>>> 2c1f9f68e7b1fafad16ce6423a35d6ca683067a2
+
         </div>
 
         <div class="modal-footer m-0 P-0">

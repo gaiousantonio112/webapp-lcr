@@ -1,10 +1,5 @@
 <link rel="stylesheet" href="assets/fontawesome-5.9.0/css/font-awesome.min.css">
-<div class="container-fluid pt-4 px-5 " >
-	<div class=" container text-right">
-	</div>
-</b>
-</div>
-
+<div class="container-fluid pt-4 px-5 grey lighten-5" >
 
 <div class="container">
 
@@ -243,4 +238,6 @@
 
 	</form>
 	</div>
+</div>
+</div>
 </div>

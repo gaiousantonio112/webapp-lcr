@@ -1,5 +1,5 @@
 
-<div class="container-fluid pt-4 px-5 teal lighten-5 mb-2">
+<div class="container-fluid pt-4 px-5 grey lighten-5">
 <div class=" container text-right ">
       <div class ="teal lighten-1 z-depth-1" style="height:60px">
           <span><img src="<?php echo base_url() .'/assets/svg/Print (ecris).svg' ?>" height="55px" alt="" style="float:right" class="px-2 "></span>

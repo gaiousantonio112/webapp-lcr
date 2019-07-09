@@ -123,7 +123,7 @@ html {
 </style>
 
 <div id="loadit">
-  <div class="container-fluid pt-4 px-5 teal lighten-5">
+  <div class="container-fluid pt-4 px-5 grey lighten-5">
 
     	<div class=" container text-right">
   <!-- <div class="loading">Loading&#8230;</div> -->
@@ -226,13 +226,12 @@ html {
         </div>
       </div>
 
-
   <div class="container py-4" id="inputpage" >
 
   	<div class="card  " >
     	  <div class="card-header bg-primary"></div>
     	  <div class="card-body">
-  	<div class="row">
+  	      <div class="row">
 
 
   		<div class="col-3">
@@ -409,7 +408,7 @@ html {
           </button>
 
 				</div>
-				<div class="modal-body p-0">
+				<div class="modal-body">
           <iframe width="100%" id="viewpdf" height="65%" src="#funk" allowfullscreen></iframe>
 				</div>
 				<div class="modal-footer">
@@ -497,11 +496,6 @@ html {
 
 
 
-
-
-
-
-
   <!-- Central Modal Small -->
 <div class="modal fade" id="update" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
@@ -516,8 +510,6 @@ html {
 
       </div>
       <div class="modal-body">
-
-
 
 
 <div id="birthdaymodal">
