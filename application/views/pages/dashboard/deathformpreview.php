@@ -21,8 +21,8 @@ $date = date('m - d - Y');
 
   $pdfdeath->Text(160, 12, "No. Control Number");
   $pdfdeath->Text(176, 60, "Date printed");
-  $pdfdeath->Text(29, 82, "Page#");
-  $pdfdeath->Text(73, 82, "Book#");
+  $pdfdeath->Text(41, 82, "Page#");
+  $pdfdeath->Text(86, 82, "Book#");
   $pdfdeath->Text(75, 93, "LCR Registry Number");
   $pdfdeath->Text(75, 101, "Date of registration");
   $pdfdeath->Text(75, 108, "Name_of_Deceased");

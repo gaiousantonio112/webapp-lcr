@@ -123,52 +123,68 @@ html {
 </style>
 
 <div id="loadit">
-  <div class="container-fluid pt-4 px-5">
+  <div class="container-fluid pt-4 px-5 teal lighten-5">
+
     	<div class=" container text-right">
-          <!-- <div class="loading">Loading&#8230;</div> -->
-  <h3 class="font-weight-bold"><b><img src="<?php echo base_url() .'/assets/svg/search and payment (eCRIS).svg' ?>" height="65px" alt=""> Search and Payment</h3>
+  <!-- <div class="loading">Loading&#8230;</div> -->
+
+      <div class ="teal lighten-1 z-depth-1" style="height:60px">
+          <span><img src="<?php echo base_url() .'/assets/svg/search and payment (eCRIS).svg' ?>" height="55px" alt="" style="float:right" class="px-2 py-1"></span>
+          <p style = "color:white; float:right; padding-right: 15px;font-size: 30px;" class="pt-2" >Search and Payment</p>
+      </div>
+
   </b>
   </div>
   <div class="container d-flex" >
   	<div class="container-fluid pt-4">
 
+  <div class = "card mb-3">
+    <div class = "card-header ">
+      <div class="container m-0" style="" >
+
+      <div class="row">
+
+    <div class="col-6 mt-5">
       <div class="custom-control custom-radio custom-control-inline">
         <input type="radio" class="custom-control-input"id="Birthday" name="lcr_type" value="birthday" onclick="show('searchbirth')" checked >
         <label class="custom-control-label" for="Birthday">Birthday</label>
       </div>
-
 
       <div class="custom-control custom-radio custom-control-inline">
         <input type="radio" class="custom-control-input" id="Death" name="lcr_type" value="death" onclick="show('searchdeath')">
         <label class="custom-control-label" for="Death">Death</label>
       </div>
 
-
       <div class="custom-control custom-radio custom-control-inline">
         <input type="radio" class="custom-control-input" id="Marriage" name="lcr_type" value="marriage"  onclick="show('searchmerage')">
         <label class="custom-control-label" for="Marriage">Marriage</label>
-      </div>    </div>
-
-
-  <div class="container-fluid row">
-      <div class="col-4 yearpick">
-        <div class="md-form">
-        <input type="text" id="year" class="form-control" required>
-          <label for="date">Start *</label>
+      </div>
     </div>
-  </div>
-  <div class="col-1">
-  <label class="text-center pt-5">-</label>
-  </div>
-    <div class="col-4 yearpick">
-      <div class="md-form">
+
+    <div class="col-6 m-0 py-0  ">
+      <div class="md-form custom-control-inline">
       <input type="text" id="year" class="form-control" required>
-        <label for="date">End *</label>
-    </div>
-  </div>
-  </div>
-  </div>
+        <label for="year">Start *</label>
+      </div>
 
+      <div class="md-form custom-control-inline">
+        <label class="text-center ">-</label>
+      </div>
+
+      <div class="md-form custom-control-inline">
+        <input type="text" id="year" class="form-control" required>
+        <label for="year">End *</label>
+      </div>
+    </div>
+
+    </div>
+</div>
+</div>
+</div>
+
+<div class="card " >
+    <div class="card-body">
+      <div class="row">
   <div class="container " >
   	<table id="tb_mainlcr" class="table table-sm table-striped table-bordered" cellspacing="0" width="100%">
 
@@ -206,12 +222,19 @@ html {
   	</table>
   </div>
 
-  <div class="container p-4" id="inputpage" >
+          </div>
+        </div>
+      </div>
 
-    	<div class="card  mb-3" >
+
+  <div class="container py-4" id="inputpage" >
+
+  	<div class="card  " >
     	  <div class="card-header bg-primary"></div>
     	  <div class="card-body">
   	<div class="row">
+
+
   		<div class="col-3">
   			<div class="md-form">
   				<input type="text" id="refno" class="form-control" value="---" readonly>
@@ -225,6 +248,7 @@ html {
   				<label id="name_husband" for="name">Name</label>
   			</div>
   		</div>
+
   		<div class="col-2">
   			<div class="dates">
   				<div class="md-form">
@@ -236,6 +260,7 @@ html {
   		<div class=" col-3 text-center p-4">
   			<button id="previewBtn" class="btn btn-lg btn-outline-default m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2" data-toggle="modal" data-target="#viewdocu"><img src="<?php echo base_url() . '/assets/svg/preview-button-ecris.svg' ?>" style="height: 20px;"alt=""> Preview</button>
   		</div>
+
   	</div>
   </div>
 
@@ -375,15 +400,17 @@ html {
 
 		<!-- Change class .modal-sm to change the size of the modal -->
 		<div class="modal-dialog modal-lg" role="document">
-
-
 			<div class="modal-content">
-				<div class="modal-header">
-					<h4 class="modal-title w-100" id="myModalLabel"><img src="<?php echo base_url() . '/assets/svg/live view.svg' ?>" style="height: 40px;"alt=""> Live View</h4>
+        <div class="modal-header p-2" style="background-color: tomato">
+          <h4 class="modal-title white-text w-100 font-weight-bold py-1" id="myModalLabel"> Live View</h4>
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
 
 				</div>
 				<div class="modal-body">
-          <iframe width="100%" id="viewpdf" height="65%" src="#funk"></iframe>
+          <iframe width="100%" id="viewpdf" height="65%" src="#funk" allowfullscreen></iframe>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>

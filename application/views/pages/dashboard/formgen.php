@@ -1,6 +1,6 @@
 
 
-<div class="container-fluid" style=" ">
+<div class="container-fluid  teal lighten-5" >
 
   <div class = "card" style="margin-top: 5px" >
     <div class = "card-header">
@@ -167,7 +167,7 @@
   <div class="card mb-3" style="background-color:#FFEAD6">
     <div class="card-body" >
     <div class="text-center px-5" style="color: #191818" id="certif2">
-      WE CERTIFY that, among others, the following facts of birth appear in our Register of Births On
+      WE CERTIFY that, among others, the following facts of death appear in our Register of Death On
           <div class="row" style="margin-top:-15px;">
                 <div class="md-form px-4 col-6">
                   <select name="death_pageno" class="custom-select" id="death_pageno">
@@ -277,7 +277,7 @@
   <div class="card mb-3" style="background-color:#FFEAD6">
     <div class="card-body" >
     <div class="text-center px-5" style="color: #191818" id="certif3">
-        WE CERTIFY that, among others, the following facts of birth appear in our Register of Births On
+        WE CERTIFY that, among others, the following facts of marriage appear in our Register of Marraige On
             <div class="row" style="margin-top:-15px;">
                   <div class="md-form px-4 col-6">
                     <select name="death_pageno" class="custom-select">
@@ -431,16 +431,12 @@
   <div class="">
 
 <div class = "" id="" >
-  <iframe width="100%" class="prewar_view" id="birthday_prewar" height="75%" src="<?php echo base_url(). 'pages/viewlcrform' ?>#toolbar=0&navpanes=0&scrollbar=0"></iframe>
-  <iframe width="100%" class="prewar_view" id="death_prewar" height="75%" src="<?php echo base_url(). 'pages/viewdeathlcrform' ?>#toolbar=0&navpanes=0&scrollbar=0"></iframe>
-  <iframe width="100%" class="prewar_view" id="marriage_prewar" height="75%" src="<?php echo base_url(). 'pages/viewmarriagelcrform' ?>#toolbar=0&navpanes=0&scrollbar=0"></iframe>
+  <iframe width="100%" class="postwar_view z-depth-1" id="postwar_image" height="75%" src="<?php echo base_url(). 'pages/viewlcrform' ?>#toolbar=0&navpanes=0&scrollbar=0"></iframe>
 </div>
 <div class ="" id = "" >
-  <iframe src="<?php echo base_url() ?>/pages/book"  class="postwar_view"   id="postwar_image" width="100%" height="100%"></iframe>
+  <iframe src="<?php echo base_url() ?>/pages/book"  class="prewar_view z-depth-1"   id="prewar_image" width="100%" height="100%"></iframe>
 
-    <!-- <embed type="application/pdf" class="postwar_view" id="postwar_image" src="<?php echo base_url() . '/assets/pdf/samplereg.pdf#toolbar=0&navpanes=0&scrollbar=0' ?>"width="100%" height="100%"> -->
-  <!-- <iframe width="100%" class="postwar_view" id="postwar_image" height="25%" src="<?php echo base_url(). 'pages/viewlcrform' ?>#toolbar=0&navpanes=0&scrollbar=0"></iframe> -->
-  </div>
+    </div>
 </div>
 
 <div class="rows">
@@ -514,7 +510,7 @@
             </div>
 
         <div class="md-form mb-4" >
-          <iframe width="100%" id="" height="75%" src="<?php echo base_url(). 'pages/viewlcrform' ?>#toolbar=0&navpanes=0&scrollbar=0"></iframe>
+          <iframe width="100%" id="" height="75%" src="<?php echo base_url(). 'pages/viewlcrform' ?>#toolbar=0&navpanes=0&scrollbar=0&view=fitH,100"></iframe>
         </div>
 
     </div>
@@ -527,14 +523,14 @@
   <div class="modal-dialog  modal-lg w-auto h-auto" style="max-width:950px" role="document">
     <div class="modal-content">
         <div class="modal-header p-2" style="background-color: tomato">
-            <h4 class="modal-title white-text w-100 font-weight-bold">Preview Death</h4>
+            <h4 class="modal-title white-text w-100 font-weight-bold py-2">Preview Death</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
         </div>
 
         <div class="md-form mb-4">
-          <iframe width="100%" id="" height="75%" src="<?php echo base_url() . 'pages/viewdeathlcrform'?>#toolbar=0&navpanes=0&scrollbar=0" ></iframe>
+          <iframe width="100%" id="" height="75%" src="<?php echo base_url() . 'pages/viewdeathlcrform'?>#toolbar=0&navpanes=0&scrollbar=0&view=fitH,100" ></iframe>
         </div>
     </div>
   </div>
@@ -545,14 +541,14 @@
   <div class="modal-dialog modal-lg w-auto h-auto" style="max-width:950px" role="document">
     <div class="modal-content">
         <div class="modal-header p-2" style="background-color: tomato">
-        <h4 class="modal-title white-text w-100 font-weight-bold">Preview Marriage</h4>
+        <h4 class="modal-title white-text w-100 font-weight-bold py-2">Preview Marriage</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
 
         <div class="md-form mb-4">
-          <iframe width="100%"  height="75%" src="<?php echo base_url() . 'pages/viewmarriagelcrform'?>#toolbar=0&navpanes=0&scrollbar=0" ></iframe>
+          <iframe width="100%"  height="75%" src="<?php echo base_url() . 'pages/viewmarriagelcrform'?>#toolbar=0&navpanes=0&scrollbar=0&view=fitH,100" ></iframe>
         </div>
     </div>
   </div>

@@ -59,10 +59,6 @@ console.log("Boo, inline PDFs are not supported by this browser");
 				'format': 'yyyy-mm-dd',
 				'autoclose': true
 			});
-
-
-
-
 		});
 
 
@@ -88,27 +84,22 @@ $("input[name$='radioselect']").click(function() {
 					$("#"+test+"-btn").show();
 					$("#genform-"+test).show();
 
-					$(".postwar_view").hide();
-					$(".prewar_view").hide();
-					$("#"+test+"_prewar").show();
 });
 
+$("#prewar_image").show();
  $("#post-war").click(function() {
 		 $("#search-birthday").show();
 		 $("#search-death").show();
 		 $("#search-marriage").show();
-
-			$(".prewar_view").hide();
-			$("#postwar_image").show();
-
-
-			$("input[name$='radioselect']").click(function() {
-			if ($('input[name=radioselectwar]:checked').val() == "postwar"){
-				$(".postwar_view").hide();
-				$(".prewar_view").hide();
-				$("#postwar_image").show();
-				}
-				});
+		 			$("#prewar_image").hide();
+		 			$("#postwar_image").show();
+			// $("input[name$='radioselect']").click(function() {
+			// if ($('input[name=radioselectwar]:checked').val() == "postwar"){
+			// 	$(".postwar_view").hide();
+			// 	$(".prewar_view").hide();
+			// 	$("#postwar_image").show();
+			// 	}
+			// 	});
 
  });
 
@@ -117,21 +108,23 @@ $("input[name$='radioselect']").click(function() {
 	 $("#search-birthday").hide();
 		$("#search-death").hide();
 		 $("#search-marriage").hide();
+		 $("#postwar_image").hide();
+		 $("#prewar_image").show();
 
 
-			if ($('input[name=radioselect]:checked').val() == "birthday"){
-					$(".prewar_view").hide();
-					$("#birthday_prewar").show();
-			}
-			else if ($('input[name=radioselect]:checked').val() == "death"){
-					$(".prewar_view").hide();
-					$("#death_prewar").show();
-			}
-			else{
-					$(".prewar_view").hide();
-					$("#marriage_prewar").show();
-			}
-			$(".postwar_view").hide();
+			// if ($('input[name=radioselect]:checked').val() == "birthday"){
+			// 		$(".prewar_view").hide();
+			// 		$("#birthday_prewar").show();
+			// }
+			// else if ($('input[name=radioselect]:checked').val() == "death"){
+			// 		$(".prewar_view").hide();
+			// 		$("#death_prewar").show();
+			// }
+			// else{
+			// 		$(".prewar_view").hide();
+			// 		$("#marriage_prewar").show();
+			// }
+
  });
 
 

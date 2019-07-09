@@ -21,8 +21,8 @@ $date = date('m - d - Y');
 
   $pdfmarriage->Text(160, 12, "No. Control Number");
   $pdfmarriage->Text(176, 60, "Date printed");
-  $pdfmarriage->Text(29, 82, "Page#");
-  $pdfmarriage->Text(73, 82, "Book#");
+  $pdfmarriage->Text(47, 82, "Page#");
+  $pdfmarriage->Text(92, 82, "Book#");
   $pdfmarriage->Text(75, 101, "Husband_Name");
   $pdfmarriage->Text(75, 108, "Husband_Age");
   $pdfmarriage->Text(75, 116, "Husband_Nationality");

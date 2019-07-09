@@ -15,6 +15,7 @@ $date = date('m - d - Y');
 $pageNo = 1;
 
   for ($pageNo; $pageNo <= $pageCount; $pageNo++) {
+      $pdfv2->SetDisplayMode(100);
     $tpl = $pdfv2->importPage($pageNo);
   $size = $pdfv2->getTemplateSize($tpl);
    $orientation = $size['h'] > $size['w'] ? 'P' : 'L';
