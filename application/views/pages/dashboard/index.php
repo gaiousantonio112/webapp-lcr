@@ -1,5 +1,4 @@
 <div class="container-fluid  pt-4 px-5 ">
-<div class="container text-right">
 
   <!-- <div class="card-header bg-primary" style="height:58px;">
     <img src="<?php echo base_url() .'/assets/svg/dashboard(ecris).svg' ?>" height="50px" alt="" style="float:right">
@@ -7,14 +6,11 @@
 
   </div> -->
 
-  <div class ="teal lighten-1 z-depth-1" style="height:60px">
-      <span><img src="<?php echo base_url() .'/assets/svg/dashboard(ecris).svg' ?>" height="55px" alt="" style="float:right" class="px-2 py-2"></span>
+  <div class ="teal lighten-1 z-depth-1 " style="height:54px">
+      <span><img src="<?php echo base_url() .'/assets/svg/dashboard(ecris).svg' ?>" height="60px" alt="" style="float:right" class="px-2 py-2"></span>
       <p style = "color:white; float:right; padding-right: 15px;font-size: 30px;" class="pt-2" >Dashboard</p>
   </div>
-</div>
 
-</b>
-</div>
 
 <div class="container p-3">
 
@@ -99,5 +95,7 @@
         </div>
   </div>
 
+  </div>
+  </div>
 
 <div class="p-5"></div>

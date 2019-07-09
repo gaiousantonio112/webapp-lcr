@@ -1,8 +1,8 @@
 
 <div class="container-fluid pt-4 px-5 grey lighten-5">
 <div class=" container text-right ">
-      <div class ="teal lighten-1 z-depth-1" style="height:60px">
-          <span><img src="<?php echo base_url() .'/assets/svg/Print (ecris).svg' ?>" height="55px" alt="" style="float:right" class="px-2 "></span>
+      <div class ="teal lighten-1 z-depth-1" style="height:52px">
+          <span><img src="<?php echo base_url() .'/assets/svg/Print (ecris).svg' ?>" height="60px" alt="" style="float:right" class="px-2 "></span>
           <p style = "color:white; float:right; padding-right: 15px;font-size: 30px;" class="pt-2" >Print</p>
       </div>
 </div>

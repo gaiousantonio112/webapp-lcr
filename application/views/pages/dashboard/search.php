@@ -123,28 +123,27 @@ html {
 </style>
 
 <div id="loadit">
-  <div class="container-fluid pt-4 px-5 grey lighten-5">
+  <div class="container-fluid pt-4 px-3 grey lighten-5">
 
     	<div class=" container text-right">
   <!-- <div class="loading">Loading&#8230;</div> -->
 
-      <div class ="teal lighten-1 z-depth-1" style="height:60px">
-          <span><img src="<?php echo base_url() .'/assets/svg/search and payment (eCRIS).svg' ?>" height="55px" alt="" style="float:right" class="px-2 py-1"></span>
+      <div class ="teal lighten-1 z-depth-1" style="height:52px">
+          <span><img src="<?php echo base_url() .'/assets/svg/search and payment (eCRIS)2.svg' ?>" height="65px" alt="" style="float:right" class="px-1 py-1"></span>
           <p style = "color:white; float:right; padding-right: 15px;font-size: 30px;" class="pt-2" >Search and Payment</p>
       </div>
 
-  </b>
   </div>
   <div class="container d-flex" >
   	<div class="container-fluid pt-4">
 
-  <div class = "card mb-3">
-    <div class = "card-header ">
+  <div class = "card mb-3 ">
+    <div class = "card-header white">
       <div class="container m-0" style="" >
 
       <div class="row">
 
-    <div class="col-6 mt-5">
+    <div class="col-6 mt-3">
       <div class="custom-control custom-radio custom-control-inline">
         <input type="radio" class="custom-control-input"id="Birthday" name="lcr_type" value="birthday" onclick="show('searchbirth')" checked >
         <label class="custom-control-label" for="Birthday">Birthday</label>
@@ -161,17 +160,17 @@ html {
       </div>
     </div>
 
-    <div class="col-6 m-0 py-0  ">
-      <div class="md-form custom-control-inline">
+    <div class="col-6 m-0 py-0" style="">
+      <div class="md-form custom-control-inline m-0">
       <input type="text" id="year" class="form-control" required>
         <label for="year">Start *</label>
       </div>
 
-      <div class="md-form custom-control-inline">
+      <div class="md-form custom-control-inline mt-1 ">
         <label class="text-center ">-</label>
       </div>
 
-      <div class="md-form custom-control-inline">
+      <div class="md-form custom-control-inline m-0">
         <input type="text" id="year" class="form-control" required>
         <label for="year">End *</label>
       </div>
@@ -226,7 +225,7 @@ html {
         </div>
       </div>
 
-  <div class="container py-4" id="inputpage" >
+  <div class="container py-4 px-0" id="inputpage" >
 
   	<div class="card  " >
     	  <div class="card-header bg-primary"></div>
@@ -401,6 +400,7 @@ html {
 		<div class="modal-dialog modal-lg" role="document">
 			<div class="modal-content">
         <div class="modal-header p-2" style="background-color: tomato">
+          <span><img src="<?php echo base_url() .'/assets/svg/live view2.svg' ?>" height="45px" alt="" style="float:right" class="px-2 py-1"></span>
           <h4 class="modal-title white-text w-100 font-weight-bold py-1" id="myModalLabel"> Live View</h4>
 
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -497,20 +497,24 @@ html {
 
 
   <!-- Central Modal Small -->
+
 <div class="modal fade" id="update" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
 
   <!-- Change class .modal-sm to change the size of the modal -->
   <div class="modal-dialog modal-lg" role="document">
-
-
     <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title w-100" id="myModalLabel"><img src=" <?php echo base_url().'/assets/svg/updatefinal.svg  '?>" style="height: 35px;">Update</h4>
+      <div class="modal-header p-2" style="background-color: tomato">
+        <span><img src=" <?php echo base_url().'/assets/svg/updatefinal.svg  '?>" height="45px" alt="" style="float:right" class="px-2 py-1"></span>
+        <h4 class="modal-title white-text w-100 font-weight-bold py-1" id="myModalLabel">Update</h4>
 
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-      <div class="modal-body">
 
+
+<div class="modal-body">
 
 <div id="birthdaymodal">
   <form id="updateBirthForm">
@@ -559,18 +563,17 @@ html {
   						<label >Date of Birth</label>
   				</div>
   		</div>
-
-
-
   		</div>
   	</div>
     <div class="modal-footer">
-
         <button type="submit" class="btn btn-primary btn-sm">Save changes</button>
-            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
-      </div>
-  </form>
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
     </div>
+  </form>
+</div>
+</div>
+</div>
+</div>
 
 
 
