@@ -10,12 +10,18 @@ $(document).ready(function(){
       data : $(this).serialize(),
       dataType : 'json',
       success : function(res){
-        // console.log(res.length);        
+        // console.log(res.length);
         if(res.length == 1){
           // goto next page
           window.location.href = global.settings.url + '/pages/dash/index'
         }else{
-          alert('incorrect username or password');
+              // notif('Incorrect Username or Password','danger');
+            $.bootstrapGrowl("Incorrect Username or Password", {
+                type: 'danger',
+                align: 'right',
+                width: 'auto',
+                allow_dismiss: true
+              }, 1000);
           $('#username').val("");
           $('#password').val("");
         }

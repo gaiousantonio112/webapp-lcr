@@ -11,3 +11,4 @@
 
 <script src="<?php echo base_url(); ?>/assets/js/global.js"></script>
 <script src="<?php echo base_url(); ?>/assets/js/login/login.js"></script>
+<script src="<?php print(base_url());?>/assets/js/dashboard/jquery.bootstrap-growl.min.js" charset="utf-8"></script>

@@ -409,7 +409,7 @@ html {
           </button>
 
 				</div>
-				<div class="modal-body">
+				<div class="modal-body p-0">
           <iframe width="100%" id="viewpdf" height="65%" src="#funk" allowfullscreen></iframe>
 				</div>
 				<div class="modal-footer">
