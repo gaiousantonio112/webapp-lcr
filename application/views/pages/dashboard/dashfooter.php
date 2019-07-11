@@ -105,7 +105,7 @@ $("#prewar_image").show();
 
 
  $("#pre-war").click(function() {
-	 $("#search-birthday").hide();
+	 	$("#search-birthday").hide();
 		$("#search-death").hide();
 		 $("#search-marriage").hide();
 		 $("#postwar_image").hide();
@@ -160,61 +160,60 @@ $("#prewar_image").show();
 function show(page){
    $('#'+page).show();
 
-if(page == 'birth'){
-$('#death').hide();
-     $('#merage').hide();
+		if(page == 'birth'){
+		$('#death').hide();
+		     $('#merage').hide();
 
-}
-if(page == 'death'){
-   $('#birth').hide();
-     $('#merage').hide();
-}if(page == 'merage'){
+		}
+		if(page == 'death'){
+		   $('#birth').hide();
+		     $('#merage').hide();
+		}if(page == 'merage'){
 
-$('#birth').hide();
-     $('#death').hide();
-}
+		$('#birth').hide();
+		     $('#death').hide();
+		}
 
+		if(page == 'searchbirth'){
 
+		  $('#birthdeath').hide();
+			   $('#birthdaymodal').show();
+				 	   $('#deathmodal').hide();
+			 	   $('#marriagemodal').hide();
+		}
+		if(page == 'searchdeath'){
 
-if(page == 'searchbirth'){
+		  $('#birthdeath').hide();
+			   $('#birthdaymodal').hide();
+				 	   $('#deathmodal').show();
+						  	   $('#marriagemodal').hide();
 
-  $('#birthdeath').hide();
-	   $('#birthdaymodal').show();
-		 	   $('#deathmodal').hide();
-	 	   $('#marriagemodal').hide();
-}
-if(page == 'searchdeath'){
+		}
+		if(page == 'searchmerage'){
 
-  $('#birthdeath').hide();
-	   $('#birthdaymodal').hide();
-		 	   $('#deathmodal').show();
-				  	   $('#marriagemodal').hide();
+		  $('#birthdeath').show();
+				   $('#birthdaymodal').hide();
+					 		 	   $('#deathmodal').hide();
+					 	   $('#marriagemodal').show();
 
-}
-if(page == 'searchmerage'){
+		}
 
-  $('#birthdeath').show();
-		   $('#birthdaymodal').hide();
-			 		 	   $('#deathmodal').hide();
-			 	   $('#marriagemodal').show();
+		if(page == 'default'){
+		document.getElementById('pageno').value='1-2' ;
+		document.getElementById('pageno').disabled = true;
+		}
 
-}
+		if(page == 'specific'){
+			document.getElementById('pageno').disabled = false;
+		document.getElementById('pageno').value='1' ;
 
+		}
 
-if(page == 'default'){
-document.getElementById('pageno').value='1-2' ;
-document.getElementById('pageno').disabled = true;
-}
-if(page == 'specific'){
-	document.getElementById('pageno').disabled = false;
-document.getElementById('pageno').value='1' ;
+		if(page == 'range'){
+			document.getElementById('pageno').disabled = false;
+		document.getElementById('pageno').value='1-2' ;
 
-}
-if(page == 'range'){
-	document.getElementById('pageno').disabled = false;
-document.getElementById('pageno').value='1-2' ;
-
-}
+		}
 
 }
 
