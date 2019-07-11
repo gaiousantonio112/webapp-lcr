@@ -552,6 +552,32 @@ $(document).ready(function(){
 
 
 
+
+
+///pre war birthday
+  $('#birthdayform').submit(function(e){
+  e.preventDefault();
+  console.log($('#birthdayform').serializeArray());
+
+  });
+
+
+  ///pre war death
+    $('#deathform').submit(function(e){
+    e.preventDefault();
+    console.log($('#deathform').serializeArray());
+
+    });
+    ///pre war marr
+      $('#marrformprewar').submit(function(e){
+      e.preventDefault();
+      console.log($('#marrformprewar').serializeArray());
+
+      });
+
+
+
+
 });
 
 
@@ -719,6 +745,7 @@ function update(id,table){
     default:
 
   }
+
 }
 
 // END

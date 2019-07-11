@@ -1,13 +1,9 @@
 
-
 <div class="container-fluid grey lighten-5" >
-
     <div class = "card" style="margin-top: 5px" >
       <div class = "card-header">
       <div class="container" style="">
-
           <div class="row">
-
             <div class="col-6">
               <div class="custom-control custom-radio custom-control-inline">
                 <input type="radio" class="custom-control-input" name="radioselectwar" id="pre-war" value="prewar" checked>
@@ -37,19 +33,17 @@
                   <label class="custom-control-label" for="Marriage">Marriage</label>
                 </div>
               </div>
-
             </div>
           </div>
-
       </div>
     </div>
 
 <div class="row">
 
+      <!-- birthday form -->
         <div class="col-6 " >
-          <!-- birthday form -->
+          <form id="birthdayform">
           <div id ="genform-birthday" class="container genform" style="margin-top: 10px; ">
-
             <div class="card mb-3 rgba-cyan-slight" >
               <div class="card-body" >
                 <div class="text-center px-5" style="color: #191818" id="certif">
@@ -147,11 +141,21 @@
 
                       </div>
                   </div>
+                  <div class="row">
+                    <div class="col-12 text-center pb-5">
+      <button type="submit" class="btn btn-info" name="button">Preview</button>
+      <button type="button"  class="btn btn-danger" name="button">Clear All</button>
+      </div>
+                  </div>
+</form>
                 </div>
+
+
+
 
         <!-- death form -->
         <div id ="genform-death" class="container genform " style="margin-top: 10px">
-
+<form id="deathform">
           <div class="card mb-3 rgba-cyan-slight">
             <div class="card-body" >
             <div class="text-center px-5" style="color: #191818" id="certif2">
@@ -258,6 +262,13 @@
           </div>
 
         </div>
+        <div class="row">
+          <div class="col-12 text-center pb-5">
+<button type="submit" class="btn btn-info" name="button">Preview</button>
+<button type="button"  class="btn btn-danger" name="button">Clear All</button>
+</div>
+        </div>
+</form>
         </div>
         <!-- marriage form -->
             <div id ="genform-marriage" class="container genform" style="margin-top: 10px">
