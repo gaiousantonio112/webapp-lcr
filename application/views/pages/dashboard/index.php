@@ -12,6 +12,7 @@
       <p class="h3 pt-2 ml-4 text-rgba-black-strong " style=" font-family: Roboto">
         <span><img src="<?php echo base_url() .'/assets/svg/dashboard(ecris).svg' ?>" height="50px" alt=""  class="px-2 text-spacing-3em "></span>Dashboard</p>
   </div>
+    </div>
 
 <hr class="">
 
@@ -97,13 +98,40 @@
 
           </div>
         </div>
-      </div>
-
 
           <div class="container card col-lg-9 col-sm-12"  style="margin-top: -15; width:100px">
             <canvas id="lineChart"></canvas>
           </div>
 
+
+
+
+<div class="container pt-3">
+  <div class="card">
+    <div class="card-body">
+        <div class="col-4 text-left">
+           <label for="exampleFormControlSelect1">Select Year</label>
+           <select class="form-control" id="exampleFormControlSelect1" >
+             <option>1</option>
+             <option>2</option>
+             <option>3</option>
+             <option>4</option>
+             <option>5</option>
+           </select>
+        </div>
+        <div class=" pt-5 col-12" style="margin-top: -15">
+          <canvas id="lineChart"></canvas>
+        </div>
+
+    </div>
+
+  </div>
+
+
+</div>
+
+
+>>>>>>> bd4ce38d61e6e7effaa48b5b633b63923a1c8f08
   </div>
   </div>
   </div>

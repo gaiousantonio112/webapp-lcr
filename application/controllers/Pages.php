@@ -72,6 +72,8 @@ class Pages extends CI_Controller {
 
         $this->load->view('pages/dashboard/viewCert');
     }
+
+    // FORM GEN
     public function viewlcrform()
     {
       $this->load->view('pages/dashboard/birthformpreview.php');
@@ -92,9 +94,10 @@ class Pages extends CI_Controller {
       $this->session->sess_destroy();
       $this->login();
     }
-  public function book(){
-  $this->load->view('pages/turnjsbook');
+    
+    public function book(){
+      $this->load->view('pages/turnjsbook');
 
-  }
+    }
 
 }
