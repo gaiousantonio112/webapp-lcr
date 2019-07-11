@@ -28,12 +28,12 @@ $(document).ready(function () {
 // } );
 $('.dataTables_length').addClass('bs-select');
 });
-
-if(PDFObject.supportsPDFs){
-console.log("Yay, this browser supports inline PDFs.");
-} else {
-console.log("Boo, inline PDFs are not supported by this browser");
-}
+//
+// if(PDFObject.supportsPDFs){
+// console.log("Yay, this browser supports inline PDFs.");
+// } else {
+// console.log("Boo, inline PDFs are not supported by this browser");
+// }
 </script>
 <script type="text/javascript" src="<?php print(base_url().'/assets/js/global.js'); ?>">
 
