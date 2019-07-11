@@ -98,7 +98,20 @@ background-color: #EFEDDF;
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle bg-title" href="#notif" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-bell"></i>
+              </a>
+              <div class="dropdown-menu  dropdown-menu-right" id="notif" aria-labelledby="navbarDropdown">
+            <a href="#" class="col-12">NOtif</a>
+              <a href="#" class="col-12">NOtif</a>
+                <a href="#" class="col-12">NOtif</a>
+                  <a href="#" class="col-12">NOtif</a>
+                    <a href="#" class="col-12">NOtif</a>
+                      <a href="#" class="col-12">NOtif</a>
+                        <a href="#" class="col-12">NOtif</a>
+              </div>
+            </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle bg-title" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 User
