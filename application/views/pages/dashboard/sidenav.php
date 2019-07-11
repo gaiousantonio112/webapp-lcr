@@ -12,7 +12,6 @@
 
 <style media="screen">
 
-
 .wrap
 {
     width: 320px;
@@ -39,8 +38,23 @@ background-color: #EFEDDF;
 .bg-title{
   color: #163F54;
 }
+.notif:hover
+{
+    background-color:#F3F3F3;
+}
+.notif
+{
+    background-color: white;
 
+}
+.notif:active
+{
+    background-color: #EFECE0;
+}
 </style>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,14 +65,16 @@ background-color: #EFEDDF;
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>LCR</title>
+  <title>LCR
+
+  </title>
 
 
 </head>
 
 <body>
 
-  <div class="d-flex" id="wrapper">
+  <div class="d-flex align-left" id="wrapper">
 
     <!-- Sidebar -->
     <div class="bg-ecris border-right" id="sidebar-wrapper">
@@ -96,21 +112,24 @@ background-color: #EFEDDF;
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle bg-title" href="#notif" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0" >
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle bg-title" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-bell"></i>
               </a>
-              <div class="dropdown-menu  dropdown-menu-right" id="notif" aria-labelledby="navbarDropdown">
-            <a href="#" class="col-12">NOtif</a>
-              <a href="#" class="col-12">NOtif</a>
-                <a href="#" class="col-12">NOtif</a>
-                  <a href="#" class="col-12">NOtif</a>
-                    <a href="#" class="col-12">NOtif</a>
-                      <a href="#" class="col-12">NOtif</a>
-                        <a href="#" class="col-12">NOtif</a>
+          <div class="dropdown-menu dropdown-menu-right pb-0" id="notif" aria-labelledby="navbarDropdown" style="background-color:tomato;">
+            <h6 class="dropdown-header mt-0 pb-3 white-text" style="background-color:tomato; width:200px;">Notification  <i class="far fa-bell float-right"></i></h6>
+            <a href="#" class="notif col-12"> Notification Notification Notification Notification</a>
+              <a href="#" class="col-12 notif">Notification</a>
+                <a href="#" class="col-12 notif">Notification</a>
+                  <a href="#" class="col-12 notif">Notification</a>
+                    <a href="#" class="col-12 notif">Notification</a>
+                      <a href="#" class="col-12 notif">Notification</a>
+                        <a href="#" class="col-12 notif">Notification</a>
               </div>
+
+
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle bg-title" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
