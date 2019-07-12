@@ -1,9 +1,4 @@
-<div class="container-fluid px-2 py-2">
 
-  <!-- <div class="card-header bg-primary" style="height:58px;">
-    <img src="<?php echo base_url() .'/assets/svg/dashboard(ecris).svg' ?>" height="50px" alt="" style="float:right">
-    <p style = "color:white; float:right; padding-right: 15px;font-size: 30px;">Dashboard</p>
-  </div> -->
 <div class="container-fluid " style="">
   <div class="row">
     <div class="col-lg-12 grey lighten-4">
@@ -126,12 +121,9 @@
     </div>
 
   </div>
-
-
 </div>
 
 
->>>>>>> bd4ce38d61e6e7effaa48b5b633b63923a1c8f08
   </div>
   </div>
   </div>
