@@ -15,6 +15,29 @@ class Lcr_works extends CI_Controller {
       echo json_encode($this->works->login_user($inputData));
     }
 
+    // For the triple line Chart
+    public function getResultCharts()
+    {
+      $per_year = $this->input->post('line');
+
+      echo json_encode($this->works->getResultCharts($per_year));
+    }
+
+    public function getYears()
+    {
+       echo json_encode($this->works->getYears());
+    }
+
+    public function getUpdateUltimate()
+    {
+      echo json_encode($this->works->getUpdateUltimate());
+    }
+
+    // END
+
+
+    
+
     public function getUserCredentials()
     {
       $id = $this->input->post('id');

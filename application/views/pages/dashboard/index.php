@@ -106,12 +106,7 @@
     <div class="card-body">
         <div class="col-4 text-left">
            <label for="exampleFormControlSelect1">Select Year</label>
-           <select class="form-control" id="exampleFormControlSelect1" >
-             <option>1</option>
-             <option>2</option>
-             <option>3</option>
-             <option>4</option>
-             <option>5</option>
+           <select class="form-control" id="year_select" >
            </select>
         </div>
         <div class=" pt-5 col-12" style="margin-top: -15">

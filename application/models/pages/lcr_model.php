@@ -36,6 +36,80 @@
         return $dataArray;
       }
 
+      // For triple line charts
+      public function getResultCharts($per_year)
+      {
+
+
+
+        $jan = $this->db->query("SELECT COUNT(*) AS num_bday FROM ".$per_year['table']." WHERE year(".$per_year['column'].") = '".$per_year['year']."' AND month(".$per_year['column'].") = '1';");
+        $feb = $this->db->query("SELECT COUNT(*) AS num_bday FROM ".$per_year['table']." WHERE year(".$per_year['column'].") = '".$per_year['year']."' AND month(".$per_year['column'].") = '2';");
+        $mar = $this->db->query("SELECT COUNT(*) AS num_bday FROM ".$per_year['table']." WHERE year(".$per_year['column'].") = '".$per_year['year']."' AND month(".$per_year['column'].") = '3';");
+        $apr = $this->db->query("SELECT COUNT(*) AS num_bday FROM ".$per_year['table']." WHERE year(".$per_year['column'].") = '".$per_year['year']."' AND month(".$per_year['column'].") = '4';");
+        $may = $this->db->query("SELECT COUNT(*) AS num_bday FROM ".$per_year['table']." WHERE year(".$per_year['column'].") = '".$per_year['year']."' AND month(".$per_year['column'].") = '5';");
+        $jun = $this->db->query("SELECT COUNT(*) AS num_bday FROM ".$per_year['table']." WHERE year(".$per_year['column'].") = '".$per_year['year']."' AND month(".$per_year['column'].") = '6';");
+        $jul = $this->db->query("SELECT COUNT(*) AS num_bday FROM ".$per_year['table']." WHERE year(".$per_year['column'].") = '".$per_year['year']."' AND month(".$per_year['column'].") = '7';");
+        $aug = $this->db->query("SELECT COUNT(*) AS num_bday FROM ".$per_year['table']." WHERE year(".$per_year['column'].") = '".$per_year['year']."' AND month(".$per_year['column'].") = '8';");
+        $sep = $this->db->query("SELECT COUNT(*) AS num_bday FROM ".$per_year['table']." WHERE year(".$per_year['column'].") = '".$per_year['year']."' AND month(".$per_year['column'].") = '9';");
+        $oct = $this->db->query("SELECT COUNT(*) AS num_bday FROM ".$per_year['table']." WHERE year(".$per_year['column'].") = '".$per_year['year']."' AND month(".$per_year['column'].") = '10';");
+        $nov = $this->db->query("SELECT COUNT(*) AS num_bday FROM ".$per_year['table']." WHERE year(".$per_year['column'].") = '".$per_year['year']."' AND month(".$per_year['column'].") = '11';");
+        $dec = $this->db->query("SELECT COUNT(*) AS num_bday FROM ".$per_year['table']." WHERE year(".$per_year['column'].") = '".$per_year['year']."' AND month(".$per_year['column'].") = '12';");
+
+        $data['year'] = array(
+          $jan->row(0)->num_bday,
+          $feb->row(0)->num_bday,
+          $mar->row(0)->num_bday,
+          $apr->row(0)->num_bday,
+          $may->row(0)->num_bday,
+          $jun->row(0)->num_bday,
+          $jul->row(0)->num_bday,
+          $aug->row(0)->num_bday,
+          $sep->row(0)->num_bday,
+          $oct->row(0)->num_bday,
+          $nov->row(0)->num_bday,
+          $dec->row(0)->num_bday
+        );
+
+        return $data;
+      }
+
+      public function getUpdateUltimate()
+      {
+
+        // DateTime::createFromFormat('d/m/Y', "24/04/2012")->format('Y-m-d')
+        $query = $this->db->query('SELECT * FROM lcr_death LIMIT 0, 20000');
+        $data[] = array();
+        $this->db->trans_start();
+        foreach ($query->result() as $r) {
+          $this->db->where('id', $r->id);
+          $this->db->update('lcr_death',array('date_of_death' => date("Y-m-d",strtotime($r->date_of_death))));
+          // $data[] = array(
+          //   'id' => $r->id,
+          //   'bday_strtime' => date("Y-m-d",strtotime($r->birthday))
+          // );
+        }
+
+        return ($this->db->trans_complete()) ? true : false;
+
+      }
+
+      public function getYears()
+      {
+        $query = $this->db->query('SELECT YEAR(birthday) AS yrs FROM lcr_bday GROUP BY YEAR(birthday)');
+
+        $data[] = array();
+
+        foreach ($query->result() as $r) {
+          $data[] = array(
+            'yrs' => ($r->yrs == null) ? 'Choose Year' : $r->yrs
+          );
+        }
+
+        return $data;
+
+      }
+
+      // END
       // LCR BDAY CRUD
       public function showAllbday()
       {
