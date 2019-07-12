@@ -565,7 +565,7 @@ $(document).ready(function(){
     $('#deathform').submit(function(e){
     e.preventDefault();
     console.log($('#deathform').serializeArray());
-  });.
+  });
 
 
 //MARR
