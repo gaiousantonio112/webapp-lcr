@@ -9,14 +9,14 @@
     <div class="col-lg-12 grey lighten-4">
 
   <div class ="">
-      <p class="h3 pt-2 mt-3 ml-4 text-rgba-black-strong" >
-        <span><img src="<?php echo base_url() .'/assets/svg/dashboard(ecris).svg' ?>" height="60px" alt=""  class="px-2 py-2 text-spacing-3em"></span>Dashboard</p>
+      <p class="h3 pt-2 ml-4 text-rgba-black-strong " style=" font-family: Roboto">
+        <span><img src="<?php echo base_url() .'/assets/svg/dashboard(ecris).svg' ?>" height="50px" alt=""  class="px-2 text-spacing-3em "></span>Dashboard</p>
   </div>
     </div>
 
 <hr class="">
 
-<div class="container p-3">
+<div class="container py-2">
 <div class="row">
     <div class="col-xl-3 col-md-6 mb-2 text-center">
       <div class="card py-2 ">
@@ -99,6 +99,10 @@
           </div>
         </div>
 
+          <div class="container card col-lg-9 col-sm-12"  style="margin-top: -15; width:100px">
+            <canvas id="lineChart"></canvas>
+          </div>
+
 
 
 
@@ -122,6 +126,7 @@
 </div>
 
 
+>>>>>>> bd4ce38d61e6e7effaa48b5b633b63923a1c8f08
   </div>
   </div>
   </div>

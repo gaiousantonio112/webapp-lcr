@@ -557,6 +557,33 @@ $(document).ready(function(){
 
 
 
+//LCR FORM GENERATOR PAGE
+
+///BIRTHDAY
+  $('#birthdayform').submit(function(e){
+  e.preventDefault();
+  console.log($('#birthdayform').serializeArray());
+  });
+
+
+//DEATH
+    $('#deathform').submit(function(e){
+    e.preventDefault();
+    console.log($('#deathform').serializeArray());
+  });
+
+
+//MARR
+      $('#marrform').submit(function(e){
+      e.preventDefault();
+      console.log($('#marrform').serializeArray());
+      });
+
+
+
+
+
+
 });
 
 
@@ -724,6 +751,7 @@ function update(id,table){
     default:
 
   }
+
 }
 
 // END
