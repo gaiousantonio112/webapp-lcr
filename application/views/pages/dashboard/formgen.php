@@ -2,7 +2,7 @@
 <div class="container-fluid grey lighten-5" >
     <div class = "card" style="margin-top: 5px" >
       <div class = "card-header">
-      <div class="container" style="">
+        <div class="container" style="">
           <div class="row">
             <div class="col-6">
               <div class="custom-control custom-radio custom-control-inline">
@@ -33,6 +33,7 @@
                   <label class="custom-control-label" for="Marriage">Marriage</label>
                 </div>
               </div>
+
             </div>
           </div>
       </div>
@@ -43,6 +44,7 @@
       <!-- birthday form -->
         <div class="col-6 " >
           <form id="birthdayform">
+
           <div id ="genform-birthday" class="container genform" style="margin-top: 10px; ">
             <div class="card mb-3 rgba-cyan-slight" >
               <div class="card-body" >
@@ -146,16 +148,13 @@
       <button type="submit" class="btn btn-info" name="button">Preview</button>
       <button type="button"  class="btn btn-danger" name="button">Clear All</button>
       </div>
-                  </div>
-</form>
-                </div>
-
-
-
-
+        </div>
+        </form>
+      </div>
         <!-- death form -->
         <div id ="genform-death" class="container genform " style="margin-top: 10px">
-<form id="deathform">
+          <form id="deathform">
+
           <div class="card mb-3 rgba-cyan-slight">
             <div class="card-body" >
             <div class="text-center px-5" style="color: #191818" id="certif2">
@@ -264,11 +263,11 @@
         </div>
         <div class="row">
           <div class="col-12 text-center pb-5">
-<button type="submit" class="btn btn-info" name="button">Preview</button>
-<button type="button"  class="btn btn-danger" name="button">Clear All</button>
-</div>
+            <button type="submit" class="btn btn-info" name="button">Preview</button>
+            <button type="button"  class="btn btn-danger" name="button">Clear All</button>
+            </div>
         </div>
-</form>
+        </form>
         </div>
         <!-- marriage form -->
             <div id ="genform-marriage" class="container genform" style="margin-top: 10px">
@@ -439,7 +438,7 @@
 
 <div class="rows ">
 
-  <div class = "card ">
+      <div class = "card ">
             <div class ="card-body">
               <div class="container">
                     <div class="row" >
@@ -496,6 +495,8 @@
                   </div>
                 </div>
               </div>
+        </div>
+      </div>
             <!-- Birthday Modal -->
                 <div class="modal fade"  id="modalBirthday" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
                   aria-hidden="true">
@@ -519,6 +520,7 @@
                           </div>
                         </div>
                       </div>
+                    </div>
 
                 <!-- Death Modal-->
                       <div class="modal fade" id="modalDeath" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
@@ -538,8 +540,8 @@
                           </div>
                         </div>
                       </div>
-                <!-- Marriage Modal -->
-                      <div class="modal fade" id="modalMarriage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                      <!-- Marriage Modal -->
+                    <div class="modal fade" id="modalMarriage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
                         aria-hidden="true">
                         <div class="modal-dialog modal-lg w-auto h-auto" style="max-width:950px" role="document">
                           <div class="modal-content">
@@ -560,3 +562,5 @@
                       </div>
                 </div>
             </div>
+          </div>
+      </div>
