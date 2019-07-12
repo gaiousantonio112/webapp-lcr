@@ -552,28 +552,31 @@ $(document).ready(function(){
 
 
 
+//LCR FORM GENERATOR PAGE
 
-
-///pre war birthday
+///BIRTHDAY
   $('#birthdayform').submit(function(e){
   e.preventDefault();
   console.log($('#birthdayform').serializeArray());
-
   });
 
 
-  ///pre war death
+//DEATH
     $('#deathform').submit(function(e){
     e.preventDefault();
     console.log($('#deathform').serializeArray());
+  });.
 
-    });
-    ///pre war marr
+
+//MARR
       $('#marrform').submit(function(e){
       e.preventDefault();
       console.log($('#marrform').serializeArray());
-
       });
+
+
+
+
 
 
 });

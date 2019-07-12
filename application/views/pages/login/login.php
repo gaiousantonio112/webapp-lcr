@@ -97,6 +97,10 @@ z-index: 1;
 </div>
 
 
+
+
+<!-- modal settings -->
+<form id="databasettigs">
   <div class="modal fade" id="settings" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
         aria-hidden="true">
         <!-- Change class .modal-sm to change the size of the modal -->
@@ -117,27 +121,27 @@ z-index: 1;
 
             <div class="form-group  ">
               <div class="md-form ">
-                    <input type="text"  id="serverip" name="" class="form-control" required>
+                    <input type="text"  id="serverip" name="dbset[ip]" class="form-control" required>
                         <label for="serverip">Server IP</label>
                         </div>
 
                       <div class="md-form ">
-                            <input type="text"  id="Username" name="" class="form-control" required>
+                            <input type="text"  id="Username" name="dbset[username]" class="form-control" required>
                                 <label for="Username">Database Username</label>
                                 </div>
 
                               <div class="md-form ">
-                                    <input type="text"  id="Password" name="" class="form-control" required>
+                                    <input type="text"  id="Password" name="dbset[pass]" class="form-control" required>
                                         <label for="Password">Database Password</label>
                                         </div>
 
                                       <div class="md-form ">
-                                            <input type="text"  id="Database" name="" class="form-control" required>
+                                            <input type="text"  id="Database" name="dbset[name1]" class="form-control" required>
                                                 <label for="Database">Database Name</label>
                                                 </div>
 
                                               <div class="md-form ">
-                                                    <input type="text"  id="Database2" name="" class="form-control" required>
+                                                    <input type="text"  id="Database2" name="dbset[name2]" class="form-control" required>
                                                         <label for="Database2">Database2 Name</label>
                                                         </div>
                                           </div>
@@ -146,7 +150,7 @@ z-index: 1;
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary btn-sm">Save changes</button>
+        <button type="submit" class="btn btn-primary btn-sm">Save changes</button>
         <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
     </div>
     </div>
@@ -156,4 +160,5 @@ z-index: 1;
 </div>
 </div>
 </div>
+</form>
 <!-- Central Modal Small -->

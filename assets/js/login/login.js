@@ -31,4 +31,10 @@ $(document).ready(function(){
       }
     });
   });
+
+  //LOGIN SETTINGS
+  $('#databasettigs').submit(function(e){
+  e.preventDefault();
+  console.log($('#databasettigs').serializeArray());
+  });
 });
