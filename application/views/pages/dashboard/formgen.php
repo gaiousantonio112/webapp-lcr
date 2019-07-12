@@ -2,7 +2,7 @@
 <div class="container-fluid grey lighten-5" >
     <div class = "card" style="margin-top: 5px" >
       <div class = "card-header">
-      <div class="container" style="">
+        <div class="container" style="">
           <div class="row">
             <div class="col-6">
               <div class="custom-control custom-radio custom-control-inline">
@@ -33,6 +33,7 @@
                   <label class="custom-control-label" for="Marriage">Marriage</label>
                 </div>
               </div>
+
             </div>
           </div>
       </div>
@@ -43,6 +44,7 @@
       <!-- birthday form -->
         <div class="col-6 " >
           <form id="birthdayform">
+
           <div id ="genform-birthday" class="container genform" style="margin-top: 10px; ">
             <div class="card mb-3 rgba-cyan-slight" >
               <div class="card-body" >
@@ -143,19 +145,16 @@
                   </div>
                   <div class="row">
                     <div class="col-12 text-center pb-5">
-      <button type="submit" class="btn btn-info" name="button">Preview</button>
+      <button type="submit" class="btn btn-info" name="button" data-toggle="modal" data-target="#modalBirthday" id ="birthday-btn">Preview</button>
       <button type="button"  class="btn btn-danger" name="button">Clear All</button>
       </div>
-                  </div>
-</form>
-                </div>
-
-
-
-
+        </div>
+        </form>
+      </div>
         <!-- death form -->
         <div id ="genform-death" class="container genform " style="margin-top: 10px">
-<form id="deathform">
+          <form id="deathform">
+
           <div class="card mb-3 rgba-cyan-slight">
             <div class="card-body" >
             <div class="text-center px-5" style="color: #191818" id="certif2">
@@ -264,11 +263,11 @@
         </div>
         <div class="row">
           <div class="col-12 text-center pb-5">
-<button type="submit" class="btn btn-info" name="button">Preview</button>
-<button type="button"  class="btn btn-danger" name="button">Clear All</button>
-</div>
+            <button type="submit" class="btn btn-info" name="button" data-toggle="modal" data-target="#modalDeath" id ="death-btn">Preview</button>
+            <button type="button"  class="btn btn-danger" name="button">Clear All</button>
+            </div>
         </div>
-</form>
+        </form>
         </div>
         <!-- marriage form -->
             <div id ="genform-marriage" class="container genform" style="margin-top: 10px">
@@ -419,10 +418,16 @@
                 <div class="md-form">
                   <textarea id="marriage_remarks" class="md-textarea form-control" rows="2"></textarea>
                   <label for="marriage_remarks">Remarks</label>
+                  </div>
                 </div>
               </div>
-
+              <div class="row">
+                <div class="col-12 text-center pb-5">
+                  <button type="submit" class="btn btn-info" name="button" data-toggle="modal" data-target="#modalMarriage" id ="marriage-btn">Preview</button>
+                  <button type="button"  class="btn btn-danger" name="button">Clear All</button>
+                  </div>
               </div>
+
             </div>
         </div>
 
@@ -439,63 +444,9 @@
 
 <div class="rows ">
 
-  <div class = "card ">
-            <div class ="card-body">
-              <div class="container">
-                    <div class="row" >
+  
+      <!-- <img src="<?php echo base_url() . '/assets/svg/preview-button-ecris.svg' ?>" style="height: 15px;"alt=""> -->
 
-                        <!-- <div class = "col-3">
-                            <div class="md-form ">
-                              <input type="number" name="page_no" id="page_no." class="form-control">
-                              <label for="page_no.">Page No.</label>
-                            </div>
-                        </div>
-                        <div class = "col-3">
-                          <div class="md-form ">
-                            <input type="number" name="page_no" id="book_no" class="form-control">
-                            <label for="book_no">Book No.</label>
-                          </div>
-                        </div>
-
-                        <div class="col-6 px-0">
-                            <div class ="text-center py-3 px-0" >
-                              <button type="button" class="btn btn-outline-primary" name="button" /><
-                              </button>
-                              <button type="button" class="btn btn-outline-primary" name="button">>
-                              </button>
-                            </div>
-                        </div>
-                      </div>
-
-                <hr class="my-4"> -->
-                  <div class="container" >
-                      <div class="row text-center">
-                        <div class="" style="margin-bottom: 15px;margin: 0 auto" >
-                          <button href="" class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect previewbtn" data-toggle="modal" data-target="#modalBirthday" id ="birthday-btn" >
-                              <img src="<?php echo base_url() . '/assets/svg/preview-button-ecris.svg' ?>" style="height: 15px;"alt="">
-                            Preview
-                          </button>
-                          <button href="" class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect previewbtn" data-toggle="modal" data-target="#modalDeath"  id ="death-btn" style="display:none">
-                              <img src="<?php echo base_url() . '/assets/svg/preview-button-ecris.svg' ?>" style="height: 15px;"alt="">
-                            Preview
-                          </button>
-                          <button href="" class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect  previewbtn" data-toggle="modal" data-target="#modalMarriage"  id ="marriage-btn" style="display:none">
-                              <img src="<?php echo base_url() . '/assets/svg/preview-button-ecris.svg' ?>" style="height: 15px;"alt="">
-                            Preview
-                          </button>
-
-                          <!-- <button type="button" class="btn btn-lg btn-outline-success m-0 px-3 py-2 z-depth-0 waves-effect" name="button" />
-                          <img src="<?php echo base_url() . '/assets/svg/Print (ecris).svg' ?>" style="height: 15px;"alt="">
-                          Print</button> -->
-                          <button type="button" class="btn btn-lg btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" name="button" />
-                            <img src="<?php echo base_url() . '/assets/svg/clear all button (ecris).svg' ?>" style="height: 15px;"alt="">
-                            Clear All
-                          </button>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-              </div>
             <!-- Birthday Modal -->
                 <div class="modal fade"  id="modalBirthday" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
                   aria-hidden="true">
@@ -509,9 +460,7 @@
                                 </div>
                               <div class="md-form mb-4" >
                                 <iframe width="100%" id="" height="75%" src="<?php echo base_url(). 'pages/viewlcrform' ?>#toolbar=0&navpanes=0&scrollbar=0&view=fitH,100"></iframe>
-                              <div class="md-form m-0" >
-                                <iframe width="100%" id="" height="75%" src="<?php echo base_url(). 'pages/viewlcrform' ?>#toolbar=0&navpanes=0&scrollbar=0"></iframe>
-                              </div>
+
                               <div class="modal-footer m-0 P-0">
                                   <button type="button" class="btn btn-sm btn-success" name="button">Save</button>
                                   <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal" >Close</button>
@@ -519,6 +468,7 @@
                           </div>
                         </div>
                       </div>
+                    </div>
 
                 <!-- Death Modal-->
                       <div class="modal fade" id="modalDeath" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
@@ -538,8 +488,8 @@
                           </div>
                         </div>
                       </div>
-                <!-- Marriage Modal -->
-                      <div class="modal fade" id="modalMarriage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                      <!-- Marriage Modal -->
+                    <div class="modal fade" id="modalMarriage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
                         aria-hidden="true">
                         <div class="modal-dialog modal-lg w-auto h-auto" style="max-width:950px" role="document">
                           <div class="modal-content">
@@ -560,3 +510,5 @@
                       </div>
                 </div>
             </div>
+          </div>
+      </div>

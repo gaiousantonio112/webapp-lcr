@@ -43,8 +43,6 @@ $('.dataTables_length').addClass('bs-select');
 
 <script>
 
-
-
 			$(function() {
         $('.yearpick #year').datepicker({
           format: "yyyy",
@@ -77,13 +75,12 @@ $(document).ready(function() {
 
 
 
-$("input[name$='radioselect']").click(function() {
+$("input[name$='radio_crt_type']").click(function() {
 	 			  var test = $(this).val();
 					$(".genform").hide();
 					$(".previewbtn").hide();
 					$("#"+test+"-btn").show();
 					$("#genform-"+test).show();
-
 });
 
 $("#prewar_image").show();
@@ -93,40 +90,15 @@ $("#prewar_image").show();
 		 $("#search-marriage").show();
 		 			$("#prewar_image").hide();
 		 			$("#postwar_image").show();
-			// $("input[name$='radioselect']").click(function() {
-			// if ($('input[name=radioselectwar]:checked').val() == "postwar"){
-			// 	$(".postwar_view").hide();
-			// 	$(".prewar_view").hide();
-			// 	$("#postwar_image").show();
-			// 	}
-			// 	});
 
  });
-
-
  $("#pre-war").click(function() {
 	 	$("#search-birthday").hide();
 		$("#search-death").hide();
 		 $("#search-marriage").hide();
 		 $("#postwar_image").hide();
 		 $("#prewar_image").show();
-
-
-			// if ($('input[name=radioselect]:checked').val() == "birthday"){
-			// 		$(".prewar_view").hide();
-			// 		$("#birthday_prewar").show();
-			// }
-			// else if ($('input[name=radioselect]:checked').val() == "death"){
-			// 		$(".prewar_view").hide();
-			// 		$("#death_prewar").show();
-			// }
-			// else{
-			// 		$(".prewar_view").hide();
-			// 		$("#marriage_prewar").show();
-			// }
-
  });
-
 
 	$('#Birthday').click(function(){
 			$('#certif').slideDown();
@@ -138,7 +110,6 @@ $("#prewar_image").show();
 			$('#certif2').slideDown();
 			$('#certif3').fadeOut();
 			$('#certif').fadeOut();
-
 	});
 
 	$('#Marriage').click(function(){

@@ -9,7 +9,7 @@ class Pages extends CI_Controller {
     }
 
     public function index() {
-        $this->load->view('pages/nav/nav');
+        // $this->load->view('pages/nav/nav');
         $this->load->view('pages/login/login');
         $this->load->view('pages/footer/foot');
     }
@@ -89,12 +89,13 @@ class Pages extends CI_Controller {
       $this->load->view('pages/dashboard/marriageformpreview.php');
     }
 
-    public function logout()
+    public function LCR()
     {
+
       $this->session->sess_destroy();
       $this->login();
     }
-    
+
     public function book(){
       $this->load->view('pages/turnjsbook');
 
