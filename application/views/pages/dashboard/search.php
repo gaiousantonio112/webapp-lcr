@@ -408,8 +408,8 @@ html {
           </button>
 
 				</div>
-				<div class="modal-body">
-          <iframe width="100%" id="viewpdf" height="65%" src="#funk" allowfullscreen></iframe>
+				<div class="modal-body p-0 m-0">
+          <iframe width="100%" id="viewpdf"  height="65%" src="#funk" allowfullscreen></iframe>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
@@ -434,7 +434,7 @@ html {
 
           </button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body p-0 m-0">
           <!-- <embed src="../../../../assets/pdf/rec.pdf#toolbar=0&zoom=70" type="application/pdf" width="100%" height="60%"> -->
           <iframe width="100%" id="recieptframe" height="65%" src="#funk"></iframe>
           <iframe width="100%" id="recieptframe_white" height="65%" src="#funk" hidden></iframe>
@@ -515,7 +515,6 @@ html {
 
 
 <div class="modal-body">
-
 <div id="birthdaymodal">
   <form id="updateBirthForm">
 
@@ -571,20 +570,9 @@ html {
     </div>
   </form>
 </div>
-</div>
-</div>
-</div>
-
-
-
-
-
 
 <div id="deathmodal">
-
-  <!-- DEATH -->
   <form id="updateDeathForm">
-
   		<div class="container">
   			<div class="md-form">
           <input type="hidden" name="updatedeath[id]" id="updatedeath_id" value="">
@@ -642,15 +630,8 @@ html {
       </form>
   	</div>
 
-
-
-
-
 <div id="marriagemodal">
-
-
   <form id="updateMarrForm">
-
   		<div class="container">
   			<div class="md-form">
           <input type="hidden" name="updatemarr[id]" id="updatemarr_id" value="">
@@ -723,19 +704,17 @@ html {
   						<label >Date of Marriage</label>
   				</div>
   			</div>
-
   			</div>
-
-
   		</div>
       <div class="modal-footer">
 
         <button type="submit" class="btn btn-primary btn-sm">Save changes</button>
                 <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
       </div>
-
-
   	</form>
   </div>
-</div>  </div>  </div>
+</div>
+</div>
+</div>
+</div>
 <!-- Central Modal Small -->
