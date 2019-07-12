@@ -1,7 +1,9 @@
 var full_name;
 // CREDENTIALS
 var defaultAmnt = 50;
-
+var data_seacrh_table_bday;
+var data_seacrh_table_death;
+var data_seacrh_table_marriage;
 $(document).ready(function(){
 
     curr_time();
@@ -34,7 +36,7 @@ $(document).ready(function(){
     $('#type_receipt').val($('input[name="lcr_type"]:checked').val());
     getUserCredentials();
     $('#tb_mainlcr').DataTable().clear().destroy();
-    $('#tb_mainlcr').DataTable({
+    data_seacrh_table_bday = $('#tb_mainlcr').DataTable({
         "ajax" : {
 
           "url" : global.settings.url + '/Lcr_works/loadTableBday',
@@ -59,7 +61,7 @@ $(document).ready(function(){
 
     // $('#tb_mainlcr').DataTable();
     $('.dataTables_length').addClass('bs-select');
-    var data_seacrh_table;
+
     $('input[name="lcr_type"]').change(function(){
 
       $('#type_receipt').val($('input[name="lcr_type"]:checked').val());
@@ -68,7 +70,7 @@ $(document).ready(function(){
           $('#name_husband').html('Name');
           $('#name_wife').html('Name');
           $('#tb_mainlcr').DataTable().clear().destroy();
-          data_seacrh_table = $('#tb_mainlcr').DataTable({
+          data_seacrh_table_bday = $('#tb_mainlcr').DataTable({
             "ajax" : {
               "url" : global.settings.url + '/Lcr_works/loadTableBday',
               dataSrc : 'data'
@@ -92,7 +94,7 @@ $(document).ready(function(){
         $('#name_husband').html('Name');
         $('#name_wife').html('Name');
           $('#tb_mainlcr').DataTable().clear().destroy();
-          data_seacrh_table = $('#tb_mainlcr').DataTable({
+          data_seacrh_table_death = $('#tb_mainlcr').DataTable({
             "ajax" : {
               "url" : global.settings.url + '/Lcr_works/loadTableDeath',
               dataSrc : 'data'
@@ -116,7 +118,7 @@ $(document).ready(function(){
           $('#name_husband').html('Name of Husband');
           $('#name_wife').html('Name of Wife');
           $('#tb_mainlcr').DataTable().clear().destroy();
-          data_seacrh_table = $('#tb_mainlcr').DataTable({
+          data_seacrh_table_marriage = $('#tb_mainlcr').DataTable({
             "ajax" : {
               "url" : global.settings.url + '/Lcr_works/loadTableMarr',
               dataSrc : 'data'
@@ -139,6 +141,72 @@ $(document).ready(function(){
         default:
 
       }
+    });
+
+
+    // # main modal update modals
+
+    $('#updateBirthForm').submit(function(e){
+      e.preventDefault();
+
+      $.ajax({
+        url : global.settings.url + '/Lcr_works/updateBirth',
+        type : 'POST',
+        data : $(this).serialize(),
+        dataType : 'json',
+        success : function(res){
+          $('#update').modal("hide");
+          notif('Success in Updating Birthday Information ','success');
+          $('#updateBirthForm')[0].reset();
+          data_seacrh_table_bday.ajax.reload();
+        },
+        error : function(xhr){
+          notif('Error in updateBirthForm '+ xhr.responseText);
+        }
+
+      });
+    });
+
+    $('#updateDeathForm').submit(function(e){
+      e.preventDefault();
+
+      $.ajax({
+        url : global.settings.url + '/Lcr_works/updateDeath',
+        type : 'POST',
+        data : $(this).serialize(),
+        dataType : 'json',
+        success : function(res){
+          $('#update').modal("hide");
+          notif('Success in Updating Death Information ','success');
+          $('#updateDeathForm')[0].reset();
+          data_seacrh_table_death.ajax.reload();
+        },
+        error : function(xhr){
+          notif('Error in updateDeathForm '+ xhr.responseText);
+        }
+
+      });
+    });
+
+    $('#updateMarrForm').submit(function(e){
+      e.preventDefault();
+
+      $.ajax({
+        url : global.settings.url + '/Lcr_works/updateMarr',
+        type : 'POST',
+        data : $(this).serialize(),
+        dataType : 'json',
+        success : function(res){
+          $('#update').modal("hide");
+          notif('Success in Updating Marriage Information','success');
+          $('#updateMarrForm')[0].reset();
+          data_seacrh_table_marriage.ajax.reload();
+        },
+        error : function(xhr){
+          notif('Error in updateMarrForm '+ xhr.responseText);
+        }
+
+      });
     });
 
     $('input[name="printOption"]').change(function(){
@@ -484,70 +552,7 @@ $(document).ready(function(){
 
 
 
-  // # main modal update modals
 
-  $('#updateBirthForm').submit(function(e){
-    e.preventDefault();
-
-    $.ajax({
-      url : global.settings.url + '/Lcr_works/updateBirth',
-      type : 'POST',
-      data : $(this).serialize(),
-      dataType : 'json',
-      success : function(res){
-        $('#update').modal("hide");
-        notif('Success in Updating Birthday Information ','success');
-        $('#updateBirthForm')[0].reset();
-        data_seacrh_table.ajax.reload();
-      },
-      error : function(xhr){
-        notif('Error in updateBirthForm '+ xhr.responseText);
-      }
-
-    });
-  });
-
-  $('#updateDeathForm').submit(function(e){
-    e.preventDefault();
-
-    $.ajax({
-      url : global.settings.url + '/Lcr_works/updateDeath',
-      type : 'POST',
-      data : $(this).serialize(),
-      dataType : 'json',
-      success : function(res){
-        $('#update').modal("hide");
-        notif('Success in Updating Death Information ','success');
-        $('#updateDeathForm')[0].reset();
-        data_seacrh_table.ajax.reload();
-      },
-      error : function(xhr){
-        notif('Error in updateDeathForm '+ xhr.responseText);
-      }
-
-    });
-  });
-
-  $('#updateMarrForm').submit(function(e){
-    e.preventDefault();
-
-    $.ajax({
-      url : global.settings.url + '/Lcr_works/updateMarr',
-      type : 'POST',
-      data : $(this).serialize(),
-      dataType : 'json',
-      success : function(res){
-        $('#update').modal("hide");
-        notif('Success in Updating Marriage Information','success');
-        $('#updateMarrForm')[0].reset();
-        data_seacrh_table.ajax.reload();
-      },
-      error : function(xhr){
-        notif('Error in updateMarrForm '+ xhr.responseText);
-      }
-
-    });
-  });
 
 
 
