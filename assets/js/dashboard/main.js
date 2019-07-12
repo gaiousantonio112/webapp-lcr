@@ -569,13 +569,11 @@ $(document).ready(function(){
 
     });
     ///pre war marr
-      $('#marrformprewar').submit(function(e){
+      $('#marrform').submit(function(e){
       e.preventDefault();
-      console.log($('#marrformprewar').serializeArray());
+      console.log($('#marrform').serializeArray());
 
       });
-
-
 
 
 });
