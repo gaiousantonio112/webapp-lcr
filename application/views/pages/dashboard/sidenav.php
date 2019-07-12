@@ -139,7 +139,7 @@ background-color: #EFEDDF;
                 <!-- <a class="dropdown-item" href="#">Account</a>
                 <a class="dropdown-item" href="#">Another action</a>
                 <div class="dropdown-divider"></div> -->
-                <a class="dropdown-item" href="<?php echo base_url() . 'pages/logout'  ?>">Logout</a>
+                <a class="dropdown-item" href="<?php echo base_url() . 'pages/LCR'  ?>">Logout</a>
               </div>
             </li>
           </ul>

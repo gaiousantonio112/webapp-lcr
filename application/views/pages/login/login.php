@@ -28,6 +28,7 @@ z-index: 1;
 }
 </style>
 
+
 <body class="bg-white">
     <div id="login" class="container pt-4">
 
@@ -143,13 +144,9 @@ z-index: 1;
 
 
 
-
-        </form>
-      </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary btn-sm">Save changes</button>
-
         <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
     </div>
     </div>
