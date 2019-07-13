@@ -127,13 +127,13 @@
 								<input type="text" name="formgenbday[issued]" id="bdayissued" class="form-control">
 								<label for="bdayissued">THIS CERTIFICATION is issued to upon his/her request</label>
 							</div>
-							<div class="md-form">
+							<div class="md-form mb-0 pb-0">
 								<textarea class="md-textarea form-control" rows="2" name="formgenbday[remarks]" id="birth_remarks"></textarea>
 								<label for="birth_remarks">Remarks</label>
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-12 text-center pb-5">
+							<div class="col-12 text-center pt-0 pb-3">
 								<button type="submit" class="btn btn-info" name="button" data-toggle="modal" data-target="#modalBirthday" id="birthday-btn">Preview</button>
 								<button type="reset" class="btn btn-danger" name="button">Clear All</button>
 							</div>
@@ -142,14 +142,6 @@
 			</form>
 		</div>
 		<!-- end of birtday form -->
-
-
-
-
-
-
-
-
 
 
 		<!-- death form -->
@@ -244,13 +236,13 @@
 							<input type="text" name="formgendeath[issued]" id="death_issued" class="form-control">
 							<label for="death_issued">THIS CERTIFICATION is issued to upon his/her request</label>
 						</div>
-						<div class="md-form">
+						<div class="md-form mb-0 pb-0">
 							<textarea id="death_remarks" name="formgendeath[remarks]" class="md-textarea form-control" rows="2"></textarea>
 							<label for="death_remarks">Remarks</label>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-12 text-center pb-5">
+						<div class="col-12 text-center pt-0 pb-3">
 							<button type="submit" class="btn btn-info" name="button" data-toggle="modal" data-target="#modalDeath" id="death-btn">Preview</button>
 							<button type="reset" class="btn btn-danger" name="button">Clear All</button>
 						</div>
@@ -399,29 +391,24 @@
 							<input type="text" name="marrform[issued]" id="marriage_issued" class="form-control">
 							<label for="marriage_issued">THIS CERTIFICATION is issued to upon his/her request</label>
 						</div>
-						<div class="md-form">
+						<div class="md-form pb-0 mb-0">
 							<textarea id="marriage_remarks" name="marrform[Remarks]" class="md-textarea form-control" rows="2"></textarea>
 							<label for="marriage_remarks">Remarks</label>
 						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-12 text-center pb-5">
-						<button type="submit" class="btn btn-info" name="button" data-toggle="modal" data-target="#modalMarriage" id="marriage-btn">Preview</button>
-						<button type="reset" class="btn btn-danger" name="button">Clear All</button>
+					<div class="row">
+						<div class="col-12 text-center pt-0 pb-3">
+							<button type="submit" class="btn btn-info" name="button" data-toggle="modal" data-target="#modalMarriage" id="marriage-btn">Preview</button>
+							<button type="reset" class="btn btn-danger" name="button">Clear All</button>
+						</div>
 					</div>
 				</div>
+
+
 			</div>
 		</form>
 	</div>
 	<!-- end of marr -->
-
-
-
-
-
-
-
 
 
 
@@ -436,10 +423,6 @@
 		</div>
 		<div class="rows ">
 			<!-- <img src="<?php echo base_url() . '/assets/svg/preview-button-ecris.svg' ?>" style="height: 15px;"alt=""> -->
-
-
-
-
 
 
 			<!-- Birthday Modal -->

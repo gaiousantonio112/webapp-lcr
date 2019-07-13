@@ -590,7 +590,7 @@ $(document).ready(function(e){
 ///BIRTHDAY
   $('#birthdayform').submit(function(e){
   e.preventDefault();
-  console.log($('#birthdayform').serializeArray());
+  console.table($('#birthdayform').serializeArray());
   });
 
 
