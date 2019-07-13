@@ -133,12 +133,7 @@
 							</div>
 						</div>
 						<div class="row">
-<<<<<<< HEAD
 							<div class="col-12 text-center pb-5">
-
-=======
-							<div class="col-12 text-center pt-0 pb-3">
->>>>>>> 4f0590449c6bde2588831a5a44251ca7f3b9b187
 								<button type="submit" class="btn btn-info" name="button" data-toggle="modal" data-target="#modalBirthday" id="birthday-btn">Preview</button>
 																								<button  type="button" class="btn btn-success" name="button" data-toggle="modal" data-target="#recipet" >Submit</button>
 								<button type="reset" class="btn btn-danger" name="button">Clear All</button>
@@ -248,12 +243,8 @@
 						</div>
 					</div>
 					<div class="row">
-<<<<<<< HEAD
 						<div class="col-12 text-center pb-5">
 
-=======
-						<div class="col-12 text-center pt-0 pb-3">
->>>>>>> 4f0590449c6bde2588831a5a44251ca7f3b9b187
 							<button type="submit" class="btn btn-info" name="button" data-toggle="modal" data-target="#modalDeath" id="death-btn">Preview</button>
 							<button type="reset" class="btn btn-danger" name="button">Clear All</button>
 						</div>
