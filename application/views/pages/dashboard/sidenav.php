@@ -29,6 +29,7 @@ background-color: #EFEDDF;
 }
 .list-group a:hover{
 	background-color: #163F54;
+  color: white;
 }
 .list-group a{
 
@@ -84,12 +85,12 @@ background-color: #EFEDDF;
 			</div>
 			<div id="current_time" class=" font-weight-bold bg-title text-center">
 			</div>
-      <div class="list-group list-group-flush pt-2">
-        <a href="<?php echo base_url() . 'pages/dash/index'  ?>" class="font-weight-bold boder text-center list-group-item list-group-item-action bg-ecris bg-title "><img src="<?php echo base_url() .'/assets/svg/dashboard(ecris).svg' ?>" height="25px" class="float-left" alt="">Dashboard</a>
-        <a href="<?php echo base_url() . 'pages/dash/search'  ?>" class="font-weight-bold  text-center list-group-item list-group-item-action bg-ecris bg-title"><img src="<?php echo base_url() .'/assets/svg/search and payment (eCRIS).svg' ?>" height="25px" class="float-left" alt=""></i> Search and Payment</a>
-        <a href="<?php echo base_url() . 'pages/dash/add'  ?>" class="font-weight-bold  text-center list-group-item list-group-item-action bg-ecris bg-title"><img src="<?php echo base_url() .'/assets/svg/add (ecris).svg' ?>" height="25px" class="float-left" alt=""> Add</a>
-      			<a href="<?php echo base_url() . 'pages/dash/formgen'  ?>" class="font-weight-bold  text-center list-group-item list-group-item-action bg-ecris bg-title"><img src="<?php echo base_url() .'/assets/svg/Print (ecris).svg' ?>" height="25px" class="float-left" alt="">LCR Form Generator</a>
-            <a href="<?php echo base_url() . 'pages/dash/print'  ?>" class="font-weight-bold  text-center list-group-item list-group-item-action bg-ecris bg-title"><img src="<?php echo base_url() .'/assets/svg/Print (ecris).svg' ?>" height="25px" class="float-left" alt=""> Print</a>
+      <div class="list-group list-group-flush pt-2 ">
+        <a href="<?php echo base_url() . 'pages/dash/index'  ?>" class="font-weight-bold boder text-left list-group-item list-group-item-action bg-ecris bg-title "><img src="<?php echo base_url() .'/assets/svg/dashboard(ecris).svg' ?>" height="25px" class="float-left mr-2" alt=""> Dashboard</a>
+        <a href="<?php echo base_url() . 'pages/dash/search'  ?>" class="font-weight-bold  text-left list-group-item list-group-item-action bg-ecris bg-title "><img src="<?php echo base_url() .'/assets/svg/search and payment (eCRIS).svg' ?>" height="25px" class="float-left mr-3" alt=""></i> Search and Payment</a>
+        <a href="<?php echo base_url() . 'pages/dash/add'  ?>" class="font-weight-bold  text-left list-group-item list-group-item-action bg-ecris bg-title "><img src="<?php echo base_url() .'/assets/svg/add (ecris).svg' ?>" height="25px" class="float-left mr-3" alt=""> Add</a>
+      			<a href="<?php echo base_url() . 'pages/dash/formgen'  ?>" class="font-weight-bold  text-left list-group-item list-group-item-action bg-ecris bg-title "><img src="<?php echo base_url() .'/assets/svg/Print (ecris).svg' ?>" height="25px" class="float-left mr-3" alt="">  LCR Form Generator</a>
+            <a href="<?php echo base_url() . 'pages/dash/print'  ?>" class="font-weight-bold  text-left list-group-item list-group-item-action bg-ecris bg-title "><img src="<?php echo base_url() .'/assets/svg/Print (ecris).svg' ?>" height="25px" class="float-left mr-3" alt="">  Print</a>
 
 			  <!-- <a href="#" class="list-group-item list-group-item-action bg-light">Warning</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Birthday</a>
@@ -103,7 +104,7 @@ background-color: #EFEDDF;
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-ecris ">
+      <nav class="navbar navbar-fixed-top navbar sticky-top  navbar-expand-lg navbar-light bg-ecris ">
         <a class="px-3 " id="menu-toggle"><i class="fas fa-bars "></i></a>
         <h4 class="bg-title font-weight-bold pt-2">ELECTRONIC CIVIL REGISTRY INFORMATION SYSTEM</h4>
 
