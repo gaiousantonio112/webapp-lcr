@@ -437,14 +437,27 @@ html {
         <div class="modal-body p-0 m-0">
           <!-- <embed src="../../../../assets/pdf/rec.pdf#toolbar=0&zoom=70" type="application/pdf" width="100%" height="60%"> -->
           <iframe width="100%" id="recieptframe" height="65%" src="#funk"></iframe>
-          <iframe width="100%" id="recieptframe_white" height="65%" src="#funk" hidden></iframe>
+          <!-- <iframe width="100%" id="recieptframe_white" height="65%" src="#funk" hidden></iframe> -->
         </div>
         <div class="modal-footer">
-            <button id="print_btn" type="button" class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#done"   >Print</button>
+            <button id="print_btn" type="button" class="btn btn-primary btn-sm"  >Print</button>
           <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
 
 
         </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="white_reciept" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <!-- Change class .modal-sm to change the size of the modal -->
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+          <!-- <embed src="../../../../assets/pdf/rec.pdf#toolbar=0&zoom=70" type="application/pdf" width="100%" height="60%"> -->
+          <!-- <iframe width="100%" id="recieptframe" height="65%" src="#funk"></iframe> -->
+          <iframe width="100%" id="recieptframe_white" height="65%" src="#funk" hidden></iframe>
       </div>
     </div>
   </div>

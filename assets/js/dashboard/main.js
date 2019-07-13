@@ -4,7 +4,13 @@ var defaultAmnt = 50;
 var data_seacrh_table_bday;
 var data_seacrh_table_death;
 var data_seacrh_table_marriage;
-$(document).ready(function(){
+
+
+// ct : stackoverflow
+
+$(document).ready(function(e){
+
+
 
     curr_time();
 
@@ -258,6 +264,23 @@ $(document).ready(function(){
     var ornum_exist = false;
     $('#print_btn').click(function(){
 
+        $('#done').modal('show');
+        // console.log($('#white_reciept').modal('show'));
+        console.log($('#recieptframe_white').attr('src'));
+
+        if ($('#recieptframe_white').attr('src') != white_reciept) {
+          $('#white_reciept').modal('show');
+          $('#recieptframe_white').attr('src',white_reciept);
+        }else{
+          document.getElementById('recieptframe_white').contentDocument.location.reload(true);
+          $('#white_reciept').modal('show');
+        }
+        // var iframe = document.getElementById('recieptframe_white');
+        // iframe.src = white_reciept;
+        // iframe.src = iframe.src;
+        //
+
+
       $.ajax({
         url : global.settings.url + '/Lcr_works/getRequested_data',
         type : 'POST',
@@ -268,7 +291,6 @@ $(document).ready(function(){
         dataType : 'json',
         success : function(res){
           res = res[0];
-
           //console.log(res);
             var typers = $('#type_receipt').val();
             //console.log(typers);
@@ -335,7 +357,7 @@ $(document).ready(function(){
       });
 
     });
-
+    var white_reciept;
     $('#addHistoryForm').submit(function(e){
       e.preventDefault();
       if(ornum_exist){
@@ -367,6 +389,7 @@ $(document).ready(function(){
     $('#printReciept').submit(function(e){
       // recieptframe
       e.preventDefault();
+
       $.ajax({
         url : global.settings.url + '/Lcr_works/viewPrint',
         type : 'POST',
@@ -380,8 +403,10 @@ $(document).ready(function(){
         success : function(res){
           //console.log(res);
           $('#recieptframe').attr('src',global.settings.url+'/pages/viewreciepter/'+res);
-          $('#recieptframe_white').attr('src',global.settings.url+'/pages/printreciept/'+res);
+
           //base_url().'/
+
+          white_reciept = global.settings.url+'/pages/printreciept/'+res;
 
         },
         error : function(xhr){
@@ -389,6 +414,9 @@ $(document).ready(function(){
           $('#recieptframe').attr('src',xhr.responseText);
         }
       });
+
+
+
       // Save addHistory
       // $.ajax({
       //   url : global.settings.url + '/Lcr_works/addHistory',

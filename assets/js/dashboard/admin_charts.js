@@ -14,7 +14,7 @@
       dataType : 'json',
       success : function(res){
         var arrayList = res ;
-        for (var i = 0; i <= arrayList.length - 1; i++) {
+        for (var i = 1; i <= arrayList.length - 1; i++) {
           $('#year_select').append('<option value="' + arrayList[i].yrs + '">' + arrayList[i].yrs + '</option>');
         }
       },
@@ -25,6 +25,9 @@
 
     $('#year_select').on("change",function(){
       // Birthday Data
+
+
+
       $.ajax({
         url : global.settings.url + '/Lcr_works/getResultCharts',
         type : 'POST',
@@ -36,6 +39,8 @@
         dataType : 'json',
         success : function(res){
           // console.log(res);
+          bday_data = [];
+          console.log(bday_data);
           res = res.year;
           bday_data = res;
           console.log(bday_data);
@@ -63,6 +68,8 @@
         dataType : 'json',
         success : function(res){
           // console.log(res);
+          death_data = [];
+          console.log(death_data);
           res = res.year;
           death_data = res;
           console.log(death_data);
@@ -90,6 +97,8 @@
         dataType : 'json',
         success : function(res){
           // console.log(res);
+          marr_data = [];
+          console.log(marr_data);
           res = res.year;
           marr_data = res;
           console.log(marr_data);

@@ -95,9 +95,9 @@
           </div>
         </div>
 
-          <div class="container card col-lg-9 col-sm-12"  style="margin-top: -15; width:100px">
+          <!-- <div class="container card col-lg-9 col-sm-12"  style="margin-top: -15; width:100px">
             <canvas id="lineChart"></canvas>
-          </div>
+          </div> -->
 
 
 
@@ -119,7 +119,10 @@
   </div>
 </div>
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4f0590449c6bde2588831a5a44251ca7f3b9b187
   </div>
   </div>
   </div>
