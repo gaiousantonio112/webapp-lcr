@@ -8,7 +8,7 @@ $date = date('m - d - Y');
 
 $pdf = new TCPDI(PDF_PAGE_ORIENTATION, 'mm', PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
-$pdf->setSourceFile(APPPATH.'/..//assets/pdf/rec.pdf/');
+$pdf->setSourceFile(APPPATH.'/../assets/pdf/rec.pdf');
  $tpl = $pdf->importPage(1);
 $size = $pdf->getTemplateSize($tpl);
  $orientation = $size['h'] > $size['w'] ? 'P' : 'L';

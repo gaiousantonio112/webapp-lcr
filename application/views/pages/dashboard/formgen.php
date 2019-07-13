@@ -134,8 +134,9 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-12 text-center pt-0 pb-3">
+							<div class="col-12 text-center pb-5">
 								<button type="submit" class="btn btn-info" name="button" data-toggle="modal" data-target="#modalBirthday" id="birthday-btn">Preview</button>
+																								<button  type="button" class="btn btn-success" name="button" data-toggle="modal" data-target="#recipet" >Submit</button>
 								<button type="reset" class="btn btn-danger" name="button">Clear All</button>
 							</div>
 						</div>
@@ -243,7 +244,8 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-12 text-center pt-0 pb-3">
+						<div class="col-12 text-center pb-5">
+
 							<button type="submit" class="btn btn-info" name="button" data-toggle="modal" data-target="#modalDeath" id="death-btn">Preview</button>
 							<button type="reset" class="btn btn-danger" name="button">Clear All</button>
 						</div>
@@ -430,8 +432,7 @@
 							<iframe width="100%" id="" height="75%" src="<?php echo base_url(). 'pages/viewlcrform' ?>#toolbar=0&navpanes=0&scrollbar=0&view=fitH,100"></iframe>
 
 							<div class="modal-footer m-0 P-0">
-								<button type="button" class="btn btn-sm btn-success" name="button">Save</button>
-								<button type="button" class="btn btn-sm btn-danger" data-dismiss="modal">Close</button>
+											<button type="button" class="btn btn-sm btn-danger" data-dismiss="modal">Close</button>
 							</div>
 						</div>
 					</div>
@@ -439,7 +440,7 @@
 			</div>
 
 			<!-- Death Modal-->
-			<div class="modal fade" id="modalDeath" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<!-- <div class="modal fade" id="modalDeath" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog  modal-lg w-auto h-auto" style="max-width:950px" role="document">
 					<div class="modal-content">
 						<div class="modal-header p-2" style="background-color: tomato">
@@ -454,9 +455,9 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<!-- Marriage Modal -->
-			<div class="modal fade" id="modalMarriage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<!-- <div class="modal fade" id="modalMarriage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog modal-lg w-auto h-auto" style="max-width:950px" role="document">
 					<div class="modal-content">
 						<div class="modal-header p-2" style="background-color: tomato">
@@ -477,7 +478,94 @@
 		</div>
 	</div>
 </div>
+<<<<<<< HEAD
 
 
 <div class="m-5" id="stopper" ></div>
+=======
+</div> -->
+
+
+
+
+
+
+
+
+
+
+<div class="modal fade" id="recipet" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+aria-hidden="true">
+
+<!-- Change class .modal-sm to change the size of the modal -->
+
+
+
+<!-- Change class .modal-sm to change the size of the modal -->
+<div class="modal-dialog modal-lg" role="document">
+
+
+	<div class="modal-content">
+		<div class="modal-header">
+			<h4 class="modal-title w-50" id="myModalLabel">PDF</h4>
+
+
+			</button>
+		</div>
+		<div class="modal-body p-0 m-0">
+		<embed src="../../../../assets/pdf/rec.pdf#toolbar=0&zoom=70" type="application/pdf" width="100%" height="60%">
+
+		</div>
+		<div class="modal-footer">
+				<button id="print_btn" type="button" class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#done"   >Print</button>
+			<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+
+
+		</div>
+	</div>
+</div>
+</div>
+
+
+
+<div class="modal fade" id="done" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+aria-hidden="true">
+
+<!-- Change class .modal-sm to change the size of the modal -->
+<div class="modal-dialog modal-sm" role="document">
+
+
+	<form id="addHistoryForm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title w-100" id="myModalLabel">Alert!</h4>
+			</div>
+			<div class="modal-body">
+					Done Printing?
+			</div>
+			<div class="modal-footer">
+					<input type="hidden" name="history[ref_num]" id="ref_num" >
+					<input type="hidden" name="history[or_num]" id="or_num" >
+					<input type="hidden" name="history[req_name]" id="req_name" >
+					<input type="hidden" name="history[name]" id="name_history" >
+					<input type="hidden" name="history[type]" id="type" >
+					<input type="hidden" name="history[date]" id="dt_history" >
+					<input type="hidden" name="history[page]" id="page" >
+					<input type="hidden" name="history[no_copy]" id="no_copy" >
+					<input type="hidden" name="history[verify_by]" id="verify_by" >
+
+					<input type="hidden" name="history[remarks]" id="remarks" >
+					<input type="hidden" name="history[print]" id="print" >
+					<input type="hidden" name="history[cs_encoder]" id="cs_encoder1" >
+					<input type="hidden" name="history[printed_by]" id="printed_by" >
+					<input type="hidden" name="history[or_amount]" id="or_amount" >
+					<input type="hidden" name="history[wife_name]" id="wife_name" >
+
+					<button type="submit" class="btn btn-primary btn-sm">Yes</button>
+					<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">No</button>
+			</div>
+		</div>
+	</form>
+</div>
+>>>>>>> ce2758742e954c1ed5d002b76ce23300a6135256
 </div>
