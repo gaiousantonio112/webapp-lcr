@@ -408,13 +408,11 @@
 
 
 	<div class="col-6 pt-5 ">
-		<div class="sticky-top m-2" style="position: sticky; top:0; position: -webkit-sticky;">
-			<div class="">
-				<iframe width="100%" class=" postwar_view z-depth-1 mb-4 " id="postwar_image " height="75%" src="<?php echo base_url(). 'pages/viewlcrform' ?>#toolbar=0&navpanes=0&scrollbar=0"></iframe>
-			</div>
-			<div class="">
+		<div class="sticky-top" style="position: sticky; top:0; position: -webkit-sticky;">
+			<div class="" id="">
 				<iframe src="<?php echo base_url() ?>/pages/book" class=" prewar_view z-depth-1 mb-4 " id="prewar_image" width="100%" height="100%" ></iframe>
 			</div>
+			<iframe width="100%" height="80%" class="postwar_view z-depth-1 mb-4" id="postwar_image"  src="<?php echo base_url() . 'pages/viewlcrform' ?>#toolbar=0&navpanes=0&scrollbar=0&view=fitH,100 " ></iframe>
 		</div>
 
 		<div class="rows ">
@@ -478,20 +476,7 @@
 		</div>
 	</div>
 </div>
-<<<<<<< HEAD
-
-
-<div class="m-5" id="stopper" ></div>
-=======
 </div> -->
-
-
-
-
-
-
-
-
 
 
 <div class="modal fade" id="recipet" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
@@ -567,5 +552,6 @@ aria-hidden="true">
 		</div>
 	</form>
 </div>
->>>>>>> ce2758742e954c1ed5d002b76ce23300a6135256
+
+<div class="p-5"></div>
 </div>
