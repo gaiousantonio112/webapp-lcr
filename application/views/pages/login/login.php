@@ -1,3 +1,5 @@
+
+<title>LCR Login</title>
 <link rel="stylesheet" href="../../../../assets/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="../../../../assets/fontawesome-5.9.0/css/all.min.css">
 <link rel="stylesheet" href="../../../../assets/MBD/css/mdb.min.css">
