@@ -40,7 +40,7 @@ z-index: 1;
 <div class="col-sm-12 col-lg-6 p-5 ">
     <img class="spc fadeIn first" src="../../../../assets/img/spclogo.png" alt="">
 </div>
-<div class="vl">
+<div class="vl mt-4">
 </div>
 <div class="col-sm-12 col-lg-5 p-5 mt-4">
   <h3 class="display-3 fadeIn first text-left black-text" style='font-size: 63px'>ELECTRONIC CIVIL REGISTRY INFORMATION SYSTEM</h3>
@@ -86,8 +86,6 @@ z-index: 1;
       <div class="form-group">
           <input type="submit" name="submit" class="btn btn-rounded white z-depth-1 blue-text" style="width: 200px; border-radius: 40px; border: 1px solid " value=" Login">
       </div>
-
-
 
       </div>
     </div>

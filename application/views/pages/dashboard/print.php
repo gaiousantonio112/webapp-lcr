@@ -1,15 +1,15 @@
-<div class="container-fluid pt-4 px-5 grey lighten-5">
-	<div class=" container text-right ">
+<div class="container-fluid pt-4 px-5 mb-5 grey lighten-5"  style="overflow-y:auto; max-height: 610; min-height: 610">
+	<div class=" container text-right " >
 		<div class="teal lighten-1 z-depth-1" style="height:52px">
 			<span><img src="<?php echo base_url() .'/assets/svg/Print (ecris).svg' ?>" height="60px" alt="" style="float:right" class="px-2 "></span>
 			<p style="color:white; float:right; padding-right: 15px;font-size: 30px;" class="pt-2">Print</p>
 		</div>
 	</div>
-	<div class="container pt-4">
-		<div class="card ">
+	<div class="container pt-4" >
+		<div class="card" >
 			<div class="card-body">
 				<div class="row">
-					<div class="container ">
+					<div class="container">
 						<table id="printable" class="table table-responsive table-sm table-striped table-bordered" cellspacing="0" width="100%">
 							<thead>
 								<tr>
@@ -68,4 +68,5 @@
 				</div>
 			</div>
 		</div>
+	</div>
 	</div>

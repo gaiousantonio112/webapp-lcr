@@ -1,4 +1,5 @@
-<div class="container-fluid grey lighten-5">
+
+<div class="container-fluid grey lighten-5"   style="overflow-y:auto; max-height: 620; min-height: 620">
 	<div class="card" style="margin-top: 5px">
 		<div class="card-header">
 			<div class="container" style="">
@@ -253,14 +254,6 @@
 		<!-- end of death form -->
 
 
-
-
-
-
-
-
-
-
 		<!-- marriage form -->
 		<form id="marrform">
 			<div id="genform-marriage" class="container genform" style="margin-top: 10px">
@@ -412,19 +405,17 @@
 
 
 
-	<div class="col-6 pt-5">
-		<div class="">
-			<div class="" id="">
-				<iframe width="100%" class="postwar_view z-depth-1 mb-4" id="postwar_image" height="75%" src="<?php echo base_url(). 'pages/viewlcrform' ?>#toolbar=0&navpanes=0&scrollbar=0"></iframe>
+	<div class="col-6 pt-5 ">
+		<div class="sticky-top m-2" style="position: sticky; top:0; position: -webkit-sticky;">
+			<div class="">
+				<iframe width="100%" class=" postwar_view z-depth-1 mb-4 " id="postwar_image " height="75%" src="<?php echo base_url(). 'pages/viewlcrform' ?>#toolbar=0&navpanes=0&scrollbar=0"></iframe>
 			</div>
-			<div class="" id="">
-				<iframe src="<?php echo base_url() ?>/pages/book" class="prewar_view z-depth-1 mb-4" id="prewar_image" width="100%" height="100%"></iframe>
+			<div class="">
+				<iframe src="<?php echo base_url() ?>/pages/book" class=" prewar_view z-depth-1 mb-4 " id="prewar_image" width="100%" height="100%" ></iframe>
 			</div>
 		</div>
+
 		<div class="rows ">
-			<!-- <img src="<?php echo base_url() . '/assets/svg/preview-button-ecris.svg' ?>" style="height: 15px;"alt=""> -->
-
-
 			<!-- Birthday Modal -->
 			<div class="modal fade" id="modalBirthday" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog modal-lg" style="max-width:950px" role="document">
@@ -486,4 +477,7 @@
 		</div>
 	</div>
 </div>
+
+
+<div class="m-5" id="stopper" ></div>
 </div>

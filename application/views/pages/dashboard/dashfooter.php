@@ -60,6 +60,8 @@ $('.dataTables_length').addClass('bs-select');
 		});
 
 
+
+
 $(document).ready(function() {
 
 	$(".genform").hide();
@@ -72,7 +74,6 @@ $(document).ready(function() {
 	$("#search-birthday").hide();
 	$("#search-death").hide();
 	$("#search-marriage").hide();
-
 
 
 $("input[name$='radio_crt_type']").click(function() {
@@ -96,8 +97,8 @@ $("#prewar_image").show();
 	 	$("#search-birthday").hide();
 		$("#search-death").hide();
 		 $("#search-marriage").hide();
-		 $("#postwar_image").hide();
-		 $("#prewar_image").show();
+			 $("#postwar_image").hide();
+			 $("#prewar_image").show();
  });
 
 	$('#Birthday').click(function(){

@@ -17,7 +17,7 @@
     width: 320px;
     height: 192px;
     padding: 0;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .bg-ecris{
@@ -54,11 +54,8 @@ background-color: #EFEDDF;
 }
 </style>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
   <meta charset="utf-8">
@@ -69,17 +66,16 @@ background-color: #EFEDDF;
   <title>LCR
 
   </title>
-
-
 </head>
 
-<body>
+<body style="position:fixed; width: 100%; height: 100%">
 
-  <div class="d-flex align-left" id="wrapper">
+<div class="d-flex wrapper" id="wrapper"  >
 
     <!-- Sidebar -->
-    <div class="bg-ecris border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading py-3"><img src="<?php base_url()?>/assets/img/ecrislogo.svg" alt=""></div>
+
+    <div class="bg-ecris  border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading py-3 "><img src="<?php base_url()?>/assets/img/ecrislogo.svg" alt=""></div>
 			<div class="font-weight-bold bg-title text-center" id="curr_name">
 				Name: Eduardo Dalisay
 			</div>
@@ -99,6 +95,7 @@ background-color: #EFEDDF;
         <a href="#" class="list-group-item list-group-item-action bg-light">Prinb</a> -->
       </div>
     </div>
+
     <!-- /#sidebar-wrapper -->
 
     <!-- Page Content -->
