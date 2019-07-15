@@ -1,4 +1,4 @@
-<div class="container-fluid pt-4 px-5 grey lighten-5">
+<div class="container-fluid pt-4 px-5 grey lighten-5"  >
 	<div class="container ">
 		<div class="card mb-3">
 			<div class="card-header bg-primary ">

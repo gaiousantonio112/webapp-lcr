@@ -123,7 +123,7 @@ html {
 </style>
 
 <div id="loadit">
-  <div class="container-fluid pt-4 px-3 grey lighten-5">
+  <div class="container-fluid pt-4 px-3 grey lighten-5" style="overflow-y:auto; max-height: 610; min-height: 610">
 
     	<div class=" container text-right">
   <!-- <div class="loading">Loading&#8230;</div> -->
