@@ -36,7 +36,7 @@ class Lcr_works extends CI_Controller {
     // END
 
 
-    
+
 
     public function getUserCredentials()
     {
@@ -172,6 +172,36 @@ class Lcr_works extends CI_Controller {
       $inputData = $this->input->post('updatemarr');
 
       echo json_encode($this->works->updateMarriage($inputData));
+    }
+
+
+    // for the form gen
+    public function formgenBday()
+    {
+
+      $inputData = $this->input->post('formgebday');
+
+      $data = array(
+        'Pageno' => $inputData['Pageno'],
+        'Bookno' => $inputData['Bookno'],
+        'bdayrefnum' => $inputData['bdayrefnum'],
+        'lcr_regno' => $inputData['lcr_regno'],
+        'date_reg' => $inputData['date_reg'],
+        'name_child' => $inputData['name_child'],
+        'sex' => $inputData['sex'],
+        'bday_date' => $inputData['bday_date'],
+        'birthplace' => $inputData['birthplace'],
+        'mothername' => $inputData['mothername'],
+        'mothernationality' => $inputData['mothernationality'],
+        'fathername' => $inputData['fathername'],
+        'fathernationality' => $inputData['fathernationality'],
+        'marriagedate' => $inputData['marriagedate'],
+        'issued' => $inputData['issued'],
+        'remarks' => $inputData['remarks']
+      );
+
+      $this->load->view('pages/dashboard/birthformpreview.php',$data);
+
     }
 
 
