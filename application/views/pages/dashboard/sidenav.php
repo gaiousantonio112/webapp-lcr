@@ -116,13 +116,17 @@ background-color: #EFEDDF;
 
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0" >
+            <div class ="px-2">
+
             <li class="nav-item dropdown ">
+                <span class="badge badge-default float-right px-2 ">9</span>
               <a class="nav-link dropdown-toggle bg-title" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-bell"></i>
               </a>
-              <!-- <i class="far fa-bell float-right"></i> -->
+
+              <!--  -->
           <div class="dropdown-menu dropdown-menu-right pb-0" id="notif" aria-labelledby="navbarDropdown" style="background-color:tomato;">
-            <h6 class="dropdown-header mt-0 pb-3 white-text" style="background-color:tomato; width:200px;">Notification  <i class="badge badge-default float-right">9</i> </h6>
+            <h6 class="dropdown-header mt-0 pb-3 white-text" style="background-color:tomato; width:200px;">Notification   <i class="far fa-bell float-right px-0"></i></h6>
             <a href="#" class="notif col-12"> Notification Notification Notification Notification</a>
               <a href="#" class="col-12 notif">Notification</a>
                 <a href="#" class="col-12 notif">Notification</a>
@@ -132,8 +136,8 @@ background-color: #EFEDDF;
                         <a href="#" class="col-12 notif">Notification</a>
               </div>
 
-
             </li>
+          </div>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle bg-title" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 User
