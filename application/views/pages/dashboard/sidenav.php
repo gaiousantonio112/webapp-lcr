@@ -46,7 +46,7 @@ background-color: #EFEDDF;
 .notif
 {
     background-color: white;
-
+    padding: 10px 0px;
 }
 .notif:active
 {
@@ -125,15 +125,15 @@ background-color: #EFEDDF;
               </a>
 
               <!--  -->
-          <div class="dropdown-menu dropdown-menu-right pb-0" id="notif" aria-labelledby="navbarDropdown" style="background-color:tomato;">
-            <h6 class="dropdown-header mt-0 pb-3 white-text" style="background-color:tomato; width:200px;">Notification   <i class="far fa-bell float-right px-0"></i></h6>
-            <a href="#" class="notif col-12"> Notification Notification Notification Notification</a>
-              <a href="#" class="col-12 notif">Notification</a>
-                <a href="#" class="col-12 notif">Notification</a>
-                  <a href="#" class="col-12 notif">Notification</a>
-                    <a href="#" class="col-12 notif">Notification</a>
+          <div class="dropdown-menu dropdown-menu-right pb-0 " id="notif" aria-labelledby="navbarDropdown" style="background-color:tomato;">
+            <h6 class="dropdown-header mt-0 pb-3 white-text" style="background-color:tomato; width:230px;">Notification   <i class="far fa-bell float-right px-0"></i></h6>
+            <a href="#" class="notif col-12 "> Notification Notification Notification Notification </a>
+              <a href="#" class="col-12 notif ">Notification</a>
+                <a href="#" class="col-12 notif ">Notification</a>
+                  <a href="#" class="col-12 notif ">Notification</a>
+                    <a href="#" class="col-12 notif ">Notification</a>
                       <a href="#" class="col-12 notif">Notification</a>
-                        <a href="#" class="col-12 notif">Notification</a>
+                        <a href="#" class="col-12 notif ">Notification</a>
               </div>
 
             </li>

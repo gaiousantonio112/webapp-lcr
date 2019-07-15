@@ -283,7 +283,7 @@ html {
   <form id="printReciept">
   	<div class="container">
         <div class="row">
-  				<div class="col-6">
+  				<div class="col-6 pl-5">
   									<div class="">
   										<div class="md-form">
                         <input type="hidden" name="reciept[data_id]" id="data_id">
@@ -345,7 +345,7 @@ html {
         						</div>
   					</div>
 
-          	<div class="col-6 pb-5">
+          	<div class="col-6 pb-5 pr-5">
           		<div class="">
           			<div class="md-form">
           				<input type="number" id="totalpay" name="reciept[totalpay]" class="form-control" readonly value="50">
@@ -368,14 +368,14 @@ html {
           						</div>
                     </div>
                           </div>        </div>        </div>        </div>        </div>
-                    <div class="container col-12">
+                    <div class="container col-12 px-5">
                       <div class="md-form">
                         <input type="text" id="remark" name="reciept[remark]" class="form-control" >
                         <label for="remark">Remarks</label>
                       </div>
                     </div>
 
-          						<div class="text-center">
+          						<div class="text-center modal-footer col-auto">
             						<button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="submit" id="button-addon2" data-toggle="modal" data-target="#reciept" ><img src="<?php echo base_url() . '/assets/svg/submmit button (ecris).svg' ?>" style="height: 15px;"alt=""> Submit</button>
             						<button class="btn btn-lg btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="reset" id="button-addon"><img src="<?php echo base_url() . '/assets/svg/clear all button (ecris).svg' ?>" style="height: 15px;"alt=""> Clear</button>
                       </div>
