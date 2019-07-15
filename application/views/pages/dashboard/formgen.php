@@ -136,7 +136,7 @@
 						<div class="row">
 							<div class="col-12 text-center pb-5">
 								<button type="submit" class="btn btn-info" name="button" data-toggle="modal" data-target="#modalBirthday" id="birthday-btn">Preview</button>
-																								<button  type="button" class="btn btn-success" name="button" data-toggle="modal" data-target="#recipet" >Submit</button>
+									<button  type="button" class="btn btn-success" name="button" data-toggle="modal" data-target="#recipet" >Submit</button>
 								<button type="reset" class="btn btn-danger" name="button">Clear All</button>
 							</div>
 						</div>
@@ -247,6 +247,7 @@
 						<div class="col-12 text-center pb-5">
 
 							<button type="submit" class="btn btn-info" name="button" data-toggle="modal" data-target="#modalDeath" id="death-btn">Preview</button>
+							<button  type="button" class="btn btn-success" name="button" data-toggle="modal" data-target="#recipet" >Submit</button>
 							<button type="reset" class="btn btn-danger" name="button">Clear All</button>
 						</div>
 					</div>
@@ -394,6 +395,7 @@
 					<div class="row">
 						<div class="col-12 text-center pt-0 pb-3">
 							<button type="submit" class="btn btn-info" name="button" data-toggle="modal" data-target="#modalMarriage" id="marriage-btn">Preview</button>
+								<button  type="button" class="btn btn-success" name="button" data-toggle="modal" data-target="#recipet" >Submit</button>
 							<button type="reset" class="btn btn-danger" name="button">Clear All</button>
 						</div>
 					</div>
@@ -421,7 +423,8 @@
 				<div class="modal-dialog modal-lg" style="max-width:950px" role="document">
 					<div class="modal-content">
 						<div class="modal-header p-2" style="background-color: tomato">
-							<h4 class="modal-title white-text w-100 font-weight-bold py-2">Preview</h4>
+							<h4 class="modal-title white-text w-100 font-weight-bold py-2">
+						</h4>
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true" class="white-text">&times;</span>
 							</button>
