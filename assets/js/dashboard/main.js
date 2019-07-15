@@ -590,7 +590,21 @@ $(document).ready(function(e){
 ///BIRTHDAY
   $('#birthdayform').submit(function(e){
   e.preventDefault();
-  console.table($('#birthdayform').serializeArray());
+  console.log($('#birthdayform').serializeArray());
+
+  $.ajax({
+    url : global.settings.url + '/Lcr_works/formgenBday',
+    type : 'POST',
+    data : $(this).serialize(),
+    dataType : 'html',
+   success : function(res){
+     console.log(res);
+   },
+   error : function(xhr){
+     console.log(xhr.responseText);
+   }
+  });
+
   });
 
 
