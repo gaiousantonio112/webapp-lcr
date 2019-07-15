@@ -227,9 +227,9 @@ html {
 
   <div class="container py-4 px-0" id="inputpage" >
 
-  	<div class="card  " >
+  	<div class="card " >
     	  <div class="card-header bg-primary"></div>
-    	  <div class="card-body">
+    	  <div class="card-body px-5">
   	      <div class="row">
 
 
@@ -722,12 +722,13 @@ html {
       <div class="modal-footer">
 
         <button type="submit" class="btn btn-primary btn-sm">Save changes</button>
-                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
       </div>
   	</form>
   </div>
 </div>
 </div>
 </div>
+  <div class = "m-5"></div>
 </div>
 <!-- Central Modal Small -->

@@ -81,9 +81,10 @@ background-color: #EFEDDF;
 			</div>
 			<div id="current_time" class=" font-weight-bold bg-title text-center">
 			</div>
-      <div class="list-group list-group-flush pt-2 ">
-        <a href="<?php echo base_url() . 'pages/dash/index'  ?>" class="font-weight-bold boder text-left list-group-item list-group-item-action bg-ecris bg-title "><img src="<?php echo base_url() .'/assets/svg/dashboard(ecris).svg' ?>" height="25px" class="float-left mr-2" alt=""> Dashboard</a>
-        <a href="<?php echo base_url() . 'pages/dash/search'  ?>" class="font-weight-bold  text-left list-group-item list-group-item-action bg-ecris bg-title "><img src="<?php echo base_url() .'/assets/svg/search and payment (eCRIS).svg' ?>" height="25px" class="float-left mr-3" alt=""></i> Search and Payment</a>
+
+      <div class="list-group list-group-flush pt-2"  style="border-bottom: 1px solid lightgrey">
+        <a href="<?php echo base_url() . 'pages/dash/index'  ?>" class="font-weight-bold boder text-left list-group-item list-group-item-action bg-ecris bg-title" ><img src="<?php echo base_url() .'/assets/svg/dashboard(ecris).svg' ?>" height="25px" class="float-left mr-2" alt=""> Dashboard</a>
+        <a href="<?php echo base_url() . 'pages/dash/search'  ?>" class="font-weight-bold  text-left list-group-item list-group-item-action bg-ecris bg-title "  ><img src="<?php echo base_url() .'/assets/svg/search and payment (eCRIS).svg' ?>" height="25px" class="float-left mr-3" alt=""></i> Search and Payment</a>
         <a href="<?php echo base_url() . 'pages/dash/add'  ?>" class="font-weight-bold  text-left list-group-item list-group-item-action bg-ecris bg-title "><img src="<?php echo base_url() .'/assets/svg/add (ecris).svg' ?>" height="25px" class="float-left mr-3" alt=""> Add</a>
       			<a href="<?php echo base_url() . 'pages/dash/formgen'  ?>" class="font-weight-bold  text-left list-group-item list-group-item-action bg-ecris bg-title "><img src="<?php echo base_url() .'/assets/svg/Print (ecris).svg' ?>" height="25px" class="float-left mr-3" alt="">  LCR Form Generator</a>
             <a href="<?php echo base_url() . 'pages/dash/print'  ?>" class="font-weight-bold  text-left list-group-item list-group-item-action bg-ecris bg-title "><img src="<?php echo base_url() .'/assets/svg/Print (ecris).svg' ?>" height="25px" class="float-left mr-3" alt="">  Print</a>
@@ -105,10 +106,13 @@ background-color: #EFEDDF;
         <a class="px-3 " id="menu-toggle"><i class="fas fa-bars "></i></a>
         <h4 class="bg-title font-weight-bold pt-2">ELECTRONIC CIVIL REGISTRY INFORMATION SYSTEM</h4>
 
+        <div class = "">
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+
+        </div>
 
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0" >
@@ -116,8 +120,9 @@ background-color: #EFEDDF;
               <a class="nav-link dropdown-toggle bg-title" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-bell"></i>
               </a>
+              <!-- <i class="far fa-bell float-right"></i> -->
           <div class="dropdown-menu dropdown-menu-right pb-0" id="notif" aria-labelledby="navbarDropdown" style="background-color:tomato;">
-            <h6 class="dropdown-header mt-0 pb-3 white-text" style="background-color:tomato; width:200px;">Notification  <i class="far fa-bell float-right"></i></h6>
+            <h6 class="dropdown-header mt-0 pb-3 white-text" style="background-color:tomato; width:200px;">Notification  <i class="badge badge-default float-right">9</i> </h6>
             <a href="#" class="notif col-12"> Notification Notification Notification Notification</a>
               <a href="#" class="col-12 notif">Notification</a>
                 <a href="#" class="col-12 notif">Notification</a>

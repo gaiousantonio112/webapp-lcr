@@ -1,28 +1,36 @@
-<div class="container-fluid pt-4 px-5 grey lighten-5"  >
-	<div class="container ">
-		<div class="card mb-3">
-			<div class="card-header bg-primary ">
+<div class="container-fluid pt-4 px-5 grey lighten-5"   style="overflow-y:auto; max-height: 620; min-height: 620">
+	<div class=" container text-right " >
+		<!--  -->
+		<div class=" teal lighten-1" style="height:52px;">
+			<span><img src="<?php echo base_url() .'/assets/svg/add (ecris).svg' ?>" height="65px" alt="" style="float:right" class="px-2 "></span>
+			<p style="color:white; float:right; padding-right: 15px;font-size: 30px;" class="pt-2">Add</p>
+		</div>
+		</div>
+
+	<div class="container p-4" >
+		<div class="card mb-0">
+			<!-- <div class="card-header bg-primary ">
+			</div> -->
+			<div class="card-header py-4 px-5 bg-white">
+			<div class="custom-control custom-radio custom-control-inline">
+				<input type="radio" class="custom-control-input" name="radioselect" id="Birthday" value="Birth" onclick="show('birth');" checked>
+				<label class="custom-control-label" for="Birthday">Birthday</label>
 			</div>
+			<div class="custom-control custom-radio custom-control-inline">
+				<input type="radio" class="custom-control-input" name="radioselect" id="Death" value="Death" onclick="show('death');">
+				<label class="custom-control-label" for="Death">Death</label>
+			</div>
+			<div class="custom-control custom-radio custom-control-inline">
+				<input type="radio" class="custom-control-input" name="radioselect" id="Marriage" value="Marriage" onclick="show('merage');">
+				<label class="custom-control-label" for="Marriage">Marriage</label>
+			</div>
+		</div>
+
 			<div class="card-body ">
-				<span><img src="<?php echo base_url() .'/assets/svg/add (ecris).svg' ?>" height="70px" alt="" style="float:right;" class="px-2 "></span>
-				<p style=" float:right; padding-right: 5px;font-size: 35px;" class="pt-2 text-dark">Add</p>
-				<div class="container-fluid p-4">
+				<div class="container-fluid p-0">
 					<div class="container">
-						<div class="custom-control custom-radio custom-control-inline">
-							<input type="radio" class="custom-control-input" name="radioselect" id="Birthday" value="Birth" onclick="show('birth');" checked>
-							<label class="custom-control-label" for="Birthday">Birthday</label>
-						</div>
-						<div class="custom-control custom-radio custom-control-inline">
-							<input type="radio" class="custom-control-input" name="radioselect" id="Death" value="Death" onclick="show('death');">
-							<label class="custom-control-label" for="Death">Death</label>
-						</div>
-						<div class="custom-control custom-radio custom-control-inline">
-							<input type="radio" class="custom-control-input" name="radioselect" id="Marriage" value="Marriage" onclick="show('merage');">
-							<label class="custom-control-label" for="Marriage">Marriage</label>
-						</div>
-						<hr class="my-4  py-3">
 
-
+						<!-- <hr class="my-4  py-3"> -->
 						<form id="addBirthForm">
 							<div class="" id="birth">
 								<div class="container py-0 px-0">
@@ -69,12 +77,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="text-center py-0">
-										<button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="submit" id="button-addon2">
-											<img src="<?php echo base_url() . '/assets/svg/submmit button (ecris).svg' ?>" style="height: 15px;" alt=""> Submit</button>
-										<button class="btn btn-lg btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2">
-											<img src="<?php echo base_url() . '/assets/svg/clear all button (ecris).svg' ?>" style="height: 15px;" alt=""> Clear</button>
-									</div>
+
 								</div>
 							</div>
 						</form>
@@ -129,18 +132,10 @@
 										</div>
 
 									</div>
-									<div class="text-center">
-										<button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="submit" id="button-addon2">
-											<img src="<?php echo base_url() . '/assets/svg/submmit button (ecris).svg' ?>" style="height: 15px;" alt=""> Submit</button>
-										<button class="btn btn-lg btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2">
-											<img src="<?php echo base_url() . '/assets/svg/clear all button (ecris).svg' ?>" style="height: 15px;" alt=""> Clear</button>
-									</div>
+
 								</div>
 							</div>
 						</form>
-
-
-
 
 						<form id="addMarrForm">
 							<div class="" id="merage">
@@ -216,18 +211,41 @@
 											</div>
 										</div>
 									</div>
-									<div class="text-center">
-										<button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="submit" id="button-addon2">
-											<img src="<?php echo base_url() . '/assets/svg/submmit button (ecris).svg' ?>" style="height: 15px;" alt=""> Submit</button>
-										<button class="btn btn-lg btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2">
-											<img src="<?php echo base_url() . '/assets/svg/clear all button (ecris).svg' ?>" style="height: 15px;" alt=""> Clear</button>
-									</div>
+
+
 								</div>
+
 							</div>
+
 					</div>
 					</form>
 				</div>
 			</div>
+
+			<div class="text-center py-3  card-footer submit-btn" id="btn-Birth">
+				<button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="submit" id="button-addon2">
+					<img src="<?php echo base_url() . '/assets/svg/submmit button (ecris).svg' ?>" style="height: 15px;" alt=""> Submit</button>
+				<button class="btn btn-lg btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2">
+					<img src="<?php echo base_url() . '/assets/svg/clear all button (ecris).svg' ?>" style="height: 15px;" alt=""> Clear</button>
+				</div>
+
+
+			<div class="text-center py-3 card-footer submit-btn" id="btn-Death">
+				<button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="submit" id="button-addon2">
+					<img src="<?php echo base_url() . '/assets/svg/submmit button (ecris).svg' ?>" style="height: 15px;" alt=""> Submit</button>
+				<button class="btn btn-lg btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2">
+					<img src="<?php echo base_url() . '/assets/svg/clear all button (ecris).svg' ?>" style="height: 15px;" alt=""> Clear</button>
+				</div>
+
+
+			<div class="text-center py-3 card-footer submit-btn" id="btn-Marriage" >
+				<button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="submit" id="button-addon2">
+					<img src="<?php echo base_url() . '/assets/svg/submmit button (ecris).svg' ?>" style="height: 15px;" alt=""> Submit</button>
+				<button class="btn btn-lg btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2">
+					<img src="<?php echo base_url() . '/assets/svg/clear all button (ecris).svg' ?>" style="height: 15px;" alt=""> Clear</button>
+
+		</div>
 		</div>
 	</div>
+	<div class="m-5"></div>
 </div>

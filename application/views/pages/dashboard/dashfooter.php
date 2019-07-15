@@ -75,6 +75,10 @@ $(document).ready(function() {
 	$("#search-death").hide();
 	$("#search-marriage").hide();
 
+	$(".submit-btn").hide();
+	$('#btn-Birth').show();
+	$('#btn-Death').hide();
+	$('#btn-Marriage').hide();
 
 $("input[name$='radio_crt_type']").click(function() {
 	 			  var test = $(this).val();
@@ -82,6 +86,13 @@ $("input[name$='radio_crt_type']").click(function() {
 					$(".previewbtn").hide();
 					$("#"+test+"-btn").show();
 					$("#genform-"+test).show();
+});
+
+
+$("input[name$='radioselect']").click(function() {
+	 			  var test = $(this).val();
+					$(".submit-btn").hide();
+					$("#btn-"+test).show();
 });
 
 $("#prewar_image").show();
@@ -93,6 +104,7 @@ $("#prewar_image").show();
 		 			$("#postwar_image").show();
 
  });
+
  $("#pre-war").click(function() {
 	 	$("#search-birthday").hide();
 		$("#search-death").hide();
@@ -143,7 +155,8 @@ function show(page){
 		}if(page == 'merage'){
 
 		$('#birth').hide();
-		     $('#death').hide();
+   	$('#death').hide();
+
 		}
 
 		if(page == 'searchbirth'){

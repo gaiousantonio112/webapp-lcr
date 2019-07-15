@@ -1,8 +1,7 @@
-<<<<<<< HEAD
+
 <div class="container-fluid px-2 py-2"  style="overflow-y:auto; max-height: 610; min-height: 610">
 	<div class="container-fluid " >
-=======
-<<<<<<< HEAD
+
 
 <div class="container-fluid " style="">
   <div class="row">
@@ -123,18 +122,15 @@
   </div>
 </div>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4f0590449c6bde2588831a5a44251ca7f3b9b187
   </div>
   </div>
   </div>
 
-=======
+
 <div class="container-fluid px-2 py-2">
 	<div class="container-fluid " style="">
->>>>>>> ce2758742e954c1ed5d002b76ce23300a6135256
+
 		<div class="row">
 			<div class="col-lg-12 grey lighten-4">
 				<div class="">

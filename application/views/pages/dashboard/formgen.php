@@ -407,12 +407,12 @@
 
 
 
-	<div class="col-6 pt-5 ">
-		<div class="sticky-top" style="position: sticky; top:0; position: -webkit-sticky;">
+	<div class="col-6 pt-2 ">
+		<div class="sticky-top" style="position: sticky; z-index:2; top:0; position: -webkit-sticky;">
 			<div class="" id="">
 				<iframe src="<?php echo base_url() ?>/pages/book" class=" prewar_view z-depth-1 mb-4 " id="prewar_image" width="100%" height="100%" ></iframe>
 			</div>
-			<iframe width="100%" height="80%" class="postwar_view z-depth-1 mb-4" id="postwar_image"  src="<?php echo base_url() . 'pages/viewlcrform' ?>#toolbar=0&navpanes=0&scrollbar=0&view=fitH,100 " ></iframe>
+			<iframe width="100%" height="100%" class="postwar_view z-depth-1 mb-4" id="postwar_image"  src="<?php echo base_url() . 'pages/viewlcrform' ?>#toolbar=0&navpanes=0&scrollbar=0&view=fitH,100 " ></iframe>
 		</div>
 
 		<div class="rows ">
@@ -553,5 +553,5 @@ aria-hidden="true">
 	</form>
 </div>
 
-<div class="p-5"></div>
+<div class="p-5 m-5"></div>
 </div>
