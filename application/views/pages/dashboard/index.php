@@ -1,8 +1,8 @@
 
 <div class="container-fluid py-2"  style="overflow-y:auto; max-height: 610; min-height: 610">
 
-	<div class=" container text-right " >
-					<div class="teal lighten-1 z-depth-1 pt-3" style="height:52px;border-radius:3px">
+	<div class=" container text-right pt-3" >
+					<div class="teal lighten-1 z-depth-1 " style="height:52px;border-radius:3px">
 						<span><img src="<?php echo base_url() .'/assets/svg/dashboard(ecris).svg' ?>" height="60px" alt="" style="float:right" class="px-3"></span>
 						<p style="color:white; float:right; font-size: 30px;" class="pt-2">Dashboard</p>
 					</div>
@@ -88,7 +88,7 @@
 				</div>
 			</div>
 
-			<div class="container pt-3">
+			<div class="container pt-0">
 				<div class="card">
 					<div class="card-body">
 						<div class="col-4 text-left">
