@@ -1,6 +1,6 @@
 <div class="container-fluid pt-4 px-5 mb-5 grey lighten-5"  style="overflow-y:auto; max-height: 610; min-height: 610">
 	<div class=" container text-right " >
-		<div class="teal lighten-1 z-depth-1" style="height:52px">
+		<div class="teal lighten-1 z-depth-1" style="height:52px; border-radius:3px">
 			<span><img src="<?php echo base_url() .'/assets/svg/Print (ecris).svg' ?>" height="60px" alt="" style="float:right" class="px-2 "></span>
 			<p style="color:white; float:right; padding-right: 15px;font-size: 30px;" class="pt-2">Print</p>
 		</div>
@@ -68,6 +68,6 @@
 				</div>
 			</div>
 		</div>
-		<div class = "m-5"></div>
+		<div class = "m-5"></d
 	</div>
 	</div>

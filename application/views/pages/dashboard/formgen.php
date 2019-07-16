@@ -142,6 +142,7 @@
 						</div>
 					</div>
 			</form>
+				<div class="m-5"></div>
 		</div>
 		<!-- end of birtday form -->
 
@@ -252,6 +253,7 @@
 						</div>
 					</div>
 				</div>
+					<div class="m-5"></div>
 			</form>
 		</div>
 		<!-- end of death form -->
@@ -293,18 +295,18 @@
 								<button id="search" class="btn btn-primary" style="box-shadow:0px 5px #CDD5D9">Search</button>
 							</div>
 						</div>
-						<div class="row">
-							<div class="md-form col-6">
+						<div class="row px-3">
+							<div class="md-form col-6 ">
 								<input type="text" name="marrform[husband_name]" id="husband_name" class="form-control" />
 								<label for="husband_name">Husband's Name</label>
 							</div>
-							<div class="md-form col-6">
+							<div class="md-form col-6 ">
 								<input type="text" name="marrform[wife_name]" id="wife_name" class="form-control">
 								<label for="wife_name">Wife's Name</label>
 							</div>
 						</div>
-						<div class="row" style="margin-top:-30px">
-							<div class="md-form col-6">
+						<div class="row px-3" style="margin-top:-30px" >
+							<div class="md-form col-6 ">
 								<input type="number" name="marrform[hus_age]" id="form2" class="form-control" />
 								<label for="form2">Husband's Age</label>
 							</div>
@@ -313,7 +315,7 @@
 								<label for="form2">Wife's Age</label>
 							</div>
 						</div>
-						<div class="row" style="margin-top:-30px">
+						<div class="row px-3" style="margin-top:-30px">
 							<div class="md-form col-6">
 								<input type="text" name="marrform[Husband_Nationality]" id="husband_nationality" class="form-control" />
 								<label for="husband_nationality">Husband's Nationality</label>
@@ -323,7 +325,7 @@
 								<label for="wife_nationality">Wife's Nationality</label>
 							</div>
 						</div>
-						<div class="row" style="margin-top:-30px">
+						<div class="row " style="margin-top:-30px">
 							<div class="md-form col-6">
 								<select name="husband-civil-status" name="marrform[hus_civil_status]" class="custom-select">
 									<option selected value=" ">Husband's Civil Status</option>
@@ -343,7 +345,7 @@
 								</select>
 							</div>
 						</div>
-						<div class="row" style="margin-top:-30px">
+						<div class="row px-3" style="margin-top:-30px">
 							<div class="md-form col-6">
 								<input type="text" name="marrform[husband_mother]" id="husband_mother" class="form-control" />
 								<label for="husband_mother">Husband's Mother</label>
@@ -353,7 +355,7 @@
 								<label for="wife_mother">Wife's Mother</label>
 							</div>
 						</div>
-						<div class="row" style="margin-top:-30px">
+						<div class="row px-3" style="margin-top:-30px">
 							<div class="md-form col-6">
 								<input type="text" name="marrform[husband_father]" id="husband_father" class="form-control" />
 								<label for="husband_father">Husband's Father</label>
@@ -404,6 +406,7 @@
 
 			</div>
 		</form>
+		<div class="m-5"></div>
 	</div>
 	<!-- end of marr -->
 
@@ -412,9 +415,9 @@
 	<div class="col-6 pt-2 ">
 		<div class="sticky-top" style="position: sticky; z-index:2; top:0; position: -webkit-sticky;">
 			<div class="" id="">
-				<iframe src="<?php echo base_url() ?>/pages/book" class=" prewar_view z-depth-1 mb-4 " id="prewar_image" width="100%" height="100%" ></iframe>
+				<iframe src="<?php echo base_url() ?>/pages/book" class=" prewar_view z-depth-1 mb-4 mt-5" id="prewar_image" width="100%" height="80%" ></iframe>
 			</div>
-			<iframe width="100%" height="100%" class="postwar_view z-depth-1 mb-4" id="postwar_image"  src="<?php echo base_url() . 'pages/viewlcrform' ?>#toolbar=0&navpanes=0&scrollbar=0&view=fitH,100 " ></iframe>
+			<iframe width="100%" height="80%" class="postwar_view z-depth-1 mb-4" id="postwar_image mt-5"  src="<?php echo base_url() . 'pages/viewlcrform' ?>#toolbar=0&navpanes=0&scrollbar=0&view=fitH,100 " ></iframe>
 		</div>
 
 		<div class="rows ">
@@ -556,5 +559,4 @@ aria-hidden="true">
 	</form>
 </div>
 
-<div class="p-5 m-5"></div>
 </div>

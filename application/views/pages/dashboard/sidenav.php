@@ -33,8 +33,8 @@ background-color: #EFEDDF;
 }
 .list-group a{
 
-	border-top: 1px solid black ;
-		border-bottom: 1px solid black ;
+	border-top: 1px solid grey ;
+		border-bottom: 1px solid grey ;
 }
 .bg-title{
   color: #163F54;
@@ -75,19 +75,19 @@ background-color: #EFEDDF;
     <!-- Sidebar -->
 
     <div class="bg-ecris  border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading py-3 "><img src="<?php base_url()?>/assets/img/ecrislogo.svg" alt=""></div>
+      <div class="sidebar-heading py-4 "><img src="<?php base_url()?>/assets/img/ecrislogo.svg" alt=""></div>
 			<div class="font-weight-bold bg-title text-center" id="curr_name">
 				Name: Eduardo Dalisay
 			</div>
 			<div id="current_time" class=" font-weight-bold bg-title text-center">
 			</div>
 
-      <div class="list-group list-group-flush pt-2"  style="border-bottom: 1px solid lightgrey">
+      <div class="list-group list-group-flush pt-4"  >
         <a href="<?php echo base_url() . 'pages/dash/index'  ?>" class="font-weight-bold boder text-left list-group-item list-group-item-action bg-ecris bg-title" ><img src="<?php echo base_url() .'/assets/svg/dashboard(ecris).svg' ?>" height="25px" class="float-left mr-2" alt=""> Dashboard</a>
         <a href="<?php echo base_url() . 'pages/dash/search'  ?>" class="font-weight-bold  text-left list-group-item list-group-item-action bg-ecris bg-title "  ><img src="<?php echo base_url() .'/assets/svg/search and payment (eCRIS).svg' ?>" height="25px" class="float-left mr-3" alt=""></i> Search and Payment</a>
         <a href="<?php echo base_url() . 'pages/dash/add'  ?>" class="font-weight-bold  text-left list-group-item list-group-item-action bg-ecris bg-title "><img src="<?php echo base_url() .'/assets/svg/add (ecris).svg' ?>" height="25px" class="float-left mr-3" alt=""> Add</a>
-      			<a href="<?php echo base_url() . 'pages/dash/formgen'  ?>" class="font-weight-bold  text-left list-group-item list-group-item-action bg-ecris bg-title "><img src="<?php echo base_url() .'/assets/svg/Print (ecris).svg' ?>" height="25px" class="float-left mr-3" alt="">  LCR Form Generator</a>
-            <a href="<?php echo base_url() . 'pages/dash/print'  ?>" class="font-weight-bold  text-left list-group-item list-group-item-action bg-ecris bg-title "><img src="<?php echo base_url() .'/assets/svg/Print (ecris).svg' ?>" height="25px" class="float-left mr-3" alt="">  Print</a>
+  			<a href="<?php echo base_url() . 'pages/dash/formgen'  ?>" class="font-weight-bold  text-left list-group-item list-group-item-action bg-ecris bg-title "><img src="<?php echo base_url() .'/assets/svg/Print (ecris).svg' ?>" height="25px" class="float-left mr-3" alt="">  LCR Form Generator</a>
+        <a href="<?php echo base_url() . 'pages/dash/print'  ?>" class="font-weight-bold  text-left list-group-item list-group-item-action bg-ecris bg-title "><img src="<?php echo base_url() .'/assets/svg/Print (ecris).svg' ?>" height="25px" class="float-left mr-3" alt="">  Print</a>
 
 			  <!-- <a href="#" class="list-group-item list-group-item-action bg-light">Warning</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Birthday</a>
