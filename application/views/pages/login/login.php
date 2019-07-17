@@ -46,7 +46,7 @@ z-index: 1;
   <h3 class="display-3 fadeIn first text-left black-text" style='font-size: 63px'>ELECTRONIC CIVIL REGISTRY INFORMATION SYSTEM</h3>
 </div>
 
-<div id="drop" class="wrapper fadeInDown mt-5" >
+<div id="drop" class="wrapper fadeInDown mt-5 " >
 
   <div id="formContent">
     <form id="login_form" class="">
@@ -64,7 +64,7 @@ z-index: 1;
             <div class="col-3">
               <img src="<?php echo base_url() . '/assets/svg/USERLOGO.svg'?>" style="height: 50px;" alt="" class="mt-4">
             </div>
-          <div class="p-0 col-9">
+          <div class="p-0 col-9 pr-4">
             <div class="md-form ">
               <input type="text"  id="username" name="login[username]" class="form-control px-1" required>
               <label for="username" class="px-1">Username</label>
@@ -74,7 +74,7 @@ z-index: 1;
               <img src="<?php echo base_url() . '/assets/svg/PWLOGO.svg'?>"  style="height: 50px; " alt="" class="mt-4">
             </div>
 
-          <div class="p-0 col-9">
+          <div class="p-0 col-9 pr-4">
             <div class="md-form">
                 <input type="password"  id="password" name="login[password]" class="form-control px-1" required>
                 <label for="password" class="px-1">Password</label>

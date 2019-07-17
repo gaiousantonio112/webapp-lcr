@@ -1,29 +1,20 @@
 
-<div class="container-fluid px-2 py-2"  style="overflow-y:auto; max-height: 610; min-height: 610">
-	<div class="container-fluid " >
+<div class="container-fluid py-2"  style="overflow-y:auto; max-height: 610; min-height: 610">
 
+	<div class=" container text-right pt-3" >
+					<div class="teal lighten-1 z-depth-1 " style="height:52px;border-radius:3px">
+						<span><img src="<?php echo base_url() .'/assets/svg/dashboard(ecris).svg' ?>" height="60px" alt="" style="float:right" class="px-3"></span>
+						<p style="color:white; float:right; font-size: 30px;" class="pt-2">Dashboard</p>
+					</div>
+	</div>
 
-<div class="container-fluid " style="">
-				  <!--   -->
-  </div>
-  </div>
-
-<div class="container-fluid px-2 py-2">
-	<div class="container-fluid " style="">
-		<div class="row">
-			<div class="col-lg-12 grey lighten-4">
-				<div class="">
-					<p class="h3 pt-2 ml-4 text-rgba-black-strong " style=" font-family: Roboto">
-						<span><img src="<?php echo base_url() .'/assets/svg/dashboard(ecris).svg' ?>" height="50px" alt="" class="px-2 text-spacing-3em "></span>Dashboard</p>
-				</div>
-			</div>
-			<hr class="">
-			<div class="container py-2">
+			<!-- <hr class=""> -->
+			<div class="container py-5">
 				<div class="row">
-					<div class="col-xl-3 col-md-6 mb-2 text-center">
-						<div class="card py-2 ">
+					<div class="col-3 mb-2 text-center">
+						<div class="card py-2">
 							<div class="card-body">
-								<div class="row ">
+
 									<div class="col auto">
 										<div class="mb-2">
 											<img src="<?php echo base_url() .'/assets/svg/service provided(ecris).svg' ?>" height="40px" alt="">
@@ -32,13 +23,13 @@
 										<div class="text-xs font-weight-bold blue-text text-uppercase mb-1 letter-spacing-5em">Service Provided</div>
 										<div class="h5 mb-0 font-weight-bold text-gray-800" id="service_provided">Loading...</div>
 									</div>
-								</div>
+
 							</div>
 						</div>
 					</div>
 
 					<!-- Earnings (Monthly) Card Example -->
-					<div class="col-xl-3 col-md-6 mb-4 text-center">
+					<div class="col-3 mb-4 text-center">
 						<div class="card py-2 ">
 							<div class="card-body">
 								<div class="row">
@@ -56,7 +47,7 @@
 					</div>
 
 					<!-- Earnings (Monthly) Card Example -->
-					<div class="col-xl-3 col-md-6 mb-0 text-center">
+					<div class="col-3  mb-0 text-center">
 						<div class="card pt-2 pb-0">
 							<div class="card-body ">
 								<div class="row">
@@ -76,7 +67,7 @@
 						</div>
 					</div>
 
-					<div class="col-xl-3 col-md-6 mb-4 text-center">
+					<div class="col-3 mb-4 text-center">
 						<div class="card py-2">
 							<div class="card-body ">
 								<div class="row">
@@ -97,7 +88,7 @@
 				</div>
 			</div>
 
-			<div class="container pt-3">
+			<div class="container pt-0">
 				<div class="card">
 					<div class="card-body">
 						<div class="col-4 text-left">
@@ -111,8 +102,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-</div>
+
+
 
 <div class="p-5"></div>
