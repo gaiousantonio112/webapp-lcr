@@ -592,18 +592,33 @@ $(document).ready(function(e){
   e.preventDefault();
   console.log($('#birthdayform').serializeArray());
 
-  $.ajax({
-    url : global.settings.url + '/Lcr_works/formgenBday',
-    type : 'POST',
-    data : $(this).serialize(),
-    dataType : 'html',
-   success : function(res){
-     console.log(res);
-   },
-   error : function(xhr){
-     console.log(xhr.responseText);
-   }
-  });
+    $.ajax({
+      url : global.settings.url + '/Lcr_works/formgenBday',
+      type : 'POST',
+      // processData: false,
+      data : $(this).serialize(),
+      // dataType : 'pdf',
+      // contentType : 'application/pdf',
+      // cache: false,
+      xhrFields: {
+            responseType: 'blob'
+        },
+      success : function(res){
+        $('#modalBirthday').modal('show');
+            // var a = document.createElement('a');
+            var url = window.URL.createObjectURL(res);
+            // a.href = url;
+            $('#iframe_preview_formgen').attr('src',url);
+            // a.download = 'myfile.pdf';
+            // document.body.append(a);
+            // a.click();
+            // a.remove();
+            // window.URL.revokeObjectURL(url);
+      },
+      error : function(xhr){
+       console.log(xhr.responseText);
+      }
+    });
 
   });
 
@@ -612,6 +627,24 @@ $(document).ready(function(e){
     $('#deathform').submit(function(e){
     e.preventDefault();
     console.log($('#deathform').serializeArray());
+    $.ajax({
+      url : global.settings.url + '/Lcr_works/formgenDeath',
+      type : 'POST',
+      data : $(this).serialize(),
+      xhrFields: {
+            responseType: 'blob'
+        },
+      success : function(res){
+        $('#modalBirthday').modal('show');
+        var a = document.createElement('a');
+        var url = window.URL.createObjectURL(res);
+        a.href = url;
+        $('#iframe_preview_formgen').attr('src',url);
+      },
+      error : function(xhr){
+       console.log(xhr.responseText);
+      }
+    });
   });
 
 
@@ -619,6 +652,25 @@ $(document).ready(function(e){
       $('#marrform').submit(function(e){
       e.preventDefault();
       console.log($('#marrform').serializeArray());
+        $.ajax({
+          url : global.settings.url + '/Lcr_works/formgenMarriage',
+          type : 'POST',
+          data : $(this).serialize(),
+          xhrFields: {
+                responseType: 'blob'
+            },
+          success : function(res){
+            $('#modalBirthday').modal('show');
+            var a = document.createElement('a');
+            var url = window.URL.createObjectURL(res);
+            // url.file_name = 
+            a.href = url;
+            $('#iframe_preview_formgen').attr('src',url);
+          },
+          error : function(xhr){
+           console.log(xhr.responseText);
+          }
+        });
       });
 
 
