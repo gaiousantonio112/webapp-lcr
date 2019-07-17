@@ -245,7 +245,8 @@
 					<img src="<?php echo base_url() . '/assets/svg/clear all button (ecris).svg' ?>" style="height: 15px;" alt=""> Clear</button>
 
 		</div>
+
 		</div>
+			<div class="m-5"></div>
 	</div>
-	<div class="m-5"></div>
 </div>

@@ -1,6 +1,6 @@
 
 <div class="container-fluid grey lighten-5"   style="overflow-y:auto; max-height: 620; min-height: 620">
-	<div class="card" style="margin-top: 5px">
+	<div class="card mt-3" style="margin-top: 5px">
 		<div class="card-header">
 			<div class="container" style="">
 				<div class="row">
@@ -35,9 +35,9 @@
 	<div class="row">
 
 		<!-- birthday form -->
-		<div class="col-6 ">
+		<div class="col-6">
 			<form id="birthdayform">
-				<div id="genform-birthday" class="container genform" style="margin-top: 10px; ">
+				<div id="genform-birthday" class="container genform " style="margin-top: 10px; ">
 					<div class="card mb-3 rgba-cyan-slight">
 						<div class="card-body">
 							<div class="text-center px-5" style="color: #191818" id="certif">
@@ -61,7 +61,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="card mb-3">
+					<div class="card mb-3 ">
 						<div class="card-body">
 							<div class="row px-5" style="float:none;margin: 10px auto" id="search-birthday">
 								<div class="col-9 px-0 py-2">
