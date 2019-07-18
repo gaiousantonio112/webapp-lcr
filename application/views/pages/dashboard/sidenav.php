@@ -111,7 +111,7 @@ background-color: #EFEDDF;
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-      <nav class="navbar  navbar-expand-lg navbar-light z-depth-1 ">
+      <nav class="navbar  navbar-expand-lg navbar-light z-depth-1 " style="border-bottom:3px solid #3F729B">
         <a class="px-3 " id="menu-toggle"><i class="fas fa-bars "></i></a>
         <h5 class="pt-2">ELECTRONIC CIVIL REGISTRY INFORMATION SYSTEM</h5>
 
