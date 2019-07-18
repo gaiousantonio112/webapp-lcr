@@ -38,14 +38,14 @@ z-index: 1;
 <div class="row">
 
 <div class="col-sm-12 col-lg-6 p-5 ">
-    <img class="spc fadeIn first" src="../../../../assets/img/spclogo.png" alt="">
+    <img class="spc fadeIn first mr-4" src="../../../../assets/img/spclogo.png" alt="">
 </div>
 <div class="vl mt-4">
 </div>
 <div class="col-sm-12 col-lg-5 p-5" id ='electext'>
- <h3 class="display-3 fadeIn first text-left black-text mt-4 ml-3" style="font-size: 63px; position:absolute">ELECTRONIC CIVIL REGISTRY INFORMATION SYSTEM</h3>
+ <h3 class="display-3 fadeIn first text-left black-text mt-4 ml-4" style="font-size: 63px; position:absolute">ELECTRONIC CIVIL REGISTRY INFORMATION SYSTEM</h3>
 
-  <div id="drop" class="wrapper fadeInDown ml-0" style="width:500px;">
+  <div id="drop" class="wrapper fadeInDown ml-0 p-0 " style="width:500px;">
 
     <div id="formContent">
       <form id="login_form" class="">

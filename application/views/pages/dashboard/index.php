@@ -58,6 +58,7 @@
 										<hr class="">
 										<div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks</div>
 										<div class="h5 mb-0 font-weight-bold text-gray-800" id="task_text_percent">Loading...</div>
+
 										<div class="progress progress-sm " style="height:8px">
 											<div class="progress-bar bg-info" role="progressbar" id="task_bar_percent" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
 										</div>
