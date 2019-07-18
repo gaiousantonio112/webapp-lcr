@@ -5,7 +5,7 @@ use setasign\Fpdi\Fpdi;
 require_once(APPPATH.'/../assets/pdfmerge/TCPDF-master/tcpdf.php');
 require_once(APPPATH.'/../assets/pdfmerge/tcpdi/tcpdi.php');
 date_default_timezone_set('Asia/Manila');
-$date = date('m - d - Y');
+$date = date('Y-m-d');
 
   $pdfmarriage = new TCPDI(PDF_PAGE_ORIENTATION, 'mm', PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
@@ -21,27 +21,27 @@ $date = date('m - d - Y');
 
   $pdfmarriage->Text(160, 12, "No. Control Number");
   $pdfmarriage->Text(176, 60, "Date printed");
-  $pdfmarriage->Text(47, 82, "Page#");
-  $pdfmarriage->Text(92, 82, "Book#");
-  $pdfmarriage->Text(75, 101, "Husband_Name");
-  $pdfmarriage->Text(75, 108, "Husband_Age");
-  $pdfmarriage->Text(75, 116, "Husband_Nationality");
-  $pdfmarriage->Text(75, 123, "Husband_Civil_Status");
-  $pdfmarriage->Text(75, 131, "Husband_Mother");
-  $pdfmarriage->Text(75, 139, "Husband_Father");
+  $pdfmarriage->Text(47, 82, $pageno);
+  $pdfmarriage->Text(92, 82, $bookno);
+  $pdfmarriage->Text(75, 101, $husband_name);
+  $pdfmarriage->Text(75, 108, $hus_age);
+  $pdfmarriage->Text(75, 116, $Husband_Nationality);
+  $pdfmarriage->Text(75, 123, $hus_civil_status);
+  $pdfmarriage->Text(75, 131, $husband_mother);
+  $pdfmarriage->Text(75, 139, $husband_father);
 
-  $pdfmarriage->Text(145, 101, "Wifes_Name");
-  $pdfmarriage->Text(145, 108, "Wife_Age");
-  $pdfmarriage->Text(145, 116, "Wife_Nationality");
-  $pdfmarriage->Text(145, 123, "Wife_Civil_Status");
-  $pdfmarriage->Text(145, 131, "Wife_Mother");
-  $pdfmarriage->Text(145, 139, "Wife_Father");
+  $pdfmarriage->Text(145, 101, $wife_name);
+  $pdfmarriage->Text(145, 108, $wife_age);
+  $pdfmarriage->Text(145, 116, $Wife_Nationality);
+  $pdfmarriage->Text(145, 123, $wife_civil_status);
+  $pdfmarriage->Text(145, 131, $wife_mother);
+  $pdfmarriage->Text(145, 139, $wife_father);
 
-  $pdfmarriage->Text(75, 152, "LCR REgistry Number ");
-  $pdfmarriage->Text(75, 160, "Date_of_Registration");
-  $pdfmarriage->Text(75, 168, "Date_of_Marriage");
-  $pdfmarriage->Text(75, 175, "Place_of_Marriage");
-  $pdfmarriage->Text(20, 188, "THIS CERTIFICATION is issued to <Issued_to> upon his/her request.");
+  $pdfmarriage->Text(75, 152, $lcr_registry_num);
+  $pdfmarriage->Text(75, 160, $date_reg);
+  $pdfmarriage->Text(75, 168, $date_marriage);
+  $pdfmarriage->Text(75, 175, $place_marriage);
+  $pdfmarriage->Text(20, 188, "THIS CERTIFICATION is issued to ".$issued." upon his/her request.");
   $pdfmarriage->Text(149,205, "City_Civil_Registrar");
   $pdfmarriage->Text(78,232, "Processed By");
   $pdfmarriage->Text(44,242, "Amount Paid");

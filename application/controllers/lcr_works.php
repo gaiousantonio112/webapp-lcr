@@ -179,7 +179,7 @@ class Lcr_works extends CI_Controller {
     public function formgenBday()
     {
 
-      $inputData = $this->input->post('formgebday');
+      $inputData = $this->input->post('formgenbday');
 
       $data = array(
         'Pageno' => $inputData['Pageno'],
@@ -200,9 +200,68 @@ class Lcr_works extends CI_Controller {
         'remarks' => $inputData['remarks']
       );
 
-      $this->load->view('pages/dashboard/birthformpreview.php',$data);
+      $this->load->view('pages/dashboard/birthformpreview',$data);
+
+      // echo '/Lcr_works/formgenBday';
 
     }
+
+    public function formgenDeath()
+    {
+      $inputData = $this->input->post('formgendeath');
+
+      $data = array(
+        'pageno' => $inputData['pageno'],
+        'bookno' => $inputData['bookno'],
+        'reference_num' => $inputData['reference_num'],
+        'Name' => $inputData['Name'],
+        'death_date_reg' => $inputData['death_date_reg'],
+        'name_deceased' => $inputData['name_deceased'],
+        'sex' => $inputData['sex'],
+        'age' => $inputData['age'],
+        'civilstats' => $inputData['civilstats'],
+        'nationality' => $inputData['nationality'],
+        'death_day' => $inputData['death_day'],
+        'place_death' => $inputData['place_death'],
+        'cause_death' => $inputData['cause_death'],
+        'issued' => $inputData['issued'],
+        'remarks' => $inputData['remarks']
+      );
+
+        $this->load->view('pages/dashboard/deathformpreview',$data);
+    }
+
+    public function formgenMarriage()
+    {
+      $inputData = $this->input->post('marrform');
+
+      $data = array(
+          'pageno' => $inputData['pageno'],
+          'bookno' => $inputData['bookno'],
+          'refno' => $inputData['refno'],
+          'husband_name' => $inputData['husband_name'],
+          'wife_name' => $inputData['wife_name'],
+          'hus_age' => $inputData['hus_age'],
+          'wife_age' => $inputData['wife_age'],
+          'Husband_Nationality' => $inputData['Husband_Nationality'],
+          'Wife_Nationality' => $inputData['Wife_Nationality'],
+          'hus_civil_status' => $inputData['hus_civil_status'],
+          'wife_civil_status' => $inputData['wife_civil_status'],
+          'husband_mother' => $inputData['husband_mother'],
+          'wife_mother' => $inputData['wife_mother'],
+          'husband_father' => $inputData['husband_father'],
+          'wife_father' => $inputData['wife_father'],
+          'lcr_registry_num' => $inputData['lcr_registry_num'],
+          'date_reg' => $inputData['date_reg'],
+          'date_marriage' => $inputData['date_marriage'],
+          'place_marriage' => $inputData['place_marriage'],
+          'issued' => $inputData['issued'],
+          'Remarks' => $inputData['Remarks']
+      );
+
+      $this->load->view('pages/dashboard/marriageformpreview',$data);
+    }
+
 
 
 }

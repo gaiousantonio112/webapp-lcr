@@ -223,7 +223,7 @@
 						</div>
 						<div class="dates">
 							<div class="md-form">
-								<input type="date" name="formgenbday[bday_date]" id="death_date" class="form-control">
+								<input type="date" name="formgendeath[death_day]" id="death_date" class="form-control">
 								<label for="death_date">Date of Death</label>
 							</div>
 						</div>
@@ -327,7 +327,7 @@
 						</div>
 						<div class="row " style="margin-top:-30px">
 							<div class="md-form col-6">
-								<select name="husband-civil-status" name="marrform[hus_civil_status]" class="custom-select">
+								<select name="marrform[hus_civil_status]" class="custom-select">
 									<option selected value=" ">Husband's Civil Status</option>
 									<option value="Single">Single</option>
 									<option value="Married">Married</option>
@@ -336,7 +336,7 @@
 								</select>
 							</div>
 							<div class="md-form col-6">
-								<select name="wife-civil-status" name="marrform[wife_civil_status]" class="custom-select">
+								<select name="marrform[wife_civil_status]" class="custom-select">
 									<option selected value=" ">Wife's Civil Status</option>
 									<option value="Single">Single</option>
 									<option value="Married">Married</option>
@@ -433,7 +433,7 @@
 							</button>
 						</div>
 						<div class="md-form mb-4">
-							<iframe width="100%" id="" height="75%" src="<?php echo base_url(). 'pages/viewlcrform' ?>#toolbar=0&navpanes=0&scrollbar=0&view=fitH,100"></iframe>
+							<iframe width="100%" id="iframe_preview_formgen" height="75%" ></iframe>
 
 							<div class="modal-footer m-0 P-0">
 											<button type="button" class="btn btn-sm btn-danger" data-dismiss="modal">Close</button>
