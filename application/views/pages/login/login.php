@@ -42,59 +42,63 @@ z-index: 1;
 </div>
 <div class="vl mt-4">
 </div>
-<div class="col-sm-12 col-lg-5 p-5 mt-4">
-  <h3 class="display-3 fadeIn first text-left black-text" style='font-size: 63px'>ELECTRONIC CIVIL REGISTRY INFORMATION SYSTEM</h3>
-</div>
+<div class="col-sm-12 col-lg-5 p-5" id ='electext'>
+ <h3 class="display-3 fadeIn first text-left black-text mt-4 ml-3" style="font-size: 63px; position:absolute">ELECTRONIC CIVIL REGISTRY INFORMATION SYSTEM</h3>
 
-<div id="drop" class="wrapper fadeInDown mt-5 " >
+  <div id="drop" class="wrapper fadeInDown ml-0" style="width:500px;">
 
-  <div id="formContent">
-    <form id="login_form" class="">
-      <div class= "px-5 py-2 blue-gradient">
-        <div class="col-auto">
-        <img src="<?php base_url()?>/assets/img/ecrislogo.svg" style="width:130px; " alt="" >
+    <div id="formContent">
+      <form id="login_form" class="">
+        <div class= "px-5 py-2 blue-gradient">
+          <div class="col-auto">
+          <img src="<?php base_url()?>/assets/img/ecrislogo.svg" style="width:130px; " alt="" >
 
-        <p class="light text-white" style="font-weight: lighter; font-family: Roboto;font-size:17px">Electronic Civil Registry Information System</p>
+          <p class="light text-white" style="font-weight: lighter; font-family: Roboto;font-size:17px">Electronic Civil Registry Information System</p>
+        </div>
+        </div>
+        <div class="container col-10 mb-2 py-0 ">
+          <div class="container col-12">
+            <div class="row mt-3">
+
+              <div class="col-3">
+                <img src="<?php echo base_url() . '/assets/svg/USERLOGO.svg'?>" style="height: 50px;" alt="" class="mt-4">
+              </div>
+            <div class="p-0 col-9 pr-4">
+              <div class="md-form ">
+                <input type="text"  id="username" name="login[username]" class="form-control px-1" required>
+                <label for="username" class="px-1">Username</label>
+              </div>
+            </div>
+              <div class=" col-3">
+                <img src="<?php echo base_url() . '/assets/svg/PWLOGO.svg'?>"  style="height: 50px; " alt="" class="mt-4">
+              </div>
+
+            <div class="p-0 col-9 pr-4">
+              <div class="md-form">
+                  <input type="password"  id="password" name="login[password]" class="form-control px-1" required>
+                  <label for="password" class="px-1">Password</label>
+              </div>
+            </div>
+
+              </div>
+
+        <div class="form-group">
+            <input type="submit" name="submit" class="btn btn-rounded white z-depth-1 blue-text" style="width: 200px; border-radius: 40px; border: 1px solid " value=" Login">
+        </div>
+
+        </div>
       </div>
+      <div class="modal-footer py-0 pt-1">
+        <a class="nav-link text-primary" data-toggle="modal" data-target="#settings">Settings </a>
+        </form>
       </div>
-      <div class="container col-10 mb-2 py-0 ">
-        <div class="container col-12">
-          <div class="row mt-3">
-
-            <div class="col-3">
-              <img src="<?php echo base_url() . '/assets/svg/USERLOGO.svg'?>" style="height: 50px;" alt="" class="mt-4">
-            </div>
-          <div class="p-0 col-9 pr-4">
-            <div class="md-form ">
-              <input type="text"  id="username" name="login[username]" class="form-control px-1" required>
-              <label for="username" class="px-1">Username</label>
-            </div>
-          </div>
-            <div class=" col-3">
-              <img src="<?php echo base_url() . '/assets/svg/PWLOGO.svg'?>"  style="height: 50px; " alt="" class="mt-4">
-            </div>
-
-          <div class="p-0 col-9 pr-4">
-            <div class="md-form">
-                <input type="password"  id="password" name="login[password]" class="form-control px-1" required>
-                <label for="password" class="px-1">Password</label>
-            </div>
-          </div>
-
-            </div>
-
-      <div class="form-group">
-          <input type="submit" name="submit" class="btn btn-rounded white z-depth-1 blue-text" style="width: 200px; border-radius: 40px; border: 1px solid " value=" Login">
-      </div>
-
-      </div>
-    </div>
-    <div class="modal-footer py-0 pt-1">
-      <a class="nav-link text-primary" data-toggle="modal" data-target="#settings">Settings </a>
-      </form>
     </div>
   </div>
+
+
 </div>
+
+
 
 
 

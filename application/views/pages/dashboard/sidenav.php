@@ -74,9 +74,9 @@ background-color: #EFEDDF;
   </title>
 </head>
 
-<body style="position:fixed; width: 100%; height: 100%">
+<body style="position:fixed; width: 100%; height: 100%;">
 
-<div class="d-flex wrapper" id="wrapper"  >
+<div class="d-flex wrapper z-index-0" id="wrapper"  >
 
     <!-- Sidebar -->
 
@@ -111,7 +111,7 @@ background-color: #EFEDDF;
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-      <nav class="navbar navbar-expand-lg navbar-light z-depth-1 ">
+      <nav class="navbar  navbar-expand-lg navbar-light z-depth-1 ">
         <a class="px-3 " id="menu-toggle"><i class="fas fa-bars "></i></a>
         <h5 class="pt-2">ELECTRONIC CIVIL REGISTRY INFORMATION SYSTEM</h5>
 
@@ -136,13 +136,16 @@ background-color: #EFEDDF;
               <!--  -->
           <div class="dropdown-menu dropdown-menu-right pb-0 "  id="notif" aria-labelledby="navbarDropdown" style="background-color:tomato;">
             <h6 class="dropdown-header mt-0 pb-3 white-text" style="background-color:tomato; width:230px;">Notification   <i class="fas fa-bell float-right px-0"></i></h6>
+            <div class="" style="height: 300px; overflow-y:scroll">
             <a href="#" class="notif col-12 "> Notification Notification Notification Notification </a>
               <a href="#" class="col-12 notif ">Notification</a>
                 <a href="#" class="col-12 notif ">Notification</a>
                   <a href="#" class="col-12 notif ">Notification</a>
                     <a href="#" class="col-12 notif ">Notification</a>
                       <a href="#" class="col-12 notif">Notification</a>
+                      <a href="#" class="col-12 notif ">Notification</a>
                         <a href="#" class="col-12 notif ">Notification</a>
+                      </div>
               </div>
 
             </li>

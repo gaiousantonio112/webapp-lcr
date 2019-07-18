@@ -141,6 +141,8 @@ $("#prewar_image").show();
              $('#merage').hide();
 
 });
+
+
 function show(page){
    $('#'+page).show();
 
