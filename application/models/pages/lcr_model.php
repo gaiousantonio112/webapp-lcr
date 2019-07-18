@@ -19,6 +19,7 @@
           $dataArray = array();
           foreach ($query->result() as $r) {
             $this->session->set_userdata('user_id',$r->id);
+            $this->session->set_userdata('full_name',$r->firstname.' '.$r->middlename.' '.$r->lastname);
             array_push($dataArray,$r);
           }
           return $dataArray;
@@ -591,6 +592,26 @@
 
     }
 
+
+    public function countPending()
+    {
+      $query = $this->db->select('*')->where([
+        'st' => 'printing'
+      ])->get('lcr_history');
+
+      
+
+      return array(
+        'count' => $query->num_rows()
+      );
+    }
+
+    public function loadNotifcations()
+    {
+      $query = $this->db->select()->where([
+        '' => 'printings'
+        ])->get('lcr_history');
+    }
 
   }
  ?>

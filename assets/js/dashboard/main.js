@@ -892,6 +892,39 @@ function getUserCredentials() {
   });
 }
 
+function countPending() {
+  $.ajax({
+    url : global.settings.url + '/Lcr_works/countPending',
+    type : 'GET',
+    dataType : 'json',
+    success : function(res){
+      $('#notif_num').html(res.count);
+
+      cntPndng = res.count;
+      sendNotification({
+          title: 'Electronic Civil Registry Information System',
+          message: 'Good Day '+full_name + '! \n You have '+cntPndng+' pendings today',
+          icon : 'https://cdn2.iconfinder.com/data/icons/mixed-rounded-flat-icon/512/megaphone-64.png',
+          // icon: global.settings.url + '/assets/img/ecrislogo.png',
+          clickCallback: function () {
+            // window.location.href = global.settings.url + '/pages/dash/print';
+          }
+        });
+    },
+    error : function(xhr){
+      console.log(xhr.responseText);
+    }
+  });
+}
+
+function functionName() {
+  $.ajax({
+    url : global.settings.url + '/Lcr_works/'
+  });
+
+  <a title=\"Click to view\" class='col-12 notif  waves-effect waves-light'><small>Ref No: ".$ref_no." / Type : ".$type." / Issued : ".$issued_date." / Status : ".$status."</small></a>
+}
+
 function numberWithCommas(x) {
   var parts = x.toString().split(".");
   parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");

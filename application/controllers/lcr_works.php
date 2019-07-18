@@ -263,6 +263,24 @@ class Lcr_works extends CI_Controller {
     }
 
 
+    public function socketTest()
+    {
+      echo $_SESSION['full_name'];
+    }
+
+    public function countPending()
+    {
+      echo json_encode($this->works->countPending());
+    }
+
+    public function loadNotifcations()
+    {
+      echo json_encode($this->works->loadNotifcations());
+    }
+
+
+
+
 
 }
  ?>

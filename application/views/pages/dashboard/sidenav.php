@@ -127,26 +127,21 @@ background-color: #EFEDDF;
             <div class ="px-2">
 
             <li class="nav-item dropdown ">
-                <span class="badge badge-default float-right px-2 ">9</span>
-              <a class="nav-link dropdown-toggle bg-title" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="far fa-bell pb-2" style="color:teal"></i>
-              </a>
-
+                <span class="badge badge-default float-right px-2" id="notif_num">Loading...</span>
+                <a class="nav-link dropdown-toggle bg-title" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="far fa-bell pb-2" style="color:teal"></i>
+                </a>
               <!--  -->
-          <div class="dropdown-menu dropdown-menu-right pb-0 "  id="notif" aria-labelledby="navbarDropdown" style="background-color:tomato;">
-            <h6 class="dropdown-header mt-0 pb-3 white-text" style="background-color:tomato; width:230px;">Notification   <i class="fas fa-bell float-right px-0"></i></h6>
-            <div class="" style="height: 300px; overflow-y:scroll">
-            <a href="#" class="notif col-12 "> Notification Notification Notification Notification </a>
-              <a href="#" class="col-12 notif ">Notification</a>
-                <a href="#" class="col-12 notif ">Notification</a>
-                  <a href="#" class="col-12 notif ">Notification</a>
-                    <a href="#" class="col-12 notif ">Notification</a>
-                      <a href="#" class="col-12 notif">Notification</a>
-                      <a href="#" class="col-12 notif ">Notification</a>
-                        <a href="#" class="col-12 notif ">Notification</a>
-                      </div>
-              </div>
-
+                <div class="dropdown-menu dropdown-menu-right pb-0 "  id="notif" aria-labelledby="navbarDropdown" style="background-color:tomato;">
+                  <h6 class="dropdown-header mt-0 pb-3 white-text" style="background-color:tomato; width:230px;">Notification   <i class="fas fa-bell float-right px-0"></i></h6>
+                  <div class="" style="height: 300px; overflow-y:scroll" id="notif_load">
+                    <!-- col-12 notif  waves-effect waves-light -->
+                    <!-- <a title="Click to view" class='col-12 notif  waves-effect waves-light'> -->
+                      <!-- <i class="fas fa-bell"></i> -->
+                      <!-- <small>Ref No: 1234 / Type : Birthday / Issued : 12/21/2019 / Status : Pending</small> -->
+                    <!-- </a> -->
+                  </div>
+                </div>
             </li>
           </div>
             <li class="nav-item dropdown">
@@ -159,8 +154,12 @@ background-color: #EFEDDF;
 
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 <!-- <a class="dropdown-item" href="#">Account</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div> -->
+                <a class="dropdown-item" href="#">Another action</a>  -->
+
+                  <button type="button" class="btn btn-primary" id="test_noy" name="button">
+                    Test Notif
+                  </button>
+
                 <a class="dropdown-item" href="<?php echo base_url() . 'pages/LCR'  ?>">Logout</a>
               </div>
             </li>
