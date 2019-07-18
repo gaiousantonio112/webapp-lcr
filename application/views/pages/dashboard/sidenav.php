@@ -83,9 +83,8 @@ background-color: #EFEDDF;
     <div class="border-right" id="sidebar-wrapper">
       <div class = "blue-gradient pt-2 pb-3 border-right">
       <div class="sidebar-heading py-4 "><img src="<?php base_url()?>/assets/img/ecrislogo.svg" alt=""></div>
-			<div class=" bg-title text-center white-text" id="curr_name">
-				Name: Eduardo Dalisay
-			</div>
+  			<div class=" bg-title text-center white-text" id="curr_name">
+  			</div>
 			<div id="current_time" class="bg-title text-center white-text">
       </div>
 			</div>
@@ -152,7 +151,10 @@ background-color: #EFEDDF;
           </div>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-              <i class="far fa-user-circle fa-lg pr-1" style="color:teal"></i> User
+                <i class="far fa-user-circle fa-lg pr-1" style="color:teal"></i>
+                <span id="curruser_name">
+
+                </span>
               </a>
 
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
