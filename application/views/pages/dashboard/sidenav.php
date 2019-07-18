@@ -90,12 +90,14 @@ background-color: #EFEDDF;
 			</div>
 
       <div class="list-group list-group-flush pt-2"  >
-        <a href="<?php echo base_url() . 'pages/dash/index'  ?>" class="  text-left list-group-item list-group-item-action" ><img src="<?php echo base_url() .'/assets/svg/dashboard(ecris).svg' ?>" height="25px" class="float-left mr-2 " alt=""> Dashboard</a>
-        <a href="<?php echo base_url() . 'pages/dash/search'  ?>" class=" text-left list-group-item list-group-item-action"  ><img src="<?php echo base_url() .'/assets/svg/search and payment (eCRIS).svg' ?>" height="25px" class="float-left mr-3" alt=""></i> Search and Payment</a>
-        <a href="<?php echo base_url() . 'pages/dash/add'  ?>" class=" text-left list-group-item list-group-item-action"><img src="<?php echo base_url() .'/assets/svg/add (ecris).svg' ?>" height="25px" class="float-left mr-3" alt=""> Add</a>
-  			<a href="<?php echo base_url() . 'pages/dash/formgen'  ?>" class=" text-left list-group-item list-group-item-action"><img src="<?php echo base_url() .'/assets/svg/Print (ecris).svg' ?>" height="25px" class="float-left mr-3" alt="">  LCR Form Generator</a>
-        <a href="<?php echo base_url() . 'pages/dash/print'  ?>" class=" text-left list-group-item list-group-item-action"><img src="<?php echo base_url() .'/assets/svg/Print (ecris).svg' ?>" height="25px" class="float-left mr-3" alt="">  Print</a>
-
+        <a href="<?php echo base_url() . 'pages/dash/index'  ?>" class="  text-left list-group-item list-group-item-action" ><img src="<?php echo base_url() .'/assets/svg/dashboard(samp).svg' ?>" height="25px" class="float-left mr-3 " alt=""> Dashboard</a>
+        <a href="<?php echo base_url() . 'pages/dash/search'  ?>" class=" text-left list-group-item list-group-item-action"  ><img src="<?php echo base_url() .'/assets/svg/search(samp).svg' ?>" height="25px" class="float-left mr-3" alt=""></i> Search and Payment</a>
+        <a href="<?php echo base_url() . 'pages/dash/add'  ?>" class=" text-left list-group-item list-group-item-action"><img src="<?php echo base_url() .'/assets/svg/add(samp).svg' ?>" height="25px" class="float-left mr-3" alt=""> Add</a>
+  			<a href="<?php echo base_url() . 'pages/dash/formgen'  ?>" class=" text-left list-group-item list-group-item-action"><img src="<?php echo base_url() .'/assets/svg/formgen(samp).svg' ?>" height="25px" class="float-left mr-3" alt="">  LCR Form Generator</a>
+        <a href="<?php echo base_url() . 'pages/dash/print'  ?>" class=" text-left list-group-item list-group-item-action"><img src="<?php echo base_url() .'/assets/svg/print(samp).svg' ?>" height="25px" class="float-left mr-3" alt="">  Print</a>
+<!-- search and payment (eCRIS).svg
+add (ecris)
+ -->
 			  <!-- <a href="#" class="list-group-item list-group-item-action bg-light">Warning</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Birthday</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Death</a>
