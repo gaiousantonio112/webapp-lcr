@@ -663,7 +663,7 @@ $(document).ready(function(e){
             $('#modalBirthday').modal('show');
             var a = document.createElement('a');
             var url = window.URL.createObjectURL(res);
-            // url.file_name = 
+            // url.file_name =
             a.href = url;
             $('#iframe_preview_formgen').attr('src',url);
           },
@@ -869,7 +869,7 @@ function view(id,refno,full_name,current_date,name_wife) {
 
 
 
-
+//Gettings user Credentials
 function getUserCredentials() {
   $.ajax({
     url : global.settings.url+'/Lcr_works/getUserCredentials',
@@ -884,6 +884,7 @@ function getUserCredentials() {
       $('.bday_encoder').val(full_name);
       $('#cs_encoder').val(full_name);
       $('#curr_name').html('Name : '+full_name);
+      $('#curruser_name').html(full_name);
     },
     error: function(){
 
