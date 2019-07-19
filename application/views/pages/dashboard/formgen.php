@@ -1,7 +1,7 @@
 
-<div class="container-fluid grey lighten-5"   style="overflow-y:auto; max-height: 620; min-height: 620">
+<div class="container-fluid grey lighten-4"   style="overflow-y:auto; max-height: 620; min-height: 620">
 	<div class="card mt-3" style="margin-top: 5px">
-		<div class="card-header">
+		<div class="card-header white">
 			<div class="container" style="">
 				<div class="row">
 					<div class="col-6">
