@@ -123,7 +123,7 @@ html {
 </style>
 
 <div id="loadit">
-  <div class="container-fluid pt-4 px-3 grey lighten-5" style="overflow-y:auto; max-height: 610; min-height: 610">
+  <div class="container-fluid pt-4 px-3 grey lighten-4" style="overflow-y:auto; max-height: 610; min-height: 610">
 
     	<div class=" container text-right">
   <!-- <div class="loading">Loading&#8230;</div> -->
@@ -402,7 +402,7 @@ html {
 		<div class="modal-dialog modal-lg" role="document">
 			<div class="modal-content">
         <div class="modal-header p-2" style="background-color: tomato">
-          <span><img src="<?php echo base_url() .'/assets/svg/live view2.svg' ?>" height="45px" alt="" style="float:right" class="px-2 py-1"></span>
+          <span><img src="<?php echo base_url() .'/assets/svg/live-view2(samp).svg' ?>" height="45px" alt="" style="float:right" class="px-2 py-1"></span>
           <h4 class="modal-title white-text w-100 font-weight-bold py-1" id="myModalLabel"> Live View</h4>
 
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -520,7 +520,7 @@ html {
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header p-2" style="background-color: tomato">
-        <span><img src=" <?php echo base_url().'/assets/svg/updatefinal.svg  '?>" height="45px" alt="" style="float:right" class="px-2 py-1"></span>
+        <span><img src=" <?php echo base_url().'/assets/svg/updatefinal(samp).svg  '?>" height="45px" alt="" style="float:right" class="px-2 py-1"></span>
         <h4 class="modal-title white-text w-100 font-weight-bold py-1" id="myModalLabel">Update</h4>
 
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">

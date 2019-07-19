@@ -1,1 +1,45 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 295.56 299.37"><defs><style>.cls-1,.cls-3{fill:#050505;}.cls-1,.cls-2,.cls-3{stroke:#000;stroke-miterlimit:10;}.cls-2{fill:none;stroke-width:9px;}.cls-3{opacity:0.5;}</style></defs><title>live view</title><path class="cls-1" d="M525.83,223.74v65.45s10.86,8.15,22.66,0V203.5s-.31-5.69-9-5.69H454.14s-12.72,8.84,0,21.46l66.72-.26S525.83,219.27,525.83,223.74Z" transform="translate(-257.6 -197.31)"/><path class="cls-1" d="M280.68,223.79v64.8s-9.8,9.48-22.07,0V203.44s1-5.63,6.57-5.63h89.09s9.77,10.77,0,21.44l-69.09-.2S280.68,220.63,280.68,223.79Z" transform="translate(-257.6 -197.31)"/><path class="cls-1" d="M280,406v63.31s.23,4.93,6.05,5.72h67.26s10.71,10.85,0,21.1h-89.6s-5.64.39-5.64-6.11V405.25S269.79,395.59,280,406Z" transform="translate(-257.6 -197.31)"/><path class="cls-1" d="M530.19,469.4V405.82s11.35-10.43,22.48,0v84.85s.46,5.52-8.11,5.52H458.12s-12.28-10,0-20.67l67.89-.39S530.19,474.52,530.19,469.4Z" transform="translate(-257.6 -197.31)"/><polygon class="cls-2" points="70.06 54.72 70.06 245.3 229.4 245.3 229.4 96.84 187.88 48 70.06 48 70.06 54.72"/><polyline class="cls-2" points="187.88 48 187.88 97.45 229.4 96.84"/><rect class="cls-3" x="89.4" y="116.36" width="118" height="11.33" rx="5.67" ry="5.67"/><rect class="cls-3" x="90.4" y="144.02" width="117" height="11.33" rx="5.67" ry="5.67"/><rect class="cls-3" x="90.4" y="173.95" width="102.67" height="11.33" rx="5.67" ry="5.67"/><rect class="cls-3" x="90.73" y="203.69" width="102.33" height="11.33" rx="5.67" ry="5.67"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 295.6 299.4" style="enable-background:new 0 0 295.6 299.4;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#7ECECE;}
+	.st1{fill:none;stroke:#7ECECE;stroke-width:18;stroke-miterlimit:10;}
+	.st2{fill:#7ECECE;enable-background:new    ;}
+</style>
+<title>live view</title>
+<g id="XMLID_2_">
+	<g>
+		<path class="st0" d="M295.1,6.2v85.7c-11.8,8.2-22.7,0-22.7,0V26.4c0-4.5-5-4.7-5-4.7L200.7,22c-12.7-12.6,0-21.5,0-21.5h85.4
+			C294.8,0.5,295.1,6.2,295.1,6.2z"/>
+	</g>
+	<g>
+	</g>
+</g>
+<g id="XMLID_3_">
+	<g>
+		<path class="st0" d="M96.7,0.5c0,0,9.8,10.8,0,21.4l-69.1-0.2c0,0-4.5,1.6-4.5,4.7v64.8c0,0-9.8,9.5-22.1,0V6.1c0,0,1-5.6,6.6-5.6
+			H96.7z"/>
+		<path class="st0" d="M95.7,277.7c0,0,10.7,10.9,0,21.1H6.1c0,0-5.6,0.4-5.6-6.1v-84.8c0,0,11.7-9.7,21.9,0.8V272
+			c0,0,0.2,4.9,6.1,5.7H95.7z"/>
+	</g>
+	<g>
+	</g>
+</g>
+<g id="XMLID_1_">
+	<g>
+		<path class="st0" d="M295.1,293.4c0,0,0.5,5.5-8.1,5.5h-86.4c0,0-12.3-10,0-20.7l67.9-0.4c0,0,4.2-0.6,4.2-5.7v-63.6
+			c0,0,11.4-10.4,22.5,0V293.4z"/>
+	</g>
+	<g>
+	</g>
+</g>
+<polygon class="st1" points="62,54.9 62,251.3 237,251.3 237,98.3 191.4,48 62,48 "/>
+<polyline class="st1" points="182.9,49 182.9,100.8 240.1,100.2 "/>
+<path class="st2" d="M95.1,125.2h106.7c3.1,0,5.7,4,5.7,8.8l0,0c0,4.9-2.5,8.8-5.7,8.8H95.1c-3.1,0-5.7-4-5.7-8.8l0,0
+	C89.4,129.2,91.9,125.2,95.1,125.2z"/>
+<path class="st2" d="M96.1,159.6h105.7c3.1,0,5.7,4,5.7,8.8v0c0,4.9-2.5,8.8-5.7,8.8H96.1c-3.1,0-5.7-4-5.7-8.8v0
+	C90.4,163.5,92.9,159.6,96.1,159.6z"/>
+<path class="st2" d="M96.1,195h91.3c3.1,0,5.7,4,5.7,8.8v0c0,4.9-2.5,8.8-5.7,8.8H96.1c-3.1,0-5.7-4-5.7-8.8v0
+	C90.4,199,92.9,195,96.1,195z"/>
+</svg>
