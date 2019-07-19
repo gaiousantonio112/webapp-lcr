@@ -917,12 +917,26 @@ function countPending() {
   });
 }
 
-function functionName() {
+function loadNotifcations() {
+  var content;
   $.ajax({
-    url : global.settings.url + '/Lcr_works/'
+    url : global.settings.url + '/Lcr_works/loadNotifcations',
+    type : 'GET',
+    dataType : 'json',
+    success : function(res){
+
+      for (var i = 1; i < res.length - 1; i++) {
+        notif_content += '<a title="Click to view" class="col-12 notif  waves-effect waves-light"><small>Ref No: '+res[i].ref_no+' / Type : '+res[i].type+' / Issued : '+res[i].issued_date+' / Status : '+res[i].status+'</small></a>';
+      }
+
+      // console.log(notif_content);
+      $('#notif_load').append(notif_content);
+    },
+    error : function(xhr){
+      console.log(xhr.responseText);
+    }
   });
 
-  <a title=\"Click to view\" class='col-12 notif  waves-effect waves-light'><small>Ref No: ".$ref_no." / Type : ".$type." / Issued : ".$issued_date." / Status : ".$status."</small></a>
 }
 
 function numberWithCommas(x) {

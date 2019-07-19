@@ -6,8 +6,10 @@ var global  = {
 
 }
 
+var notif_content = '';
+
 function loadNotif(childHTML){
-  $('#notif_load').append(childHTML);
+  $('#notif_load').prepend(childHTML);
 }
 var cntPndng = 0;
 
@@ -19,6 +21,8 @@ websocket.onopen = function(event) {
   // console.log(event);
   countPending();
   console.log('Connected!');
+  loadNotifcations();
+  // loadNotif(notif_content);
 
 }
 
@@ -31,10 +35,13 @@ websocket.onmessage = function(event) {
   // Do your actions here
   // send kada module request para magpush notif sa mga kapwa user
   console.log(Data);
-  loadNotif(Data.notif_content);
-  cntPndng += 1;
-  $('#notif_num').html(cntPndng);
-  console.log(getUserCredentials());
+  if(Data.notif_content != ""){
+    loadNotif(Data.notif_content);
+    cntPndng += 1;
+    $('#notif_num').html(cntPndng);
+  }
+
+  // console.log(getUserCredentials());
 
 };
 

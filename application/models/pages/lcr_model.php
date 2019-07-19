@@ -599,7 +599,7 @@
         'st' => 'printing'
       ])->get('lcr_history');
 
-      
+
 
       return array(
         'count' => $query->num_rows()
@@ -608,9 +608,20 @@
 
     public function loadNotifcations()
     {
-      $query = $this->db->select()->where([
-        '' => 'printings'
+      $query = $this->db->select('*')->where([
+        'st' => 'printing'
         ])->get('lcr_history');
+        $data = [];
+        foreach ($query->result() as $r) {
+          $data[] = array(
+            'ref_no' => ($r->ref_num == null) ? '<span title="Unknown Data from old records please contact the administrator">Unknow Data </span>' : $r->ref_num,
+            'type' => ($r->type == null) ? '<span title="Unknown Data from old records please contact the administrator">Unknow Data </span>' : $r->type,
+            'issued_date' => ($r->date_paid == null) ? '<span title="Unknown Data from old records please contact the administrator">Unknow Data </span>' : $r->date_paid,
+            'status' => ($r->st == null) ? '<span title="Unknown Data from old records please contact the administrator">Unknow Data </span>' : 'Pending'
+          );
+        }
+
+        return $data;
     }
 
   }
