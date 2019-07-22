@@ -73,15 +73,14 @@ background-color: #EFEDDF;
 
   </title>
 </head>
+<!-- position:fixed; width: 100%; height: 100%; -->
+<body style="">
 
-<body style="position:fixed; width: 100%; height: 100%;">
-
-<div class="d-flex wrapper z-index-0" id="wrapper"  >
-
-    <!-- Sidebar -->
-
+<div class="d-flex wrapper" id="wrapper">
+  <!-- Sidebar -->
     <div class="border-right" id="sidebar-wrapper">
-      <div class = "blue-gradient pt-2 pb-3 border-right">
+      <div class ="sticky-top pt-5" style="">
+      <div class = "blue-gradient border-right pb-4">
       <div class="sidebar-heading py-4 "><img src="<?php base_url()?>/assets/img/ecrislogo.svg" alt=""></div>
   			<div class=" bg-title text-center white-text" id="curr_name">
   			</div>
@@ -95,16 +94,16 @@ background-color: #EFEDDF;
         <a href="<?php echo base_url() . 'pages/dash/add'  ?>" class=" text-left list-group-item list-group-item-action"><img src="<?php echo base_url() .'/assets/svg/add(samp).svg' ?>" height="25px" class="float-left mr-3" alt=""> Add</a>
   			<a href="<?php echo base_url() . 'pages/dash/formgen'  ?>" class=" text-left list-group-item list-group-item-action"><img src="<?php echo base_url() .'/assets/svg/formgen(samp).svg' ?>" height="25px" class="float-left mr-3" alt="">  LCR Form Generator</a>
         <a href="<?php echo base_url() . 'pages/dash/print'  ?>" class=" text-left list-group-item list-group-item-action"><img src="<?php echo base_url() .'/assets/svg/print(samp).svg' ?>" height="25px" class="float-left mr-3" alt="">  Print</a>
-<!-- search and payment (eCRIS).svg
-add (ecris)
- -->
+        <!-- search and payment (eCRIS).svg
+        add (ecris)
+         -->
 			  <!-- <a href="#" class="list-group-item list-group-item-action bg-light">Warning</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Birthday</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Death</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Marriage</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Prinb</a> -->
       </div>
-
+      </div>
     </div>
 
     <!-- /#sidebar-wrapper -->
@@ -112,7 +111,7 @@ add (ecris)
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-      <nav class="navbar  navbar-expand-lg navbar-light z-depth-1 " style="border-bottom:3px solid #3F729B">
+      <nav class="navbar navbar fixed-top navbar-expand-lg navbar-light bg-white z-depth-1 " style="border-bottom:3px solid #3F729B">
         <a class="px-3 " id="menu-toggle"><i class="fas fa-bars "></i></a>
         <h5 class="pt-2">ELECTRONIC CIVIL REGISTRY INFORMATION SYSTEM</h5>
 
@@ -168,5 +167,5 @@ add (ecris)
           </ul>
         </div>
       </nav>
-
+<div class = "m-5"></div>
     <!-- /#page-content-wrapper -->
