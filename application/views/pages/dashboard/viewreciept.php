@@ -10,6 +10,7 @@ $pdf = new TCPDI(PDF_PAGE_ORIENTATION, 'mm', PDF_PAGE_FORMAT, true, 'UTF-8', fal
 
 $pdf->setSourceFile(APPPATH.'/../assets/pdf/rec.pdf');
  $tpl = $pdf->importPage(1);
+$pdf->SetDisplayMode(100);
 $size = $pdf->getTemplateSize($tpl);
  $orientation = $size['h'] > $size['w'] ? 'P' : 'L';
  $pdf->setPrintHeader(false);

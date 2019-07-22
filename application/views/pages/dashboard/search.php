@@ -430,15 +430,17 @@ html {
 
 
       <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title w-50" id="myModalLabel">PDF</h4>
+        <div class="modal-header" style="background-color: tomato">
+          <h4 class="modal-title white-text w-50 font-weight-bold" id="myModalLabel">PDF</h4>
 
-
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="white-text">&times;</span>
           </button>
+
         </div>
         <div class="modal-body p-0 m-0">
           <!-- <embed src="../../../../assets/pdf/rec.pdf#toolbar=0&zoom=70" type="application/pdf" width="100%" height="60%"> -->
-          <iframe width="100%" id="recieptframe" height="65%" src="#funk"></iframe>
+          <iframe width="100%" id="recieptframe" height="65%" src="#funk#toolbar=0&zoom=100"  type="application/pdf"></iframe>
           <!-- <iframe width="100%" id="recieptframe_white" height="65%" src="#funk" hidden></iframe> -->
         </div>
         <div class="modal-footer">

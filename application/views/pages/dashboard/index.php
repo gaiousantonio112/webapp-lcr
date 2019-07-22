@@ -1,5 +1,6 @@
 
-<div class="container-fluid py-2 grey lighten-4"  >
+<body class="grey lighten-4">
+<div class="container-fluid pt-2 px-5 "  >
 
 	<div class=" container text-right pt-3" >
 					<div class="teal lighten-1 z-depth-1 " style="height:52px;border-radius:3px">
@@ -87,23 +88,23 @@
 						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="container pt-0">
-				<div class="card">
-					<div class="card-body">
-						<div class="col-4 text-left">
-							<label for="exampleFormControlSelect1">Select Year</label>
-							<select class="form-control" id="year_select">
-							</select>
+			<div class ="mt-4">
+				<h4 class = "">Select Year</h4>
+			</div>
+				<div class="card mt-1">
+					<div class="card-body h-100" >
+					<div class="col-4 ">
+						<select class="form-control" id="year_select">
+						</select>
+				</div>
+
+					<div class ="container ">
+						<div class=" col-12" >
+							<canvas id="lineChart" style="height:5px"></canvas>
 						</div>
-						<div class=" col-12" style="margin-top: ">
-							<canvas id="lineChart"></canvas>
-						</div>
+					</div>
 					</div>
 				</div>
 			</div>
-
-
-
-<div class="p-5"></div>
+			</div>
