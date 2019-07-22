@@ -2,8 +2,8 @@
 	<div class=" container text-right " >
 		<!--  -->
 		<div class="teal lighten-1 z-depth-1" style="height:52px;border-radius:3px">
-			<span><img src="<?php echo base_url() .'/assets/svg/add (ecris).svg' ?>" height="65px" alt="" style="float:right" class="px-2 "></span>
-			<p style="color:white; float:right; padding-right: 15px;font-size: 30px;" class="pt-2">Add</p>
+			<span><img src="<?php echo base_url() .'/assets/svg/add2(samp).svg' ?>" height="45px" alt="" style="float:right" class="px-2 pt-2"></span>
+			<p style="color:white; float:right; padding-right: 5px;font-size: 30px;" class="pt-1">Add</p>
 		</div>
 		</div>
 

@@ -129,8 +129,8 @@ html {
   <!-- <div class="loading">Loading&#8230;</div> -->
 
       <div class ="teal lighten-1 z-depth-1" style="height:52px;border-radius:3px">
-          <span><img src="<?php echo base_url() .'/assets/svg/search and payment (eCRIS)2.svg' ?>" height="65px" alt="" style="float:right" class="px-1 py-1"></span>
-          <p style = "color:white; float:right; padding-right: 15px;font-size: 30px;" class="pt-2" >Search and Payment</p>
+          <span><img src="<?php echo base_url() .'/assets/svg/search2(samp).svg' ?>" height="40px" alt="" style="float:right" class="px-1 pt-2"></span>
+          <p style = "color:white; float:right; padding-right: 10px;font-size: 30px;" class="pt-1" >Search and Payment</p>
       </div>
 
   </div>
