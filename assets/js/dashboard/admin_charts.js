@@ -29,6 +29,13 @@
 
 
       $.ajax({
+        processing: true,
+        language: {
+            processing: console.log('<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span> ')
+          },
+
+
+        serverSide: true,
         url : global.settings.url + '/Lcr_works/getResultCharts',
         type : 'POST',
         data : {
