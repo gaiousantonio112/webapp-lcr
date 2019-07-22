@@ -19,11 +19,11 @@ websocket.onopen = function(event) {
   // showMessage("<div class='chat-connection-ack'>Connection is established!</div>");
   // Load all notificaions read/unread
   // console.log(event);
+  // loadNotif(notif_content);
+
   countPending();
   console.log('Connected!');
   loadNotifcations();
-  // loadNotif(notif_content);
-
 }
 
 //receive socket

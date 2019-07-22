@@ -26,7 +26,7 @@ while (true) {
 		socket_getpeername($newSocket, $client_ip_address);
 		$connectionACK = $chatHandler->newConnectionACK($client_ip_address);
 
-		$chatHandler->send($connectionACK);
+		// $chatHandler->send($connectionACK);
 
 		$newSocketIndex = array_search($socketResource, $newSocketArray);
 		unset($newSocketArray[$newSocketIndex]);
@@ -46,7 +46,7 @@ while (true) {
 		if ($socketData === false) {
 			socket_getpeername($newSocketArrayResource, $client_ip_address);
 			$connectionACK = $chatHandler->connectionDisconnectACK($client_ip_address);
-			$chatHandler->send($connectionACK);
+			// $chatHandler->send($connectionACK);
 			$newSocketIndex = array_search($newSocketArrayResource, $clientSocketArray);
 			unset($clientSocketArray[$newSocketIndex]);
 		}
