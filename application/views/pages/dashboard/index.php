@@ -3,8 +3,8 @@
 
 	<div class=" container text-right pt-3" >
 					<div class="teal lighten-1 z-depth-1 " style="height:52px;border-radius:3px">
-						<span><img src="<?php echo base_url() .'/assets/svg/dashboard2(samp).svg' ?>" height="40px" alt="" style="float:right" class="px-2 pt-2"></span>
-						<p style="color:white; float:right; font-size: 30px;" class="pt-1 pr-3">Dashboard</p>
+						<span><img src="<?php echo base_url() .'/assets/svg/dashboard2(samp).svg' ?>" height="40px" alt="" style="float:right" class="px-3 mt-2"></span>
+						<p style="color:white; float:right; font-size: 30px;" class="pt-2">Dashboard</p>
 					</div>
 	</div>
 
@@ -14,7 +14,7 @@
 					<div class="col-3 mb-2 text-center">
 						<div class="card py-2">
 							<div class="card-body">
-									<div class="row">
+
 									<div class="col auto">
 										<div class="mb-2">
 											<img src="<?php echo base_url() .'/assets/svg/service provided(ecris).svg' ?>" height="40px" alt="">
@@ -23,7 +23,7 @@
 										<div class="text-xs font-weight-bold blue-text text-uppercase mb-1 letter-spacing-5em">Service Provided</div>
 										<div class="h5 mb-0 font-weight-bold text-gray-800" id="service_provided">Loading...</div>
 									</div>
-								</div>
+
 							</div>
 						</div>
 					</div>
@@ -96,8 +96,12 @@
 							<label for="exampleFormControlSelect1">Select Year</label>
 							<select class="form-control" id="year_select">
 							</select>
+
 						</div>
-						<div class=" col-12" style="margin-top: ">
+						<div class="row" id="status">
+							<div class="col-12 text-center"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span> </div>
+						</div>
+						<div class=" pt-2 col-12" style="margin-top: -15">
 							<canvas id="lineChart"></canvas>
 						</div>
 					</div>
