@@ -96,6 +96,10 @@
 							<label for="exampleFormControlSelect1">Select Year</label>
 							<select class="form-control" id="year_select">
 							</select>
+
+						</div>
+						<div class="row" id="status">
+							<div class="col-12 text-center"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span> </div>
 						</div>
 						<div class=" pt-5 col-12" style="margin-top: -15">
 							<canvas id="lineChart"></canvas>
