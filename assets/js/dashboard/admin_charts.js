@@ -7,7 +7,7 @@
 
 
   $(document).ready(function(){
-
+    $('#status').hide();
     $.ajax({
       url : global.settings.url + '/Lcr_works/getYears',
       type : 'GET',
@@ -26,12 +26,13 @@
     $('#year_select').on("change",function(){
       // Birthday Data
 
-
+        var myLineChart ;
+        var num = 0;
 
       $.ajax({
         processing: true,
         language: {
-            processing: console.log('<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span> ')
+            processing: $('#status').show()
           },
 
 
@@ -114,9 +115,12 @@
           // for (var i = 0; i < res.length; i++) {
           //   res[i]
           // }
-
+        if (num > 0) {
+            myLineChart.destroy();
+        }
+          $('#status').hide();
           var ctxL = document.getElementById("lineChart").getContext('2d');
-          var myLineChart = new Chart(ctxL, {
+          myLineChart = new Chart(ctxL, {
             type: 'line',
             data: {
               labels: ["January", "February", "March", "April", "May", "June", "July" , "August"  , "September" , "October" , "November" , "December"],
@@ -159,12 +163,14 @@
               responsive: true
             }
           });
+          num++;
         },
         error : function(xhr){
           console.log(xhr.responseText);
         }
 
       });
+
     });
 
 

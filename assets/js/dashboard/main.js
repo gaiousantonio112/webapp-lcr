@@ -932,7 +932,7 @@ function loadNotifcations() {
     success : function(res){
 
       for (var i = 1; i < res.length - 1; i++) {
-        notif_content += '<a title="Click to view" class="col-12 notif  waves-effect waves-light"><small>Ref No: '+res[i].ref_no+' / Type : '+res[i].type+' / Issued : '+res[i].issued_date+' / Status : '+res[i].status+'</small></a>';
+        notif_content += '<a title="Click to view" href="http://localhost:3000//pages/dash/print" class="col-12 notif  waves-effect waves-light"><small>Ref No: '+res[i].ref_no+' / Type : '+res[i].type+' / Issued : '+res[i].issued_date+' / Status : '+res[i].status+'</small></a>';
       }
 
       // console.log(notif_content);
