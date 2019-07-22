@@ -78,7 +78,7 @@ background-color: #EFEDDF;
 
 <div class="d-flex wrapper" id="wrapper">
   <!-- Sidebar -->
-    <div class="border-right" id="sidebar-wrapper">
+    <div class="border-right bg-white" id="sidebar-wrapper">
       <div class ="sticky-top pt-5" style="">
       <div class = "blue-gradient border-right pb-4">
       <div class="sidebar-heading py-4 "><img src="<?php base_url()?>/assets/img/ecrislogo.svg" alt=""></div>
