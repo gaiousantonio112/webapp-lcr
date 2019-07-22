@@ -1,9 +1,9 @@
 
-<div class="container-fluid py-2 grey lighten-4"  style="overflow-y:auto; max-height: 610; min-height: 610">
+<div class="container-fluid py-2 grey lighten-4"  >
 
 	<div class=" container text-right pt-3" >
 					<div class="teal lighten-1 z-depth-1 " style="height:52px;border-radius:3px">
-						<span><img src="<?php echo base_url() .'/assets/svg/dashboard(ecris).svg' ?>" height="60px" alt="" style="float:right" class="px-3"></span>
+						<span><img src="<?php echo base_url() .'/assets/svg/dashboard2(samp).svg' ?>" height="40px" alt="" style="float:right" class="px-3 mt-2"></span>
 						<p style="color:white; float:right; font-size: 30px;" class="pt-2">Dashboard</p>
 					</div>
 	</div>
@@ -29,7 +29,7 @@
 					</div>
 
 					<!-- Earnings (Monthly) Card Example -->
-					<div class="col-3 mb-4 text-center">
+					<div class="col-3 mb-2 text-center">
 						<div class="card py-2 ">
 							<div class="card-body">
 								<div class="row">
@@ -68,7 +68,7 @@
 						</div>
 					</div>
 
-					<div class="col-3 mb-4 text-center">
+					<div class="col-3 mb-2 text-center">
 						<div class="card py-2">
 							<div class="card-body ">
 								<div class="row">
@@ -101,7 +101,7 @@
 						<div class="row" id="status">
 							<div class="col-12 text-center"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span> </div>
 						</div>
-						<div class=" pt-5 col-12" style="margin-top: -15">
+						<div class=" pt-2 col-12" style="margin-top: -15">
 							<canvas id="lineChart"></canvas>
 						</div>
 					</div>

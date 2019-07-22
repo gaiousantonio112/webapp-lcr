@@ -1,6 +1,6 @@
 
-<div class="container-fluid grey lighten-4"   style="overflow-y:auto; max-height: 620; min-height: 620">
-	<div class="card mt-3" style="margin-top: 5px">
+<div class="container-fluid grey lighten-4 pt-4">
+	<div class="card">
 		<div class="card-header white">
 			<div class="container" style="">
 				<div class="row">
@@ -412,10 +412,10 @@
 
 
 
-	<div class="col-6 pt-2 ">
+	<div class="col-6 pt-2">
 		<div class="sticky-top" style="position: sticky; z-index:2; top:0; position: -webkit-sticky;">
 			<div class="" id="">
-				<iframe src="<?php echo base_url() ?>/pages/book" class=" prewar_view z-depth-1 mb-4 mt-5" id="prewar_image" width="100%" height="80%" ></iframe>
+				<iframe src="<?php echo base_url() ?>/pages/book" class=" prewar_view z-depth-1 mb-4 mt-5" id="prewar_image" width="100%" height="80%"></iframe>
 			</div>
 			<iframe width="100%" height="80%" class="postwar_view z-depth-1 mb-4" id="postwar_image mt-5"  src="<?php echo base_url() . 'pages/viewlcrform' ?>#toolbar=0&navpanes=0&scrollbar=0&view=fitH,100 " ></iframe>
 		</div>
