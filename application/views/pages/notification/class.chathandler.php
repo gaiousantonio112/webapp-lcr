@@ -87,7 +87,7 @@ class ChatHandler {
 	}
 
 	function createNotification($ref_no,$type,$issued_date,$status) {
-		$notif_content = "<a title=\"Click to view\" class='col-12 notif  waves-effect waves-light'><small>Ref No: ".$ref_no." / Type : ".$type." / Issued : ".$issued_date." / Status : ".$status."</small></a>";
+		$notif_content = "<a title=\"Click to view\" href='http://localhost:3000//pages/dash/print' class='col-12 notif  waves-effect waves-light'><small>Ref No: ".$ref_no." / Type : ".$type." / Issued : ".$issued_date." / Status : ".$status."</small></a>";
 		$messageArray = array('notif_content' => $notif_content,'from_user' => 'samplename');
 		$chatMessage = $this->seal(json_encode($messageArray));
 		return $chatMessage;
