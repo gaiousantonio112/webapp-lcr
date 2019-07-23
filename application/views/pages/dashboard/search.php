@@ -440,7 +440,7 @@ html {
         </div>
         <div class="modal-body p-0 m-0">
           <!-- <embed src="../../../../assets/pdf/rec.pdf#toolbar=0&zoom=70" type="application/pdf" width="100%" height="60%"> -->
-          <iframe width="100%" id="recieptframe" height="65%" src="#funk#toolbar=0&zoom=100"  type="application/pdf"></iframe>
+          <iframe width="100%" id="recieptframe" height="65%" src="#funk"  type="application/pdf"></iframe>
           <!-- <iframe width="100%" id="recieptframe_white" height="65%" src="#funk" hidden></iframe> -->
         </div>
         <div class="modal-footer">
@@ -575,7 +575,7 @@ html {
   			<div class="">
   				<div class="dates">
   					<div class="md-form">
-  					<input type="text" name="updatebday[bday_date]" id="updatebday_bday_dt" class="form-control" value="---">
+  					<input type="date" name="updatebday[bday_date]" id="updatebday_bday_dt" class="form-control" >
   						<label >Date of Birth</label>
   				</div>
   		</div>
@@ -630,7 +630,7 @@ html {
   			<div class="">
   				<div class="dates">
   					<div class="md-form">
-  					<input type="text" name="updatedeath[death_date]" id="updatedeath_death_date" class="form-control" value="---">
+  					<input type="date" name="updatedeath[death_date]" id="updatedeath_death_date" class="form-control" value="---">
   						<label >Date of Death</label>
   				</div>
   		</div>
@@ -717,7 +717,7 @@ html {
   			<div class="">
   				<div class="dates">
   					<div class="md-form">
-  					<input type="text" name="updatemarr[date_of_marriage]" id="updatemarr_date_of_marriage" class="form-control" value="---">
+  					<input type="date" name="updatemarr[date_of_marriage]" id="updatemarr_date_of_marriage" class="form-control" value="---">
   						<label >Date of Marriage</label>
   				</div>
   			</div>

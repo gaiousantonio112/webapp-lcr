@@ -17,8 +17,8 @@
 							<div class="card-body">
 
 									<div class="col auto">
-										<div class="mb-2">
-											<img src="<?php echo base_url() .'/assets/svg/service provided(ecris).svg' ?>" height="40px" alt="">
+										<div class="">
+											<img src="<?php echo base_url() .'/assets/svg/service provided(samp).svg' ?>" height="50px" alt="">
 										</div>
 										<hr class="">
 										<div class="text-xs font-weight-bold blue-text text-uppercase mb-1 letter-spacing-5em">Service Provided</div>
@@ -35,8 +35,8 @@
 							<div class="card-body">
 								<div class="row">
 									<div class="col auto">
-										<div class="mb-2">
-											<img src="<?php echo base_url() .'/assets/svg/earnings (ecris).svg' ?>" height="40px" alt="">
+										<div class="">
+											<img src="<?php echo base_url() .'/assets/svg/earnings (samp).svg' ?>" height="50px" alt="">
 										</div>
 										<hr class="">
 										<div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Earnings</div>
@@ -53,8 +53,8 @@
 							<div class="card-body ">
 								<div class="row">
 									<div class="col auto">
-										<div class="mb-2">
-											<img src="<?php echo base_url() .'/assets/svg/task(ecris).svg' ?>" height="40px" alt="">
+										<div class="">
+											<img src="<?php echo base_url() .'/assets/svg/task(samp).svg' ?>" height="50px" alt="">
 										</div>
 										<hr class="">
 										<div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks</div>
@@ -74,8 +74,8 @@
 							<div class="card-body ">
 								<div class="row">
 									<div class="col auto">
-										<div class="mb-2">
-											<img src="<?php echo base_url() .'/assets/svg/pending request(ecris).svg' ?>" height="40px" alt="">
+										<div class="	">
+											<img src="<?php echo base_url() .'/assets/svg/pending request(samp).svg' ?>" height="50px" alt="">
 										</div>
 										<hr class="">
 										<div class="col mr-2">
