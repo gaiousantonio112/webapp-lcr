@@ -1,5 +1,6 @@
 
-<div class="container-fluid py-2 grey lighten-4"  >
+<body class="grey lighten-4">
+<div class="container-fluid pt-2 px-5 "  >
 
 	<div class=" container text-right pt-3" >
 					<div class="teal lighten-1 z-depth-1 " style="height:52px;border-radius:3px">
@@ -16,8 +17,8 @@
 							<div class="card-body">
 
 									<div class="col auto">
-										<div class="mb-2">
-											<img src="<?php echo base_url() .'/assets/svg/service provided(ecris).svg' ?>" height="40px" alt="">
+										<div class="">
+											<img src="<?php echo base_url() .'/assets/svg/service provided(samp).svg' ?>" height="50px" alt="">
 										</div>
 										<hr class="">
 										<div class="text-xs font-weight-bold blue-text text-uppercase mb-1 letter-spacing-5em">Service Provided</div>
@@ -34,8 +35,8 @@
 							<div class="card-body">
 								<div class="row">
 									<div class="col auto">
-										<div class="mb-2">
-											<img src="<?php echo base_url() .'/assets/svg/earnings (ecris).svg' ?>" height="40px" alt="">
+										<div class="">
+											<img src="<?php echo base_url() .'/assets/svg/earnings (samp).svg' ?>" height="50px" alt="">
 										</div>
 										<hr class="">
 										<div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Earnings</div>
@@ -52,8 +53,8 @@
 							<div class="card-body ">
 								<div class="row">
 									<div class="col auto">
-										<div class="mb-2">
-											<img src="<?php echo base_url() .'/assets/svg/task(ecris).svg' ?>" height="40px" alt="">
+										<div class="">
+											<img src="<?php echo base_url() .'/assets/svg/task(samp).svg' ?>" height="50px" alt="">
 										</div>
 										<hr class="">
 										<div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks</div>
@@ -73,8 +74,8 @@
 							<div class="card-body ">
 								<div class="row">
 									<div class="col auto">
-										<div class="mb-2">
-											<img src="<?php echo base_url() .'/assets/svg/pending request(ecris).svg' ?>" height="40px" alt="">
+										<div class="	">
+											<img src="<?php echo base_url() .'/assets/svg/pending request(samp).svg' ?>" height="50px" alt="">
 										</div>
 										<hr class="">
 										<div class="col mr-2">
@@ -87,13 +88,17 @@
 						</div>
 					</div>
 				</div>
-			</div>
+	</div>
 
-			<div class="container pt-0">
+
+			<div class="container mb-5">
+				<div class ="">
+					<!-- < for="exampleFormControlSelect1"> -->
+					<h5  class="font-weight-bold text-spacing-5">Select Year</h5>
+				</div>
 				<div class="card">
 					<div class="card-body">
 						<div class="col-4 text-left">
-							<label for="exampleFormControlSelect1">Select Year</label>
 							<select class="form-control" id="year_select">
 							</select>
 
@@ -101,13 +106,11 @@
 						<div class="row" id="status">
 							<div class="col-12 text-center"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span> </div>
 						</div>
-						<div class=" pt-2 col-12" style="margin-top: -15">
-							<canvas id="lineChart"></canvas>
+						<div class="pt-2 col-12" >
+							<canvas id="lineChart" style="height:5px"></canvas>
 						</div>
 					</div>
+					</div>
 				</div>
+
 			</div>
-
-
-
-<div class="p-5"></div>

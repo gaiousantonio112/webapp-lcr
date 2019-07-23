@@ -78,8 +78,8 @@ background-color: #EFEDDF;
 
 <div class="d-flex wrapper" id="wrapper">
   <!-- Sidebar -->
-    <div class="border-right" id="sidebar-wrapper">
-      <div class ="sticky-top pt-5" style="">
+    <div class="border-right bg-white" id="sidebar-wrapper">
+      <div class ="sticky-top pt-5 " style="">
       <div class = "blue-gradient border-right pb-4">
       <div class="sidebar-heading py-4 "><img src="<?php base_url()?>/assets/img/ecrislogo.svg" alt=""></div>
   			<div class=" bg-title text-center white-text" id="curr_name">
@@ -88,7 +88,7 @@ background-color: #EFEDDF;
       </div>
 			</div>
 
-      <div class="list-group list-group-flush pt-2"  >
+      <div class="list-group list-group-flush pt-2 slide-right">
         <a href="<?php echo base_url() . 'pages/dash/index'  ?>" class="  text-left list-group-item list-group-item-action" ><img src="<?php echo base_url() .'/assets/svg/dashboard(samp).svg' ?>" height="25px" class="float-left mr-3 " alt=""> Dashboard</a>
         <a href="<?php echo base_url() . 'pages/dash/search'  ?>" class=" text-left list-group-item list-group-item-action"  ><img src="<?php echo base_url() .'/assets/svg/search(samp).svg' ?>" height="25px" class="float-left mr-3" alt=""></i> Search and Payment</a>
         <a href="<?php echo base_url() . 'pages/dash/add'  ?>" class=" text-left list-group-item list-group-item-action"><img src="<?php echo base_url() .'/assets/svg/add(samp).svg' ?>" height="25px" class="float-left mr-3" alt=""> Add</a>
