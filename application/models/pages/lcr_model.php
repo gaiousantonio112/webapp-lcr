@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('Asia/Manila');
   class Lcr_model extends CI_Model {
 
       public function __construct()
@@ -385,7 +386,7 @@
         $start = intval($this->input->get("start"));
         $length = intval($this->input->get("length"));
 
-        $query = $this->db->query("SELECT * FROM lcr_history where cash_rep = 'not done' OR st = 'printing'");
+        $query = $this->db->query("SELECT * FROM lcr_history WHERE ref_num IS NOT NULL AND (cash_rep = 'not done' OR st = 'printing') ORDER BY CONCAT(date_paid,time) DESC");
         $date = date('Y-m-d');
         $data = [];
         foreach ($query->result() as $r) {
@@ -483,7 +484,7 @@
     public function addHistory($inputData)
     {
 
-      $date = date('Y-m-d h:i:s a', time());
+      $date = date('Y-m-d', time());
       $data_add_history = array(
         // 'id' => $inputData['id'],
         'ref_num' => $inputData['ref_num'],
@@ -617,7 +618,8 @@
             'ref_no' => ($r->ref_num == null) ? '<span title="Unknown Data from old records please contact the administrator">Unknow Data </span>' : $r->ref_num,
             'type' => ($r->type == null) ? '<span title="Unknown Data from old records please contact the administrator">Unknow Data </span>' : $r->type,
             'issued_date' => ($r->date_paid == null) ? '<span title="Unknown Data from old records please contact the administrator">Unknow Data </span>' : $r->date_paid,
-            'status' => ($r->st == null) ? '<span title="Unknown Data from old records please contact the administrator">Unknow Data </span>' : 'Pending'
+            'status' => ($r->st == null) ? '<span title="Unknown Data from old records please contact the administrator">Unknow Data </span>' : 'Pending',
+            'from' => ($r->verify_by == null) ? '<span title="Unknown Data from old records please contact the administrator">User doesn\'t exist </span>' : $r->verify_by
           );
         }
 

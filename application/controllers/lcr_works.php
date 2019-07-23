@@ -8,6 +8,11 @@ class Lcr_works extends CI_Controller {
         $this->load->model('pages/Lcr_model','works');
     }
 
+    public function index()
+    {
+      $this->load->view('404');
+    }
+
     public function login_user()
     {
       $inputData = $this->input->post('login');
@@ -101,7 +106,7 @@ class Lcr_works extends CI_Controller {
     {
       $print = $this->input->post('print');
 
-      echo base_url()."pages/viewpdf/".$print['f_id']."#toolbar=0&zoom=60%";
+      echo base_url()."pages/viewpdf/".$print['f_id']."#toolbar=0&zoom=100%";
     }
 
     //TABLEPRINT
