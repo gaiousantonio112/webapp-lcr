@@ -10,11 +10,6 @@
 	</div>
 
 			<!-- <hr class=""> -->
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 6c3d0dc7c3aa8d6b4ba5da5be36869e4fd1d4f68
 			<div class="container py-5">
 				<div class="row">
 					<div class="col-lg-3 col-sm-12 pt-3 text-center">

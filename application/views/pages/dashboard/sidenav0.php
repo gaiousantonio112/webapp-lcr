@@ -15,10 +15,10 @@
 
 .wrap
 {
-    width: auto;
-    height: auto;
+    width: ;
+    height: ;
     padding: 0;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .bg-ecris{
@@ -61,7 +61,7 @@ background-color: #EFEDDF;
 
 <div class="d-flex wrapper" id="wrapper" >
   <!-- Sidebar -->
-<nav class="bg-white rounded-bottom ">
+<nav class="bg-white rounded-bottom z-index-">
 
       <div class ="main-menu pt-5 bg-white" style="position: sticky; top:0; position: -webkit-sticky;">
       <div class ="blue-gradient pb-4">
@@ -143,7 +143,7 @@ background-color: #EFEDDF;
               </a>
 
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-        
+
                 <a class="dropdown-item" href="<?php echo base_url() . 'pages/LCR'  ?>">Logout</a>
               </div>
             </li>
