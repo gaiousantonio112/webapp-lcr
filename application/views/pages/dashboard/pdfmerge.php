@@ -74,7 +74,7 @@ for ($pageNo; $pageNo <= $pageCount; $pageNo++) {
 
   $pdf->StartTransform();
   // Rotate 20 degrees counter-clockwise centered by (70,110) which is the lower left corner of the rectangle
-  $pdf->Rotate(90, 20, 240);
+  $pdf->Rotate(90, 25, 240);
   $pdf->Text(0, 220, $stringData);
   // Stop Transformation
   $pdf->StopTransform();
@@ -82,7 +82,7 @@ for ($pageNo; $pageNo <= $pageCount; $pageNo++) {
 
   $pdf->StartTransform();
   // Rotate 20 degrees counter-clockwise centered by (70,110) which is the lower left corner of the rectangle
-  $pdf->Rotate(-90, 90, 120);
+  $pdf->Rotate(-90, 85, 120);
   $pdf->Text(0, 0, $stringData);
   // Stop Transformation
   $pdf->StopTransform();
