@@ -21,6 +21,7 @@ $(".leftDiv").hover(
 $(document).ready(function(e){
 
 
+    loadNotifcations();
 
     curr_time();
     // FOR THE MAIN DASHBOARDs
@@ -52,12 +53,6 @@ $(document).ready(function(e){
     getUserCredentials();
     $('#tb_mainlcr').DataTable().clear().destroy();
     data_seacrh_table_bday = $('#tb_mainlcr').DataTable({
-        "processing": true,
-        "language": {
-            processing: '<div class="text-center"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span> </div>'},
-
-
-        "serverSide": true,
         "ajax" : {
 
           "url" : global.settings.url + '/Lcr_works/loadTableBday',
@@ -388,6 +383,28 @@ $(document).ready(function(e){
             $('#reciept').modal("hide");
             $('#addHistoryForm')[0].reset();
             $('#printReciept')[0].reset();
+
+            var jsonData = {
+              // from_user : 'sampleUser',
+              ref_no : $('#ref_num').val(),
+              type : $('#type').val(),
+              issued_date : formatDate(Date()),
+              status : 'Pending',
+              from : full_name
+            };
+
+            websocket.send(JSON.stringify(jsonData));
+            //
+            // sendNotification({
+            //     title: 'Electronic Civil Registry Information System',
+            //     message: 'Good Day ' + full_name + '! \n Has added one new pending request on print page.\n Click to go to Print Page.',
+            //     icon : 'https://cdn2.iconfinder.com/data/icons/mixed-rounded-flat-icon/512/megaphone-64.png',
+            //     // icon: global.settings.url + '/assets/img/ecrislogo.png',
+            //     clickCallback: function () {
+            //       window.location.href = global.settings.url + '/pages/dash/print';
+            //     }
+            //   });
+
           },
           error : function(xhr){
             notif('Error in addHistoryForm '+xhr.responseText,'danger');
@@ -696,6 +713,18 @@ $(document).ready(function(e){
 });
 
 
+function formatDate(date) {
+    var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2) month = '0' + month;
+    if (day.length < 2) day = '0' + day;
+
+    return [year, month, day].join('-');
+}
+
 function curr_time() {
   setInterval(function(){
     var currentTime = new Date(),
@@ -918,7 +947,7 @@ function countPending() {
       cntPndng = res.count;
       sendNotification({
           title: 'Electronic Civil Registry Information System',
-          message: 'Good Day '+full_name + '! \n You have '+cntPndng+' pendings today',
+          message: 'Good Day ' + full_name + '! \n You have '+cntPndng+' pendings today',
           icon : 'https://cdn2.iconfinder.com/data/icons/mixed-rounded-flat-icon/512/megaphone-64.png',
           // icon: global.settings.url + '/assets/img/ecrislogo.png',
           clickCallback: function () {
@@ -932,6 +961,43 @@ function countPending() {
   });
 }
 
+
+function loadCertificate(ref_num,table_name) {
+
+  $.ajax({
+    url : global.settings.url + '/Lcr_works/viewCerificate',
+    type : 'POST',
+    data : {
+      'what[refno]' : ref_num,
+      'what[categogry]' : table_name
+    },
+    dataType : 'text',
+    success : function(res){
+      $('#postwar_image').attr('src',global.settings.url+'/pages/viewCerts/'+res);
+    },
+    error : function(xhr){
+      notif('Error in Viewing Certificate','danger');
+    }
+  });
+
+}
+
+function clickPostwar(table) {
+  switch (table) {
+    case 'birth':
+      ($('#birth_refnum').val() == "" ) ? notif('Reference Number Textbox should not be empty') : loadCertificate($('#birth_refnum').val(),'birthday');
+      break;
+    case 'death':
+      ($('#death_refnum').val() == "" ) ? notif('Reference Number Textbox should not be empty') : loadCertificate($('#death_refnum').val(),'death');
+      break;
+    case 'marriage':
+      ($('#marrform_refno').val() == "" ) ? notif('Reference Number Textbox should not be empty') : loadCertificate($('#marrform_refno').val(),'marriage');
+      break;
+    default:
+
+  }
+}
+
 function loadNotifcations() {
   var content;
   $.ajax({
@@ -941,7 +1007,7 @@ function loadNotifcations() {
     success : function(res){
 
       for (var i = 1; i < res.length - 1; i++) {
-        notif_content += '<a title="Click to view" href="http://localhost:3000//pages/dash/print" class="col-12 notif  waves-effect waves-light"><small>Ref No: '+res[i].ref_no+' / Type : '+res[i].type+' / Issued : '+res[i].issued_date+' / Status : '+res[i].status+'</small></a>';
+        notif_content += '<a title="Click to view" href="http://localhost:3000//pages/dash/print" class="col-12 notif  waves-effect waves-light"><small>Ref No: '+res[i].ref_no+' / Type : '+res[i].type+' / Issued : '+res[i].issued_date+' / Status : '+res[i].status+' / FROM : '+res[i].from+'</small></a>';
       }
 
       // console.log(notif_content);

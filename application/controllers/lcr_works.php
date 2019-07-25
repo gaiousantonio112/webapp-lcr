@@ -8,6 +8,11 @@ class Lcr_works extends CI_Controller {
         $this->load->model('pages/Lcr_model','works');
     }
 
+    public function index()
+    {
+      $this->load->view('404');
+    }
+
     public function login_user()
     {
       $inputData = $this->input->post('login');

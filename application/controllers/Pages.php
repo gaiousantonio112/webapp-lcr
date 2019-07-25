@@ -9,8 +9,12 @@ class Pages extends CI_Controller {
     }
 
     public function index() {
+      if ($this->is_login()) {
         $this->load->view('pages/login/login');
         $this->load->view('pages/footer/foot');
+      }else{
+        $this->login();
+      }
     }
 
     public function login() {
@@ -19,10 +23,12 @@ class Pages extends CI_Controller {
         $this->load->view('pages/footer/foot');
     }
 
-    public function dash($page){
+    public function dash($page = null){
+      // $page = $this->uri->segment(3);
       if ($this->is_login()) {
-        if ($page == "") {
+        if ($page == null) {
           $this->index();
+          // die('ohno');
         }else{
           $this->load->view('pages/dashboard/sidenav0');
           $this->load->view('pages/dashboard/'.$page);

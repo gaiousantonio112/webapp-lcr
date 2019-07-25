@@ -68,7 +68,7 @@
 									<input type="text" name="formgenbday[bdayrefnum]" id="birth_refnum" class="form-control" placeholder="Enter Reference Number..." style="box-shadow:0px 2px #CDD5D9">
 								</div>
 								<div class="col-3">
-									<button id="birth_search" class="btn btn-primary" style="box-shadow:0px 5px #CDD5D9">Search</button>
+									<button id="birth_search_btn" type="button" onclick="clickPostwar('birth')" class="btn btn-primary" style="box-shadow:0px 5px #CDD5D9">Search</button>
 								</div>
 							</div>
 							<div class="md-form ">
@@ -180,7 +180,7 @@
 								<input type="text" name="formgendeath[reference_num]" id="death_refnum" class="form-control" placeholder="Enter Reference Number..." style="box-shadow:0px 2px #CDD5D9">
 							</div>
 							<div class="col-3">
-								<button id="death_search" class="btn btn-primary" style="box-shadow:0px 5px #CDD5D9">Search</button>
+								<button id="death_search_btn" type="button" onclick="clickPostwar('death')" class="btn btn-primary" style="box-shadow:0px 5px #CDD5D9">Search</button>
 							</div>
 						</div>
 						<div class="md-form ">
@@ -289,10 +289,10 @@
 					<div class="card-body">
 						<div class="row px-5" style="float:none;margin: 10px auto" id="search-marriage">
 							<div class="col-9 px-0 py-2">
-								<input type="text" name="marrform[refno]" id="form2" class="form-control" placeholder="Enter Reference Number..." style="box-shadow:0px 2px #CDD5D9">
+								<input type="text" name="marrform[refno]" id="marrform_refno" class="form-control" placeholder="Enter Reference Number..." style="box-shadow:0px 2px #CDD5D9">
 							</div>
 							<div class="col-3">
-								<button id="search" class="btn btn-primary" style="box-shadow:0px 5px #CDD5D9">Search</button>
+								<button id="marriage_search_btn" type="button" onclick="clickPostwar('marriage')" class="btn btn-primary" style="box-shadow:0px 5px #CDD5D9">Search</button>
 							</div>
 						</div>
 						<div class="row px-3">
@@ -416,7 +416,7 @@
 		<div class="sticky-top" style="position: sticky; z-index:2; top:0; position: -webkit-sticky;">
 		<!---->
 				<iframe src="<?php echo base_url() ?>/pages/book" class=" prewar_view z-depth-1 mb-4 " id="prewar_image" width="100%" height="80%" style="margin-top: 80px"></iframe>
-			<iframe  src="<?php echo base_url() . 'pages/viewlcrform'?>#toolbar=0&navpanes=0&scrollbar=0&view=fitH,100" class="postwar_view z-depth-1 mb-5 " id="postwar_image" width="100%" height="80%" style="margin-top: 80px"></iframe>
+				<iframe  src="<?php echo base_url() . 'pages/viewlcrform'?>#toolbar=0&navpanes=0&scrollbar=0&view=fitH,100" class="postwar_view z-depth-1 mb-5 " id="postwar_image" width="100%" height="80%" style="margin-top: 80px"></iframe>
 		</div>
 
 		<div class="rows ">

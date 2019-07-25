@@ -10,6 +10,7 @@ var notif_content = '';
 
 function loadNotif(childHTML){
   $('#notif_load').prepend(childHTML);
+  notif('New Notification/s recieved','success');
 }
 var cntPndng = 0;
 
@@ -20,11 +21,13 @@ websocket.onopen = function(event) {
   // Load all notificaions read/unread
   // console.log(event);
   // loadNotif(notif_content);
-
-  countPending();
+  if (cntPndng <= 0) {
+    console.log(cntPndng);
+    countPending();
+  }
   console.log('Connected!');
-  loadNotifcations();
-}
+
+};
 
 //receive socket
 websocket.onmessage = function(event) {
@@ -35,7 +38,7 @@ websocket.onmessage = function(event) {
   // Do your actions here
   // send kada module request para magpush notif sa mga kapwa user
   console.log(Data);
-  if(Data.notif_content != ""){
+  if(Data.from_user != null){
     loadNotif(Data.notif_content);
     cntPndng += 1;
     $('#notif_num').html(cntPndng);
@@ -61,15 +64,7 @@ websocket.onclose = function(event){
 };
 
 $('#test_noy').click(function(){
-  var jsonData = {
-    // from_user : 'sampleUser',
-    ref_no : '1234',
-    type : 'birthday',
-    issued_date : '12/12/2019',
-    status : 'pending'
-  };
-
-  websocket.send(JSON.stringify(jsonData));
+alert();
 });
 
 function sendNotification (data) {
