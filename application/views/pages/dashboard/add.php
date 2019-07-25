@@ -130,9 +130,7 @@
 												<label>Date of Death</label>
 											</div>
 										</div>
-
 									</div>
-
 								</div>
 							</div>
 						</form>

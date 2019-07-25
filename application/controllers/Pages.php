@@ -24,7 +24,7 @@ class Pages extends CI_Controller {
         if ($page == "") {
           $this->index();
         }else{
-          $this->load->view('pages/dashboard/sidenav');
+          $this->load->view('pages/dashboard/sidenav0');
           $this->load->view('pages/dashboard/'.$page);
           $this->load->view('pages/dashboard/dashfooter');
         }

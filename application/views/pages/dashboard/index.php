@@ -1,6 +1,6 @@
 
 <body class="grey lighten-4">
-<div class="container-fluid pt-2 px-5 "  >
+<div class="container-fluid pt-2 px-5 z-index-1"  >
 
 	<div class=" container text-right pt-3" >
 					<div class="teal lighten-1 z-depth-1 " style="height:52px;border-radius:3px">
@@ -10,8 +10,8 @@
 	</div>
 
 			<!-- <hr class=""> -->
-			<div class="container py-5">
-				<div class="row">
+			<div class="container py-5 ">
+				<div class="row ">
 					<div class="col-3 mb-2 text-center">
 						<div class="card py-2">
 							<div class="card-body">

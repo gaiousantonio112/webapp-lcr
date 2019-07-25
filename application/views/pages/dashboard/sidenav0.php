@@ -1,7 +1,8 @@
 <link rel="stylesheet" href="../../../../assets/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="../../../../assets/bootstrap/css/bootstrap-grid.css">
 <link rel="stylesheet" href="../../../../assets/fontawesome-5.9.0/css/all.min.css">
-<link rel="stylesheet" href="../../../../assets/css/simple-sidebar.css">
+<link rel="stylesheet" href="../../../../assets/css/sideslide.css">
+<link rel="stylesheet" href="../../../../assets/css/simple-sidebar0.css">
 <link rel="stylesheet" href="../../../../assets/MBD/css/mdb.min.css">
 <link rel="stylesheet" href="../../../../assets/MBD/css/style.css">
 <link rel="stylesheet" href="../../../../assets/MBD/css/modules/animations-extended.min.css">
@@ -14,8 +15,8 @@
 
 .wrap
 {
-    width: 320px;
-    height: 192px;
+    width: auto;
+    height: auto;
     padding: 0;
     overflow: auto;
 }
@@ -23,25 +24,7 @@
 .bg-ecris{
 background-color: #EFEDDF;
 }
-.navbar{
-/* border-bottom: 6px solid #163F54; */
-/* color: white; */
-}
-.list-group a:hover{
-	background-color: #eeeeee ;
-  color: #3b465e;
-  margin-left: 5px;
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
-}
 
-.list-group a{
-  border:1px solid white;
-
-	/* border-top: 1px solid grey ;
-		border-bottom: 1px solid grey ; */
-
-}
 .bg-title{
   color: #163F54;
 }
@@ -58,10 +41,11 @@ background-color: #EFEDDF;
 {
     background-color: #EFECE0;
 }
+
 </style>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
 <head>
 
   <meta charset="utf-8">
@@ -73,48 +57,57 @@ background-color: #EFEDDF;
 
   </title>
 </head>
-<!-- position:fixed; width: 100%; height: 100%; -->
-<body style="">
+<body>
 
-<div class="d-flex wrapper" id="wrapper">
+<div class="d-flex wrapper" id="wrapper" >
   <!-- Sidebar -->
-    <div class="border-right bg-white slide-right" id="sidebar-wrapper" >
-      <div class ="sticky-top pt-5 " style="">
-      <div class = "blue-gradient border-right pb-4">
-      <div class="sidebar-heading py-4 "><img src="<?php base_url()?>/assets/img/ecrislogo.svg" alt=""></div>
-  			<div class=" bg-title text-center white-text" id="curr_name">
-  			</div>
-			<div id="current_time" class="bg-title text-center white-text">
+<nav class="bg-white rounded-bottom ">
+
+      <div class ="main-menu pt-5 bg-white" style="position: sticky; top:0; position: -webkit-sticky;">
+      <div class ="blue-gradient pb-4">
+      <div class="sidebar-heading">
+        <img src="<?php base_url()?>/assets/img/ecrislogo.svg" alt="" height="120px" width="140px" class="" style="margin-left:50px">
       </div>
+      <ul class="list-group list-group-flush">
+      <li class="">
+    	<i class="fa fa-user fa-lg white-text pl-3 mb-3 "></i><span class=" bg-title text-center white-text ml-3" id="curr_name" style="font-size:15px">
+  		</span>
+      </li>
+
+      <li >
+			<i class="far fa-clock fa-lg white-text pl-3"></i><span id="current_time" class="bg-title text-center white-text ml-3"></span>
 			</div>
+      </li>
+      </ul>
 
-      <div class="list-group list-group-flush pt-2 ">
-        <a href="<?php echo base_url() . 'pages/dash/index'  ?>" class="  text-left list-group-item list-group-item-action" ><img src="<?php echo base_url() .'/assets/svg/dashboard(samp).svg' ?>" height="25px" class="float-left mr-3 " alt=""> Dashboard</a>
-        <a href="<?php echo base_url() . 'pages/dash/search'  ?>" class=" text-left list-group-item list-group-item-action"  ><img src="<?php echo base_url() .'/assets/svg/search(samp).svg' ?>" height="25px" class="float-left mr-3" alt=""></i> Search and Payment</a>
-        <a href="<?php echo base_url() . 'pages/dash/add'  ?>" class=" text-left list-group-item list-group-item-action"><img src="<?php echo base_url() .'/assets/svg/add(samp).svg' ?>" height="25px" class="float-left mr-3" alt=""> Add</a>
-  			<a href="<?php echo base_url() . 'pages/dash/formgen'  ?>" class=" text-left list-group-item list-group-item-action"><img src="<?php echo base_url() .'/assets/svg/formgen(samp).svg' ?>" height="25px" class="float-left mr-3" alt="">  LCR Form Generator</a>
-        <a href="<?php echo base_url() . 'pages/dash/print'  ?>" class=" text-left list-group-item list-group-item-action"><img src="<?php echo base_url() .'/assets/svg/print(samp).svg' ?>" height="25px" class="float-left mr-3" alt="">  Print</a>
-        <!-- search and payment (eCRIS).svg
-        add (ecris)
-         -->
-			  <!-- <a href="#" class="list-group-item list-group-item-action bg-light">Warning</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Birthday</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Death</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Marriage</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Prinb</a> -->
+<ul class="list-group list-group-flush pt-2 ">
+  <li class="text-left list-group-item list-group-item-action pl-2"  style="border:0px solid">
+        <a href="<?php echo base_url() . 'pages/dash/index'  ?>" ><img src="<?php echo base_url() .'/assets/svg/dashboard(samp).svg' ?>" height="25px" alt=""><span class="nav-text">Dashboard </span></a>
+  </li>
+  <li class="text-left list-group-item list-group-item-action pl-2" style="border:0px solid">
+        <a href="<?php echo base_url() . 'pages/dash/search'  ?>" ><img src="<?php echo base_url() .'/assets/svg/search(samp).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text"> Search and Payment</span></a>
+  </li>
+  <li class="text-left list-group-item list-group-item-action pl-2" style="border:0px solid">
+        <a href="<?php echo base_url() . 'pages/dash/add'  ?>" ><img src="<?php echo base_url() .'/assets/svg/add(samp).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text"> Add</span></a>
+  </li>
+  <li class="text-left list-group-item list-group-item-action pl-2" style="border:0px solid">
+      	<a href="<?php echo base_url() . 'pages/dash/formgen'  ?>" ><img src="<?php echo base_url() .'/assets/svg/formgen(samp).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text"> LCR Form Generator</span></a>
+  </li>
+  <li class="text-left list-group-item list-group-item-action pl-2" style="border:0px solid">
+        <a href="<?php echo base_url() . 'pages/dash/print'  ?>"><img src="<?php echo base_url() .'/assets/svg/print(samp).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text"> Print</span></a>
+  </li>
+</ul>
+      <!-- </div> -->
       </div>
-      </div>
-    </div>
-
+</nav>
     <!-- /#sidebar-wrapper -->
 
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
       <nav class="navbar navbar fixed-top navbar-expand-lg navbar-light bg-white z-depth-1 " style="border-bottom:3px solid #3F729B">
-        <a class="px-3 " id="menu-toggle"><i class="fas fa-bars "></i></a>
-        <h5 class="pt-2">ELECTRONIC CIVIL REGISTRY INFORMATION SYSTEM</h5>
-
+        <!-- <a class="px-3 " id="menu-toggle"><i class="fas fa-bars "></i></a> -->
+        <h5 class="pt-2 pl-4">ELECTRONIC CIVIL REGISTRY INFORMATION SYSTEM</h5>
         <div class = "">
 
         <button class="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -136,11 +129,7 @@ background-color: #EFEDDF;
                 <div class="dropdown-menu dropdown-menu-right pb-0 "  id="notif" aria-labelledby="navbarDropdown" style="background-color:tomato;">
                   <h6 class="dropdown-header mt-0 pb-3 white-text" style="background-color:tomato; width:230px;">Notification   <i class="fas fa-bell float-right px-0"></i></h6>
                   <div class="" style="height: 300px; overflow-y:scroll" id="notif_load">
-                    <!-- col-12 notif  waves-effect waves-light -->
-                    <!-- <a title="Click to view" class='col-12 notif  waves-effect waves-light'> -->
-                      <!-- <i class="fas fa-bell"></i> -->
-                      <!-- <small>Ref No: 1234 / Type : Birthday / Issued : 12/21/2019 / Status : Pending</small> -->
-                    <!-- </a> -->
+
                   </div>
                 </div>
             </li>

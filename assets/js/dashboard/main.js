@@ -7,13 +7,22 @@ var data_seacrh_table_marriage;
 
 
 // ct : stackoverflow
+$(".leftDiv").hover(
+    function() {
+        $(this).animate({"width": "100%"}, 1000);
+        $(".rightDiv").animate({"width": "0%"}, 1000);
+    },
+    function() {
+        $(this).animate({"width": "50%"}, 1000);
+        $(".rightDiv").animate({"width": "50%"}, 1000);
+});
+
 
 $(document).ready(function(e){
 
 
 
     curr_time();
-
     // FOR THE MAIN DASHBOARDs
     $('#service_provided').html('Loading..');
     $('#total_earnings').html('Loading..');
