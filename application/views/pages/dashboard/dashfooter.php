@@ -52,12 +52,21 @@ $('.dataTables_length').addClass('bs-select');
         });
 
 			$('.dates #usr1').datepicker({
+				'format': 'yyyy-mm-dd',
+				'autoclose': true
+			});
 
+			$('.dates #date_reg, #birthdate, #marriagedate,#death_date_reg').datepicker({
+				'format': 'yyyy-mm-dd',
+				'autoclose': true
+			});
 
+			$('.dates #death_date,#death_date_reg,#date_marriage').datepicker({
 				'format': 'yyyy-mm-dd',
 				'autoclose': true
 			});
 		});
+
 
 
 
