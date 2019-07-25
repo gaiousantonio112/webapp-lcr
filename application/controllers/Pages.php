@@ -39,6 +39,27 @@ class Pages extends CI_Controller {
       }
 
     }
+
+
+  public function admin($page = null){
+    if ($this->is_login()) {
+      if ($page == null) {
+        $this->index();
+     die('ohno');
+      }else{
+        $this->load->view('pages/admin/Slidenav');
+        $this->load->view('pages/admin/'.$page);
+        $this->load->view('pages/admin/adminfoot');
+      }
+    }else{
+      $this->login();
+    }
+
+  }
+
+
+
+
     public function settings(){
         $this->load->view('pages/nav/nav');
         $this->load->view('pages/settings/settings');
