@@ -10,18 +10,13 @@
 	</div>
 
 			<!-- <hr class=""> -->
-<<<<<<< HEAD
-			<div class="container py-5 ">
-				<div class="row ">
-					<div class="col-3 mb-2 text-center">
-=======
+
+
 			<div class="container py-5">
 				<div class="row">
 					<div class="col-lg-3 col-sm-12 pt-3 text-center">
->>>>>>> db473d2895168c0bb54113ef441fe97c6771d8e4
 						<div class="card py-2">
 							<div class="card-body">
-
 									<div class="col auto">
 										<div class="">
 											<img src="<?php echo base_url() .'/assets/svg/service provided(samp).svg' ?>" height="50px" alt="">
@@ -30,7 +25,6 @@
 										<div class="text-xs font-weight-bold blue-text text-uppercase mb-1 letter-spacing-5em">Service Provided</div>
 										<div class="h5 mb-0 font-weight-bold text-gray-800" id="service_provided">Loading...</div>
 									</div>
-
 							</div>
 						</div>
 					</div>
