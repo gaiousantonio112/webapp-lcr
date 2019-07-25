@@ -143,13 +143,7 @@ background-color: #EFEDDF;
               </a>
 
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <!-- <a class="dropdown-item" href="#">Account</a>
-                <a class="dropdown-item" href="#">Another action</a>  -->
-
-                  <button type="button" class="btn btn-primary" id="test_noy" name="button">
-                    Test Notif
-                  </button>
-
+        
                 <a class="dropdown-item" href="<?php echo base_url() . 'pages/LCR'  ?>">Logout</a>
               </div>
             </li>
