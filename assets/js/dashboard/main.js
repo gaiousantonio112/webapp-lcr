@@ -976,13 +976,13 @@ function loadCertificate(ref_num,table_name) {
 function clickPostwar(table) {
   switch (table) {
     case 'birth':
-      ($('#birth_refnum').val() == "" ) ? notify('Reference Number Textbox should not be empty') : loadCertificate($('#birth_refnum').val(),'birthday');
+      ($('#birth_refnum').val() == "" ) ? notif('Reference Number Textbox should not be empty') : loadCertificate($('#birth_refnum').val(),'birthday');
       break;
     case 'death':
-      ($('#death_refnum').val() == "" ) ? notify('Reference Number Textbox should not be empty') : loadCertificate($('#death_refnum').val(),'death');
+      ($('#death_refnum').val() == "" ) ? notif('Reference Number Textbox should not be empty') : loadCertificate($('#death_refnum').val(),'death');
       break;
     case 'marriage':
-      ($('#marrform_refno').val() == "" ) ? notify('Reference Number Textbox should not be empty') : loadCertificate($('#marrform_refno').val(),'marriage');
+      ($('#marrform_refno').val() == "" ) ? notif('Reference Number Textbox should not be empty') : loadCertificate($('#marrform_refno').val(),'marriage');
       break;
     default:
 
