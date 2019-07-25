@@ -952,6 +952,43 @@ function countPending() {
   });
 }
 
+
+function loadCertificate(ref_num,table_name) {
+
+  $.ajax({
+    url : global.settings.url + '/Lcr_works/viewCerificate',
+    type : 'POST',
+    data : {
+      'what[refno]' : ref_num,
+      'what[categogry]' : table_name
+    },
+    dataType : 'text',
+    success : function(res){
+      $('#postwar_image').attr('src',global.settings.url+'/pages/viewCerts/'+res);
+    },
+    error : function(xhr){
+      notif('Error in Viewing Certificate','danger');
+    }
+  });
+
+}
+
+function clickPostwar(table) {
+  switch (table) {
+    case 'birth':
+      ($('#birth_refnum').val() == "" ) ? notify('Reference Number Textbox should not be empty') : loadCertificate($('#birth_refnum').val(),'birthday');
+      break;
+    case 'death':
+      ($('#death_refnum').val() == "" ) ? notify('Reference Number Textbox should not be empty') : loadCertificate($('#death_refnum').val(),'death');
+      break;
+    case 'marriage':
+      ($('#marrform_refno').val() == "" ) ? notify('Reference Number Textbox should not be empty') : loadCertificate($('#marrform_refno').val(),'marriage');
+      break;
+    default:
+
+  }
+}
+
 function loadNotifcations() {
   var content;
   $.ajax({

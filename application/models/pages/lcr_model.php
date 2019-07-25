@@ -38,6 +38,11 @@ date_default_timezone_set('Asia/Manila');
         return $dataArray;
       }
 
+      public function searchPostwar($refnum)
+      {
+        
+      }
+
       // For triple line charts
       public function getResultCharts($per_year)
       {
