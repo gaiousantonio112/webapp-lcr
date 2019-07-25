@@ -65,6 +65,11 @@ $('.dataTables_length').addClass('bs-select');
 				'format': 'yyyy-mm-dd',
 				'autoclose': true
 			});
+
+			$('.dates #updatebday_bday_dt,#updatedeath_death_date,#updatemarr_date_of_marriage').datepicker({
+				'format': 'yyyy-mm-dd',
+				'autoclose': true
+			});
 		});
 
 
