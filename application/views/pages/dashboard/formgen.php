@@ -68,7 +68,7 @@
 									<input type="text" name="formgenbday[bdayrefnum]" id="birth_refnum" class="form-control" placeholder="Enter Reference Number..." style="box-shadow:0px 2px #CDD5D9">
 								</div>
 								<div class="col-3">
-									<button id="birth_search_btn" onclick="clickPostwar('birth')" class="btn btn-primary" style="box-shadow:0px 5px #CDD5D9">Search</button>
+									<button id="birth_search_btn" type="button" onclick="clickPostwar('birth')" class="btn btn-primary" style="box-shadow:0px 5px #CDD5D9">Search</button>
 								</div>
 							</div>
 							<div class="md-form ">
@@ -180,7 +180,7 @@
 								<input type="text" name="formgendeath[reference_num]" id="death_refnum" class="form-control" placeholder="Enter Reference Number..." style="box-shadow:0px 2px #CDD5D9">
 							</div>
 							<div class="col-3">
-								<button id="death_search_btn" onclick="clickPostwar('death')" class="btn btn-primary" style="box-shadow:0px 5px #CDD5D9">Search</button>
+								<button id="death_search_btn" type="button" onclick="clickPostwar('death')" class="btn btn-primary" style="box-shadow:0px 5px #CDD5D9">Search</button>
 							</div>
 						</div>
 						<div class="md-form ">
@@ -292,7 +292,7 @@
 								<input type="text" name="marrform[refno]" id="marrform_refno" class="form-control" placeholder="Enter Reference Number..." style="box-shadow:0px 2px #CDD5D9">
 							</div>
 							<div class="col-3">
-								<button id="marriage_search_btn" onclick="clickPostwar('marriage')" class="btn btn-primary" style="box-shadow:0px 5px #CDD5D9">Search</button>
+								<button id="marriage_search_btn" type="button" onclick="clickPostwar('marriage')" class="btn btn-primary" style="box-shadow:0px 5px #CDD5D9">Search</button>
 							</div>
 						</div>
 						<div class="row px-3">
