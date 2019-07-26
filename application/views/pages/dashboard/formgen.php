@@ -1,10 +1,13 @@
 
 <div class="container-fluid grey lighten-4 pt-4">
+
+
 	<div class="card">
 		<div class="card-header white">
 			<div class="container" style="">
 				<div class="row">
 					<div class="col-6">
+
 						<div class="custom-control custom-radio custom-control-inline">
 							<input type="radio" class="custom-control-input" name="radioselectwar" id="pre-war" value="prewar" checked>
 							<label class="custom-control-label" for="pre-war">Pre War</label>
@@ -35,12 +38,13 @@
 	<div class="row">
 
 		<!-- birthday form -->
+
 		<div class="col-6">
 			<form id="birthdayform">
-				<div id="genform-birthday" class="container genform " style="margin-top: 10px; ">
-					<div class="card mb-3 rgba-cyan-slight">
+				<div id="genform-birthday" class="container genform mt-3" >
+					<div class="card mb-3 info-color">
 						<div class="card-body">
-							<div class="text-center px-5" style="color: #191818" id="certif">
+							<div class="text-center px-5 white-text font-weight-lighter"  id="certif">
 								WE CERTIFY that, among others, the following facts of birth appear in our Register of Births On
 								<div class="row" style="margin-top:-15px;">
 									<div class="md-form px-4 col-6">
@@ -81,6 +85,7 @@
 									<label for="date_reg">Date of Registration</label>
 								</div>
 							</div>
+
 							<div class="md-form ">
 								<input type="text" name="formgenbday[name_child]" id="name_child" class="form-control">
 								<label for="name_child">Name of Child</label>
@@ -150,9 +155,9 @@
 		<!-- death form -->
 		<div id="genform-death" class="container genform " style="margin-top: 10px">
 			<form id="deathform">
-				<div class="card mb-3 rgba-cyan-slight">
+				<div class="card mb-3 info-color">
 					<div class="card-body">
-						<div class="text-center px-5" style="color: #191818" id="certif2">
+						<div class="text-center px-5 white-text font-weight-lighter" id="certif2">
 							WE CERTIFY that, among others, the following facts of death appear in our Register of Death On
 							<div class="row" style="margin-top:-15px;">
 								<div class="md-form px-4 col-6">
@@ -262,10 +267,10 @@
 		<!-- marriage form -->
 		<form id="marrform">
 			<div id="genform-marriage" class="container genform" style="margin-top: 10px">
-				<div class="card mb-3 rgba-cyan-slight">
+				<div class="card mb-3 info-color">
 					<div class="card-body">
-						<div class="text-center px-5" style="color: #191818" id="certif3">
-							WE CERTIFY that, among others, the following facts of marriage appear in our Register of Marraige On
+						<div class="text-center px-5 white-text font-weight-lighter" id="certif3">
+							WE CERTIFY that, among others, the following facts of marriage appear in our Register of Marriage On
 							<div class="row" style="margin-top:-15px;">
 								<div class="md-form px-4 col-6">
 									<select name="marrform[pageno]" class="custom-select">

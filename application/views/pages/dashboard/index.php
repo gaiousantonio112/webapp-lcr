@@ -1,6 +1,6 @@
 
-<body class="grey lighten-4">
-<div class="container-fluid pt-2 px-5 z-index-1"  >
+
+<div class="container-fluid pt-2 px-5 z-index-1 grey lighten-4"  >
 
 	<div class=" container text-right pt-3" >
 					<div class="teal lighten-1 z-depth-1 " style="height:52px;border-radius:3px">
@@ -89,22 +89,22 @@
 	</div>
 
 
-			<div class="container mb-5">
+			<div class="container pb-5">
 				<div class ="">
 					<!-- < for="exampleFormControlSelect1"> -->
 					<h5  class="font-weight-bold text-spacing-5">Select Year</h5>
 				</div>
-				<div class="card">
+				<div class="card mb-5">
 					<div class="card-body">
 						<div class="col-4 text-left">
 							<select class="form-control" id="year_select">
 							</select>
 
 						</div>
-						<div class="row" id="status">
+						<div class="row " id="status">
 							<div class="col-12 text-center"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span> </div>
 						</div>
-						<div class="pt-2 col-12" >
+						<div class="pt-2 col-12 " >
 							<canvas id="lineChart" style="height:5px"></canvas>
 						</div>
 					</div>
