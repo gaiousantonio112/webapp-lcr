@@ -4,9 +4,6 @@ var defaultAmnt = 50;
 var data_seacrh_table_bday;
 var data_seacrh_table_death;
 var data_seacrh_table_marriage;
-var usertable;
-
-
 // ct : stackoverflow
 $(".leftDiv").hover(
     function() {
@@ -708,8 +705,7 @@ $(document).ready(function(e){
 
       ////////////////////////////////////////////////////////////////////////
       //userpage
-
-              usertable = $('#tbl_users').DataTable({
+            var  usertable = $('#tbl_users').DataTable({
                  "ajax" : {
                    "url" : global.settings.url + '/Lcr_works/showuserstable',
                    dataSrc : 'data'
@@ -731,8 +727,6 @@ $(document).ready(function(e){
                  }]
                });
                $('.dataTables_length').addClass('bs-select');
-
-
                console.log($('#adduser').serializeArray());
                $.ajax({
                  url : global.settings.url + '/Lcr_works/addusers',
@@ -750,10 +744,6 @@ $(document).ready(function(e){
                  }
                });
                });
-
-
-
-
                   $('#edituser').submit(function(e){
                   e.preventDefault();
                   console.log($('#edituser').serializeArray());
@@ -775,12 +765,8 @@ $(document).ready(function(e){
                     }
                   });
                      });
-
-
                      $('#deleteuser').submit(function(e){
                        e.preventDefault();
-
-
                        $.ajax({
                          url : global.settings.url + '/Lcr_works/deleteuser',
                          type : 'POST',
@@ -798,29 +784,19 @@ $(document).ready(function(e){
 
                          }
                        });
-
-
                        ///////////////////////////////////////////////////////////////////////////////////////////
                        //edn user page
-
-
-
 
 });
 
 ///////////////////////////////////////////////////////////
 //userpage
-
-
-
 function deleteuser(id){
   $('#deleteusermodal').modal('show');
 $('#delid').val(id);
 }
-
 function edituser(id){
   console.log(id);
-
   $.ajax({
         url : global.settings.url + '/Lcr_works/get_data_user',
         type: "POST",
@@ -846,21 +822,7 @@ function edituser(id){
                    notif('Error in getting credentials ' + xhr.responseText,'danger');
                 }
             });
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
 //////////////////////////////////////////////////////////////
 //endofuserpage
 
