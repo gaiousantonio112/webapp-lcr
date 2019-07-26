@@ -727,43 +727,52 @@ $(document).ready(function(e){
                  }]
                });
                $('.dataTables_length').addClass('bs-select');
-               console.log($('#adduser').serializeArray());
-               $.ajax({
-                 url : global.settings.url + '/Lcr_works/addusers',
-                 type : 'POST',
-                 data : $(this).serialize(),
-                 dataType : 'json',
-                 success : function(res){
-                     notif('Saved Successfully','success');
-                       table.ajax.reload();
-                     $("#adduser")[0].reset();
-                 },
-                 error : function(xhr){
-                   notif('Error in getting credentials ' + xhr.responseText,'danger');
 
-                 }
+
+               // Add User
+               $('#adduser').submit(function(e){
+                 e.preventDefault();
+                 console.log($('#adduser').serializeArray());
+                 $.ajax({
+                   url : global.settings.url + '/Lcr_works/addusers',
+                   type : 'POST',
+                   data : $(this).serialize(),
+                   dataType : 'json',
+                   success : function(res){
+                     notif('Saved Successfully','success');
+                     usertable.ajax.reload();
+                     $("#adduser")[0].reset();
+                   },
+                   error : function(xhr){
+                     notif('Error in getting credentials ' + xhr.responseText,'danger');
+
+                   }
+                 });
                });
+
+
+
                });
                   $('#edituser').submit(function(e){
                   e.preventDefault();
                   console.log($('#edituser').serializeArray());
-                  $.ajax({
-                    url : global.settings.url + '/Lcr_works/updateusers',
-                    type : 'POST',
-                    data : $(this).serialize(),
-                    dataType : 'json',
-                    success : function(res){
+                        $.ajax({
+                          url : global.settings.url + '/Lcr_works/updateusers',
+                          type : 'POST',
+                          data : $(this).serialize(),
+                          dataType : 'json',
+                          success : function(res){
 
-                        notif('Update Successfully','success');
-                        usertable.ajax.reload();
-                        $('#editusermodal').modal('hide');
+                              notif('Update Successfully','success');
+                              usertable.ajax.reload();
+                              $('#editusermodal').modal('hide');
 
-                    },
-                    error : function(xhr){
-                      notif('Error in getting credentials ' + xhr.responseText,'danger');
+                          },
+                          error : function(xhr){
+                            notif('Error in getting credentials ' + xhr.responseText,'danger');
 
-                    }
-                  });
+                          }
+                        });
                      });
                      $('#deleteuser').submit(function(e){
                        e.preventDefault();
@@ -784,8 +793,7 @@ $(document).ready(function(e){
 
                          }
                        });
-                       ///////////////////////////////////////////////////////////////////////////////////////////
-                       //edn user page
+ ////////////////////////edn user page
 
 });
 
