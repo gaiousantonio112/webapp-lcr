@@ -23,8 +23,8 @@
 	.st17{display:inline;fill:#FFFFFF;}
 	.st18{fill:#FFFFFF;}
 	.st19{display:inline;fill:none;stroke:#FFFFFF;stroke-width:40;stroke-miterlimit:10;}
-	.st20{fill:none;stroke:#FEFEFE;stroke-miterlimit:10;}
-	.st21{fill:none;stroke:#FEFEFE;stroke-width:16;stroke-miterlimit:10;}
+	.st20{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
+	.st21{fill:none;stroke:#FFFFFF;stroke-width:16;stroke-miterlimit:10;}
 </style>
 <title>dashboard(ecris)</title>
 <rect x="-3.4" y="-5.6" class="st0" width="475" height="406"/>
@@ -139,4 +139,9 @@
 			/>
 	</g>
 </g>
+<polygon class="st18" points="314,361.5 287,336.5 314.4,270 341,337.5 "/>
+<polygon class="st18" points="297.6,263.2 330.4,263.2 314,279.6 "/>
+<path class="st18" d="M155.6,283.8c0,3.3,0.2,6.6,0.4,9.8l-6.2,5.5l-27-25l27.4-66.5l13.9,35.2C158.8,254,155.6,268.3,155.6,283.8z"
+	/>
+<polygon class="st18" points="133.3,202.7 166.2,202.7 149.8,219.2 "/>
 </svg>
