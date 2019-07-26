@@ -4,9 +4,6 @@ var defaultAmnt = 50;
 var data_seacrh_table_bday;
 var data_seacrh_table_death;
 var data_seacrh_table_marriage;
-var usertable;
-
-
 // ct : stackoverflow
 $(".leftDiv").hover(
     function() {
@@ -708,8 +705,7 @@ $(document).ready(function(e){
 
       ////////////////////////////////////////////////////////////////////////
       //userpage
-
-              usertable = $('#tbl_users').DataTable({
+            var  usertable = $('#tbl_users').DataTable({
                  "ajax" : {
                    "url" : global.settings.url + '/Lcr_works/showuserstable',
                    dataSrc : 'data'
@@ -731,6 +727,7 @@ $(document).ready(function(e){
                  }]
                });
                $('.dataTables_length').addClass('bs-select');
+<<<<<<< HEAD
 
 
                // Add User
@@ -743,6 +740,15 @@ $(document).ready(function(e){
                    data : $(this).serialize(),
                    dataType : 'json',
                    success : function(res){
+=======
+               console.log($('#adduser').serializeArray());
+               $.ajax({
+                 url : global.settings.url + '/Lcr_works/addusers',
+                 type : 'POST',
+                 data : $(this).serialize(),
+                 dataType : 'json',
+                 success : function(res){
+>>>>>>> 8fc66d6d5360d5a7e4b076ad7410eabea12f53a4
                      notif('Saved Successfully','success');
                      usertable.ajax.reload();
                      $("#adduser")[0].reset();
@@ -757,10 +763,6 @@ $(document).ready(function(e){
 
 
                });
-
-
-
-
                   $('#edituser').submit(function(e){
                   e.preventDefault();
                   console.log($('#edituser').serializeArray());
@@ -782,8 +784,6 @@ $(document).ready(function(e){
                           }
                         });
                      });
-
-
                      $('#deleteuser').submit(function(e){
                        e.preventDefault();
                        $.ajax({
@@ -803,26 +803,23 @@ $(document).ready(function(e){
 
                          }
                        });
+<<<<<<< HEAD
  ////////////////////////edn user page
-
-
-
+=======
+                       ///////////////////////////////////////////////////////////////////////////////////////////
+                       //edn user page
+>>>>>>> 8fc66d6d5360d5a7e4b076ad7410eabea12f53a4
 
 });
 
 ///////////////////////////////////////////////////////////
 //userpage
-
-
-
 function deleteuser(id){
   $('#deleteusermodal').modal('show');
 $('#delid').val(id);
 }
-
 function edituser(id){
   console.log(id);
-
   $.ajax({
         url : global.settings.url + '/Lcr_works/get_data_user',
         type: "POST",
@@ -848,21 +845,7 @@ function edituser(id){
                    notif('Error in getting credentials ' + xhr.responseText,'danger');
                 }
             });
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
 //////////////////////////////////////////////////////////////
 //endofuserpage
 

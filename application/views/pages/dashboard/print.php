@@ -1,4 +1,4 @@
-<div class="container-fluid p-4 px-5  grey lighten-4" >
+<div class="container-fluid p-4 px-5" >
 	<div class=" container text-right " >
 		<div class="teal lighten-1 z-depth-1" style="height:52px; border-radius:3px">
 			<span><img src="<?php echo base_url() .'/assets/svg/print2(samp).svg' ?>" height="50px" alt="" style="float:right" class="px-2 pt-2"></span>

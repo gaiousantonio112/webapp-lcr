@@ -1,6 +1,6 @@
 
 
-<div class="container-fluid pt-2 px-5 z-index-1 grey lighten-4"  >
+<div class="container-fluid container pt-2 px-5 z-index-1 ">
 
 	<div class=" container text-right pt-3" >
 					<div class="teal lighten-1 z-depth-1 " style="height:52px;border-radius:3px">
@@ -10,7 +10,7 @@
 	</div>
 
 			<!-- <hr class=""> -->
-			<div class="container py-5">
+			<div class="container py-5 pt-4">
 				<div class="row">
 					<div class="col-lg-3 col-sm-12 pt-3 text-center">
 						<div class="card py-2">

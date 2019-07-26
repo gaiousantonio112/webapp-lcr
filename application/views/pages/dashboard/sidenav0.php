@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="../../../../assets/MBD/css/addons/datatables-select.min.css">
 <link rel="stylesheet" href="../../../../assets/datepicker/calendar/lib/bootstrap-datepicker.css">
 <link rel="stylesheet" href="../../../../assets/datepicker/calendar/lib/daterangepicker.css">
-
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>/assets/css/pages.css" >
 <style media="screen">
 
 .wrap
@@ -65,17 +65,21 @@ background-color: #EFEDDF;
 
       <div class ="main-menu pt-5 bg-white" style="position: sticky; top:0; position: -webkit-sticky;">
       <div class ="blue-gradient pb-4">
-      <div class="sidebar-heading">
-        <img src="<?php base_url()?>/assets/img/ecrislogo.svg" alt="" height="120px" width="140px" class="" style="margin-left:50px">
+      <div class="sidebar-heading ">
+        <img src="<?php base_url()?>/assets/img/ecrislogo.svg" alt="" height="100px" width="160px" class="mt-2" style="margin-left:50px">
       </div>
       <ul class="list-group list-group-flush">
-      <li class="">
-    	<i class="fa fa-user fa-lg white-text pl-3 mb-3 "></i><span class=" bg-title text-center white-text ml-3" id="curr_name" style="font-size:15px">
+      <li class="mb-2">
+    	<i>
+        <img src="<?php echo base_url() .'/assets/svg/user(samp).svg' ?>" height="25px" class = "ml-2" alt="">
+      </i><span class=" bg-title text-center white-text ml-3" id="curr_name" style="font-size:15px">
   		</span>
       </li>
 
       <li >
-			<i class="far fa-clock fa-lg white-text pl-3"></i><span id="current_time" class="bg-title text-center white-text ml-3"></span>
+			<i>
+          <img src="<?php echo base_url() .'/assets/svg/time(samp).svg' ?>" height="25px" class = "ml-2" alt="">
+      </i><span id="current_time" class="bg-title text-center white-text ml-3"></span>
 			</div>
       </li>
       </ul>
