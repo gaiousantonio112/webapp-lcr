@@ -727,7 +727,6 @@ $(document).ready(function(e){
                  }]
                });
                $('.dataTables_length').addClass('bs-select');
-<<<<<<< HEAD
 
 
                // Add User
@@ -740,15 +739,6 @@ $(document).ready(function(e){
                    data : $(this).serialize(),
                    dataType : 'json',
                    success : function(res){
-=======
-               console.log($('#adduser').serializeArray());
-               $.ajax({
-                 url : global.settings.url + '/Lcr_works/addusers',
-                 type : 'POST',
-                 data : $(this).serialize(),
-                 dataType : 'json',
-                 success : function(res){
->>>>>>> 8fc66d6d5360d5a7e4b076ad7410eabea12f53a4
                      notif('Saved Successfully','success');
                      usertable.ajax.reload();
                      $("#adduser")[0].reset();
@@ -803,12 +793,7 @@ $(document).ready(function(e){
 
                          }
                        });
-<<<<<<< HEAD
  ////////////////////////edn user page
-=======
-                       ///////////////////////////////////////////////////////////////////////////////////////////
-                       //edn user page
->>>>>>> 8fc66d6d5360d5a7e4b076ad7410eabea12f53a4
 
 });
 
