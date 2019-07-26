@@ -286,6 +286,43 @@ class Lcr_works extends CI_Controller {
 
 
 
+////////////////////////////////////////////////////////////
+//userpage
+
+public function showuserstable()
+{
+  echo json_encode($this->works->showuserstable());
+}
+
+public function addusers()
+{
+  $inputData = $this->input->post('user');
+  echo json_encode($this->works->addusers($inputData));
+
+}
+
+public function get_data_user()
+{
+  $inputData = $this->input->post('data');
+  echo json_encode($this->works->get_data_user($inputData));
+
+}
+public function updateusers()
+{
+  $inputData = $this->input->post('edit');
+  echo json_encode($this->works->updateusers($inputData));
+
+}
+public function deleteuser()
+{
+  $inputData = $this->input->post('del');
+  echo json_encode($this->works->deleteuser($inputData));
+}
+
+////////////////////////////////////////////////////////////
+//end userpage
+
+
 
 }
  ?>

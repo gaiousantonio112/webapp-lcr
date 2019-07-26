@@ -631,5 +631,183 @@ date_default_timezone_set('Asia/Manila');
         return $data;
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////
+//userpage
+
+
+
+public function showuserstable()
+{
+  $draw = intval($this->input->get("draw"));
+  $start = intval($this->input->get("start"));
+  $length = intval($this->input->get("length"));
+  $query = $this->db->query("SELECT * FROM usercredentials");
+  $data = [];
+  foreach ($query->result() as $r) {
+  $data[] = array(
+
+  'id' => $r->id,
+  'username' => $r->username,
+  'password' => $r->password,
+  'fullname' => $r->firstname .' '.$r->lastname .' '.$r->middlename,
+  'firstname' => $r->firstname,
+  'lastname' => $r->lastname,
+  'middlename' => $r->middlename,
+  'address' => $r->address,
+  'user_level' =>$r->user_level,
+  'btn'=>'
+  <div class="row">
+  <button type="button" onclick="edituser('.$r->id.')" class="btn btn-sm btn-info ml-3" name="button">Edit</button>
+  <button type="button" onclick="deleteuser('.$r->id.')" class="btn btn-sm btn-danger mr-3" name="button">Delete</button>
+  </div>
+
+  '
+
+  );
+  }
+  $result = array(
+  "draw" => $draw,
+  "recordsTotal" => $query->num_rows(),
+  "recordsFiltered" => $query->num_rows(),
+  "data" => $data
+  );
+
+  return $result;
+
+}
+
+public function addusers($inputData)
+{
+  $data = array(
+
+  'username' => $inputData['Username'],
+  'password' => $inputData['Password'],
+  'firstname' => $inputData['First'],
+  'lastname' => $inputData['Last'],
+  'middlename' => $inputData['Middle'],
+  'address' => $inputData['Address'],
+  'user_level' => $inputData['type']
+  );
+  return $this->db->insert('usercredentials' , $data);
+}
+
+public function get_data_user($id){
+    $result =  array();
+
+    $query = $this->db->query("SELECT * FROM  usercredentials WHERE id = ".$id['id']);
+
+    foreach ($query->result() as $data) {
+    array_push($result,$data);
+    }
+    return $result;
+}
+
+
+public function updateusers($inputData){
+
+  if($inputData['password'] =!null){
+
+$pass = array('password' =>$inputData['password']);
+    $this->db->where('id', $inputData['id']);
+    $this->db->update('usercredentials',$pass );
+  }
+
+  $data = array(
+
+      'username' => $inputData['Username'],
+      'firstname' => $inputData['First'],
+      'lastname' => $inputData['Last'],
+      'middlename' => $inputData['Middle'],
+      'address' => $inputData['Address'],
+      'user_level' => $inputData['type'],
+          );
+
+
+    $this->db->where('id', $inputData['id']);
+    $this->db->update('usercredentials', $data);
+    }
+
+    public function deleteuser($inputData){
+        $this->db->delete('usercredentials', array('id' => $inputData['id']));
+    }
+
+
+
+
   }
  ?>
