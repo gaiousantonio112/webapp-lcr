@@ -289,7 +289,7 @@ class Lcr_works extends CI_Controller {
 ////////////////////////////////////////////////////////////
 //userpage
 
-public function showusers()
+public function showuserstable()
 {
   echo json_encode($this->works->showuserstable());
 }

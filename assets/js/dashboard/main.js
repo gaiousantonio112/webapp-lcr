@@ -706,106 +706,163 @@ $(document).ready(function(e){
         });
       });
 
-////////////////////////////////////////////////////////////////////////
-//userpage
+      ////////////////////////////////////////////////////////////////////////
+      //userpage
 
-        usertable = $('#tbl_users').DataTable({
-           "ajax" : {
-             "url" : global.settings.url + '/Lcr_works/showusers',
-             dataSrc : 'data'
-           },
-           "columns" : [{
-               "data" : "id"
-           },
-           {
-               "data" : "username"
-           },
-           {
-               "data" : "fullname"
-           },
-           {
-               "data" : "address"
-             },
-             {
-               "data" : "btn"
-           }]
-         });
-         $('.dataTables_length').addClass('bs-select');
-
-
-         console.log($('#adduser').serializeArray());
-         $.ajax({
-           url : global.settings.url + '/Lcr_works/addusers',
-           type : 'POST',
-           data : $(this).serialize(),
-           dataType : 'json',
-           success : function(res){
-               notif('Saved Successfully','success');
-                 table.ajax.reload();
-               $("#adduser")[0].reset();
-           },
-           error : function(xhr){
-             notif('Error in getting credentials ' + xhr.responseText,'danger');
-
-           }
-         });
-         });
+              usertable = $('#tbl_users').DataTable({
+                 "ajax" : {
+                   "url" : global.settings.url + '/Lcr_works/showuserstable',
+                   dataSrc : 'data'
+                 },
+                 "columns" : [{
+                     "data" : "id"
+                 },
+                 {
+                     "data" : "username"
+                 },
+                 {
+                     "data" : "fullname"
+                 },
+                 {
+                     "data" : "address"
+                   },
+                   {
+                     "data" : "btn"
+                 }]
+               });
+               $('.dataTables_length').addClass('bs-select');
 
 
+               console.log($('#adduser').serializeArray());
+               $.ajax({
+                 url : global.settings.url + '/Lcr_works/addusers',
+                 type : 'POST',
+                 data : $(this).serialize(),
+                 dataType : 'json',
+                 success : function(res){
+                     notif('Saved Successfully','success');
+                       table.ajax.reload();
+                     $("#adduser")[0].reset();
+                 },
+                 error : function(xhr){
+                   notif('Error in getting credentials ' + xhr.responseText,'danger');
 
-
-            $('#edituser').submit(function(e){
-            e.preventDefault();
-            console.log($('#edituser').serializeArray());
-            $.ajax({
-              url : global.settings.url + '/Lcr_works/updateusers',
-              type : 'POST',
-              data : $(this).serialize(),
-              dataType : 'json',
-              success : function(res){
-
-                  notif('Update Successfully','success');
-                  table.ajax.reload();
-                  $('#editusermodal').modal('hide');
-
-              },
-              error : function(xhr){
-                notif('Error in getting credentials ' + xhr.responseText,'danger');
-
-              }
-            });
+                 }
+               });
                });
 
 
-               $('#deleteuser').submit(function(e){
-                 e.preventDefault();
 
 
-                 $.ajax({
-                   url : global.settings.url + '/Lcr_works/deleteuser',
-                   type : 'POST',
-                   data : $(this).serialize(),
-                   dataType : 'json',
-                   success : function(res){
+                  $('#edituser').submit(function(e){
+                  e.preventDefault();
+                  console.log($('#edituser').serializeArray());
+                  $.ajax({
+                    url : global.settings.url + '/Lcr_works/updateusers',
+                    type : 'POST',
+                    data : $(this).serialize(),
+                    dataType : 'json',
+                    success : function(res){
 
-                       notif('Deleted Successfully','success');
-                       table.ajax.reload();
-                       $('#deleteusermodal').modal('hide');
+                        notif('Update Successfully','success');
+                        usertable.ajax.reload();
+                        $('#editusermodal').modal('hide');
 
-                   },
-                   error : function(xhr){
-                     notif('Error in getting credentials ' + xhr.responseText,'danger');
+                    },
+                    error : function(xhr){
+                      notif('Error in getting credentials ' + xhr.responseText,'danger');
 
-                   }
-                 });
+                    }
+                  });
+                     });
 
 
-                 ///////////////////////////////////////////////////////////////////////////////////////////
-                 //edn user page
+                     $('#deleteuser').submit(function(e){
+                       e.preventDefault();
+
+
+                       $.ajax({
+                         url : global.settings.url + '/Lcr_works/deleteuser',
+                         type : 'POST',
+                         data : $(this).serialize(),
+                         dataType : 'json',
+                         success : function(res){
+
+                             notif('Deleted Successfully','success');
+                             usertable.ajax.reload();
+                             $('#deleteusermodal').modal('hide');
+
+                         },
+                         error : function(xhr){
+                           notif('Error in getting credentials ' + xhr.responseText,'danger');
+
+                         }
+                       });
+
+
+                       ///////////////////////////////////////////////////////////////////////////////////////////
+                       //edn user page
+
 
 
 
 });
+
+///////////////////////////////////////////////////////////
+//userpage
+
+
+
+function deleteuser(id){
+  $('#deleteusermodal').modal('show');
+$('#delid').val(id);
+}
+
+function edituser(id){
+  console.log(id);
+
+  $.ajax({
+        url : global.settings.url + '/Lcr_works/get_data_user',
+        type: "POST",
+        data : {
+        'data[id]' : id
+        },
+        dataType: "JSON",
+        success: function(data)
+        {
+          data = data[0];
+    console.log(data);
+      $('#editid').val(id);
+      $('#editFirst').val(data.firstname);
+        $('#editMiddle').val(data.middlename);
+    $('#editLast').val(data.lastname);
+    $('#editAddress').val(data.address);
+      $('#editUsername').val(data.username);
+  $('#edittyp').val(data.user_level);
+        $('#editusermodal').modal('show');
+                },
+            error : function(xhr)
+                {
+                   notif('Error in getting credentials ' + xhr.responseText,'danger');
+                }
+            });
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////
+//endofuserpage
 
 
 function formatDate(date) {

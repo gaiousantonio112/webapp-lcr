@@ -632,6 +632,80 @@ date_default_timezone_set('Asia/Manila');
     }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ////////////////////////////////////////////////////////////////////////////
 //userpage
 
@@ -709,7 +783,7 @@ public function updateusers($inputData){
   if($inputData['password'] =!null){
 
 $pass = array('password' =>$inputData['password']);
-    $this->db->where('i d', $inputData['id']);
+    $this->db->where('id', $inputData['id']);
     $this->db->update('usercredentials',$pass );
   }
 
