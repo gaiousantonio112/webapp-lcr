@@ -61,7 +61,7 @@ background-color: #EFEDDF;
 
 <div class="d-flex wrapper" id="wrapper" >
   <!-- Sidebar -->
-<nav class="bg-white rounded-bottom z-index-">
+<nav class="bg-white rounded-bottom z-depth-1">
 
       <div class ="main-menu pt-5 bg-white" style="position: sticky; top:0; position: -webkit-sticky;">
       <div class ="blue-gradient pb-4">
