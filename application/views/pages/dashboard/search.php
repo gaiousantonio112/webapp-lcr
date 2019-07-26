@@ -123,7 +123,7 @@ html {
 </style>
 
 <div id="loadit">
-  <div class="container-fluid pt-4 px-3 grey lighten-4">
+  <div class="container-fluid pt-4 px-3 ">
 
     	<div class=" container text-right">
   <!-- <div class="loading">Loading&#8230;</div> -->
@@ -565,7 +565,7 @@ html {
   				<div class="col-2">
   					<div class="md-form ">
   						<input type="text" name="updatebday[annex]" id="updatebday_annex" class="form-control" >
-  						<label for="Annex">Annex</label>
+  						<label for="updatebday_annex">Annex</label>
   					</div>
   				</div>
   			</div>
@@ -620,7 +620,7 @@ html {
   				<div class="col-2">
   					<div class="md-form ">
   						<input type="text" name="updatedeath[annex]" id="updatedeath_annex" class="form-control" >
-  						<label for="Annex">Annex</label>
+  						<label for="updatedeath_annex">Annex</label>
   					</div>
   				</div>
   			</div>
@@ -679,8 +679,9 @@ html {
   				<div class="col-2">
   					<div class="md-form ">
   						<input type="text" name="updatemarr[annexh]" id="updatemarr_annexh" class="form-control">
-  						<label for="Annex">Annex</label>
+  						<label for="updatemarr_annexh">Annex</label>
   					</div>
+            
   				</div>
   			</div>
   		</div>
@@ -707,7 +708,7 @@ html {
   				<div class="col-2">
   					<div class="md-form ">
   						<input type="number" name="updatemarr[annexw]" id="updatemarr_annexw" class="form-control" >
-  						<label for="Annex">Annex</label>
+  						<label for="updatemarr_annexw">Annex</label>
   					</div>
   				</div>
   			</div>

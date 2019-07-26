@@ -1,5 +1,5 @@
 
-<div class="container-fluid grey lighten-4 pt-4">
+<div class="container-fluid pt-4">
 
 
 	<div class="card">

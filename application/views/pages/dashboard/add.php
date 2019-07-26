@@ -1,4 +1,4 @@
-<div class="container-fluid pt-5 px-5 grey lighten-4"  >
+<div class="container-fluid pt-5 px-5 "  >
 	<div class=" container text-right " >
 		<!--  -->
 		<div class="teal lighten-1 z-depth-1" style="height:52px;border-radius:3px">

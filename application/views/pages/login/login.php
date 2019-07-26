@@ -41,7 +41,7 @@ z-index: 1;
     <img class="spc fadeIn first mr-4" src="../../../../assets/img/spclogo.png" alt="">
 </div>
 <div class="vl mt-4">
-</div>
+
 <div class="col-sm-12 col-lg-5 p-5" id ='electext'>
  <h3 class="display-3 fadeIn first text-left black-text mt-4 ml-4" style="font-size: 63px; position:absolute">ELECTRONIC CIVIL REGISTRY INFORMATION SYSTEM</h3>
 
@@ -96,6 +96,7 @@ z-index: 1;
   </div>
 
 
+</div>
 </div>
 
 
