@@ -779,12 +779,19 @@ public function get_data_user($id){
 
 
 public function updateusers($inputData){
+$pas = $inputData['password'] ;
+  if($pas =!null){
+//
+// $pass1 = array('password' => 'asd');
+// return $pass1;
+//     $this->db->where('id', $inputData['id']);
+//     $this->db->update('usercredentials',$pass1 );
 
-  if($inputData['password'] =!null){
-
-$pass = array('password' =>$inputData['password']);
-    $this->db->where('id', $inputData['id']);
-    $this->db->update('usercredentials',$pass );
+$query = $this->db->query("
+Update db_lcr.usercredentials set password = '" .md5($inputData['password']). "' where id = '" .$inputData['id']."'
+");
+  }else {
+    // code...
   }
 
   $data = array(
@@ -795,6 +802,7 @@ $pass = array('password' =>$inputData['password']);
       'middlename' => $inputData['Middle'],
       'address' => $inputData['Address'],
       'user_level' => $inputData['type'],
+
           );
 
 
