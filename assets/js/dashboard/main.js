@@ -757,7 +757,7 @@ $(document).ready(function(e){
                   $('#edituser').submit(function(e){
                   e.preventDefault();
 
-                  console.log($('#edituser').serializeArray());
+                      console.log($('#edituser').serializeArray());
                         $.ajax({
                           url : global.settings.url + '/Lcr_works/updateusers',
                           type : 'POST',
@@ -767,6 +767,7 @@ $(document).ready(function(e){
 
                               notif('Update Successfully','success');
                               usertable.ajax.reload();
+                      $("#edituser")[0].reset();
                               $('#editusermodal').modal('hide');
 
                           },
