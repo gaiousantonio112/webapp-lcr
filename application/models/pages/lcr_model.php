@@ -788,7 +788,7 @@ $pas = $inputData['password'] ;
 //     $this->db->update('usercredentials',$pass1 );
 
 $query = $this->db->query("
-Update db_lcr.usercredentials set password = '" .md5($inputData['password']). "' where id = '" .$inputData['id']."'
+Update db_lcr.usercredentials set password = '" .$inputData['password']. "' where id = '" .$inputData['id']."'
 ");
   }else {
     // code...
