@@ -24,6 +24,12 @@ html {
     font-size: 16px;
   }
 }
+.text-title
+{
+  color:white;
+  float:right;
+}
+
 .card-icon
 {
   width:100%;
