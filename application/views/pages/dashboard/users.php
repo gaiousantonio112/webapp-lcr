@@ -86,7 +86,7 @@
         </th>
         <th class="th-sm" id="whatType">Address
         </th>
-        <th class="th-sm">Action
+        <th class="th-sm " style="width:20%">Action
         </th>
       </tr>
     </thead>

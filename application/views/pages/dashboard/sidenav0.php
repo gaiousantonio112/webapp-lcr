@@ -13,6 +13,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>/assets/css/pages.css" >
 <style media="screen">
 
+
 .wrap
 {
     width: ;
@@ -40,6 +41,10 @@ background-color: #EFEDDF;
 .notif:active
 {
     background-color: #EFECE0;
+}
+.curr-name
+{
+  overflow-wrap: break-word;
 }
 
 </style>
@@ -69,11 +74,24 @@ background-color: #EFEDDF;
         <img src="<?php base_url()?>/assets/img/ecrislogo.svg" alt="" height="100px" width="160px" class="mt-2" style="margin-left:50px">
       </div>
       <ul class="list-group list-group-flush">
-      <li class="mb-2">
-    	<i>
-        <img src="<?php echo base_url() .'/assets/svg/user(samp).svg' ?>" height="25px" class = "ml-2" alt="">
-      </i><span class=" bg-title text-center white-text ml-3" id="curr_name" style="font-size:15px">
-  		</span>
+      <li class="mb-2 ">
+<div class = "container px-0">
+  <div class = "row">
+    <div class = "col-2 ml-2">
+    	 <i>
+         <img src="<?php echo base_url() .'/assets/svg/user(samp).svg' ?>" height="25px" class = "img-user" alt="">
+       </i>
+     </div>
+
+      <div class = "col-9 pt-1 pb-0 px-2 ml-2">
+      <!-- <p class=" bg-title  white-text curr-name " id="" style="">
+  		1234567890123456789012345678901234</p> -->
+
+      <p class=" bg-title white-text curr-name" id="curr_name"></p>
+     </div>
+   </div>
+</div>
+
       </li>
 
       <li >

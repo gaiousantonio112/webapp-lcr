@@ -1,11 +1,4 @@
 
-<style media="screen">
-	.try1{
-
-		background-color: black;
-
-	}
-</style>
 <div class="container-fluid container pt-2 px-5 z-index-1 ">
 
 	<div class=" container text-right pt-3" >
@@ -15,108 +8,134 @@
 					</div>
 	</div>
 
-	<!-- <hr class=""> -->
 	<div class="container py-5 pt-4">
 		<div class="row">
-			<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pt-3 text-center">
-				<div class="card py-2">
-					<div class="card-body">
-							<div class="col auto">
-								<div class="">
-									<img src="<?php echo base_url() .'/assets/svg/service provided(samp).svg' ?>" height="50px" alt="">
-								</div>
-								<hr class="">
-								<div class="text-xs font-weight-bold blue-text text-uppercase mb-1 letter-spacing-5em">Service Provided</div>
-								<div class="h5 mb-0 font-weight-bold text-gray-800" id="service_provided">Loading...</div>
+
+			<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 ">
+				<div class="card mt-4">
+					<div class="card-body card-dashboard">
+						<div class = "container ">
+						<div class = "row">
+						<div class = "col-5 p-0">
+							<div class="card card-icon warning-color-dark">
+										<img src="<?php echo base_url() .'/assets/svg/service provided2(samp).svg' ?>" height="45px" alt="">
 							</div>
+						</div>
+							<div class = "col-7 ">
+								<div class="text-count " id="service_provided">Loading...</div>
+							</div>
+						</div>
+					</div>
+					<hr>
+					<div class="text-dashboard ">
+						Service Provided</div>
 					</div>
 				</div>
 			</div>
 
-			<!-- Earnings (Monthly) Card Example -->
-			<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pt-3 mb-2 text-center">
-				<div class="card py-2 ">
-					<div class="card-body">
-						<div class="row">
-							<div class="col auto">
-								<div class="">
-									<img src="<?php echo base_url() .'/assets/svg/earnings (samp).svg' ?>" height="50px" alt="">
-								</div>
-								<hr class="">
-								<div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Earnings</div>
-								<div class="h5 mb-0 font-weight-bold text-gray-800" id="total_earnings">Loading...</div>
+			<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 ">
+				<div class="card mt-4">
+					<div class="card-body card-dashboard">
+						<div class = "container">
+						<div class = "row">
+						<div class = "col-5 p-0">
+							<div class="card card-icon info-color-dark">
+										<img src="<?php echo base_url() .'/assets/svg/earnings 2(samp).svg' ?>" height="45px" alt="">
 							</div>
 						</div>
+							<div class = "col-7 ">
+								<div class="text-count " id="total_earnings">Loading...</div>
+							</div>
+						</div>
+					</div>
+					<hr>
+					<div class="text-dashboard ">
+					Total Earnings</div>
 					</div>
 				</div>
 			</div>
 
-			<!-- Earnings (Monthly) Card Example -->
-			<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pt-3   mb-0 text-center">
-				<div class="card pt-2 pb-0">
-					<div class="card-body ">
-						<div class="row">
-							<div class="col auto">
-								<div class="">
-									<img src="<?php echo base_url() .'/assets/svg/task(samp).svg' ?>" height="50px" alt="">
-								</div>
-								<hr class="">
-								<div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks</div>
-								<div class="h5 mb-0 font-weight-bold text-gray-800" id="task_text_percent">Loading...</div>
-
-								<div class="progress progress-sm " style="height:8px">
-									<div class="progress-bar bg-info" role="progressbar" id="task_bar_percent" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
+			<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 ">
+				<div class="card mt-4">
+					<div class="card-body card-dashboard">
+						<div class = "container">
+						<div class = "row">
+						<div class = "col-5 p-0">
+							<div class="card card-icon cyan">
+										<img src="<?php echo base_url() .'/assets/svg/task2(samp).svg' ?>" height="45px" alt="">
 							</div>
 						</div>
+							<div class = "col-7 ">
+								<div class="text-count " id="task_text_percent">Loading...</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="progress progress-sm " style="height:5px">
+						<div class="progress-bar bg-info" role="progressbar" id="task_bar_percent" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+					<div class="text-dashboard mt-2">
+					Tasks</div>
 					</div>
 				</div>
 			</div>
 
-			<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pt-3  mb-2 text-center">
-				<div class="card py-2">
-					<div class="card-body ">
-						<div class="row">
-							<div class="col auto">
-								<div class="	">
-									<img src="<?php echo base_url() .'/assets/svg/pending request(samp).svg' ?>" height="50px" alt="">
-								</div>
-								<hr class="">
-								<div class="col mr-2">
-									<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Pending Requests</div>
-									<div class="h5 mb-0 font-weight-bold text-gray-800" id="pending_request">Loading...</div>
-								</div>
+
+			<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 ">
+				<div class="card mt-4">
+					<div class="card-body card-dashboard">
+						<div class = "container">
+						<div class = "row">
+						<div class = "col-5 p-0">
+							<div class="card card-icon default-color">
+										<img src="<?php echo base_url() .'/assets/svg/pending request2(samp).svg' ?>" height="45px" alt="">
 							</div>
 						</div>
+							<div class = "col-7 ">
+								<div class="text-count " id="pending_request">Loading...</div>
+							</div>
+						</div>
+					</div>
+					<hr>
+					<div class="text-dashboard ">
+					Pending Requests</div>
 					</div>
 				</div>
 			</div>
 
-		<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pt-3  mb-2 text-center">
-			<div class="card py-2">
-				<div class="card-body ">
-					<div class="row">
-						<div class="col auto">
-							<div class="	">
-								<img src="<?php echo base_url() .'/assets/svg/pending request(samp).svg' ?>" height="50px" alt="">
-							</div>
-							<hr class="">
-							<div class="col mr-2">
-								<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Online Requests</div>
-								<div class="h5 mb-0 font-weight-bold text-gray-800" id="pending_request">Loading...</div>
-							</div>
-						</div>
+	</div>
+</div>
+
+<div class = "container">
+	<div class = "row">
+
+	<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 ">
+		<div class="card mt-4">
+			<div class="card-body card-dashboard">
+				<div class = "container">
+				<div class = "row">
+				<div class = "col-5 p-0">
+					<div class="card card-icon green">
+								<img src="<?php echo base_url() .'/assets/svg/pending request2(samp).svg' ?>" height="45px" alt="">
 					</div>
 				</div>
+					<div class = "col-7 ">
+						<div class="text-count " id="pending_request">Loading...</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="text-dashboard ">
+			Online Request</div>
 			</div>
 		</div>
 	</div>
+
 </div>
 </div>
 
 
-
-	<div class="container pb-5">
+	<div class="container pb-5 mt-5">
 		<div class ="">
 			<!-- < for="exampleFormControlSelect1"> -->
 			<h5  class="font-weight-bold text-spacing-5">Select Year</h5>
@@ -137,5 +156,4 @@
 			</div>
 			</div>
 		</div>
-
 	</div>
