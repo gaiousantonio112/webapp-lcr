@@ -4,6 +4,7 @@ var defaultAmnt = 50;
 var data_seacrh_table_bday;
 var data_seacrh_table_death;
 var data_seacrh_table_marriage;
+var usertable;
 // ct : stackoverflow
 $(".leftDiv").hover(
     function() {
@@ -705,7 +706,7 @@ $(document).ready(function(e){
 
       ////////////////////////////////////////////////////////////////////////
       //userpage
-            var  usertable = $('#tbl_users').DataTable({
+             usertable = $('#tbl_users').DataTable({
                  "ajax" : {
                    "url" : global.settings.url + '/Lcr_works/showuserstable',
                    dataSrc : 'data'
@@ -755,7 +756,8 @@ $(document).ready(function(e){
                });
                   $('#edituser').submit(function(e){
                   e.preventDefault();
-                  console.log($('#edituser').serializeArray());
+
+                      console.log($('#edituser').serializeArray());
                         $.ajax({
                           url : global.settings.url + '/Lcr_works/updateusers',
                           type : 'POST',
@@ -765,6 +767,7 @@ $(document).ready(function(e){
 
                               notif('Update Successfully','success');
                               usertable.ajax.reload();
+                      $("#edituser")[0].reset();
                               $('#editusermodal').modal('hide');
 
                           },
