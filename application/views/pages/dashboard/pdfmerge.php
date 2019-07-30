@@ -23,7 +23,14 @@ $pdf->setSourceFile('\\\\192.168.100.164\\lcr\\'.$type.'\\'.$ref_num.'.pdf');
 // this will declare the number of pages
 $pageNo = 1;
 $pageCount = 2;
-$stringData = 'Date Now:'.$date.' Reference Number:'.$ref_num.' OR NO:'.$or_num.' Date Paid:'.$date_paid.' Encoder Name:'.$cs_encoder;
+$stringData = 'Date Now:'.$date.' Reference Number:'.$ref_num;
+$orstring = 'OR Date / OR NO:'.$date_paid.'/'.$or_num;
+$encodername = ' Processed & Verified by:'.$cs_encoder;
+$approvename = 'Approved by:';
+$requestername = 'Requester Name:';
+$remarks = 'Remarks:';
+$city = 'CITY OF SAN PABLO';
+$reg = 'The City Civil Registar';
 
 // $stringData = 'Date Now:'.$date.' Reference Number:'.;
 switch ($print) {
@@ -68,7 +75,7 @@ for ($pageNo; $pageNo <= $pageCount; $pageNo++) {
   $pdf->setPrintFooter(false);
     $pdf->addPage();
   // $pdf->useTemplate($tpl, null, null, 0, 0, TRUE);
-  $pdf ->useTemplate($tpl, null, null, $size['w'], 300, FALSE);
+  $pdf ->useTemplate($tpl, 10, 10, $size['w']-20, 300-30, FALSE);
 
   // $pageCount = $pdf->setSourceFile("apps/Par.pdf"); .' Page no '.$pageNo.' Wha print'.$_GET['print']
 
@@ -76,8 +83,18 @@ for ($pageNo; $pageNo <= $pageCount; $pageNo++) {
   // Rotate 20 degrees counter-clockwise centered by (70,110) which is the lower left corner of the rectangle
   $pdf->Rotate(90, 25, 240);
   $pdf->Text(0, 220, $stringData);
+
   // Stop Transformation
   $pdf->StopTransform();
+
+  $pdf->StartTransform();
+  // Rotate 20 degrees counter-clockwise centered by (70,110) which is the lower left corner of the rectangle
+  $pdf->Rotate(90, 25, 240);
+  $pdf->Text(0, 225, $orstring);
+
+  // Stop Transformation
+  $pdf->StopTransform();
+
 
 
   $pdf->StartTransform();
@@ -87,6 +104,37 @@ for ($pageNo; $pageNo <= $pageCount; $pageNo++) {
   // Stop Transformation
   $pdf->StopTransform();
 
+
+  $pdf->StartTransform();
+  // Rotate 20 degrees counter-clockwise centered by (70,110) which is the lower left corner of the rectangle
+  $pdf->Rotate(-90, 85, 120);
+  $pdf->Text(0, 5, $orstring);
+
+  // Stop Transformation
+  $pdf->StopTransform();
+
+    $pdf->StartTransform();
+    // Rotate 20 degrees counter-clockwise centered by (70,110) which is the lower left corner of the rectangle
+    $pdf->Rotate(90, 25, 240);
+    $pdf->Text(110, 220, $remarks);
+
+    // Stop Transformation
+    $pdf->StopTransform();
+
+
+
+
+    $pdf->Text(25,265 ,$requestername);
+  $pdf->Text(25,270 ,$encodername);
+  $pdf->Text(120,265 ,$approvename);
+
+
+
+
+
+///the city of san pablo
+$pdf->text($size['w']/2 - 20 , 10 , $city);
+$pdf->text($size['w']/2 - 20 , 15 , $reg);
 }
 //print function
 $pdf->IncludeJS('print(true)');
