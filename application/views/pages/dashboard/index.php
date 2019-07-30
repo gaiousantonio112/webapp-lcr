@@ -1,20 +1,12 @@
 
-<div class="container-fluid container pt-2 px-5 z-index-1 ">
+<div class="container-fluid container pt-4 px-5 z-index-1 ">
 
-	<div class=" container text-right pt-3" >
-					<div class="teal lighten-1 z-depth-1 " style="height:52px;border-radius:3px">
-						<span><img src="<?php echo base_url() .'/assets/svg/dashboard2(samp).svg' ?>" height="40px" alt="" style="float:right" class="px-3 mt-2"></span>
-							<p class="text-title">Dashboard</p>
-					</div>
+	<div class="z-depth-1 title-Div">
+		<span><img class = "title-Divimg" src="<?php echo base_url() .'/assets/svg/dashboard2(samp).svg' ?>" ></span>
+		<h2 class="white-text float-right title-text"> Dashboard </h2>
 	</div>
 
-	<div class="container py-5 pt-1">
-		<div class="row">
-	</div>
-</div>
-
-
-<div class = "container">
+<div class = "container py-4">
 	<div class = "row">
 
 		<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 ">
@@ -141,7 +133,7 @@
 	<div class="container pb-5 mt-5">
 		<div class ="">
 			<!-- < for="exampleFormControlSelect1"> -->
-			<h5  class="font-weight-bold text-spacing-5">Select Year</h5>
+			<h5  class="font-weight-bold text-spacing-5 text-left">Select Year</h5>
 		</div>
 		<div class="card mb-5">
 			<div class="card-body">

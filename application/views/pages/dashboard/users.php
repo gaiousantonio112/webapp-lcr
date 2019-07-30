@@ -1,13 +1,12 @@
 
 
-<div class="container pt-5">
-  	<div class=" container text-right pt-3" >
-  					<div class="teal lighten-1 z-depth-1 " style="height:52px;border-radius:3px">
-  						<span><img src="<?php echo base_url() .'/assets/svg/usermanager2(samp).svg' ?>" height="40px" alt="" style="float:right" class="px-3 mt-2"></span>
-  						<p style="color:white; float:right; font-size: 30px;" class="pt-2">User Manager</p>
-  					</div>
-  	</div>
-</div>
+<div class="container pt-4">
+
+    <div class="z-depth-1 title-Div">
+      <span><img class = "title-Divimg" src="<?php echo base_url() .'/assets/svg/usermanager2(samp).svg' ?>" ></span>
+      <h2 class="white-text float-right title-text">User Manager</h2>
+    </div>
+
 <form id="adduser">
 
 
@@ -86,7 +85,7 @@
         </th>
         <th class="th-sm" id="whatType">Address
         </th>
-        <th class="th-sm " style="width:20%">Action
+        <th class="th-sm ">Action
         </th>
       </tr>
     </thead>

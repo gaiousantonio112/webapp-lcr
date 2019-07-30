@@ -6,7 +6,7 @@
 		<div class="card-header white">
 			<div class="container" style="">
 				<div class="row">
-					<div class="col-6">
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 
 						<div class="custom-control custom-radio custom-control-inline">
 							<input type="radio" class="custom-control-input" name="radioselectwar" id="pre-war" value="prewar" checked>
@@ -17,7 +17,7 @@
 							<label class="custom-control-label" for="post-war">Post War</label>
 						</div>
 					</div>
-					<div class="col-6">
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 						<div class="custom-control custom-radio custom-control-inline">
 							<input type="radio" class="custom-control-input" name="radio_crt_type" id="Birthday" value="birthday" checked>
 							<label class="custom-control-label" for="Birthday">Birthday</label>
@@ -39,7 +39,7 @@
 
 		<!-- birthday form -->
 
-		<div class="col-6">
+		<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
 			<form id="birthdayform">
 				<div id="genform-birthday" class="container genform mt-3" >
 					<div class="card mb-3 info-color">
@@ -67,11 +67,11 @@
 					</div>
 					<div class="card mb-3 ">
 						<div class="card-body">
-							<div class="row px-5" style="float:none;margin: 10px auto" id="search-birthday">
-								<div class="col-9 px-0 py-2">
+							<div class="row px-4"   id="search-birthday">
+								<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 py-2 ">
 									<input type="text" name="formgenbday[bdayrefnum]" id="birth_refnum" class="form-control" placeholder="Enter Reference Number..." style="box-shadow:0px 2px #CDD5D9">
 								</div>
-								<div class="col-3">
+								<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
 									<button id="birth_search_btn" type="button" onclick="clickPostwar('birth')" class="btn btn-primary" style="box-shadow:0px 5px #CDD5D9">Search</button>
 								</div>
 							</div>
@@ -181,10 +181,10 @@
 				<div class="card  mb-3">
 					<div class="card-body">
 						<div class="row px-5" style="float:none;margin: 10px auto" id="search-death">
-							<div class="col-9 px-0 py-2">
+							<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 py-2 ">
 								<input type="text" name="formgendeath[reference_num]" id="death_refnum" class="form-control" placeholder="Enter Reference Number..." style="box-shadow:0px 2px #CDD5D9">
 							</div>
-							<div class="col-3">
+							<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
 								<button id="death_search_btn" type="button" onclick="clickPostwar('death')" class="btn btn-primary" style="box-shadow:0px 5px #CDD5D9">Search</button>
 							</div>
 						</div>
@@ -293,10 +293,10 @@
 				<div class="card mb-3">
 					<div class="card-body">
 						<div class="row px-5" style="float:none;margin: 10px auto" id="search-marriage">
-							<div class="col-9 px-0 py-2">
+							<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 py-2 ">
 								<input type="text" name="marrform[refno]" id="marrform_refno" class="form-control" placeholder="Enter Reference Number..." style="box-shadow:0px 2px #CDD5D9">
 							</div>
-							<div class="col-3">
+							<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
 								<button id="marriage_search_btn" type="button" onclick="clickPostwar('marriage')" class="btn btn-primary" style="box-shadow:0px 5px #CDD5D9">Search</button>
 							</div>
 						</div>
@@ -417,7 +417,7 @@
 
 
 
-	<div class="col-6 pt-2">
+	<div class=" pt-2 col-lg-6 col-md-12 col-sm-12 col-xs-12">
 		<div class="sticky-top" style="position: sticky; z-index:2; top:0; position: -webkit-sticky;">
 		<!---->
 				<iframe src="<?php echo base_url() ?>/pages/book" class=" prewar_view z-depth-1 mb-4 " id="prewar_image" width="100%" height="80%" style="margin-top: 80px"></iframe>

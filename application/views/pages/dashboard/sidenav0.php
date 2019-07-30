@@ -84,9 +84,6 @@ background-color: #EFEDDF;
      </div>
 
       <div class = "col-9 pt-1 pb-0 px-2 ml-2">
-      <!-- <p class=" bg-title  white-text curr-name " id="" style="">
-  		1234567890123456789012345678901234</p> -->
-
       <p class=" bg-title white-text curr-name" id="curr_name"></p>
      </div>
    </div>
@@ -126,23 +123,20 @@ background-color: #EFEDDF;
       </div>
 </nav>
     <!-- /#sidebar-wrapper -->
-
     <!-- Page Content -->
     <div id="page-content-wrapper">
+      <nav class="navbar navbar fixed-top navbar-expand-lg navbar-light bg-white z-depth-1 py-0 " style="border-bottom:3px solid #3F729B ;">
 
-      <nav class="navbar navbar fixed-top navbar-expand-lg navbar-light bg-white z-depth-1 " style="border-bottom:3px solid #3F729B">
-        <!-- <a class="px-3 " id="menu-toggle"><i class="fas fa-bars "></i></a> -->
-        <h5 class="pt-2 pl-4">ELECTRONIC CIVIL REGISTRY INFORMATION SYSTEM</h5>
-        <div class = "">
+       <div class = "mt-2">
+        <p class="electext px-0">ELECTRONIC CIVIL REGISTRY INFORMATION SYSTEM</p>
+      </div>
 
-        <button class="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <button class="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon" style="color:teal"></span>
         </button>
 
-        </div>
-
-        <div class="collapse navbar-collapse " id="navbarSupportedContent" >
-          <ul class="navbar-nav ml-auto mt-2 mt-lg-0" >
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+          <ul class="navbar-nav ml-auto mt-2  mt-lg-0" >
             <div class ="px-2">
 
             <li class="nav-item dropdown ">
@@ -150,7 +144,7 @@ background-color: #EFEDDF;
                 <a class="nav-link dropdown-toggle bg-title" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="far fa-bell pb-2" style="color:teal"></i>
                 </a>
-              <!--  -->
+      
                 <div class="dropdown-menu dropdown-menu-right pb-0 "  id="notif" aria-labelledby="navbarDropdown" style="background-color:tomato;">
                   <h6 class="dropdown-header mt-0 pb-3 white-text" style="background-color:tomato; width:230px;">Notification   <i class="fas fa-bell float-right px-0"></i></h6>
                   <div class="" style="height: 300px; overflow-y:scroll" id="notif_load">
@@ -174,6 +168,8 @@ background-color: #EFEDDF;
             </li>
           </ul>
         </div>
-      </nav>
+
+  </nav>
+
 <div class = "m-5"></div>
     <!-- /#page-content-wrapper -->

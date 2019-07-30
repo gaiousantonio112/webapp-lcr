@@ -27,7 +27,32 @@ html {
 .text-title
 {
   color:white;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+.electext
+{
+    font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+
+}
+.title-text
+{
+    font-size: calc(22px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+    vertical-align: middle;
+    line-height: 52px;
+}
+.title-Div
+{
+  border-radius: 3px;
+  background-color: #26a69a;
+  height: 52px;
+}
+.title-Divimg
+{
+  height:52px;
+  padding: 7;
   float:right;
+  vertical-align: middle;
+  line-height: 52px;
 }
 
 .card-icon
@@ -41,7 +66,6 @@ html {
 }
 .text-dashboard
 {
-
   font-weight:lighter;
   margin-bottom:10px;
 }

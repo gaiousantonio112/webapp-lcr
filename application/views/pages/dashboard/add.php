@@ -1,11 +1,9 @@
-<div class="container-fluid pt-5 px-5 "  >
-	<div class=" container text-right " >
-		<!--  -->
-		<div class="teal lighten-1 z-depth-1" style="height:52px;border-radius:3px">
-			<span><img src="<?php echo base_url() .'/assets/svg/add2(samp).svg' ?>" height="45px" alt="" style="float:right" class="px-2 pt-2"></span>
-			<p style="color:white; float:right; padding-right: 5px;font-size: 30px;" class="pt-1">Add</p>
-		</div>
-		</div>
+<div class="container-fluid pt-4 px-5 "  >
+
+			<div class="z-depth-1 title-Div">
+				<span><img class = "title-Divimg" src="<?php echo base_url() .'/assets/svg/add2(samp).svg' ?>" ></span>
+				<h2 class="white-text float-right title-text"> Add </h2>
+			</div>
 
 	<div class="container p-4" >
 		<div class="card mb-0">

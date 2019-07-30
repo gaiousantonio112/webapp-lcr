@@ -1,16 +1,14 @@
-<div class="container-fluid p-4 px-5" >
-	<div class=" container text-right " >
-		<div class="teal lighten-1 z-depth-1" style="height:52px; border-radius:3px">
-			<span><img src="<?php echo base_url() .'/assets/svg/print2(samp).svg' ?>" height="50px" alt="" style="float:right" class="px-2 pt-2"></span>
-			<p style="color:white; float:right; padding-right: 15px;font-size: 30px;" class="pt-2">Print</p>
+<div class="container-fluid p-4 px-5" width="500px" >
+
+		<div class="z-depth-1 title-Div">
+			<span><img class = "title-Divimg" src="<?php echo base_url() .'/assets/svg/print2(samp).svg' ?>" ></span>
+			<h2 class="white-text float-right title-text"> Print </h2>
 		</div>
-	</div>
-	<div class="container p-4 " >
-		<div class="card" >
+
+		<div class="card mt-3" >
 			<div class="card-body">
-				<div class="row">
-					<div class="container">
-						<table id="printable" class="table table-responsive table-sm table-striped table-bordered" cellspacing="0" width="100%">
+
+						<table id="printable" class="table table-responsive table-sm table-striped table-bordered w-100" cellspacing="0" >
 							<thead>
 								<tr>
 									<th class="th-sm">Reference Number
@@ -34,11 +32,10 @@
 								</tr>
 							</thead>
 							<tbody>
+
 							</tbody>
 						</table>
 
-					</div>
-				</div>
 			</div>
 		</div>
 
@@ -70,5 +67,4 @@
 			</div>
 		</div>
 
-	</div>
 	</div>

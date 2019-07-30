@@ -128,11 +128,10 @@ html {
     	<div class=" container text-right">
   <!-- <div class="loading">Loading&#8230;</div> -->
 
-      <div class ="teal lighten-1 z-depth-1" style="height:52px;border-radius:3px">
-          <span><img src="<?php echo base_url() .'/assets/svg/search2(samp).svg' ?>" height="40px" alt="" style="float:right" class="px-1 pt-2"></span>
-          <p style = "color:white; float:right; padding-right: 10px;font-size: 30px;" class="pt-1" >Search and Payment</p>
-      </div>
-
+      <div class="z-depth-1 title-Div">
+  			<span><img class = "title-Divimg" src="<?php echo base_url() .'/assets/svg/search2(samp).svg' ?>" ></span>
+  			<h2 class="white-text float-right title-text"> Search and Payment </h2>
+  		</div>
   </div>
   <div class="container d-flex" >
   	<div class="container-fluid pt-4">
@@ -183,9 +182,8 @@ html {
 
 <div class="card " >
     <div class="card-body">
-      <div class="row">
-  <div class="container " >
-  	<table id="tb_mainlcr" class="table table-sm table-striped table-bordered" cellspacing="0" width="100%">
+
+  	<table id="tb_mainlcr" class="table table-responsive table-striped table-bordered pr-3 pl-4"align="center" cellspacing="0" width="100%">
 
   	  <thead>
   	    <tr>
@@ -218,12 +216,13 @@ html {
   	      </th>
   	    </tr>
   	  </tfoot> -->
-  	</table>
-  </div>
 
-          </div>
-        </div>
-      </div>
+  	</table>
+
+  </div>
+</div>
+
+
 
   <div class="container py-4 px-0" id="inputpage" >
 
@@ -681,7 +680,7 @@ html {
   						<input type="text" name="updatemarr[annexh]" id="updatemarr_annexh" class="form-control">
   						<label for="updatemarr_annexh">Annex</label>
   					</div>
-            
+
   				</div>
   			</div>
   		</div>
