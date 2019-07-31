@@ -92,7 +92,9 @@
         </th>
         <th class="th-sm">Full Name
         </th>
-        <th class="th-sm" id="whatType">Address
+        <th class="th-sm" >Address
+        </th>
+        <th class="th-sm" >Type
         </th>
         <th class="th-sm" width='25%'>Action
         </th>
