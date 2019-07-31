@@ -1,6 +1,4 @@
-
-
-<div class="container pt-4">
+<div class="container-fluid pt-4 px-5">
 
     <div class="z-depth-1 title-Div">
       <span><img class = "title-Divimg" src="<?php echo base_url() .'/assets/svg/usermanager2(samp).svg' ?>" ></span>
@@ -9,10 +7,11 @@
 
 <form id="adduser">
 
-
 <div class="container pt-4">
+
 	<div class="card">
-		<div class="card-header bg-primary">
+		<div class="card-header bg-white">
+      <h4 class ="">Register User</h4>
     </div>
     <div class="card-body">
       <div class="row">
@@ -60,20 +59,30 @@
           </select>
         </div>
       </div>
-      <div class="col-12 text-center">
-        <button type="submit" class="btn btn-sm btn-success" name="button">Submit</button>
-    <button type="reset" class="btn btn-sm btn-danger" name="button">Clear All</button>
+
+    </div>
+    <div class="card-footer">
+    <div class="col-12 text-center">
+      <!-- <button type="submit" class="btn btn-sm btn-success" name="button">Submit</button>
+      <button type="reset" class="btn btn-sm btn-danger" name="button">Clear All</button> -->
+
+      <button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0" type="submit" id="">
+        <img src="<?php echo base_url() . '/assets/svg/submmit button (ecris).svg' ?>" style="height: 15px;"> Submit</button>
+      <button class="btn btn-lg btn-outline-danger m-0 px-3 py-2 z-depth-0" type="reset" id="">
+        <img src="<?php echo base_url() . '/assets/svg/clear all button (ecris).svg' ?>" style="height: 15px;"> Clear All</button>
       </div>
 
+    </div>
     </div>
   </div>
 </div>
 </form>
-<div class="container pt-3">
+
+<div class ="container px-2">
 <div class="card">
 <div class="card-body">
 
-  <table id="tbl_users" class="table table-sm table-striped table-bordered" cellspacing="0" width="100%">
+  <table id="tbl_users" class="table table-responsive table-sm table-striped table-bordered" cellspacing="0" width="100%">
 
     <thead>
       <tr>
@@ -85,7 +94,7 @@
         </th>
         <th class="th-sm" id="whatType">Address
         </th>
-        <th class="th-sm ">Action
+        <th class="th-sm" width='25%'>Action
         </th>
       </tr>
     </thead>
@@ -95,11 +104,10 @@
 
   </table>
 
+</div>
+</div>
+</div>
 
-
-</div>
-</div>
-</div>
 
 
 

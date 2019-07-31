@@ -36,9 +36,10 @@ html {
 }
 .title-text
 {
-    font-size: calc(22px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(15px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
     vertical-align: middle;
     line-height: 52px;
+    float: right;
 }
 .title-Div
 {
@@ -48,8 +49,15 @@ html {
 }
 .title-Divimg
 {
-  height:52px;
+  height: calc(42px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   padding: 7;
+  float:right;
+  vertical-align: middle;
+  line-height: 52px;
+}
+.card-Divimg
+{
+  height: calc(42px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   float:right;
   vertical-align: middle;
   line-height: 52px;
@@ -86,4 +94,7 @@ html {
 .progress-sm
 {
   margin-top:20px;
+}
+table{
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }

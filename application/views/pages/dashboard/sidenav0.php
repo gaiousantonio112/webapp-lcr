@@ -45,6 +45,8 @@ background-color: #EFEDDF;
 .curr-name
 {
   overflow-wrap: break-word;
+      /* font-size: calc(12px + (26 - 14) * ((100vw - 300px) / (1600 - 300))); */
+    margin:0;
 }
 
 </style>
@@ -84,7 +86,7 @@ background-color: #EFEDDF;
      </div>
 
       <div class = "col-9 pt-1 pb-0 px-2 ml-2">
-      <p class=" bg-title white-text curr-name" id="curr_name"></p>
+      <p class="white-text curr-name" id="curr_name"></p>
      </div>
    </div>
 </div>
@@ -144,7 +146,7 @@ background-color: #EFEDDF;
                 <a class="nav-link dropdown-toggle bg-title" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="far fa-bell pb-2" style="color:teal"></i>
                 </a>
-      
+
                 <div class="dropdown-menu dropdown-menu-right pb-0 "  id="notif" aria-labelledby="navbarDropdown" style="background-color:tomato;">
                   <h6 class="dropdown-header mt-0 pb-3 white-text" style="background-color:tomato; width:230px;">Notification   <i class="fas fa-bell float-right px-0"></i></h6>
                   <div class="" style="height: 300px; overflow-y:scroll" id="notif_load">

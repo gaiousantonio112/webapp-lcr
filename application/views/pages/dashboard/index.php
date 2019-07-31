@@ -1,12 +1,12 @@
 
-<div class="container-fluid container pt-4 px-5 z-index-1 ">
+<div class="container-fluid pt-4 px-5 z-index-1 ">
 
 	<div class="z-depth-1 title-Div">
-		<span><img class = "title-Divimg" src="<?php echo base_url() .'/assets/svg/dashboard2(samp).svg' ?>" ></span>
-		<h2 class="white-text float-right title-text"> Dashboard </h2>
+					<span><img class = "title-Divimg img-fluid" src="<?php echo base_url() .'/assets/svg/dashboard2(samp).svg' ?>" ></span>
+					<h2 class="white-text  title-text"> Dashboard </h2>
 	</div>
 
-<div class = "container py-4">
+<div class = "container py-4 pt-5">
 	<div class = "row">
 
 		<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 ">
@@ -101,6 +101,8 @@
 </div>
 </div>
 
+<!-- //online request -->
+<!--
 <div class = "container">
 	<div class = "row">
 
@@ -127,7 +129,7 @@
 	</div>
 
 </div>
-</div>
+</div> -->
 
 
 	<div class="container pb-5 mt-5">

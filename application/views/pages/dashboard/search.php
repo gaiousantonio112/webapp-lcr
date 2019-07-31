@@ -123,7 +123,7 @@ html {
 </style>
 
 <div id="loadit">
-  <div class="container-fluid pt-4 px-3 ">
+  <div class="container-fluid pt-4 px-3">
 
     	<div class=" container text-right">
   <!-- <div class="loading">Loading&#8230;</div> -->
@@ -180,10 +180,11 @@ html {
 </div>
 </div>
 
-<div class="card " >
+<div class ="container ">
+<div class="card px-2" >
     <div class="card-body">
 
-  	<table id="tb_mainlcr" class="table table-responsive table-striped table-bordered pr-3 pl-4"align="center" cellspacing="0" width="100%">
+  	<table id="tb_mainlcr" class="table table-responsive table-sm table-striped table-bordered " cellspacing="0" width="100%">
 
   	  <thead>
   	    <tr>
@@ -193,7 +194,7 @@ html {
   	      </th>
   	      <th class="th-sm" id="whatType">Date of Birth
   	      </th>
-  	      <th class="th-sm">Name
+  	      <th class="th-sm" width="47%">Name
   	      </th>
   	      <th class="th-sm">Action
   	      </th>
@@ -220,6 +221,7 @@ html {
   	</table>
 
   </div>
+  </div>
 </div>
 
 
@@ -232,21 +234,21 @@ html {
   	      <div class="row">
 
 
-  		<div class="col-3">
+  		<div class="col-lg-3">
   			<div class="md-form">
   				<input type="text" id="refno" class="form-control" value="---" readonly>
   				<label for="refno">Reference No</label>
   			</div>
   		</div>
 
-  		<div class="col-4" >
+  		<div class="col-lg-4" >
   			<div class="md-form" >
   				<input type="text" id="name" class="form-control" value="---" readonly>
   				<label id="name_husband" for="name">Name</label>
   			</div>
   		</div>
 
-  		<div class="col-2">
+  		<div class="col-lg-3">
   			<div class="dates">
   				<div class="md-form">
   				<input type="date" id="date" class="form-control" readonly>
@@ -254,8 +256,8 @@ html {
   			</div>
   	</div>	</div>
 
-  		<div class=" col-3 text-center p-4">
-  			<button id="previewBtn" class="btn btn-lg btn-outline-default m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2" data-toggle="modal" data-target="#viewdocu"><img src="<?php echo base_url() . '/assets/svg/preview-button-ecris.svg' ?>" style="height: 20px;"alt=""> Preview</button>
+  		<div class=" col-lg-2 col-sm-12 col-xs-12 text-center p-4">
+  			<button id="previewBtn" class="btn btn-lg btn-outline-default m-0 px-2 py-2 z-depth-0 waves-effect" type="button" id="button-addon2" data-toggle="modal" data-target="#viewdocu"><img src="<?php echo base_url() . '/assets/svg/preview-button-ecris.svg' ?>" style="height: 18px;"alt=""> Preview</button>
   		</div>
 
   	</div>
@@ -264,13 +266,13 @@ html {
 
   <div class="container" id="birthdeath">
     	<div class="row">
-          <div class="col-3" >
+          <div class="col-lg-3" >
             <div class="md-form" hidden>
               <input type="text" class="form-control" value="---">
 
             </div>
           </div>
-         <div class="col-4">
+         <div class="col-lg-4 col-sm-12">
             <div class="md-form" >
               <input type="text" id="name2" class="form-control" value="---" readonly>
               <label id="name_wife" for="name2">Name2</label>
@@ -282,7 +284,7 @@ html {
   <form id="printReciept">
   	<div class="container">
         <div class="row">
-  				<div class="col-6 pl-5">
+  				<div class="col-lg-6 col-sm-12 pl-5">
   									<div class="">
   										<div class="md-form">
                         <input type="hidden" name="reciept[data_id]" id="data_id">
@@ -330,13 +332,13 @@ html {
           						<input class="form-check-input" type="radio" name="printOption" id="range"  onclick="show('range')" value="range">
           						<label class="form-check-label" for="range">Range</label>
           					</div> -->
-        						<div class="col">
+        						<div class="col-lg-12 col-sm-12">
         							<div class="md-form">
         								<input type="text" id="pageno" value = "1-2" name="reciept[pageno]" class="form-control" readonly>
         								<label for="pageno">Page No.</label>
         							</div>
         						</div>
-        						<div class="col">
+        						<div class="col-lg-12 col-sm-12">
         							<div class="md-form">
         								<input type="number" id="nocopy" name="reciept[nocopy]" class="form-control" value="1">
         								<label for="nocopy">No Copies.</label>
@@ -344,7 +346,7 @@ html {
         						</div>
   					</div>
 
-          	<div class="col-6 pb-5 pr-5">
+          	<div class="col-lg-6 col-sm-12 pb-5 pr-5">
           		<div class="">
           			<div class="md-form">
           				<input type="number" id="totalpay" name="reciept[totalpay]" class="form-control" readonly value="50">
@@ -367,7 +369,7 @@ html {
           						</div>
                     </div>
                           </div>        </div>        </div>        </div>        </div>
-                    <div class="container col-12 px-5">
+                    <div class="container col-lg-12 col-sm-12 px-5">
                       <div class="md-form">
                         <input type="text" id="remark" name="reciept[remark]" class="form-control" >
                         <label for="remark">Remarks</label>

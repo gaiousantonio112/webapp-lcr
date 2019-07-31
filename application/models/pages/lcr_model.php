@@ -536,7 +536,6 @@ date_default_timezone_set('Asia/Manila');
         'or_num' => $or_num,
       ])->get('lcr_history');
 
-
       return ($qry->row(0)->counts == 0) ? array('response' => true) : array('response' => false);
 
     }
@@ -732,8 +731,8 @@ public function showuserstable()
   'user_level' =>$r->user_level,
   'btn'=>'
   <div class="row">
-  <button type="button" onclick="edituser('.$r->id.')" class="btn btn-sm btn-info ml-3" name="button">Edit</button>
-  <button type="button" onclick="deleteuser('.$r->id.')" class="btn btn-sm btn-danger mr-3" name="button">Delete</button>
+  <button type="button" onclick="edituser('.$r->id.')" class="btn btn-md btn-outline-primary ml-3 mr-2 px-4 py-2" name="button">Edit</button>
+  <button type="button" onclick="deleteuser('.$r->id.')" class="btn btn-md btn-outline-danger ml-2 mr-3 px-4 py-2" name="button">Delete</button>
   </div>
 
   '
