@@ -21,6 +21,7 @@ date_default_timezone_set('Asia/Manila');
           foreach ($query->result() as $r) {
             $this->session->set_userdata('user_id',$r->id);
             $this->session->set_userdata('full_name',$r->firstname.' '.$r->middlename.' '.$r->lastname);
+            $this->session->set_userdata('user_level',$r->user_level);
             array_push($dataArray,$r);
           }
           return $dataArray;
