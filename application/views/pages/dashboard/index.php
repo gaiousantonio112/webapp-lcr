@@ -2,7 +2,7 @@
 <div class="container-fluid pt-4 px-5 z-index-1 ">
 
 	<div class="z-depth-1 title-Div">
-					<span><img class = "title-Divimg img-fluid" src="<?php echo base_url() .'/assets/svg/dashboard2(samp).svg' ?>" ></span>
+					<span><img class = "title-Divimg img-fluid" src="<?php echo base_url() .'/assets/svg/dashboard2(ecris).svg' ?>" ></span>
 					<h2 class="white-text  title-text"> Dashboard </h2>
 	</div>
 
@@ -16,7 +16,7 @@
 					<div class = "row">
 					<div class = "col-5 p-0">
 						<div class="card card-icon warning-color-dark">
-									<img src="<?php echo base_url() .'/assets/svg/service provided2(samp).svg' ?>" height="45px" alt="">
+									<img src="<?php echo base_url() .'/assets/svg/service provided2(ecris).svg' ?>" height="45px" alt="">
 						</div>
 					</div>
 						<div class = "col-7 ">
@@ -37,7 +37,7 @@
 					<div class = "row">
 					<div class = "col-5 p-0">
 						<div class="card card-icon info-color-dark">
-									<img src="<?php echo base_url() .'/assets/svg/earnings 2(samp).svg' ?>" height="45px" alt="">
+									<img src="<?php echo base_url() .'/assets/svg/earnings 2(ecris).svg' ?>" height="45px" alt="">
 						</div>
 					</div>
 						<div class = "col-7 ">
@@ -58,7 +58,7 @@
 								<div class = "row">
 								<div class = "col-5 p-0">
 									<div class="card card-icon cyan">
-												<img src="<?php echo base_url() .'/assets/svg/task2(samp).svg' ?>" height="45px" alt="">
+												<img src="<?php echo base_url() .'/assets/svg/task2(ecris).svg' ?>" height="45px" alt="">
 									</div>
 								</div>
 									<div class = "col-7 ">
@@ -84,7 +84,7 @@
 					<div class = "row">
 					<div class = "col-5 p-0">
 						<div class="card card-icon default-color">
-									<img src="<?php echo base_url() .'/assets/svg/pending request2(samp).svg' ?>" height="45px" alt="">
+									<img src="<?php echo base_url() .'/assets/svg/pending request2(ecris).svg' ?>" height="45px" alt="">
 						</div>
 					</div>
 						<div class = "col-7 ">
@@ -113,7 +113,7 @@
 				<div class = "row">
 				<div class = "col-5 p-0">
 					<div class="card card-icon green">
-								<img src="<?php echo base_url() .'/assets/svg/pending request2(samp).svg' ?>" height="45px" alt="">
+								<img src="<?php echo base_url() .'/assets/svg/pending request2(ecris).svg' ?>" height="45px" alt="">
 					</div>
 				</div>
 					<div class = "col-7 ">

@@ -1,7 +1,7 @@
 <div class="container-fluid pt-4 px-5 "  >
 
 			<div class="z-depth-1 title-Div">
-				<span><img class = "title-Divimg" src="<?php echo base_url() .'/assets/svg/add2(samp).svg' ?>" ></span>
+				<span><img class = "title-Divimg" src="<?php echo base_url() .'/assets/svg/add2(ecris).svg' ?>" ></span>
 				<h2 class="white-text float-right title-text"> Add </h2>
 			</div>
 

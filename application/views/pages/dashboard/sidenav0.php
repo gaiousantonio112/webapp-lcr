@@ -81,7 +81,7 @@ background-color: #EFEDDF;
   <div class = "row">
     <div class = "col-2 ml-2">
     	 <i>
-         <img src="<?php echo base_url() .'/assets/svg/user(samp).svg' ?>" height="25px" class = "img-user" alt="">
+         <img src="<?php echo base_url() .'/assets/svg/user(ecris).svg' ?>" height="25px" class = "img-user" alt="">
        </i>
      </div>
 
@@ -95,7 +95,7 @@ background-color: #EFEDDF;
 
       <li >
 			<i>
-          <img src="<?php echo base_url() .'/assets/svg/time(samp).svg' ?>" height="25px" class = "ml-2" alt="">
+          <img src="<?php echo base_url() .'/assets/svg/time(ecris).svg' ?>" height="25px" class = "ml-2" alt="">
       </i><span id="current_time" class="bg-title text-center white-text ml-3"></span>
 			</div>
       </li>
@@ -103,22 +103,22 @@ background-color: #EFEDDF;
 
 <ul class="list-group list-group-flush pt-2 ">
   <li class="text-left list-group-item list-group-item-action pl-2"  style="border:0px solid">
-        <a href="<?php echo base_url() . 'pages/dash/index'  ?>" ><img src="<?php echo base_url() .'/assets/svg/dashboard(samp).svg' ?>" height="25px" alt=""><span class="nav-text">Dashboard </span></a>
+        <a href="<?php echo base_url() . 'pages/dash/index'  ?>" ><img src="<?php echo base_url() .'/assets/svg/dashboard(ecris).svg' ?>" height="25px" alt=""><span class="nav-text">Dashboard </span></a>
   </li>
   <li class="text-left list-group-item list-group-item-action pl-2" style="border:0px solid">
-        <a href="<?php echo base_url() . 'pages/dash/search'  ?>" ><img src="<?php echo base_url() .'/assets/svg/search(samp).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text"> Search and Payment</span></a>
+        <a href="<?php echo base_url() . 'pages/dash/search'  ?>" ><img src="<?php echo base_url() .'/assets/svg/search(ecris).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text"> Search and Payment</span></a>
   </li>
   <li class="text-left list-group-item list-group-item-action pl-2" style="border:0px solid">
-        <a href="<?php echo base_url() . 'pages/dash/add'  ?>" ><img src="<?php echo base_url() .'/assets/svg/add(samp).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text"> Add</span></a>
+        <a href="<?php echo base_url() . 'pages/dash/add'  ?>" ><img src="<?php echo base_url() .'/assets/svg/add(ecris).svg' ?>" height="28px" class="mr-3" alt=""><span class="nav-text"> Add</span></a>
   </li>
   <li class="text-left list-group-item list-group-item-action pl-2" style="border:0px solid">
-      	<a href="<?php echo base_url() . 'pages/dash/formgen'  ?>" ><img src="<?php echo base_url() .'/assets/svg/formgen(samp).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text"> LCR Form Generator</span></a>
+      	<a href="<?php echo base_url() . 'pages/dash/formgen'  ?>" ><img src="<?php echo base_url() .'/assets/svg/formgen(ecris).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text"> LCR Form Generator</span></a>
   </li>
   <li class="text-left list-group-item list-group-item-action pl-2" style="border:0px solid">
-        <a href="<?php echo base_url() . 'pages/dash/print'  ?>"><img src="<?php echo base_url() .'/assets/svg/print(samp).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text"> Print</span></a>
+        <a href="<?php echo base_url() . 'pages/dash/print'  ?>"><img src="<?php echo base_url() .'/assets/svg/print(ecris).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text"> Print</span></a>
   </li>
   <li class="text-left list-group-item list-group-item-action pl-2" style="border:0px solid">
-        <a href="<?php echo base_url() . 'pages/dash/users'  ?>"><img src="<?php echo base_url() .'/assets/svg/usermanager(samp).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text"> Users Manager</span></a>
+        <a href="<?php echo base_url() . 'pages/dash/users'  ?>"><img src="<?php echo base_url() .'/assets/svg/usermanager(ecris).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text"> Users Manager</span></a>
   </li>
 </ul>
       <!-- </div> -->

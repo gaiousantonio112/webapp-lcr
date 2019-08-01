@@ -1,7 +1,7 @@
 <div class="container-fluid p-4 px-5" width="500px" >
 
 		<div class="z-depth-1 title-Div">
-			<span><img class = "title-Divimg" src="<?php echo base_url() .'/assets/svg/print2(samp).svg' ?>" ></span>
+			<span><img class = "title-Divimg" src="<?php echo base_url() .'/assets/svg/print2(ecris).svg' ?>" ></span>
 			<h2 class="white-text float-right title-text"> Print </h2>
 		</div>
 

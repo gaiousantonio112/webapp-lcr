@@ -129,7 +129,7 @@ html {
   <!-- <div class="loading">Loading&#8230;</div> -->
 
       <div class="z-depth-1 title-Div">
-  			<span><img class = "title-Divimg" src="<?php echo base_url() .'/assets/svg/search2(samp).svg' ?>" ></span>
+  			<span><img class = "title-Divimg" src="<?php echo base_url() .'/assets/svg/search2(ecris).svg' ?>" ></span>
   			<h2 class="white-text float-right title-text"> Search and Payment </h2>
   		</div>
   </div>
@@ -403,7 +403,7 @@ html {
 		<div class="modal-dialog modal-lg" role="document">
 			<div class="modal-content">
         <div class="modal-header p-2" style="background-color: tomato">
-          <span><img src="<?php echo base_url() .'/assets/svg/live-view2(samp).svg' ?>" height="45px" alt="" style="float:right" class="px-2 py-1"></span>
+          <span><img src="<?php echo base_url() .'/assets/svg/live-view2(ecris).svg' ?>" height="45px" alt="" style="float:right" class="px-2 py-1"></span>
           <h4 class="modal-title white-text w-100 font-weight-bold py-1" id="myModalLabel"> Live View</h4>
 
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -523,7 +523,7 @@ html {
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header p-2" style="background-color: tomato">
-        <span><img src=" <?php echo base_url().'/assets/svg/updatefinal(samp).svg  '?>" height="45px" alt="" style="float:right" class="px-2 py-1"></span>
+        <span><img src=" <?php echo base_url().'/assets/svg/updatefinal(ecris).svg  '?>" height="45px" alt="" style="float:right" class="px-2 py-1"></span>
         <h4 class="modal-title white-text w-100 font-weight-bold py-1" id="myModalLabel">Update</h4>
 
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
