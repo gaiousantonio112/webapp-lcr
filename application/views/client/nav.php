@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="../../../../assets/MBD/css/addons/datatables-select.min.css">
 <link rel="stylesheet" href="../../../../assets/datepicker/calendar/lib/bootstrap-datepicker.css">
 <link rel="stylesheet" href="../../../../assets/datepicker/calendar/lib/daterangepicker.css">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>/assets/css/pages.css" >
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>/assets/css/client.css" >
 <style media="screen">
 
 
@@ -60,68 +60,22 @@ background-color: #EFEDDF;
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>LCR
-
-  </title>
+  <title>LCR Client</title>
 </head>
 <body>
 
 <div class="d-flex wrapper" id="wrapper" >
-  <!-- Sidebar -->
-<nav class="bg-white rounded-bottom z-depth-1">
 
-  
-</nav>
-    <!-- /#sidebar-wrapper -->
-    <!-- Page Content -->
     <div id="page-content-wrapper">
       <nav class="navbar navbar fixed-top navbar-expand-lg navbar-light bg-white z-depth-1 py-0 " style="border-bottom:3px solid #3F729B ;">
+        <div class = "">
+          <img class = "" style="height:55px;" src="<?php echo base_url() .'/assets/img/spclogo.png' ?>">
+          <span class = "ml-2">San Pablo City</span>
+        </div>
 
-       <div class = "mt-2">
-        <p class="electext px-0">ELECTRONIC CIVIL REGISTRY INFORMATION SYSTEM</p>
-      </div>
-
-         <button class="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon" style="color:teal"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent" >
-          <ul class="navbar-nav ml-auto mt-2  mt-lg-0" >
-            <div class ="px-2">
-
-            <li class="nav-item dropdown ">
-                <span class="badge badge-default float-right px-2" id="notif_num">Loading...</span>
-                <a class="nav-link dropdown-toggle bg-title" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="far fa-bell pb-2" style="color:teal"></i>
-                </a>
-
-                <div class="dropdown-menu dropdown-menu-right pb-0 "  id="notif" aria-labelledby="navbarDropdown" style="background-color:tomato;">
-                  <h6 class="dropdown-header mt-0 pb-3 white-text" style="background-color:tomato; width:230px;">Notification   <i class="fas fa-bell float-right px-0"></i></h6>
-                  <div class="" style="height: 300px; overflow-y:scroll" id="notif_load">
-
-                  </div>
-                </div>
-            </li>
-          </div>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-                <i class="far fa-user-circle fa-lg pr-1" style="color:teal"></i>
-                <span id="curruser_name">
-
-                </span>
-              </a>
-
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-
-                <a class="dropdown-item" href="<?php echo base_uSrl() . 'pages/LCR'  ?>">Logout</a>
-              </div>
-            </li>
-          </ul>
+       <div class = "pr-3 ">
         </div>
 
   </nav>
 
 <div class = "m-5"></div>
-
-
-    <!-- /#page-content-wrapper -->
