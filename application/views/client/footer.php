@@ -1,3 +1,4 @@
+
 <script type="text/javascript">
   var userid = '<?php print($this->session->userdata('user_id')); ?>';
 </script>
@@ -14,3 +15,10 @@
 <script src="<?php print(base_url());?>/assets/js/dashboard/jquery.bootstrap-growl.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="<?php print(base_url().'/assets/js/global.js'); ?>">
 </script>
+<div class = "">
+  <div class = "">
+<div class ="bg-white text-center p-2 z-depth-2">
+<small class = "grey-text">  San Pablo City </small>
+</div>
+</div>
+</div>

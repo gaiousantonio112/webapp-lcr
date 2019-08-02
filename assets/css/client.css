@@ -35,7 +35,7 @@ html {
 @import url('https://fonts.googleapis.com/css?family=Rozha+One');
 @import url('https://fonts.googleapis.com/css?family=Raleway|Rozha+One');
 
-body {background-color: #a4a4a4;}
+body {background-color:;}
 .col4 {width: 33.33333333%; float: left; position: relative;}
 .transition {-webkit-transition: all .5s ease; -moz-transition: all .5s ease; -o-transition: all .5s ease;  transition: all .5s ease;}
 body .container {width: 70%; margin: 0 auto;}

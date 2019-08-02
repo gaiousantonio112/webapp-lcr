@@ -1,6 +1,6 @@
 <div class="container-fluid px-5 pt-3">
 
-    <div class="jumbotron p-5">
+    <div class="jumbotron mt-5">
   	   <div class="container-fluid " >
     	    <div class="row">
             <div class = "col-lg-12 text-center ">
@@ -36,5 +36,6 @@
 		    </div>
       </div>
 
+</div>
 
 </div>
