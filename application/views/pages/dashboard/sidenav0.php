@@ -118,16 +118,13 @@ background-color: #EFEDDF;
         <a href="<?php echo base_url() . 'pages/dash/print'  ?>"><img src="<?php echo base_url() .'/assets/svg/print(ecris).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text"> Print</span></a>
   </li>
 
-  <li class="text-left list-group-item list-group-item-action pl-2" style="border:0px solid">
-        <a href="<?php echo base_url() . 'pages/dash/users'  ?>"><img src="<?php echo base_url() .'/assets/svg/usermanager(ecris).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text"> Users Manager</span></a>
-  </li>
 
 
   <?php
   switch ($user_level) {
       case 'Admin':
 echo  '<li class="text-left list-group-item list-group-item-action pl-2" style="border:0px solid">'
-.'<a href='.base_url().'pages/dash/users>'.'<img src='.base_url().'/assets/svg/usermanager(samp).svg height="25px" class="mr-3" alt=""><span class="nav-text"> User Manager</span></a>';
+.'<a href='.base_url().'pages/dash/users>'.'<img src='.base_url().'/assets/svg/usermanager(ecris).svg height="25px" class="mr-3" alt=""><span class="nav-text"> User Manager</span></a>';
         break;
 
     default:
