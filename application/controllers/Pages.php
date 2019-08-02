@@ -26,12 +26,13 @@ class Pages extends CI_Controller {
     public function dash($page = null){
       // $page = $this->uri->segment(3);
       if ($this->is_login()) {
+      $data['user_level']  = $this->session->userdata('user_level');
         if ($page == null) {
           $this->index();
           // die('ohno');
         }else{
-          $this->load->view('pages/dashboard/sidenav0');
-          $this->load->view('pages/dashboard/'.$page);
+          $this->load->view('pages/dashboard/sidenav0', $data);
+          $this->load->view('pages/dashboard/'.$page );
           $this->load->view('pages/dashboard/dashfooter');
         }
       }else{
@@ -45,7 +46,7 @@ class Pages extends CI_Controller {
     if ($this->is_login()) {
       if ($page == null) {
         $this->index();
-     die('ohno');
+     // die('ohno');
       }else{
         $this->load->view('pages/admin/Slidenav');
         $this->load->view('pages/admin/'.$page);

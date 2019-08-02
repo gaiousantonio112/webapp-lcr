@@ -6,13 +6,13 @@ require_once(APPPATH.'/../assets/pdfmerge/TCPDF-master/tcpdf.php');
 require_once(APPPATH.'/../assets/pdfmerge/tcpdi/tcpdi.php');
 date_default_timezone_set('Asia/Manila');
 $date = date('m - d - Y');
+$file_pointer1 = '\\\\192.168.100.164\\lcr\\'.$_GET['type'].'\\'.str_replace(' ','',$_GET['ref']).'.pdf';
+// $file_pointer = APPPATH."..\\files\\".str_replace(' ','',$_GET['type']).'\\'.str_replace(' ','',$_GET['ref']).'.pdf';
 
-$file_pointer = '\\\\192.168.100.164\\lcr\\'.$_GET['type'].'\\'.$_GET['ref'].'.pdf';
-
-        if (file_exists($file_pointer)) {
+        if (file_exists($file_pointer1)) {
 
           $pdfv2 = new TCPDI(PDF_PAGE_ORIENTATION, 'mm', PDF_PAGE_FORMAT, true, 'UTF-8', false);
-          $pageCount = $pdfv2->setSourceFile('\\\\192.168.100.164\\lcr\\'.$_GET['type'].'\\'.$_GET['ref'].'.pdf');
+          $pageCount = $pdfv2->setSourceFile($file_pointer1);
 
         $pageNo = 1;
 

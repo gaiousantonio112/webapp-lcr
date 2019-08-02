@@ -724,6 +724,9 @@ $(document).ready(function(e){
                      "data" : "address"
                    },
                    {
+                       "data" : "user_level"
+                     },
+                   {
                      "data" : "btn"
                  }]
                });

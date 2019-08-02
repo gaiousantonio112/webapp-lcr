@@ -21,6 +21,7 @@ date_default_timezone_set('Asia/Manila');
           foreach ($query->result() as $r) {
             $this->session->set_userdata('user_id',$r->id);
             $this->session->set_userdata('full_name',$r->firstname.' '.$r->middlename.' '.$r->lastname);
+            $this->session->set_userdata('user_level',$r->user_level);
             array_push($dataArray,$r);
           }
           return $dataArray;
@@ -124,7 +125,7 @@ date_default_timezone_set('Asia/Manila');
         $start = intval($this->input->get("start"));
         $length = intval($this->input->get("length"));
 
-        $query = $this->db->query("SELECT * FROM lcr_bday LIMIT 0 , 20000");
+        $query = $this->db->query("SELECT * FROM lcr_bday LIMIT 0 , 10");
         $date = date('Y-m-d');
         $data = [];
         foreach ($query->result() as $r) {
@@ -213,7 +214,7 @@ date_default_timezone_set('Asia/Manila');
         $start = intval($this->input->get("start"));
         $length = intval($this->input->get("length"));
 
-        $query = $this->db->query("SELECT * FROM lcr_death LIMIT 0 , 20000");
+        $query = $this->db->query("SELECT * FROM lcr_death LIMIT 0 , 10");
         $date = date('Y-m-d');
         $data = [];
         foreach ($query->result() as $r) {
@@ -222,8 +223,8 @@ date_default_timezone_set('Asia/Manila');
             'refno' => $r->refno,
             'date_of_death' => $r->date_of_death,
             'full_name' => $r->First_name.' '.$r->Middle_name.' '.$r->Last_name,
-            'btn' => $r->btn='<button onclick="view('.$r->id.',\''.$r->refno.'\',\''.$r->First_name.' '.$r->Middle_name.' '.$r->Last_name.'\',\''.$date.'\',\'---\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-primary btn-sm"><!-- <img src=" '.base_url().'/assets/svg/open (ecris).svg  " style="height: 15px;"> --> Open</button>'
-                              .'<button  data-toggle="modal" data-target="#update" onclick="update('.$r->id.',\'lcr_death\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-info btn-sm"><!-- <img src=" '.base_url().'/assets/svg/updatefinal.svg  " style="height: 15px;"> --> Update</button>'
+            'btn' => $r->btn='<button onclick="view('.$r->id.',\''.$r->refno.'\',\''.$r->First_name.' '.$r->Middle_name.' '.$r->Last_name.'\',\''.$date.'\',\'---\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-primary btn-sm"> Open</button>'
+                              .'<button  data-toggle="modal" data-target="#update" onclick="update('.$r->id.',\'lcr_death\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-info btn-sm"> Update</button>'
           );
         }
         $result = array(
@@ -295,7 +296,7 @@ date_default_timezone_set('Asia/Manila');
         $start = intval($this->input->get("start"));
         $length = intval($this->input->get("length"));
 
-        $query = $this->db->query("SELECT * FROM lcr_marriage LIMIT 0 , 20000");
+        $query = $this->db->query("SELECT * FROM lcr_marriage LIMIT 0 , 10");
         $date = date('Y-m-d');
         $data = [];
         foreach ($query->result() as $r) {

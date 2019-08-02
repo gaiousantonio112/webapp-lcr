@@ -9,7 +9,7 @@ $date = date('Y/m/d');
 
 $pdfbirth= new TCPDI(PDF_PAGE_ORIENTATION, 'mm', PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
-    $pdfbirth->SetProtection(array('print', 'copy','modify'), "spc", 0, null);
+    // $pdfbirth->SetProtection(array('print', 'copy','modify'), "spc", 0, null);
 
   $pdfbirth->setSourceFile(APPPATH.'/..//assets/pdf/lcrform_birth.pdf');
   $pdfbirth->SetDisplayMode(100);
