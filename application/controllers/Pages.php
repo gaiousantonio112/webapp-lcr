@@ -128,4 +128,17 @@ class Pages extends CI_Controller {
 
     }
 
+
+
+    public function client($pages = '')
+    {
+
+      $this->load->view('client/nav');
+      $this->load->view('client/'.$page);
+      $this->load->view('client/footer');
+
+
+
+    }
+
 }
