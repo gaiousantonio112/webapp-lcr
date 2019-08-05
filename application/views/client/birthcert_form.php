@@ -1,5 +1,5 @@
 
-<div class = "container-fluid  p-5">
+<div class = "container-fluid  pt-5">
 
   <form id="employment">
     <div id="employment" class="container-fluid p-5">
@@ -150,15 +150,48 @@
   <div class="modal fade" id="emp_continue" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" style="max-width:950px" role="document">
       <div class="modal-content">
-        <div class="modal-header p-4" style="background-color: #3F729B">
-          <h4 class="modal-title white-text w-70 font-weight-bold py-2">
+        <div class="modal-header " style="background-color: #3F729B">
+          <h4 class="modal-title white-text w-70">
+            Who is requesting for this Birth Certificate?
         </h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true" class="white-text">&times;</span>
           </button>
         </div>
+        <div class = "modal-body">
+
+          <div class ="container">
+          <div class ="row">
+
+                      <input type="text" name="father_fname" id="father_fname" class="form-control">
+                      <label for="father_fname">First Name</label>
+
+                      <input type="text" name="father_mname" id="father_mname" class="form-control">
+                      <label for="father_mname">Middle Name</label>
+
+                      <input type="text" name="father_lname" id="father_lname" class="form-control">
+                      <label for="father_lname">Last Name</label>
+
+
+                    <select name="emp_birthright" class="custom-select" id="emp_birthright">
+                      <option selected value=" ">Requestor</option>
+                      <option value="Legitimate">Owner</option>
+                      <option value="Illegitimate">Spouse</option>
+                      <option value="Illegitimate">Mother</option>
+                      <option value="Illegitimate">Father</option>
+                      <option value="Illegitimate">Son</option>
+                      <option value="Illegitimate">Daughter</option>
+                      <option value="Illegitimate">Grandparent</option>
+                      <option value="Illegitimate">Grandchild</option>
+                      <option value="Illegitimate">None of the above</option>
+                    </select>
+                  </div>
+                </div>
+        </div>
+
         <div class="md-form mb-4">
           <div class="modal-footer m-0 P-0">
+              <button type="button" type="submit" class="btn btn-sm btn-success" data-dismiss="modal">Submit</button>
               <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal">Close</button>
           </div>
         </div>
