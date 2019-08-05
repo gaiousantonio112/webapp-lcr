@@ -17,6 +17,7 @@
 </script>
 
 <script type="text/javascript" src="<?php print(base_url().'/assets/js/dashboard/main.js'); ?>"></script>
+<script src="<?php print(base_url());?>/assets/js/client/clientform.js" charset="utf-8"></script>
 
 <script>
 

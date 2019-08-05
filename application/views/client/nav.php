@@ -11,7 +11,6 @@
 <link rel="stylesheet" href="../../../../assets/datepicker/calendar/lib/bootstrap-datepicker.css">
 <link rel="stylesheet" href="../../../../assets/datepicker/calendar/lib/daterangepicker.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>/assets/css/client.css" >
-
 <style media="screen">
 
 
