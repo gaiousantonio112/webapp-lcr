@@ -1,15 +1,16 @@
 <div class="container-fluid ">
 
   <div class = "container-fluid pt-3 mt-5 pt-5">
+    <h5 class = "mb-3">Purpose of getting Death Certificate</h5>
+
   <div class = "row">
 
-
     <div class = "col-lg-4">
-      <div class = "card p-4">
+      <div class = "card p-4 selection">
       <a href="<?php echo base_url() . 'pages/client/deathcert_form'  ?>" >
         <div class = "card-body">
           <div class="md-form">
-            <p>Claims/Benefits/Loans</p>
+            <p>CLAIMS/BENEFITS/LOANS</p>
         </div>
       </div>
     </div>
@@ -18,11 +19,11 @@
 
 
       <div class = "col-lg-4">
-        <div class = "card p-4">
+        <div class = "card p-4 selection">
           <a href="" data-toggle="modal" data-target="#others">
           <div class = "card-body">
           <div class="md-form">
-            <p >Others</p>
+            <p >OTHERS</p>
           </div>
         </div>
       </div>
@@ -31,11 +32,11 @@
 
 
     <div class = "col-lg-4">
-      <div class = "card p-4">
+      <div class = "card p-4 selection">
         <a href="" data-toggle="modal" data-target="#negative_intact">
         <div class = "card-body">
         <div class="md-form">
-          <p for="claims">No Record</p>
+          <p for="claims">NO RECORD</p>
         </div>
       </div>
     </div>

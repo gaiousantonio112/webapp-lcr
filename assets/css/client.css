@@ -29,8 +29,16 @@ html {
   color: #37474F;
 
 }
-
-
+.selection:hover
+{
+  background-color: #EDF2FC;
+  color: grey;
+  opacity: 0.9; -webkit-transform: scale(0.95); transform: scale(1.05);
+}
+.selection
+{
+  color: Black;
+}
 
 @import url('https://fonts.googleapis.com/css?family=Rozha+One');
 @import url('https://fonts.googleapis.com/css?family=Raleway|Rozha+One');

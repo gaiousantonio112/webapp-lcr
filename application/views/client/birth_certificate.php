@@ -4,12 +4,12 @@
   <h5 class = "mb-3">Purpose of getting Birth Certificate</h5>
 <div class = "row">
 
-    <div class = "col-lg-4 selection">
+    <div class = "col-lg-4 ">
     <a href="" data-toggle="modal" data-target="#pass_travel" >
-      <div class = "card  p-4">
-        <div class = "card-body pb-2">
+      <div class = "card  p-3 selection">
+        <div class = "card-body ">
           <div class="md-form ">
-            <p>Passport/Travel</p>
+            <p>PASSPORT/TRAVEL</p>
           </div>
         </div>
       </div>
@@ -19,10 +19,10 @@
 
 <div class = "col-lg-4">
   <a href="<?php echo base_url() . 'pages/client/birthcert_form'  ?>" >
-    <div class = "card p-3">
+    <div class = "card p-3 selection">
       <div class = "card-body">
         <div class="md-form">
-          <p>Employment</p>
+          <p>EMPLOYMENT</p>
         </div>
       </div>
     </div>
@@ -31,10 +31,10 @@
 
 <div class = "col-lg-4">
     <a href="<?php echo base_url() . 'pages/client/birthcert_form'  ?>" >
-      <div class = "card p-3">
+      <div class = "card p-3 selection">
         <div class = "card-body">
         <div class="md-form">
-          <p>School Requirements</p>
+          <p>SCHOOL REQUIREMENT</p>
         </div>
       </div>
     </div>
@@ -49,11 +49,11 @@
 
 
     <div class = "col-lg-4">
-      <div class = "card p-4">
+      <div class = "card p-3 selection">
       <a href="<?php echo base_url() . 'pages/client/birthcert_form'  ?>" >
         <div class = "card-body">
           <div class="md-form">
-            <p>Claims/Benefits/Loans</p>
+            <p>CLAIMS/BENEFITS/LOANS</p>
         </div>
       </div>
     </div>
@@ -62,11 +62,11 @@
 
 
       <div class = "col-lg-4">
-        <div class = "card p-4">
+        <div class = "card p-3 selection">
           <a href="" data-toggle="modal" data-target="#others">
           <div class = "card-body">
           <div class="md-form">
-            <p >Others</p>
+            <p >OTHERS</p>
           </div>
         </div>
       </div>
@@ -75,11 +75,11 @@
 
 
     <div class = "col-lg-4">
-      <div class = "card p-4">
+      <div class = "card p-3 selection">
         <a href="" data-toggle="modal" data-target="#negative_intact">
         <div class = "card-body">
         <div class="md-form">
-          <p for="claims">No Record</p>
+          <p for="claims">NO RECORD</p>
         </div>
       </div>
     </div>
@@ -169,17 +169,3 @@
 </div>
 
 </div>
-<!-- <div class = "col-lg-3 selection">
-  <div class = "card">
-    <div class = "card-body pb-2">
-      <h5 class = "">Passport/Travel</h5>
-      <div class="md-form ">
-        <input type="text" name="pass_travel" id="pass_travel" class="form-control">
-        <label for="pass_travel">Destination Country</label>
-        <button class="btn btn-sm btn-primary m-0 px-3  z-depth-0 waves-effect float-right" type="submit" id="button-addon2">
-          <img src="<?php echo base_url() . '/assets/svg/submmit button (ecris).svg' ?>" style="height: 15px;" alt=""> Submit</button>
-      </div>
-    </div>
-  </div>
-</div>
- -->
