@@ -37,9 +37,11 @@ html {
 
 body {background-color:;}
 .col4 {width: 33.33333333%; float: left; position: relative;}
+.col3 {width: 33.33333333%; float: left; position: relative;}
 .transition {-webkit-transition: all .5s ease; -moz-transition: all .5s ease; -o-transition: all .5s ease;  transition: all .5s ease;}
 body .container {width: 70%; margin: 0 auto;}
- .fx2 .item{margin: 10px 0;}
+.fx2 .item{margin: 10px 0;}
+.fx .item{margin: 10px 0;}
 
 /* active on focus for accessibility tab navigation */
 
@@ -51,6 +53,16 @@ body .container {width: 70%; margin: 0 auto;}
 .fx2 a:hover .item h4, .fx2 a:focus .item h4 {-webkit-filter: blur(0px); filter: blur(0px); opacity: 1;}
 .fx2 a .item p {font-family: 'Raleway', sans-serif; font-size: 17px; position: absolute; color:#000; text-transform: uppercase; letter-spacing: 2px; position: absolute; top:53%; left:0; right:0; margin:0 auto; text-align: center; opacity: 0;}
 .fx2 a:hover .item p, .fx2 a:focus .item p {opacity: 1;}
+
+
+.fx .item  {padding: 0 !important; display: block; max-width: 100%; height: 220px;}
+.fx a:hover .item, .fx2 a:focus .item  {opacity: 0.9; -webkit-transform: scale(0.95); transform: scale(0.95);}
+.fx h4, .fx2 p, .fx2 span {-webkit-transition: all .5s ease; -moz-transition: all .5s ease; -o-transition: all .5s ease;  transition: all .5s ease;}
+.fx a .item h4 {font-family: 'Raleway', sans-serif; font-size: 16px; position: absolute; color:#fff; text-transform: uppercase; letter-spacing: 2px; position: absolute; top:42%; left:0; right:0; margin:0 auto; text-align: center; -webkit-filter: blur(5px); filter: blur(5px); opacity: 0;}
+.fx a:hover .item h4, .fx2 a:focus .item h4 {-webkit-filter: blur(0px); filter: blur(0px); opacity: 1;}
+.fx a .item p {font-family: 'Raleway', sans-serif; font-size: 17px; position: absolute; color:#000; text-transform: uppercase; letter-spacing: 2px; position: absolute; top:53%; left:0; right:0; margin:0 auto; text-align: center; opacity: 0;}
+.fx a:hover .item p, .fx2 a:focus .item p {opacity: 1;}
+
 
 @media screen and (max-width: 991px) {
 .col4 {width: 50%;}

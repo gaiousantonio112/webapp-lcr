@@ -15,10 +15,23 @@
 <script src="<?php print(base_url());?>/assets/js/dashboard/jquery.bootstrap-growl.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="<?php print(base_url().'/assets/js/global.js'); ?>">
 </script>
-<div class = "">
-  <div class = "">
-<div class ="bg-white text-center p-2 z-depth-2">
-<small class = "grey-text">  San Pablo City </small>
-</div>
-</div>
-</div>
+
+<script type="text/javascript" src="<?php print(base_url().'/assets/js/dashboard/main.js'); ?>"></script>
+
+<script>
+
+			$(function() {
+        $('.yearpick #year').datepicker({
+          format: "yyyy",
+      viewMode: "years",
+      minViewMode: "years",
+      autoclose: true
+        });
+
+			$('.dates #empdate_birthday').datepicker({
+				'format': 'yyyy-mm-dd',
+				'autoclose': true
+			});
+  });
+
+  </script>

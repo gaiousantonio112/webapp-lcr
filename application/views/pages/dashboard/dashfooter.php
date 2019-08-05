@@ -70,6 +70,7 @@ $('.dataTables_length').addClass('bs-select');
 				'format': 'yyyy-mm-dd',
 				'autoclose': true
 			});
+
 		});
 
 
