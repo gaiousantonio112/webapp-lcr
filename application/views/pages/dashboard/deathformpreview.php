@@ -34,10 +34,10 @@ $date = date('Y-m-d');
   $pdfdeath->Text(75, 154, $place_death);
   $pdfdeath->Text(75, 162,$cause_death);
   $pdfdeath->Text(20, 180, "THIS CERTIFICATION is issued to ".$issued." upon his/her request.");
-  $pdfdeath->Text(149,197, "City_Civil_Registrar");
-  $pdfdeath->Text(78,224, "Processed By");
-  $pdfdeath->Text(44,235, "Amount Paid");
-  $pdfdeath->Text(44,241, "OR_#");
+  $pdfdeath->Text(149,197, "Victoria G. Maloles");
+  $pdfdeath->Text(78,224, "Jem Perilla Hila");
+  $pdfdeath->Text(44,235, "Php 50.00");
+  $pdfdeath->Text(44,241, " ");
   $pdfdeath->Text(44,247, $date);
 
 

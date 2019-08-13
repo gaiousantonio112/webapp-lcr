@@ -39,15 +39,25 @@ $pdfbirth= new TCPDI(PDF_PAGE_ORIENTATION, 'mm', PDF_PAGE_FORMAT, true, 'UTF-8',
   $pdfbirth->Text(75, 154, $fathername);
   $pdfbirth->Text(75, 162, $fathernationality);
   $pdfbirth->Text(75, 170, $marriagedate);
-  $pdfbirth->Text(75, 181, "place of marriage here");
+  $pdfbirth->Text(75, 181, " ");
   $pdfbirth->Text(20, 199, "THIS CERTIFICATION is issued to ".$issued." upon his/her request.");
-  $pdfbirth->Text(149,215, "City_Civil_Registrar");
-  $pdfbirth->Text(78,241, "Processed By");
+
+
+
+
+  $pdfbirth->Text(78,241, "Jem Perilla Hila");
   $pdfbirth->Text(44,252, "Php 50.00");
   $pdfbirth->Text(44,258, $bdayrefnum);
   $pdfbirth->Text(44,264, $date);
 
+  $pdfbirth->SetDrawColor(255,255,255);
+  $pdfbirth->SetFillColor(255,255,255);
+  $pdfbirth->Rect(120, 240, 85, 20, 'DF');
 
+  $pdfbirth->Rect(150, 220, 40, 20, 'DF');
+
+  $pdfbirth->Text(149,240, "Victoria G. Maloles");
+  $pdfbirth->Text(146,245, "CITY CIVIL REGISTAR");
   // $js = 'print(true);';
   // set javascript
   ob_end_clean();
