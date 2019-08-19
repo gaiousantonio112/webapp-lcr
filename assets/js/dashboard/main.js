@@ -1055,6 +1055,8 @@ function getUserCredentials() {
       full_name = jsUcfirst(res[0].firstname) + ' ' + jsUcfirst(res[0].middlename) + ' ' + jsUcfirst(res[0].lastname);
       $('.bday_encoder').val(full_name);
       $('#cs_encoder').val(full_name);
+      $('#cs_encoder1').val(full_name);
+      $('#verify_by').val(full_name);
       $('#curr_name').html('Name : '+full_name);
       $('#curruser_name').html(full_name);
     },
@@ -1163,3 +1165,274 @@ function notif(msg,type){
         allow_dismiss: true
       }, 1000);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////FORM GEN ONLICK FUNCTION
+
+function bdaygenreciept(){
+  console.log($('#birthdayform').serializeArray());
+
+
+  
+  $.ajax({
+    url : global.settings.url + '/Lcr_works/formgenBdayreciept',
+    type : 'POST',
+    // processData: false,
+    data : $('#birthdayform').serializeArray(),
+    // dataType : 'pdf',
+    // contentType : 'application/pdf',
+    // cache: false,
+    xhrFields: {
+          responseType: 'blob'
+      },
+    success : function(res){
+      $('#classification').val('birthdayform');
+    // console.log(res);
+    
+          // // var a = document.createElement('a');
+          var url = window.URL.createObjectURL(res);
+          // a.href = url;
+          $('#myframe').attr('src',url);
+          // a.download = 'myfile.pdf';
+          // document.body.append(a);
+          // a.click();
+          // a.remove();
+          // window.URL.revokeObjectURL(url);
+    },
+    error : function(xhr){
+     console.log(xhr.responseText);
+    }
+  });
+
+  }
+
+  function deathgenreciept(){
+    console.log($('#deathform').serializeArray());
+
+
+  
+    $.ajax({
+      url : global.settings.url + '/Lcr_works/deathformreciept',
+      type : 'POST',
+      // processData: false,
+      data : $('#deathform').serializeArray(),
+      // dataType : 'pdf',
+      // contentType : 'application/pdf',
+      // cache: false,
+      xhrFields: {
+            responseType: 'blob'
+        },
+      success : function(res){
+        $('#classification').val('deathform');
+     // console.log(res);
+      
+            // // var a = document.createElement('a');
+            var url = window.URL.createObjectURL(res);
+            // a.href = url;
+            $('#myframe').attr('src',url);
+            // a.download = 'myfile.pdf';
+            // document.body.append(a);
+            // a.click();
+            // a.remove();
+            // window.URL.revokeObjectURL(url);
+      },
+      error : function(xhr){
+       console.log(xhr.responseText);
+      }
+    });
+
+
+
+}
+
+function marrgenreciept(){
+
+
+console.log($('#marrform').serializeArray());
+
+
+  
+$.ajax({
+  url : global.settings.url + '/Lcr_works/marrformreciept',
+  type : 'POST',
+  // processData: false,
+  data : $('#marrform').serializeArray(),
+  
+  // dataType : 'pdf',
+  // contentType : 'application/pdf',
+  // cache: false,
+  xhrFields: {
+        responseType: 'blob'
+    },
+  success : function(res){
+    $('#classification').val('marrform');
+ // console.log(res);
+  
+        // // var a = document.createElement('a');
+        var url = window.URL.createObjectURL(res);
+        // a.href = url;
+        $('#myframe').attr('src',url);
+        // a.download = 'myfile.pdf';
+        // document.body.append(a);
+        // a.click();
+        // a.remove();
+        // window.URL.revokeObjectURL(url);
+  },
+  error : function(xhr){
+   console.log(xhr.responseText);
+  }
+});
+
+}
+
+function printrecipt(){
+  getUserCredentials();
+var val = $('#classification').val(); 
+console.log(val);
+switch (val) {
+case 'birthdayform':
+  var data =   $('#birthdayform').serializeArray();
+$('#ref_num').val(data[3].value);
+// $('#or_num').val(data[2]);
+$('#req_name').val(data[16].value);
+$('#name_history').val(data[5].value);
+$('#type').val(val);
+$('#date').val(Date('Y-m-d'));
+$('#page').val('1');
+$('#no_copy').val('1');
+// $('#verify_by').val($('#cs_encoder').val());
+$('#remarks').val(data[15].value);
+$('#print').val('default');
+//  $('#cs_encoder1').val($('#cs_encoder').val());
+$('#wife_names').val('No Wife');
+$('#or_amount').val('50');
+$('#pharse').val('formgenbday');
+$('#done').modal('show');
+
+
+
+
+  break;
+
+  case "deathform":
+      var data =   $('#deathform').serializeArray();
+  console.log(data);
+  $('#ref_num').val(data[3].value);
+// $('#or_num').val(data[2]);
+$('#req_name').val(data[16].value);
+$('#name_history').val(data[4].value);
+$('#type').val(val);
+$('#date').val(Date('Y-m-d'));
+$('#page').val('1');
+$('#no_copy').val('1');
+// $('#verify_by').val($('#cs_encoder').val());
+$('#remarks').val(data[15].value);
+$('#print').val('default');
+//  $('#cs_encoder1').val($('#cs_encoder').val());
+$('#wife_names').val('No Wife');
+$('#or_amount').val('50');
+$('#pharse').val('formgendeath');
+$('#done').modal('show');
+
+
+  
+  
+    break;
+
+    case "marrform":
+
+        
+        var data =   $('#marrform').serializeArray();
+        console.log(data);
+        $('#ref_num').val(data[3].value);
+      // $('#or_num').val(data[2]);
+      $('#req_name').val(data[16].value);
+      $('#name_history').val(data[4].value);
+      $('#type').val(val);
+      $('#date').val(Date('Y-m-d'));
+      $('#page').val('1');
+      $('#no_copy').val('1');
+      // $('#verify_by').val($('#cs_encoder').val());
+      $('#remarks').val(data[15].value);
+      $('#print').val('default');
+      //  $('#cs_encoder1').val($('#cs_encoder').val());
+      $('#wife_names').val('No Wife');
+      $('#or_amount').val('50');
+      $('#pharse').val('marrform');
+      $('#done').modal('show');
+      
+      
+        
+  
+      break;
+  
+default:
+  break;
+}
+
+
+
+
+}
+
+
+
+$('#savedataofprint').submit(function(e){
+  e.preventDefault();
+   type = $('#type').val();
+
+
+   data = [].concat($('#savedataofprint').serializeArray() , $('#' + type).serializeArray() )
+  console.log(data);
+
+  $.ajax({
+    url : global.settings.url + '/Lcr_works/savegenfromrecipthistory',
+    type : 'POST',
+    data : data,
+    dataType : 'json',
+    success : function(res){
+      notif('Success','success');
+      //console.log(res);
+      $('#done').modal('hide');
+      $('#'+type)[0].reset();
+    },
+    error : function(){
+      notif('Invalid O.R Number','danger');
+    }
+  });
+
+  
+  
+  });
+  
+
+
+
+
+///////////////////////////////////////////////////////////////

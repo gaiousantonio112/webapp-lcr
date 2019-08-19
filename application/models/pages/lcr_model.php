@@ -815,7 +815,39 @@ Update db_lcr.usercredentials set password = '" .$inputData['password']. "' wher
     }
 
 
+  ///////////////reciept save data
+    public function savegenfromrecipthistory($inputData , $json)
+    {
+      $data = json_encode($json);
+
+      $date = date('Y-m-d', time());
+      $data_add_history = array(
+        // 'id' => $inputData['id'],
+        'ref_num' => $inputData['ref_num'],
+        'or_num' => $inputData['or_num'],
+        'req_name' => $inputData['req_name'],
+        'name' => $inputData['name'],
+        'type' => $inputData['type'],
+        'date' => date('d/m/Y'),
+        'page' => $inputData['page'],
+        'no_copy' => $inputData['no_copy'],
+        'verify_by' => $inputData['verify_by'],
+        'dt_print' => $date,
+        'date_paid' => $date,
+        'st' => 'printing',
+        'remarks' =>  $data ,
+        'print' => $inputData['print'],
+        'cs_encoder' => $inputData['cs_encoder'],
+        'printed_by' => $inputData['printed_by'],
+        'or_amount' => $inputData['or_amount'],
+        'wife_name' => $inputData['wife_name'],
+        'time' => date('h:i:s a', time()),
+        'cash_rep' => 'not done'
+      );
+
+      // $this->db->trans_start();
+      $addhist = $this->db->insert('lcr_history',$data_add_history);
+    }
 
 
-  }
- ?>
+  } ?>
