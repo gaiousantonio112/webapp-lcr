@@ -59,6 +59,7 @@
 						<form id="update_print">
 							<input type="hidden" name="update[id]" id="lcr_history_iid" value="">
 							<input type="hidden" name="update[st]" value="done">
+							<input type="hidden" id="verify_by" name="update[printedby]" value="">
 							<button type="submit" class="btn btn-warning btn-sm">Yes</button>
 							<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">No</button>
 						</form>

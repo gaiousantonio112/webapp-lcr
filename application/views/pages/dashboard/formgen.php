@@ -76,7 +76,7 @@
                             </div>
                         </div>
                         <div class="md-form ">
-                            <input type="number" name="formgenbday[lcr_regno]" id="lcr_regno" class="form-control">
+                            <input  type="number" name="formgenbday[lcr_regno]" id="lcr_regno" class="form-control">
                             <label for="lcr_regno">LCR Registry Number</label>
                         </div>
                         <div class="dates">
@@ -138,21 +138,26 @@
                             <label for="birth_remarks">Remarks</label>
                         </div>
                         <div class="md-form mb-0 pb-0">
-                            <input type="text" class="form-control" name="formgenbday[payor]" id="payorbirth"></input>
+                            <input required type="text" class="form-control" name="formgenbday[payor]" id="payorbirth"></input>
                             <label for="payorbirth">Payor Name</label>
+                        </div>
+                        <div class="md-form mb-0 pb-0">
+                            <input required type="number" class="form-control" name="formgenbday[or]" id="payorbirth"></input>
+                            <label for="payorbirth">O.R Number</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12 text-center pb-5">
                         <input hidden type="text" name="formgenbday[amount]" value="50">
                     <input hidden type="text" name="formgenbday[type]" value ="Birthday Certificate">
-                            <button type="submit" class="btn btn-info" name="button" data-toggle="modal" data-target="#modalBirthday" id="birthday-btn">Preview</button>
+                            <button type="submit" class="btn btn-info" name="button"  id="birthday-btn">Preview</button>
                                 <button type="button" onclick="bdaygenreciept()"  class="btn btn-success" name="button" data-toggle="modal" data-target="#recipet" >Submit</button>
                             <button type="reset" class="btn btn-danger" name="button">Clear All</button>
                         </div>
                     </div>
+                    </form>
                 </div>
-        </form>
+
             <div class="m-5"></div>
     </div>
     <!-- end of birtday form -->
@@ -259,15 +264,19 @@
                         <label for="death_remarks">Remarks</label>
                     </div>
                     <div class="md-form mb-0 pb-0">
-                            <input type="text" class="form-control" name="formgendeath[payor]" id="payordeath"></input>
+                            <input required type="text" class="form-control" name="formgendeath[payor]" id="payordeath"></input>
                             <label for="payordeath">Payor Name</label>
+                        </div>
+                        <div class="md-form mb-0 pb-0">
+                            <input required type="number" class="form-control" name="formgendeath[or]" id="payorbirth"></input>
+                            <label for="payorbirth">O.R Number</label>
                         </div>
                 </div>
                 <div class="row">
                 <div class="col-12 text-center pb-5">
                         <input hidden type="text" name="formgendeath[amount]" value="50">
                     <input hidden type="text" name="formgendeath[type]" value ="Death Certificate">
-                            <button type="submit" class="btn btn-info" name="button" data-toggle="modal" data-target="#modalBirthday" id="birthday-btn">Preview</button>
+                            <button type="submit" class="btn btn-info" name="button" id="birthday-btn">Preview</button>
                                 <button type="button" onclick="deathgenreciept()"  class="btn btn-success" name="button" data-toggle="modal" data-target="#recipet" >Submit</button>
                             <button type="reset" class="btn btn-danger" name="button">Clear All</button>
                         </div>
@@ -418,15 +427,19 @@
                         <label for="marriage_remarks">Remarks</label>
                     </div>
                     <div class="md-form mb-0 pb-0">
-                            <input type="text" class="form-control" name="marrform[payor]" id="payormarr"></input>
+                            <input required type="text" class="form-control" name="marrform[payor]" id="payormarr"></input>
                             <label for="payormarr">Payor Name</label>
                         </div>
-                
+                        <div class="md-form mb-0 pb-0">
+                            <input required type="number" class="form-control" name="marrform[or]" id="payorbirth"></input>
+                            <label for="payorbirth">O.R Number</label>
+                        </div>
+                    
                 <div class="row">
                 <div class="col-12 text-center pb-5">
                         <input hidden type="text" name="marrform[amount]" value="50">
                     <input hidden type="text" name="marrform[type]" value ="Marriage Certificate">
-                            <button type="submit" class="btn btn-info" name="button" data-toggle="modal" data-target="#modalBirthday" id="birthday-btn">Preview</button>
+                            <button type="submit" class="btn btn-info" name="button"  id="birthday-btn">Preview</button>
                                 <button type="button" onclick="marrgenreciept()"  class="btn btn-success" name="button" data-toggle="modal" data-target="#recipet" >Submit</button>
                             <button type="reset" class="btn btn-danger" name="button">Clear All</button>
                         </div>
@@ -449,8 +462,12 @@
             <iframe src="<?php echo base_url() ?>/pages/book" class=" prewar_view z-depth-1 mb-4 " id="prewar_image" width="100%" height="80%" style="margin-top: 80px"></iframe>
             <iframe  src="<?php echo base_url() . 'pages/viewlcrform'?>#toolbar=0&navpanes=0&scrollbar=0&view=fitH,100" class="postwar_view z-depth-1 mb-5 " id="postwar_image" width="100%" height="80%" style="margin-top: 80px"></iframe>
     </div>
+    
 
     <div class="rows ">
+
+
+    
         <!-- Birthday Modal -->
         <div class="modal fade" id="modalBirthday" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" style="max-width:950px" role="document">
@@ -466,7 +483,7 @@
                         <iframe width="100%" id="iframe_preview_formgen" height="75%" ></iframe>
 
                         <div class="modal-footer m-0 P-0">
-                                        <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal">Close</button>
+                       <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
@@ -541,7 +558,7 @@ aria-hidden="true">
 
                 <input type="hidden" name="class" id="classification">
         
-            <button onclick = "printrecipt()" type="button" class="btn btn-primary btn-sm"    >Print</button>
+            <button onclick = "printrecipt()" type="button" class="btn btn-primary btn-sm">Print</button>
         <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
     </div>
 </div>
@@ -568,7 +585,7 @@ aria-hidden="true">
     
                 Done Printing?
                 <input type="hidden" name="history[ref_num]" id="ref_num" >
-                <input type="" name="history[or_num]" id="or_num" >
+                <input type="hidden" name="history[or_num]" id="or_num" >
                 <input type="hidden" name="history[req_name]" id="req_name" >
                 <input type="hidden" name="history[name]" id="name_history" >
                 <input type="hidden" name="history[type]" id="type" >
@@ -584,6 +601,8 @@ aria-hidden="true">
                 <input type="hidden" name="history[or_amount]" id="or_amount" >
                 <input type="hidden" name="history[wife_name]" id="wife_names" >
                 <input type="hidden" name="history[inputname]" id="pharse" >
+
+                <iframe src="" id="print_rec_holder" hidden frameborder="0"></iframe>
         </div>
         <div class="modal-footer">
                 

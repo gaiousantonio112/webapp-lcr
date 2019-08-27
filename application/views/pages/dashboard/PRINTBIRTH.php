@@ -45,9 +45,9 @@ $pdfbirth= new TCPDI(PDF_PAGE_ORIENTATION, 'mm', PDF_PAGE_FORMAT, true, 'UTF-8',
 
 
 
-  $pdfbirth->Text(78,241, "Jem Perilla Hila");
+
   $pdfbirth->Text(44,252, "Php 50.00");
-  $pdfbirth->Text(44,258, $ornum);
+  $pdfbirth->Text(44,258, $bdayrefnum);
   $pdfbirth->Text(44,264, $date);
 
   $pdfbirth->SetDrawColor(255,255,255);
@@ -58,10 +58,13 @@ $pdfbirth= new TCPDI(PDF_PAGE_ORIENTATION, 'mm', PDF_PAGE_FORMAT, true, 'UTF-8',
 
   $pdfbirth->Text(149,240, "Victoria G. Maloles");
   $pdfbirth->Text(146,245, "CITY CIVIL REGISTAR");
-  // $js = 'print(true);';
+
+  $pdfbirth->Text(78,241, $encoder);
+  $js = 'print(true);';
+
   // set javascript
   ob_end_clean();
-
+  $pdfbirth->IncludeJS($js);
   $pdfbirth->Output('print.pdf', 'I');
 
 ?>

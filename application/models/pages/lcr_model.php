@@ -396,6 +396,28 @@ date_default_timezone_set('Asia/Manila');
         $date = date('Y-m-d');
         $data = [];
         foreach ($query->result() as $r) {
+              ///for certifate prin functuion
+            switch ($r->type) {
+              case 'birthdayform':
+                $r->btn = '<button onclick="certprintnow(\''.$r->id.'\')" type="button" class="btn btn-outline-primary btn-sm" "><img src=" '.base_url().'/assets/svg/Print (ecris).svg ">Print </button>';
+                $r->type = 'Birthday Certificate';
+                  break;
+                  case 'deathform':
+                    $r->btn = '<button onclick="certprintnow(\''.$r->id.'\')" type="button" class="btn btn-outline-primary btn-sm" "><img src=" '.base_url().'/assets/svg/Print (ecris).svg ">Print </button>';
+                    $r->type = 'Death Certificate';
+                      break;
+                      case 'marrform':
+                        $r->btn = '<button onclick="certprintnow(\''.$r->id.'\')" type="button" class="btn btn-outline-primary btn-sm" "><img src=" '.base_url().'/assets/svg/Print (ecris).svg ">Print /button>';
+                        $r->type = 'Marriage Certificate';
+                          break;
+              
+                 default:
+                $r->btn = '<button onclick="printPage(\''.$r->id.'\')" type="button" class="btn btn-outline-primary btn-sm" "><img src=" '.base_url().'/assets/svg/Print (ecris).svg "> Print</button>';
+                break;
+            }
+
+
+
           $data[] = array(
             // 'id' => $r->id,
             'ref_num' => $r->ref_num,
@@ -406,8 +428,12 @@ date_default_timezone_set('Asia/Manila');
             'date' => $r->date_paid,
             'page' => $r->page,
             'no_copy' => $r->no_copy,
-            'btn' => $r->btn = '<button onclick="printPage(\''.$r->id.'\')" type="button" class="btn btn-outline-primary btn-sm" "><img src=" '.base_url().'/assets/svg/Print (ecris).svg "> Print</button>'
-          );
+            'btn' => $r->btn
+                   );
+
+
+
+
         }
         $result = array(
                   "draw" => $draw,
@@ -550,7 +576,8 @@ date_default_timezone_set('Asia/Manila');
       $data = array(
         'st' => $inputData['st'],
         'dt_print' => $date,
-        'cash_rep' => 'done'
+        'cash_rep' => 'done',
+        'printed_by' => $inputData['printedby']
       );
 
       $this->db->where('id',$inputData['id']);
@@ -842,12 +869,32 @@ Update db_lcr.usercredentials set password = '" .$inputData['password']. "' wher
         'or_amount' => $inputData['or_amount'],
         'wife_name' => $inputData['wife_name'],
         'time' => date('h:i:s a', time()),
-        'cash_rep' => 'not done'
+        'cash_rep' => 'not done',
+      
       );
 
       // $this->db->trans_start();
       $addhist = $this->db->insert('lcr_history',$data_add_history);
     }
+
+
+
+//get print cer data
+
+
+function getprintcertdata($id)
+{
+
+$result =  array();
+
+$query = $this->db->query("SELECT * FROM  lcr_history WHERE id = ".$id['id']);
+
+foreach ($query->result() as $data) {
+array_push($result,$data);
+}
+return $result;
+
+}
 
 
   } ?>

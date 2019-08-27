@@ -275,7 +275,7 @@ $(document).ready(function(e){
 
         $('#done').modal('show');
         // console.log($('#white_reciept').modal('show'));
-        console.log($('#recieptframe_white').attr('src'));
+
 
         if ($('#recieptframe_white').attr('src') != white_reciept) {
           $('#white_reciept').modal('show');
@@ -608,33 +608,26 @@ $(document).ready(function(e){
     });
   });
 
-
-
-
-
-
-
-
-
 //LCR FORM GENERATOR PAGE
 
 ///BIRTHDAY
   $('#birthdayform').submit(function(e){
   e.preventDefault();
-  console.log($('#birthdayform').serializeArray());
 
     $.ajax({
       url : global.settings.url + '/Lcr_works/formgenBday',
       type : 'POST',
-      // processData: false,
+
       data : $(this).serialize(),
-      // dataType : 'pdf',
-      // contentType : 'application/pdf',
-      // cache: false,
+
+      
       xhrFields: {
             responseType: 'blob'
         },
       success : function(res){
+        
+
+        
         $('#modalBirthday').modal('show');
             // var a = document.createElement('a');
             var url = window.URL.createObjectURL(res);
@@ -657,7 +650,6 @@ $(document).ready(function(e){
 //DEATH
     $('#deathform').submit(function(e){
     e.preventDefault();
-    console.log($('#deathform').serializeArray());
     $.ajax({
       url : global.settings.url + '/Lcr_works/formgenDeath',
       type : 'POST',
@@ -682,7 +674,6 @@ $(document).ready(function(e){
 //MARR
       $('#marrform').submit(function(e){
       e.preventDefault();
-      console.log($('#marrform').serializeArray());
         $.ajax({
           url : global.settings.url + '/Lcr_works/formgenMarriage',
           type : 'POST',
@@ -736,7 +727,6 @@ $(document).ready(function(e){
                // Add User
                $('#adduser').submit(function(e){
                  e.preventDefault();
-                 console.log($('#adduser').serializeArray());
                  $.ajax({
                    url : global.settings.url + '/Lcr_works/addusers',
                    type : 'POST',
@@ -759,8 +749,6 @@ $(document).ready(function(e){
                });
                   $('#edituser').submit(function(e){
                   e.preventDefault();
-
-                      console.log($('#edituser').serializeArray());
                         $.ajax({
                           url : global.settings.url + '/Lcr_works/updateusers',
                           type : 'POST',
@@ -810,7 +798,6 @@ function deleteuser(id){
 $('#delid').val(id);
 }
 function edituser(id){
-  console.log(id);
   $.ajax({
         url : global.settings.url + '/Lcr_works/get_data_user',
         type: "POST",
@@ -821,7 +808,6 @@ function edituser(id){
         success: function(data)
         {
           data = data[0];
-    console.log(data);
       $('#editid').val(id);
       $('#editFirst').val(data.firstname);
         $('#editMiddle').val(data.middlename);
@@ -1196,34 +1182,19 @@ function notif(msg,type){
 ///////////////////////////////////////////////FORM GEN ONLICK FUNCTION
 
 function bdaygenreciept(){
-  console.log($('#birthdayform').serializeArray());
-
-
+ 
   
   $.ajax({
     url : global.settings.url + '/Lcr_works/formgenBdayreciept',
     type : 'POST',
-    // processData: false,
     data : $('#birthdayform').serializeArray(),
-    // dataType : 'pdf',
-    // contentType : 'application/pdf',
-    // cache: false,
     xhrFields: {
           responseType: 'blob'
       },
     success : function(res){
       $('#classification').val('birthdayform');
-    // console.log(res);
-    
-          // // var a = document.createElement('a');
           var url = window.URL.createObjectURL(res);
-          // a.href = url;
           $('#myframe').attr('src',url);
-          // a.download = 'myfile.pdf';
-          // document.body.append(a);
-          // a.click();
-          // a.remove();
-          // window.URL.revokeObjectURL(url);
     },
     error : function(xhr){
      console.log(xhr.responseText);
@@ -1231,6 +1202,9 @@ function bdaygenreciept(){
   });
 
   }
+
+
+
 
   function deathgenreciept(){
     console.log($('#deathform').serializeArray());
@@ -1240,27 +1214,14 @@ function bdaygenreciept(){
     $.ajax({
       url : global.settings.url + '/Lcr_works/deathformreciept',
       type : 'POST',
-      // processData: false,
       data : $('#deathform').serializeArray(),
-      // dataType : 'pdf',
-      // contentType : 'application/pdf',
-      // cache: false,
       xhrFields: {
             responseType: 'blob'
         },
       success : function(res){
         $('#classification').val('deathform');
-     // console.log(res);
-      
-            // // var a = document.createElement('a');
             var url = window.URL.createObjectURL(res);
-            // a.href = url;
             $('#myframe').attr('src',url);
-            // a.download = 'myfile.pdf';
-            // document.body.append(a);
-            // a.click();
-            // a.remove();
-            // window.URL.revokeObjectURL(url);
       },
       error : function(xhr){
        console.log(xhr.responseText);
@@ -1273,132 +1234,117 @@ function bdaygenreciept(){
 
 function marrgenreciept(){
 
-
-console.log($('#marrform').serializeArray());
-
-
-  
 $.ajax({
   url : global.settings.url + '/Lcr_works/marrformreciept',
   type : 'POST',
-  // processData: false,
+
   data : $('#marrform').serializeArray(),
-  
-  // dataType : 'pdf',
-  // contentType : 'application/pdf',
-  // cache: false,
+
   xhrFields: {
         responseType: 'blob'
     },
   success : function(res){
     $('#classification').val('marrform');
- // console.log(res);
-  
-        // // var a = document.createElement('a');
+
+
         var url = window.URL.createObjectURL(res);
-        // a.href = url;
+ 
         $('#myframe').attr('src',url);
-        // a.download = 'myfile.pdf';
-        // document.body.append(a);
-        // a.click();
-        // a.remove();
-        // window.URL.revokeObjectURL(url);
+      
   },
   error : function(xhr){
    console.log(xhr.responseText);
   }
 });
-
 }
+
+
+
 
 function printrecipt(){
   getUserCredentials();
 var val = $('#classification').val(); 
-console.log(val);
 switch (val) {
 case 'birthdayform':
   var data =   $('#birthdayform').serializeArray();
+
 $('#ref_num').val(data[3].value);
-// $('#or_num').val(data[2]);
+$('#or_num').val(data[17].value);
 $('#req_name').val(data[16].value);
 $('#name_history').val(data[5].value);
 $('#type').val(val);
 $('#date').val(Date('Y-m-d'));
 $('#page').val('1');
 $('#no_copy').val('1');
-// $('#verify_by').val($('#cs_encoder').val());
+$('#verify_by').val($('#cs_encoder').val());
+$('#printed_by').val($('#cs_encoder').val());
 $('#remarks').val(data[15].value);
 $('#print').val('default');
-//  $('#cs_encoder1').val($('#cs_encoder').val());
 $('#wife_names').val('No Wife');
 $('#or_amount').val('50');
 $('#pharse').val('formgenbday');
 $('#done').modal('show');
 
-
-
-
   break;
 
   case "deathform":
       var data =   $('#deathform').serializeArray();
-  console.log(data);
   $('#ref_num').val(data[3].value);
-// $('#or_num').val(data[2]);
+$('#or_num').val(data[17]);
 $('#req_name').val(data[16].value);
 $('#name_history').val(data[4].value);
 $('#type').val(val);
 $('#date').val(Date('Y-m-d'));
 $('#page').val('1');
 $('#no_copy').val('1');
-// $('#verify_by').val($('#cs_encoder').val());
+$('#verify_by').val($('#cs_encoder').val());
+$('#printed_by').val($('#cs_encoder').val());
 $('#remarks').val(data[15].value);
 $('#print').val('default');
-//  $('#cs_encoder1').val($('#cs_encoder').val());
 $('#wife_names').val('No Wife');
 $('#or_amount').val('50');
-$('#pharse').val('formgendeath');
+$('#pharse').val('formgendeath')
 $('#done').modal('show');
-
-
-  
-  
     break;
-
     case "marrform":
-
-        
         var data =   $('#marrform').serializeArray();
-        console.log(data);
+        
+  ////////print function //////////
         $('#ref_num').val(data[3].value);
-      // $('#or_num').val(data[2]);
+        $('#or_num').val(data[23]);
       $('#req_name').val(data[16].value);
       $('#name_history').val(data[4].value);
       $('#type').val(val);
       $('#date').val(Date('Y-m-d'));
       $('#page').val('1');
       $('#no_copy').val('1');
-      // $('#verify_by').val($('#cs_encoder').val());
+      $('#verify_by').val($('#cs_encoder').val());
+      $('#printed_by').val($('#cs_encoder').val());
       $('#remarks').val(data[15].value);
       $('#print').val('default');
-      //  $('#cs_encoder1').val($('#cs_encoder').val());
       $('#wife_names').val('No Wife');
       $('#or_amount').val('50');
       $('#pharse').val('marrform');
       $('#done').modal('show');
-      
-      
-        
-  
+
       break;
-  
-default:
-  break;
 }
-
-
-
-
+$('#recipet').modal('hide');
+$.ajax({
+  url : global.settings.url + '/Lcr_works/printgenformreciept/'+val,
+  type : 'POST',
+  data : $('#'+val).serializeArray(),
+  xhrFields: {
+        responseType: 'blob'
+    },
+  success : function(res){
+        var url = window.URL.createObjectURL(res);
+        $('#print_rec_holder').attr('src',url);
+  },
+  error : function(xhr){
+   console.log(xhr.responseText);
+  }
+});
 }
 
 
@@ -1406,10 +1352,7 @@ default:
 $('#savedataofprint').submit(function(e){
   e.preventDefault();
    type = $('#type').val();
-
-
    data = [].concat($('#savedataofprint').serializeArray() , $('#' + type).serializeArray() )
-  console.log(data);
 
   $.ajax({
     url : global.settings.url + '/Lcr_works/savegenfromrecipthistory',
@@ -1417,20 +1360,63 @@ $('#savedataofprint').submit(function(e){
     data : data,
     dataType : 'json',
     success : function(res){
-      notif('Success','success');
+      notif('Transaction Success Please proceed to the printing page to finish Transaction!!','success');
       //console.log(res);
       $('#done').modal('hide');
       $('#'+type)[0].reset();
+
+      var jsonData = {
+        // from_user : 'sampleUser',
+        ref_no : $('#ref_num').val(),
+        type : $('#type').val(),
+        issued_date : formatDate(Date()),
+        status : 'Pending',
+        from : full_name
+      };
+
+      websocket.send(JSON.stringify(jsonData));
+
+      
     },
     error : function(){
       notif('Invalid O.R Number','danger');
     }
   });
 
-  
-  
   });
   
+
+  function certprintnow(id){
+    $.ajax({
+      url : global.settings.url + '/Lcr_works/getprintcertdata',
+      type : 'POST',
+      data :{  'data[id]' : id},
+      dataType : 'json',
+      success : function(res){
+        res = res[0];
+      $('#lcr_history_iid').val(id);
+      $('#printname').val($('#cs_encoder').val());
+
+    $.ajax({
+      url : global.settings.url + '/Lcr_works/printcert',
+      type : 'POST',
+      data :  {'data' : JSON.parse(res.remarks) , 'printdata' : res},
+      xhrFields: {
+        responseType: 'blob'
+    },
+    success : function(res){
+      $('#reciept_print_page').modal('show');
+          var url = window.URL.createObjectURL(res);
+          $('#print_pageFrame').attr('src',url);
+    },
+    error : function(xhr){
+     console.log(xhr.responseText);
+    }
+    });
+}
+});
+
+}
 
 
 

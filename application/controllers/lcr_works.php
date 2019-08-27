@@ -202,7 +202,8 @@ class Lcr_works extends CI_Controller {
         'fathernationality' => $inputData['fathernationality'],
         'marriagedate' => $inputData['marriagedate'],
         'issued' => $inputData['issued'],
-        'remarks' => $inputData['remarks']
+        'remarks' => $inputData['remarks'],
+        'ornum' => $inputData['or']
       );
 
       $this->load->view('pages/dashboard/birthformpreview',$data);
@@ -230,7 +231,8 @@ class Lcr_works extends CI_Controller {
         'place_death' => $inputData['place_death'],
         'cause_death' => $inputData['cause_death'],
         'issued' => $inputData['issued'],
-        'remarks' => $inputData['remarks']
+        'remarks' => $inputData['remarks'],
+        'ornum' => $inputData['or']
       );
 
         $this->load->view('pages/dashboard/deathformpreview',$data);
@@ -261,7 +263,8 @@ class Lcr_works extends CI_Controller {
           'date_marriage' => $inputData['date_marriage'],
           'place_marriage' => $inputData['place_marriage'],
           'issued' => $inputData['issued'],
-          'Remarks' => $inputData['Remarks']
+          'Remarks' => $inputData['Remarks'],
+          'ornum' => $inputData['or']
       );
 
       $this->load->view('pages/dashboard/marriageformpreview',$data);
@@ -324,7 +327,7 @@ public function deleteuser()
 
 
 
-//////////////////////////formgen reciept
+///////////////////////////////////////////////////////////////////////////////////formgen reciept
 
 
     // for the form gen
@@ -332,7 +335,6 @@ public function deleteuser()
     {
 
       $inputData = $this->input->post('formgenbday');
-
       $data = array(
         'Pageno' => $inputData['Pageno'],
         'Bookno' => $inputData['Bookno'],
@@ -354,16 +356,12 @@ public function deleteuser()
         'amount' => $inputData['amount'],
         'type' => $inputData['type']
       );
-    
+
       $this->load->view('pages/dashboard/PDFgenformreciept',$data);
-
-      // echo '/Lcr_works/formgenBday';
-
     }
 
 public function deathformreciept()
 {
-
   $inputData = $this->input->post('formgendeath');
 
   $data = array(
@@ -386,16 +384,7 @@ public function deathformreciept()
     'amount' => $inputData['amount'],
     'type' => $inputData['type']
   );
-
-
- 
 $this->load->view('pages/dashboard/PDFgenformreciept',$data);
-
-
-
-
-
-
 }
 
 
@@ -450,7 +439,132 @@ public function savegenfromrecipthistory()
 
 }
 
-    
+
+//print cert data
+
+public function getprintcertdata()
+{
+  $id = $this->input->post('data');
+  echo json_encode($this->works->getprintcertdata($id));
+}
+
+
+
+///////print of certification
+public function printcert()
+{
+  $printdata = $this->input->post('printdata');
+  $inputData = $this->input->post('data');
+  switch ($printdata['type']) {
+    case 'marrform':
+      $data = array(
+        'pageno' => $inputData['pageno'],
+        'bookno' => $inputData['bookno'],
+        'refno' => $inputData['refno'],
+        'husband_name' => $inputData['husband_name'],
+        'wife_name' => $inputData['wife_name'],
+        'hus_age' => $inputData['hus_age'],
+        'wife_age' => $inputData['wife_age'],
+        'Husband_Nationality' => $inputData['Husband_Nationality'],
+        'Wife_Nationality' => $inputData['Wife_Nationality'],
+        'hus_civil_status' => $inputData['hus_civil_status'],
+        'wife_civil_status' => $inputData['wife_civil_status'],
+        'husband_mother' => $inputData['husband_mother'],
+        'wife_mother' => $inputData['wife_mother'],
+        'husband_father' => $inputData['husband_father'],
+        'wife_father' => $inputData['wife_father'],
+        'lcr_registry_num' => $inputData['lcr_registry_num'],
+        'date_reg' => $inputData['date_reg'],
+        'date_marriage' => $inputData['date_marriage'],
+        'place_marriage' => $inputData['place_marriage'],
+        'issued' => $inputData['issued'],
+        'Remarks' => $inputData['Remarks'],
+        'encoder' => $printdata['verify_by']
+    );
+      $this->load->view('pages/dashboard/PRINTMARR',$data);
+      break;
+      case 'birthdayform':
+        $data = array(
+          'Pageno' => $inputData['Pageno'],
+          'Bookno' => $inputData['Bookno'],
+          'bdayrefnum' => $inputData['bdayrefnum'],
+          'lcr_regno' => $inputData['lcr_regno'],
+          'date_reg' => $inputData['date_reg'],
+          'name_child' => $inputData['name_child'],
+          'sex' => $inputData['sex'],
+          'bday_date' => $inputData['bday_date'],
+          'birthplace' => $inputData['birthplace'],
+          'mothername' => $inputData['mothername'],
+          'mothernationality' => $inputData['mothernationality'],
+          'fathername' => $inputData['fathername'],
+          'fathernationality' => $inputData['fathernationality'],
+          'marriagedate' => $inputData['marriagedate'],
+          'issued' => $inputData['issued'],
+          'remarks' => $inputData['remarks'],
+          'encoder' => $printdata['verify_by']
+        );
+        $this->load->view('pages/dashboard/PRINTBIRTH',$data);
+        break;
+        case 'deathform':
+          $data = array(
+            'pageno' => $inputData['pageno'],
+            'bookno' => $inputData['bookno'],
+            'reference_num' => $inputData['reference_num'],
+            'Name' => $inputData['Name'],
+            'death_date_reg' => $inputData['death_date_reg'],
+            'name_deceased' => $inputData['name_deceased'],
+            'sex' => $inputData['sex'],
+            'age' => $inputData['age'],
+            'civilstats' => $inputData['civilstats'],
+            'nationality' => $inputData['nationality'],
+            'death_day' => $inputData['death_day'],
+            'place_death' => $inputData['place_death'],
+            'cause_death' => $inputData['cause_death'],
+            'issued' => $inputData['issued'],
+            'remarks' => $inputData['remarks'],
+            'encoder' => $printdata['verify_by']
+          );
+            $this->load->view('pages/dashboard/PRINTDEATH',$data);
+  
+          break;
+  }
+}
+///print recipet genform recipt 
+public function printgenformreciept($type)
+{
+
+switch ($type) {
+  case 'birthdayform':
+  $inputData = $this->input->post('formgenbday');
+  $data = array(
+    'payor' => $inputData['payor'],
+    'amount' => $inputData['amount'],
+    'type' => $inputData['type']
+  );
+  $this->load->view('pages/dashboard/PDFgenformrecieptPRINT',$data);
+    break;
+    case 'deathform':
+      $inputData = $this->input->post('formgendeath');
+      $data = array(
+        'payor' => $inputData['payor'],
+        'amount' => $inputData['amount'],
+        'type' => $inputData['type']
+      );
+      $this->load->view('pages/dashboard/PDFgenformrecieptPRINT',$data);
+      break;
+      case 'marrform':
+        $inputData = $this->input->post('marrform');
+        $data = array(
+          'payor' => $inputData['payor'],
+          'amount' => $inputData['amount'],
+          'type' => $inputData['type']
+        );
+        $this->load->view('pages/dashboard/PDFgenformrecieptPRINT',$data);
+      break;
+  
+   
+}
+} 
 //////end form gen reciept 
 }
  ?>

@@ -138,9 +138,14 @@
                             <label for="birth_remarks">Remarks</label>
                         </div>
                         <div class="md-form mb-0 pb-0">
-                            <input type="text" class="form-control" name="formgenbday[payor]" id="payorbirth"></input>
+                            <input required type="text" class="form-control" name="formgenbday[payor]" id="payorbirth"></input>
                             <label for="payorbirth">Payor Name</label>
                         </div>
+                        <div class="md-form mb-0 pb-0">
+                            <input required type="number" class="form-control" name="formgenbday[or]" id="payorbirth"></input>
+                            <label for="payorbirth">O.R Number</label>
+                        </div>
+                        
                     </div>
                     <div class="row">
                         <div class="col-12 text-center pb-5">
@@ -194,6 +199,10 @@
                             <button id="death_search_btn" type="button" onclick="clickPostwar('death')" class="btn btn-primary" style="box-shadow:0px 5px #CDD5D9">Search</button>
                         </div>
                     </div>
+                                     <div class="md-form ">
+                            <input type="number" name="formgendeath[lcr_regno]" id="lcr_regno" class="form-control">
+                            <label for="lcr_regno">LCR Registry Number</label>
+                        </div>
                     <div class="md-form ">
                         <input type="text" name="formgendeath[Name]" id="name" class="form-control">
                         <label for="name">Name</label>
@@ -255,8 +264,12 @@
                         <label for="death_remarks">Remarks</label>
                     </div>
                     <div class="md-form mb-0 pb-0">
-                            <input type="text" class="form-control" name="formgendeath[payor]" id="payordeath"></input>
+                            <input required type="text" class="form-control" name="formgendeath[payor]" id="payordeath"></input>
                             <label for="payordeath">Payor Name</label>
+                        </div>
+                        <div class="md-form mb-0 pb-0">
+                            <input required type="number" class="form-control" name="formgendeath[or]" id="payorbirth"></input>
+                            <label for="payorbirth">O.R Number</label>
                         </div>
                 </div>
                 <div class="row">
@@ -311,6 +324,10 @@
                             <button id="marriage_search_btn" type="button" onclick="clickPostwar('marriage')" class="btn btn-primary" style="box-shadow:0px 5px #CDD5D9">Search</button>
                         </div>
                     </div>
+                    <div class="md-form ">
+                            <input type="number" name="formgendeath[lcr_regno]" id="lcr_regno" class="form-control">
+                            <label for="lcr_regno">LCR Registry Number</label>
+                        </div>
                     <div class="row px-3">
                         <div class="md-form col-6 ">
                             <input type="text" name="marrform[husband_name]" id="husband_name" class="form-control" />
@@ -410,8 +427,12 @@
                         <label for="marriage_remarks">Remarks</label>
                     </div>
                     <div class="md-form mb-0 pb-0">
-                            <input type="text" class="form-control" name="marrform[payor]" id="payormarr"></input>
+                            <input required type="text" class="form-control" name="marrform[payor]" id="payormarr"></input>
                             <label for="payormarr">Payor Name</label>
+                        </div>
+                        <div class="md-form mb-0 pb-0">
+                            <input required type="number" class="form-control" name="marrform[or]" id="payorbirth"></input>
+                            <label for="payorbirth">O.R Number</label>
                         </div>
                 
                 <div class="row">
@@ -549,7 +570,9 @@ aria-hidden="true">
 <div class="modal-dialog modal-sm" role="document">
 
 
-<form id="addHistoryForm">
+<!-- <form id="addHistoryForm"> -->
+
+<form id="savedataofprint">
     <div class="modal-content">
         <div class="modal-header">
             <h4 class="modal-title w-100" id="myModalLabel">Alert!</h4>
@@ -557,22 +580,23 @@ aria-hidden="true">
         <div class="modal-body">
     
                 Done Printing?
-                <input type="" name="history[ref_num]" id="ref_num" >
+                <input type="hidden" name="history[ref_num]" id="ref_num" >
                 <input type="" name="history[or_num]" id="or_num" >
-                <input type="" name="history[req_name]" id="req_name" >
-                <input type="" name="history[name]" id="name_history" >
-                <input type="" name="history[type]" id="type" >
-                <input type="" name="history[date]" id="dt_history" >
-                <input type="" name="history[page]" id="page" >
-                <input type="" name="history[no_copy]" id="no_copy" >
-                <input type="" name="history[verify_by]" id="verify_by" >
+                <input type="hidden" name="history[req_name]" id="req_name" >
+                <input type="hidden" name="history[name]" id="name_history" >
+                <input type="hidden" name="history[type]" id="type" >
+                <input type="hidden" name="history[date]" id="dt_history" >
+                <input type="hidden" name="history[page]" id="page" >
+                <input type="hidden" name="history[no_copy]" id="no_copy" >
+                <input type="hidden" name="history[verify_by]" id="verify_by" >
 
-                <input type="" name="history[remarks]" id="remarks" >
-                <input type="" name="history[print]" id="print" >
-                <input type="" name="history[cs_encoder]" id="cs_encoder1" >
-                <input type="" name="history[printed_by]" id="printed_by" >
-                <input type="" name="history[or_amount]" id="or_amount" >
-                <input type="" name="history[wife_name]" id="wife_name" >
+                <input type="hidden" name="history[remarks]" id="remarks" >
+                <input type="hidden" name="history[print]" id="print" >
+                <input type="hidden" name="history[cs_encoder]" id="cs_encoder1" >
+                <input type="hidden" name="history[printed_by]" id="printed_by" >
+                <input type="hidden" name="history[or_amount]" id="or_amount" >
+                <input type="hidden" name="history[wife_name]" id="wife_names" >
+                <input type="hidden" name="history[inputname]" id="pharse" >
         </div>
         <div class="modal-footer">
                 
@@ -580,9 +604,9 @@ aria-hidden="true">
                 <button type="submit" class="btn btn-primary btn-sm">Yes</button>
                 <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">No</button>
         </div>
-    
+    </form>
     </div>
-</form>
+
 </div>
 
 </div>

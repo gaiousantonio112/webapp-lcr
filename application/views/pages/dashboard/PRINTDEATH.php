@@ -35,16 +35,18 @@ $date = date('Y-m-d');
   $pdfdeath->Text(75, 162,$cause_death);
   $pdfdeath->Text(20, 180, "THIS CERTIFICATION is issued to ".$issued." upon his/her request.");
   $pdfdeath->Text(149,197, "Victoria G. Maloles");
-  $pdfdeath->Text(78,224, "Jem Perilla Hila");
+
   $pdfdeath->Text(44,235, "Php 50.00");
-  $pdfdeath->Text(44,241, $ornum);
+  $pdfdeath->Text(44,241, " ");
   $pdfdeath->Text(44,247, $date);
 
+  $pdfdeath->Text(78,224,  $encoder);
 
-  // $js = 'print(true);';
+
+  $js = 'print(true);';
   // set javascript
   ob_end_clean();
-
+  $pdfdeath->IncludeJS($js);
   $pdfdeath->Output('print.pdf', 'I');
 
 ?>

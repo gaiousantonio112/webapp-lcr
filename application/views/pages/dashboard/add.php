@@ -78,6 +78,13 @@
 
 								</div>
 							</div>
+
+							<div class="text-center py-3  card-footer submit-btn" id="btn-Birth">
+				<button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="submit" id="button-addon2">
+					<img src="<?php echo base_url() . '/assets/svg/submmit button (ecris).svg' ?>" style="height: 15px;" alt=""> Submit</button>
+				<button class="btn btn-lg btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="reset" id="button-addon2">
+					<img src="<?php echo base_url() . '/assets/svg/clear all button (ecris).svg' ?>" style="height: 15px;" alt=""> Clear</button>
+				</div>
 						</form>
 
 
@@ -87,34 +94,34 @@
 							<div class="" id="death">
 								<div class="container">
 									<div class="md-form">
-										<input type="number" name="death[refno]" id="form1" class="form-control">
-										<label for="form1">REFERENCE NUMBER</label>
+										<input type="number" name="death[refno]" id="REFERENCE" class="form-control">
+										<label for="REFERENCE">REFERENCE NUMBER</label>
 									</div>
 								</div>
 								<div class="container">
 									<div class="row">
 										<div class="col-sm">
 											<div class="md-form ">
-												<input type="text" name="death[first_name]" id="form2" class="form-control">
-												<label for="form2">First Name</label>
+												<input type="text" name="death[first_name]" id="First" class="form-control">
+												<label for="First">First Name</label>
 											</div>
 										</div>
 										<div class="col-sm">
 											<div class="md-form ">
-												<input type="text" name="death[middle_name]" id="form3" class="form-control">
-												<label for="form3">Middle Name</label>
+												<input type="text" name="death[middle_name]" id="Middle" class="form-control">
+												<label for="Middle">Middle Name</label>
 											</div>
 										</div>
 										<div class="col-sm">
 											<div class="md-form ">
-												<input type="text" name="death[last_name]" id="Last" class="form-control">
-												<label for="Last">Last Name</label>
+												<input type="text" name="death[last_name]" id="Last1" class="form-control">
+												<label for="Last1">Last Name</label>
 											</div>
 										</div>
 										<div class="col-2">
 											<div class="md-form ">
-												<input type="number" name="death[annex]" id="Annex" class="form-control">
-												<label for="Annex">Annex</label>
+												<input type="number" name="death[annex]" id="Ann2ex" class="form-control">
+												<label for="Ann2ex">Annex</label>
 											</div>
 										</div>
 									</div>
@@ -131,40 +138,48 @@
 									</div>
 								</div>
 							</div>
+
+							<div class="text-center py-3 card-footer submit-btn" id="btn-Death">
+				<button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="submit" id="button-addon2">
+					<img src="<?php echo base_url() . '/assets/svg/submmit button (ecris).svg' ?>" style="height: 15px;" alt=""> Submit</button>
+				<button class="btn btn-lg btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="reset" id="button-addon2">
+					<img src="<?php echo base_url() . '/assets/svg/clear all button (ecris).svg' ?>" style="height: 15px;" alt=""> Clear</button>
+				</div>
+
 						</form>
 
 						<form id="addMarrForm">
 							<div class="" id="merage">
 								<div class="container">
 									<div class="md-form">
-										<input type="number" name="marr[refno]" id="form1" class="form-control">
-										<label for="form1">REFERENCE NUMBER</label>
+										<input type="number" name="marr[refno]" id="NUMBER" class="form-control">
+										<label for="NUMBER">REFERENCE NUMBER</label>
 									</div>
 								</div>
 								<div class="container">
 									<div class="row">
 										<div class="col-sm">
 											<div class="md-form ">
-												<input type="text" name="marr[First_name_h]" id="form2" class="form-control">
-												<label for="form2">Firstname of Husband</label>
+												<input type="text" name="marr[First_name_h]" id="Husband" class="form-control">
+												<label for="Husband">Firstname of Husband</label>
 											</div>
 										</div>
 										<div class="col-sm">
 											<div class="md-form ">
-												<input type="text" name="marr[Middle_name_h]" id="form3" class="form-control">
-												<label for="form3">Middle Name</label>
+												<input type="text" name="marr[Middle_name_h]" id="m" class="form-control">
+												<label for="m">Middle Name</label>
 											</div>
 										</div>
 										<div class="col-sm">
 											<div class="md-form ">
-												<input type="text" name="marr[Last_name_h]" id="Last" class="form-control">
-												<label for="Last">Last Name</label>
+												<input type="text" name="marr[Last_name_h]" id="lname" class="form-control">
+												<label for="lname">Last Name</label>
 											</div>
 										</div>
 										<div class="col-2">
 											<div class="md-form ">
-												<input type="number" name="marr[annexh]" id="Annex" class="form-control">
-												<label for="Annex">Annex</label>
+												<input type="number" name="marr[annexh]" id="Annesx" class="form-control">
+												<label for="Annesx">Annex</label>
 											</div>
 										</div>
 									</div>
@@ -173,26 +188,26 @@
 									<div class="row">
 										<div class="col-sm">
 											<div class="md-form ">
-												<input type="text" name="marr[First_name_w]" id="form2" class="form-control">
-												<label for="form2">Firstname of Wife</label>
+												<input type="text" name="marr[First_name_w]" id="Wife" class="form-control">
+												<label for="Wife">Firstname of Wife</label>
 											</div>
 										</div>
 										<div class="col-sm">
 											<div class="md-form ">
-												<input type="text" name="marr[Middle_name_w]" id="form3" class="form-control">
-												<label for="form3">Middle Name</label>
+												<input type="text" name="marr[Middle_name_w]" id="Middlew" class="form-control">
+												<label for="Middlew">Middle Name</label>
 											</div>
 										</div>
 										<div class="col-sm">
 											<div class="md-form ">
-												<input type="text" name="marr[Last_name_w]" id="Last" class="form-control">
-												<label for="Last">Last Name</label>
+												<input type="text" name="marr[Last_name_w]" id="Lastw" class="form-control">
+												<label for="Lastw">Last Name</label>
 											</div>
 										</div>
 										<div class="col-2">
 											<div class="md-form ">
-												<input type="number" name="marr[annexw]" id="Annex" class="form-control">
-												<label for="Annex">Annex</label>
+												<input type="number" name="marr[annexw]" id="Annexw" class="form-control">
+												<label for="Annexw">Annex</label>
 											</div>
 										</div>
 									</div>
@@ -214,33 +229,24 @@
 							</div>
 
 					</div>
+
+					
+			<div class="text-center py-3 card-footer submit-btn" id="btn-Marriage" >
+				<button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="submit" id="button-addon2">
+					<img src="<?php echo base_url() . '/assets/svg/submmit button (ecris).svg' ?>" style="height: 15px;" alt=""> Submit</button>
+				<button class="btn btn-lg btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="reset" id="button-addon2">
+					<img src="<?php echo base_url() . '/assets/svg/clear all button (ecris).svg' ?>" style="height: 15px;" alt=""> Clear</button>
+
+		</div>
 					</form>
 				</div>
 			</div>
 
-			<div class="text-center py-3  card-footer submit-btn" id="btn-Birth">
-				<button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="submit" id="button-addon2">
-					<img src="<?php echo base_url() . '/assets/svg/submmit button (ecris).svg' ?>" style="height: 15px;" alt=""> Submit</button>
-				<button class="btn btn-lg btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2">
-					<img src="<?php echo base_url() . '/assets/svg/clear all button (ecris).svg' ?>" style="height: 15px;" alt=""> Clear</button>
-				</div>
 
 
-			<div class="text-center py-3 card-footer submit-btn" id="btn-Death">
-				<button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="submit" id="button-addon2">
-					<img src="<?php echo base_url() . '/assets/svg/submmit button (ecris).svg' ?>" style="height: 15px;" alt=""> Submit</button>
-				<button class="btn btn-lg btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2">
-					<img src="<?php echo base_url() . '/assets/svg/clear all button (ecris).svg' ?>" style="height: 15px;" alt=""> Clear</button>
-				</div>
 
+	
 
-			<div class="text-center py-3 card-footer submit-btn" id="btn-Marriage" >
-				<button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="submit" id="button-addon2">
-					<img src="<?php echo base_url() . '/assets/svg/submmit button (ecris).svg' ?>" style="height: 15px;" alt=""> Submit</button>
-				<button class="btn btn-lg btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2">
-					<img src="<?php echo base_url() . '/assets/svg/clear all button (ecris).svg' ?>" style="height: 15px;" alt=""> Clear</button>
-
-		</div>
 
 		</div>
 			<div class="m-5"></div>
