@@ -127,6 +127,7 @@ class Pages extends CI_Controller {
       $this->load->view('pages/turnjsbook');
 
     }
+
 //client
     public function client($page = '')
     {

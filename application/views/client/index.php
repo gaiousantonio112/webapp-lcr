@@ -11,21 +11,21 @@
 
             <div class = "fx2 col-12 text-center img-center" align="center" >
 
-                <a href="<?php echo base_url() . 'pages/client/birth_certificate'  ?>" >
+                <a href="<?php echo base_url() . 'client/pages/birth_certificate'  ?>" >
           			<div class="col4 text-center item">
                   <img class = "transition img-responsive"src="<?php echo base_url() .'/assets/img/birth-cert.png' ?>">
                   <p class="">Birth Certificate</p>
                 </div>
                 </a>
 
-                <a href="<?php echo base_url() . 'pages/client/marriage'  ?>" >
+                <a href="<?php echo base_url() . 'client/pages/marriage'  ?>" >
           			<div class="col4 text-center item ">
                     <img class = "transition img-responsive " src="<?php echo base_url() .'/assets/img/marriage-cert.png' ?>">
                     <p class="nav-text">Marriage Certificate</p>
                 </div>
                 </a>
 
-                <a href="<?php echo base_url() . 'pages/client/death'  ?>" >
+                <a href="<?php echo base_url() . 'client/pages/death'  ?>" >
           			<div class="col4 text-center item ">
                     <img class = "transition img-responsive" src="<?php echo base_url() .'/assets/img/death-cert.png' ?>" >
                   <p>Death Certificate</p>

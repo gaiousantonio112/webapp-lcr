@@ -18,7 +18,7 @@
 
 
 <div class = "col-lg-4">
-  <a href="<?php echo base_url() . 'pages/client/marriagecert_form'  ?>" >
+  <a href="<?php echo base_url() . 'client/pages/marriagecert_form'  ?>" >
     <div class = "card p-3 selection">
       <div class = "card-body">
         <div class="md-form">
@@ -30,7 +30,7 @@
   </div>
 
 <div class = "col-lg-4">
-    <a href="<?php echo base_url() . 'pages/client/marriagecert_form'  ?>" >
+    <a href="<?php echo base_url() . 'client/pages/marriagecert_form'  ?>" >
       <div class = "card p-3 selection">
         <div class = "card-body">
         <div class="md-form">
@@ -50,7 +50,7 @@
 
     <div class = "col-lg-4">
       <div class = "card p-3 selection">
-      <a href="<?php echo base_url() . 'pages/client/marriagecert_form'  ?>" >
+      <a href="<?php echo base_url() . 'client/pages/marriagecert_form'  ?>" >
         <div class = "card-body">
           <div class="md-form">
             <p>CLAIMS/BENEFITS/LOANS</p>

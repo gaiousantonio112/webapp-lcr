@@ -7,7 +7,7 @@
 
     <div class = "col-lg-4">
       <div class = "card p-4 selection">
-      <a href="<?php echo base_url() . 'pages/client/deathcert_form'  ?>" >
+      <a href="<?php echo base_url() . 'client/pages/deathcert_form'  ?>" >
         <div class = "card-body">
           <div class="md-form">
             <p>CLAIMS/BENEFITS/LOANS</p>

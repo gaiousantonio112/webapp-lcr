@@ -461,29 +461,6 @@
 	</script>
 </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- //////////////////////////////////////Death///////////////////////////////////////////// -->
 <div class="modal fade" id="death" tabindex="-1" role="dialog" aria-labelledby="death" aria-hidden="true">
 	<div class="modal-dialog modal-lg" role="document">
@@ -1081,23 +1058,5 @@
 		</div>
 	</div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </html>
