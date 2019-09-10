@@ -7,6 +7,8 @@
 <script src="<?php print(base_url()); ?>/assets/MBD/js/addons/datatables-select.min.js "></script>
 <script src="<?php print(base_url()); ?>/assets/datepicker/calendar/lib/bootstrap-datepicker.js"></script>
 <script src="<?php print(base_url());?>/assets/js/dashboard/jquery.bootstrap-growl.min.js" charset="utf-8"></script>
+
+
 <script type="text/javascript">
 var userid = '<?php print($this->session->userdata('user_id')); ?>';
 
@@ -39,6 +41,10 @@ $('.dataTables_length').addClass('bs-select');
 
 </script>
 <script type="text/javascript" src="<?php print(base_url().'/assets/js/dashboard/main.js'); ?>"></script>
+
+
+<!-- //orpage //dean -->
+<script src="<?php print(base_url());?>/assets/js/dashboard/orpage.js"></script>
 
 
 <script>
