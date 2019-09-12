@@ -29,5 +29,34 @@ class Client extends CI_Controller {
       $this->load->view('client/footer');
           $this->load->view('client/step');
     }
+    public function addRequest_died()
+    {
+      $inputData = $this->input->post('death');
+
+      echo json_encode($this->client->insert_as_response($inputData,'Death'));
+
+    }
+
+    public function addRequest_bday()
+    {
+      $inputData = $this->input->post('birthday');
+
+      echo json_encode($this->client->insert_as_response($inputData,'Birthday'));
+
+    }
+
+
+    public function addRequest_marr()
+    {
+      $inputData = $this->input->post('marr');
+
+      echo json_encode($this->client->insert_as_response($inputData,'Marriage'));
+
+    }
+
+    public function getIP()
+    {
+      echo json_encode($this->client->getIP());
+    }
   }
  ?>
