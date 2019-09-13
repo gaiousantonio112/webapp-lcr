@@ -24,9 +24,9 @@ class Client extends CI_Controller {
 
     public function pages($page = '')
     {
-      $this->load->view('client/nav');
-      $this->load->view('client/'.$page);
-      $this->load->view('client/footer');
+          $this->load->view('client/nav');
+          $this->load->view('client/'.$page);
+          $this->load->view('client/footer');
           $this->load->view('client/step');
     }
     public function addRequest_died()
@@ -55,6 +55,11 @@ class Client extends CI_Controller {
     }
 
     public function getIP()
+    {
+      echo json_encode($this->client->getIP());
+    }
+
+    public function getAllRespo()
     {
       echo json_encode($this->client->getIP());
     }

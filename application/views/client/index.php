@@ -9,7 +9,7 @@
                 <hr class = " ">
             </div>
 
-            <div class = "fx2 col-12 text-center img-center" align="center" >
+            <div class = "fx2 col-12 text-center img-center">
 
                 <a href="<?php echo base_url() . 'client/pages/birth_certificate'  ?>" >
           			<div class="col4 text-center item">
