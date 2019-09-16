@@ -159,7 +159,7 @@ html {
       </div>
     </div>
 
-    <div class="col-6 m-0 py-0" style="">
+    <!-- <div class="col-6 m-0 py-0" style="">
       <div class="md-form custom-control-inline m-0">
       <input type="text" id="year" class="form-control" required>
         <label for="year">Start *</label>
@@ -173,7 +173,7 @@ html {
         <input type="text" id="year" class="form-control" required>
         <label for="year">End *</label>
       </div>
-    </div>
+    </div> -->
 
     </div>
 </div>
@@ -287,10 +287,11 @@ html {
   				<div class="col-lg-6 col-sm-12 pl-5">
   									<div class="">
   										<div class="md-form">
+									
                         <input type="hidden" name="reciept[data_id]" id="data_id">
                         <input type="hidden" name="reciept[type]" id="type_receipt">
                         <input type="hidden" name="reciept[cs_encoder]" id="cs_encoder">
-  											<input type="number" id="orno" name="reciept[orno]" class="form-control">
+  											<input type="text"  id="orno" name="reciept[orno]" class="form-control" readonly placeholder=" ">
   											<label for="orno">OR No.</label>
   										</div>
   									</div>
@@ -378,7 +379,7 @@ html {
                     </div>
                     <div class="text-center modal-footer">
                       <div class= " col auto">
-                      <button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="submit" id="button-addon2" data-toggle="modal" data-target="#reciept" ><img src="<?php echo base_url() . '/assets/svg/submmit button (ecris).svg' ?>" style="height: 15px;"alt=""> Submit</button>
+                      <button class="btn btn-lg btn-outline-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="submit" id="button-addon2"  ><img src="<?php echo base_url() . '/assets/svg/submmit button (ecris).svg' ?>" style="height: 15px;"alt=""> Submit</button>
                       <button class="btn btn-lg btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="reset" id="button-addon"><img src="<?php echo base_url() . '/assets/svg/clear all button (ecris).svg' ?>" style="height: 15px;"alt=""> Clear</button>
                       </div>
                     </div>
@@ -412,12 +413,12 @@ html {
 
 				</div>
 				<div class="modal-body p-0 m-0">
-          <iframe width="100%" id="viewpdf"  height="65%" src="#funk" allowfullscreen></iframe>
+          <iframe id="viewpdf" height="550px"  width="100%" src="#funk" type="application/pdf" allowfullscreen></iframe>
 				</div>
-				<div class="modal-footer">
+				<!-- <div class="modal-footer">
 					<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
 
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
@@ -441,10 +442,10 @@ html {
         </div>
         <div class="modal-body p-0 m-0">
           <!-- <embed src="../../../../assets/pdf/rec.pdf#toolbar=0&zoom=70" type="application/pdf" width="100%" height="60%"> -->
-          <iframe width="100%" id="recieptframe" height="65%" src="#funk"  type="application/pdf"></iframe>
+          <iframe width="100%" id="recieptframe" height="500px"  src="#funk"  type="application/pdf"></iframe>
           <!-- <iframe width="100%" id="recieptframe_white" height="65%" src="#funk" hidden></iframe> -->
         </div>
-        <div class="modal-footer">
+        <div class="modal-footer p-0">
             <button id="print_btn" type="button" class="btn btn-primary btn-sm"  >Print</button>
           <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
 
@@ -738,3 +739,4 @@ html {
   <div class = "m-5"></div>
 </div>
 <!-- Central Modal Small -->
+

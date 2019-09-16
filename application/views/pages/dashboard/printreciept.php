@@ -20,8 +20,8 @@ $date = date('m - d - Y');
 
 
 
-   $pdfv2->addpage();
-   $pdfv2->deletePage(1);
+  //  $pdfv2->addpage();
+  //  $pdfv2->deletePage(1);
   $pdfv2->Text(55,50 , $date);
   $pdfv2->Text(17,65 , ($_GET['payor'] == null ? 'no payor input!' : $_GET['payor']));
   $pdfv2->Text(10,83 , ($_GET['what'] == null ? '0' : $_GET['what']));
