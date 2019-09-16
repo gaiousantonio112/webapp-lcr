@@ -399,23 +399,30 @@ date_default_timezone_set('Asia/Manila');
               ///for certifate prin functuion
             switch ($r->type) {
               case 'birthdayform':
-                $r->btn = '<button onclick="certprintnow(\''.$r->id.'\')" type="button" class="btn btn-outline-primary btn-sm" "><img src=" '.base_url().'/assets/svg/Print (ecris).svg ">Print </button>';
+                $r->btn = '<button onclick="certprintnow(\''.$r->id.'\')" type="button" class="btn btn-outline-primary btn-sm" "><i class="fas fa-print text-primary fa-lg "></i> Print </button>
+                <button onclick="cancelor(\''.$r->id.'\')" class="btn btn-sm btn-outline-danger"><i class="fas fa-times text-danger fa-lg"></i> Cancel</button>';
                 $r->type = 'Birthday Certificate';
                   break;
                   case 'deathform':
-                    $r->btn = '<button onclick="certprintnow(\''.$r->id.'\')" type="button" class="btn btn-outline-primary btn-sm" "><img src=" '.base_url().'/assets/svg/Print (ecris).svg ">Print </button>';
+                    $r->btn = '<button onclick="certprintnow(\''.$r->id.'\')" type="button" class="btn btn-outline-primary btn-sm" "><i class="fas fa-print text-primary fa-lg "></i> Print </button>
+                    <button onclick="cancelor(\''.$r->id.'\')" class="btn btn-sm btn-outline-danger"><i class="fas fa-times text-danger fa-lg"></i> Cancel</button>';
                     $r->type = 'Death Certificate';
                       break;
                       case 'marrform':
-                        $r->btn = '<button onclick="certprintnow(\''.$r->id.'\')" type="button" class="btn btn-outline-primary btn-sm" "><img src=" '.base_url().'/assets/svg/Print (ecris).svg ">Print /button>';
+                        $r->btn = '<button onclick="certprintnow(\''.$r->id.'\')" type="button" class="btn btn-outline-primary btn-sm" "><i class="fas fa-print text-primary fa-lg "></i> Print /button>
+                        <button onclick="cancelor(\''.$r->id.'\')" class="btn btn-sm btn-outline-danger"><i class="fas fa-times text-danger fa-lg"></i> Cancel</button>';
                         $r->type = 'Marriage Certificate';
                           break;
               
                  default:
-                $r->btn = '<button onclick="printPage(\''.$r->id.'\')" type="button" class="btn btn-outline-primary btn-sm" "><img src=" '.base_url().'/assets/svg/Print (ecris).svg "> Print</button>';
+                     // <img src=" '.base_url().'/assets/svg/Print (ecris).svg ">
+                $r->btn = '<button onclick="printPage(\''.$r->id.'\'  )" type="button" class="btn btn-outline-primary btn-sm" "><i class="fas fa-print text-primary fa-lg "></i> Print</button>
+                <button onclick="cancelor(\''.$r->id.'\' ,\''.$r->or_num.'\' ,\''.$r->name.'\' )" class="btn btn-sm btn-outline-danger"><i class="fas fa-times text-danger fa-lg"></i> Cancel</button>
+                
+                ';
                 break;
             }
-
+        
 
 
           $data[] = array(

@@ -188,5 +188,27 @@ return $dataArray;
          
   }
 
+  public function cancelor($or)
+  {
+  
+    $data = array(
+      'or_number' => $or['or'],
+      'cancelled_by' =>$this->session->userdata('user_id'),
+      'remarks' =>  $or['remarks']
+    );
+
+
+    $qry = $this->db->insert('or_cancelled',$data);
+
+    $this->db->where('id',$or['id']);
+    $del = $this->db->delete('lcr_history');
+
+  
+
+
+    return $qry + $del;
+
+  }
+
 }
  ?>
