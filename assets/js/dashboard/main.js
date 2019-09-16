@@ -34,7 +34,7 @@ $(document).ready(function(e){
       url : global.settings.url + '/Lcr_works/dashboardStats',
       dataType : 'json',
       success : function(res){
-        console.log(res);
+        // console.log(res);
         // ;
         $('#service_provided').html(res.service_provided);
         $('#total_earnings').html('₱ '+numberWithCommas(res.total_earnings));

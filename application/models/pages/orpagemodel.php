@@ -100,7 +100,12 @@ public function selectorbetween($inputData)
     public function checkorisdone($id)
     {
         $result =  array();
-        $query = $this->db->get_where('or_pool', array('owned_by' => $id));
+        $this->db->select('*');
+        $this->db->from('or_pool');
+        $this->db->where('owned_by =' , $id);
+        $this->db->where('or_status =' , 'READY');
+       $query =  $this->db->get();
+        // $query = $this->db->get_where('', array('' => $id));
 
         foreach ($query->result() as $data) {
             array_push($result,$data);
@@ -182,5 +187,6 @@ return $dataArray;
 
          
   }
+
 }
  ?>
