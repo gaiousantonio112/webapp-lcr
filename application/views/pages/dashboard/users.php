@@ -56,6 +56,7 @@
           <select name="user[type]" class="custom-select" id="typ">
             <option selected value="User">User</option>
             <option value="Admin">Admin</option>
+            <option value="Cashier">Cashier</option>
           </select>
         </div>
       </div>
