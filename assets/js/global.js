@@ -1,7 +1,7 @@
 var global  = {
     settings : {
-      // url : 'http://cf464a5a.ngrok.io',
-      url : 'http://localhost:3000',
+    // url : 'http://d2059b99.ngrok.io',
+     url : 'http://localhost:3000',
       ws_url : '0.tcp.ngrok.io'
     },
 
@@ -16,7 +16,7 @@ function loadNotif(childHTML){
 var cntPndng = 0;
 
 
-var websocket = new WebSocket("ws://"+global.settings.ws_url+":16803/php-socket.php");
+var websocket = new WebSocket("ws://"+global.settings.ws_url+":18715/php-socket.php");
 websocket.onopen = function(event) {
   // showMessage("<div class='chat-connection-ack'>Connection is established!</div>");
   // Load all notificaions read/unread

@@ -34,7 +34,7 @@ $(document).ready(function(e){
       url : global.settings.url + '/Lcr_works/dashboardStats',
       dataType : 'json',
       success : function(res){
-        // //console.log(res);
+        console.log(res);
         // ;
         $('#service_provided').html(res.service_provided);
         $('#total_earnings').html('₱ '+numberWithCommas(res.total_earnings));
@@ -391,7 +391,8 @@ $(document).ready(function(e){
               status : 'Pending',
               from : full_name
             };
-
+            updateor();
+            getnextor();
             websocket.send(JSON.stringify(jsonData));
             //
             // sendNotification({
@@ -417,34 +418,64 @@ $(document).ready(function(e){
       }
     });
 
+
+
+
+    //get next or in search page
+
+    getnextor();
     $('#printReciept').submit(function(e){
-      // recieptframe
-      e.preventDefault();
+ e.preventDefault();
 
-      $.ajax({
-        url : global.settings.url + '/Lcr_works/viewPrint',
-        type : 'POST',
-        data : {
-          'rec[what]' : $('input[name="lcr_type"]:checked').val(),
-          'rec[orno]' : $('#orno').val(),
-          'rec[totalpay]' : $('#totalpay').val(),
-          'rec[payor]' : $('#payor').val()
-        },
-        dataType :'text',
-        success : function(res){
-          //console.log(res);
-          $('#recieptframe').attr('src',global.settings.url+'/pages/viewreciepter/'+res);
 
-          //base_url().'/
+      var checkorifnum =  $('#orno').val();
+      total = $('#totalpay').val();
+     cash = $('#cashten').val();
+     
 
-          white_reciept = global.settings.url+'/pages/printreciept/'+res;
+     if(parseInt(total) <= parseInt(cash)  ){
+                if(isNaN(checkorifnum)){
+                  notif('Please Declare New OR' , 'warning');
+                }else{
+                            if($('#data_id').val() == ''){
+                              notif('Please Select a Request' , 'info');
+                          }else{
+                            if($('#payor').val() == ''){
+                              notif('Please Add Payor Name' , 'info');
+                          }else{
+                            $('#reciept').modal('show');
+                            $.ajax({
+                              url : global.settings.url + '/Lcr_works/viewPrint',
+                              type : 'POST',
+                              data : {
+                                'rec[what]' : $('input[name="lcr_type"]:checked').val(),
+                                'rec[orno]' : $('#orno').val(),
+                                'rec[totalpay]' : $('#totalpay').val(),
+                                'rec[payor]' : $('#payor').val()
+                              },
+                              dataType :'text',
+                              success : function(res){
+                                //console.log(res);
+                                $('#recieptframe').attr('src',global.settings.url+'/pages/viewreciepter/'+res);      
+                                 
+                                white_reciept = global.settings.url+'/pages/printreciept/'+res;
+                              },
+                              error : function(xhr){
+                                notif('Error in Viewing Reciept Kindl Report to the Administrators','danger');
+                                $('#recieptframe').attr('src',xhr.responseText);
+                              }
+                            });
+                          }
+                        }
+                        
+                }
+              }else{
+                notif('Invalid Cash Tendered' , 'warning');
+               }
 
-        },
-        error : function(xhr){
-          notif('Error in Viewing Reciept Kindl Report to the Administrators','danger');
-          $('#recieptframe').attr('src',xhr.responseText);
-        }
-      });
+
+
+      
 
 
 
@@ -1416,9 +1447,64 @@ $('#savedataofprint').submit(function(e){
 }
 });
 
+
+
+
+
 }
 
 
 
 
+
+
+
 ///////////////////////////////////////////////////////////////
+
+///get next or function 
+
+
+function getnextor(){
+  $.ajax({
+      async: false,
+      url: global.settings.url + '/Orpage/getnextor' ,
+      type: 'POST',
+      data: {'data':userid}, 
+      dataType: 'json',
+      success: function (res) {
+    console.log(res);
+    if(res.length == 0){
+      $('#orno').val('Empty Reciepts');
+      
+    }else{
+      res = res[0];
+      $('#orno').val(res.or_next);
+    }
+      },
+      error: function(xhr){
+          console.log(xhr);
+          
+      } 
+  });
+}
+
+
+function updateor(){
+  $.ajax({
+
+    url: global.settings.url + '/Orpage/updateor' ,
+    type: 'POST',
+    data: {'data':userid}, 
+    dataType: 'json',
+    success: function (res) {
+  console.log(res);
+    },
+    error: function(xhr){
+        console.log(xhr);
+        
+    } 
+});
+
+
+
+}
