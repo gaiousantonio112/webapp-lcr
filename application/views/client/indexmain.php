@@ -190,7 +190,7 @@
 						<!-- Text -->
 
 						<!-- Button -->
-						<a href="#" class="btn light-green lighten-5 btn-block" data-toggle="modal"
+						<a href="#" id="bday_request" class="btn light-green lighten-5 btn-block" data-toggle="modal"
 							data-target="#birthday">Request Now</a>
 
 					</div>
@@ -553,7 +553,7 @@
 
 							<div class="col-lg-4">
 								<div class=" md-form p-0">
-									<input type="text" name="death[request_fname]" id="father_fname"
+									<input type="text" name="death[request_fname]" id="death_fname"
 										class="form-control">
 									<label for="father_fname">First Name</label>
 								</div>
@@ -562,7 +562,7 @@
 
 							<div class="col-lg-4">
 								<div class=" md-form p-0">
-									<input type="text" name="death[request_mname]" id="father_mname"
+									<input type="text" name="death[request_mname]" id="death_mname"
 										class="form-control">
 									<label for="father_mname">Middle Initial</label>
 								</div>
@@ -570,7 +570,7 @@
 
 							<div class="col-lg-4">
 								<div class=" md-form p-0">
-									<input type="text" name="death[request_lname]" id="father_lname"
+									<input type="text" name="death[request_lname]" id="death_lname"
 										class="form-control">
 									<label for="father_lname">Last Name</label>
 								</div>
@@ -602,7 +602,7 @@
 						</div>
 
 						<div class="col-12 text-center">
-							<button type="button" class="btn btn-success z-depth-0" name="button">Submit</button>
+							<button type="submit" class="btn btn-success z-depth-0" name="button">Submit</button>
 							<button type="reset" class="btn btn-danger z-depth-0" name="button">Clear All</button>
 						</div>
 				</form>
@@ -793,7 +793,7 @@
 
 							<div class="col-lg-4">
 								<div class=" md-form p-0">
-									<input type="text" name="birthday[requestor_fname]" id="father_fname"
+									<input type="text" name="birthday[requestor_fname]" id="bday_fname"
 										class="form-control">
 									<label for="father_fname">First Name</label>
 								</div>
@@ -802,7 +802,7 @@
 
 							<div class="col-lg-4">
 								<div class=" md-form p-0">
-									<input type="text" name="birthday[requestor_mname]" id="father_mname"
+									<input type="text" name="birthday[requestor_mname]" id="bday_mname"
 										class="form-control">
 									<label for="father_mname">Middle Initial</label>
 								</div>
@@ -810,7 +810,7 @@
 
 							<div class="col-lg-4">
 								<div class=" md-form p-0">
-									<input type="text" name="birthday[requestor_lname]" id="father_lname"
+									<input type="text" name="birthday[requestor_lname]" id="bday_lname"
 										class="form-control">
 									<label for="father_lname">Last Name</label>
 								</div>
@@ -839,7 +839,7 @@
 								<label for="Email">Email Address</label>
 							</div>
 							<div class="col-12 text-center">
-								<button type="button" class="btn btn-success z-depth-0" name="button">Submit</button>
+								<button type="submit" class="btn btn-success z-depth-0" name="button">Submit</button>
 								<button type="reset" class="btn btn-danger z-depth-0" name="button">Clear All</button>
 							</div>
 
@@ -876,7 +876,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<form action="mmarrigecert">
+				<form id="mmarrigecert">
 					<div class="container">
 
 						<b>Purpose of getting Marriage Certificate</b>
@@ -988,7 +988,7 @@
 
 							<div class="col-lg-4">
 								<div class=" md-form p-0">
-									<input type="text" name="marr[requestor_fname]" id="father_fname"
+									<input type="text" name="marr[requestor_fname]" id="marris_fname"
 										class="form-control">
 									<label for="father_fname">First Name</label>
 								</div>
@@ -997,7 +997,7 @@
 
 							<div class="col-lg-4">
 								<div class=" md-form p-0">
-									<input type="text" name="marr[requestor_mname]" id="father_mname"
+									<input type="text" name="marr[requestor_mname]" id="marris_mname"
 										class="form-control">
 									<label for="father_mname">Middle Initial</label>
 								</div>
@@ -1005,7 +1005,7 @@
 
 							<div class="col-lg-4">
 								<div class=" md-form p-0">
-									<input type="text" name="marr[requestor_lname]" id="father_lname"
+									<input type="text" name="marr[requestor_lname]" id="marris_lname"
 										class="form-control">
 									<label for="father_lname">Last Name</label>
 								</div>
@@ -1034,7 +1034,7 @@
 								<label for="Email">Email Address</label>
 							</div>
 							<div class="col-12 text-center">
-								<button type="button" class="btn btn-success z-depth-0" name="button">Submit</button>
+								<button type="submit" class="btn btn-success z-depth-0" name="button">Submit</button>
 								<button type="reset" class="btn btn-danger z-depth-0" name="button">Clear All</button>
 							</div>
 						</div>

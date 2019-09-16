@@ -1,8 +1,8 @@
 var global  = {
     settings : {
-    // url : 'http://d2059b99.ngrok.io',
-     url : 'http://localhost:3000',
-      ws_url : '0.tcp.ngrok.io'
+      // url : 'http://cf464a5a.ngrok.io',
+      url : 'http://192.168.100.207:3000/',
+      ws_url : 'localhost'
     },
 
 }
@@ -14,9 +14,10 @@ function loadNotif(childHTML){
   notif('New Notification/s recieved','success');
 }
 var cntPndng = 0;
+var counter = 0;
 
 
-var websocket = new WebSocket("ws://"+global.settings.ws_url+":18715/php-socket.php");
+var websocket = new WebSocket("ws://"+global.settings.ws_url+":8090/php-socket.php");
 websocket.onopen = function(event) {
   // showMessage("<div class='chat-connection-ack'>Connection is established!</div>");
   // Load all notificaions read/unread
@@ -100,4 +101,41 @@ function sendNotification (data) {
             sendNotification()
         }
     }
+}
+
+function countPending() {
+  $.ajax({
+    url : global.settings.url + '/Lcr_works/countPending',
+    type : 'GET',
+    dataType : 'json',
+    success : function(res){
+      $('#notif_num').html(res.count);
+
+      cntPndng = res.count;
+      // sendNotification({
+      //     title: 'Electronic Civil Registry Information System',
+      //     message: 'Good Day ' + full_name + '! \n You have '+cntPndng+' pendings today',
+      //     icon : 'https://cdn2.iconfinder.com/data/icons/mixed-rounded-flat-icon/512/megaphone-64.png',
+      //     // icon: global.settings.url + '/assets/img/ecrislogo.png',
+      //     clickCallback: function () {
+      //       // window.location.href = global.settings.url + '/pages/dash/print';
+      //     }
+      //   });
+    },
+    error : function(xhr){
+      console.log(xhr.responseText);
+    }
+  });
+}
+
+function formatDate(date) {
+    var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2) month = '0' + month;
+    if (day.length < 2) day = '0' + day;
+
+    return [year, month, day].join('-');
 }

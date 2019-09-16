@@ -651,14 +651,14 @@ $(document).ready(function(e){
 
       data : $(this).serialize(),
 
-      
+
       xhrFields: {
             responseType: 'blob'
         },
       success : function(res){
-        
 
-        
+
+
         $('#modalBirthday').modal('show');
             // var a = document.createElement('a');
             var url = window.URL.createObjectURL(res);
@@ -1083,30 +1083,7 @@ function getUserCredentials() {
   });
 }
 
-function countPending() {
-  $.ajax({
-    url : global.settings.url + '/Lcr_works/countPending',
-    type : 'GET',
-    dataType : 'json',
-    success : function(res){
-      $('#notif_num').html(res.count);
 
-      cntPndng = res.count;
-      sendNotification({
-          title: 'Electronic Civil Registry Information System',
-          message: 'Good Day ' + full_name + '! \n You have '+cntPndng+' pendings today',
-          icon : 'https://cdn2.iconfinder.com/data/icons/mixed-rounded-flat-icon/512/megaphone-64.png',
-          // icon: global.settings.url + '/assets/img/ecrislogo.png',
-          clickCallback: function () {
-            // window.location.href = global.settings.url + '/pages/dash/print';
-          }
-        });
-    },
-    error : function(xhr){
-      console.log(xhr.responseText);
-    }
-  });
-}
 
 
 function loadCertificate(ref_num,table_name) {
@@ -1213,8 +1190,8 @@ function notif(msg,type){
 ///////////////////////////////////////////////FORM GEN ONLICK FUNCTION
 
 function bdaygenreciept(){
- 
-  
+
+
   $.ajax({
     url : global.settings.url + '/Lcr_works/formgenBdayreciept',
     type : 'POST',
@@ -1241,7 +1218,7 @@ function bdaygenreciept(){
     console.log($('#deathform').serializeArray());
 
 
-  
+
     $.ajax({
       url : global.settings.url + '/Lcr_works/deathformreciept',
       type : 'POST',
@@ -1279,9 +1256,9 @@ $.ajax({
 
 
         var url = window.URL.createObjectURL(res);
- 
+
         $('#myframe').attr('src',url);
-      
+
   },
   error : function(xhr){
    console.log(xhr.responseText);
@@ -1294,7 +1271,7 @@ $.ajax({
 
 function printrecipt(){
   getUserCredentials();
-var val = $('#classification').val(); 
+var val = $('#classification').val();
 switch (val) {
 case 'birthdayform':
   var data =   $('#birthdayform').serializeArray();
@@ -1339,7 +1316,7 @@ $('#done').modal('show');
     break;
     case "marrform":
         var data =   $('#marrform').serializeArray();
-        
+
   ////////print function //////////
         $('#ref_num').val(data[3].value);
         $('#or_num').val(data[23]);
@@ -1407,7 +1384,7 @@ $('#savedataofprint').submit(function(e){
 
       websocket.send(JSON.stringify(jsonData));
 
-      
+
     },
     error : function(){
       notif('Invalid O.R Number','danger');
@@ -1415,7 +1392,7 @@ $('#savedataofprint').submit(function(e){
   });
 
   });
-  
+
 
   function certprintnow(id){
     $.ajax({
