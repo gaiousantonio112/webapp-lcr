@@ -434,7 +434,7 @@
                             <input required type="number" class="form-control" name="marrform[or]" id="payorbirth"></input>
                             <label for="payorbirth">O.R Number</label>
                         </div>
-                    
+
                 <div class="row">
                 <div class="col-12 text-center pb-5">
                         <input hidden type="text" name="marrform[amount]" value="50">
@@ -459,15 +459,13 @@
 <div class=" pt-2 col-lg-6 col-md-12 col-sm-12 col-xs-12">
     <div class="sticky-top" style="position: sticky; z-index:2; top:0; position: -webkit-sticky;">
     <!---->
-            <iframe src="<?php echo base_url() ?>/pages/book" class=" prewar_view z-depth-1 mb-4 " id="prewar_image" width="100%" height="80%" style="margin-top: 80px"></iframe>
+            <iframe src="<?php echo base_url() ?>/pages/book" class=" prewar_view z-depth-1 mb-4 " id="prewar_image" width="100%" height="35%" style="margin-top: 80px"></iframe>
             <iframe  src="<?php echo base_url() . 'pages/viewlcrform'?>#toolbar=0&navpanes=0&scrollbar=0&view=fitH,100" class="postwar_view z-depth-1 mb-5 " id="postwar_image" width="100%" height="80%" style="margin-top: 80px"></iframe>
     </div>
-    
+
 
     <div class="rows ">
 
-
-    
         <!-- Birthday Modal -->
         <div class="modal fade" id="modalBirthday" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" style="max-width:950px" role="document">
@@ -557,7 +555,7 @@ aria-hidden="true">
     <div class="modal-footer">
 
                 <input type="hidden" name="class" id="classification">
-        
+
             <button onclick = "printrecipt()" type="button" class="btn btn-primary btn-sm">Print</button>
         <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
     </div>
@@ -582,7 +580,7 @@ aria-hidden="true">
             <h4 class="modal-title w-100" id="myModalLabel">Alert!</h4>
         </div>
         <div class="modal-body">
-    
+
                 Done Printing?
                 <input type="hidden" name="history[ref_num]" id="ref_num" >
                 <input type="hidden" name="history[or_num]" id="or_num" >
@@ -605,7 +603,7 @@ aria-hidden="true">
                 <iframe src="" id="print_rec_holder" hidden frameborder="0"></iframe>
         </div>
         <div class="modal-footer">
-                
+
 
                 <button type="submit" class="btn btn-primary btn-sm">Yes</button>
                 <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">No</button>
