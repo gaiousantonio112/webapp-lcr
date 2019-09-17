@@ -25,8 +25,10 @@ class Pages extends CI_Controller {
 
     public function dash($page = null){
       // $page = $this->uri->segment(3);
+      $data = array();
       if ($this->is_login()) {
       $data['user_level']  = $this->session->userdata('user_level');
+      $data['js_file'] = $page.'.js';
         if ($page == null) {
           $this->index();
           // die('ohno');

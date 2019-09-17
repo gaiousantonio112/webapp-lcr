@@ -116,6 +116,23 @@ date_default_timezone_set('Asia/Manila');
         return $data;
 
       }
+      public function testTwoBday()
+      {
+        $result = $this->db->query('SELECT * FROM lcr_bday LIMIT 20001,40000')->result();
+        
+        
+        // $result = array_merge($array1, $array2);
+        return $result;
+        
+      }
+      public function testTogetAllBday()
+      {
+        $result = $this->db->query('SELECT * FROM lcr_bday LIMIT 0,20000')->result();
+
+
+        // $result = array_merge($array1, $array2);
+        return $result;
+      }
 
       // END
       // LCR BDAY CRUD
@@ -125,7 +142,7 @@ date_default_timezone_set('Asia/Manila');
         $start = intval($this->input->get("start"));
         $length = intval($this->input->get("length"));
 
-        $query = $this->db->query("SELECT * FROM lcr_bday LIMIT 0 , 10");
+        $query = $this->db->query("SELECT * FROM lcr_bday");
         $date = date('Y-m-d');
         $data = [];
         foreach ($query->result() as $r) {
