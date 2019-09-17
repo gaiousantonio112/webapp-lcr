@@ -34,7 +34,6 @@ $(document).ready(function(){
         e.preventDefault();
 
         console.log(selectorbetween());
-        console.log(selectorbetween());
                 if(selectorbetween() == true){
         notif('Used Official Receipt');
         
@@ -59,6 +58,35 @@ $(document).ready(function(){
 
     });
 
+    
+
+$('#sibmitorcancel').submit(function (e) {
+    e.preventDefault();
+  
+  $.ajax({
+  
+    url:  global.settings.url + '/Orpage/cancelor',
+    type : 'POST', 
+    data: $(this).serialize(),
+    dataType: 'json',
+    success: function(res){
+        console.log(res);
+        print_datatable.ajax.reload();
+        $('#cancelormodal').modal('hide');
+        
+notif('You cancelled the request successfully' , 'success');
+
+    },
+    error: function(xhr){
+        console.log(xhr);
+    }
+    });
+  
+  });
+
+
+    
+    
 });
 
 function checkordone(id){
@@ -72,9 +100,9 @@ function checkordone(id){
         },
         dataType: 'json',
         success: function(res){
-            res = res[0];
-            console.log(res.or_status);
-            (res.or_status == 'READY') ?  val = true :  val = false;     
+            console.log(res);
+            console.log(res.length);
+            (res.length) ?  val = true :  val = false;     
             // window.location = '/printables';
         },
         error: function(xhr){
@@ -114,10 +142,8 @@ function selectorbetween(){
         data: $('#saveor').serialize(),
         dataType: 'json',
         success: function(res){
-            res= res[0];
-        console.log(res);
-        (res.or_num) ?  val = true :  val = false;  
-    
+            console.log(res);
+        (res.length) ?  val = true :  val = false;  
         },
         error: function(xhr){
             console.log(xhr);
@@ -125,3 +151,13 @@ function selectorbetween(){
         });
         return val;
 }
+
+function cancelor(id , or , name){
+    $('#cancelormodal').modal('show');
+    document.getElementById("ornum").innerHTML = 'OR#:'+' '+ or;
+    document.getElementById("name").innerHTML = 'Name:'+' '+ name;
+    $('#orrealnum').val(or);
+    $('#iddel').val(id);
+}
+
+   

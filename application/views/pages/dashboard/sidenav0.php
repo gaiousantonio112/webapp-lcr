@@ -108,9 +108,7 @@ background-color: #EFEDDF;
   <li class="text-left list-group-item list-group-item-action pl-2" style="border:0px solid">
         <a href="<?php echo base_url() . 'pages/dash/search'  ?>" ><img src="<?php echo base_url() .'/assets/svg/search(ecris).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text"> Search and Payment</span></a>
   </li>
-  <li class="text-left list-group-item list-group-item-action pl-2" style="border:0px solid">
-        <a href="<?php echo base_url() . 'pages/dash/add'  ?>" ><img src="<?php echo base_url() .'/assets/svg/add(ecris).svg' ?>" height="28px" class="mr-3" alt=""><span class="nav-text"> Add</span></a>
-  </li>
+
   <li class="text-left list-group-item list-group-item-action pl-2" style="border:0px solid">
       	<a href="<?php echo base_url() . 'pages/dash/formgen'  ?>" ><img src="<?php echo base_url() .'/assets/svg/formgen(ecris).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text"> LCR Form Generator</span></a>
   </li>
@@ -129,12 +127,20 @@ background-color: #EFEDDF;
   <?php
   switch ($user_level) {
       case 'Admin':
+
+      echo  '   <li class="text-left list-group-item list-group-item-action pl-2" style="border:0px solid">
+      <a href='.base_url().'pages/dash/add><img src='.base_url().'/assets/svg/add(ecris).svg height="28px" class="mr-3" alt=""><span class="nav-text"> Add</span></a>';
 echo  '<li class="text-left list-group-item list-group-item-action pl-2" style="border:0px solid">'
 .'<a href='.base_url().'pages/dash/users>'.'<img src='.base_url().'/assets/svg/usermanager(ecris).svg height="25px" class="mr-3" alt=""><span class="nav-text"> User Manager</span></a>';
 
 echo  '<li class="text-left list-group-item list-group-item-action pl-2" style="border:0px solid">'
-.'<a href='.base_url().'pages/dash/cashreport>'.'<img src='.base_url().'/assets/svg/usermanager(ecris).svg height="25px" class="mr-3" alt=""><span class="nav-text">Cashier Page</span></a>';
+.'<a href='.base_url().'pages/dash/cashreport>'.'<img src='.base_url().'/assets/svg/cashier(ecris).svg height="25px" class="mr-3" alt=""><span class="nav-text">Cashier Page</span></a>';
         break;
+
+        case 'Cashier':
+        echo  '<li class="text-left list-group-item list-group-item-action pl-2" style="border:0px solid">'
+        .'<a href='.base_url().'pages/dash/cashreport>'.'<img src='.base_url().'/assets/svg/cashier(ecris).svg height="25px" class="mr-3" alt=""><span class="nav-text">Cashier Page</span></a>';
+                break;
 
     default:
       // code...

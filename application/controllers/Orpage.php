@@ -42,8 +42,24 @@ public function checkorisdone()
     echo json_encode($this->model->checkorisdone($id));
 }
 
+public function getnextor()
+{
+    $id = $this->input->post('data');
+    echo json_encode($this->model->getnextor($id));
+}
+
+public function  updateor()
+{
+    $id = $this->input->post('data');
+    echo json_encode($this->model->updateor($id));
+}
 
 
+function cancelor()
+{
+    $data = $this->input->post('orcancel');
+    echo json_encode($this->model->cancelor($data));
+}
 
 
 }

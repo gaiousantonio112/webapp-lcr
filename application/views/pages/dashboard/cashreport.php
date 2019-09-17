@@ -1,7 +1,7 @@
 <div class="container-fluid pt-4 px-5">
 
 	<div class="z-depth-1 title-Div">
-		<span><img class="title-Divimg" src="<?php echo base_url() .'/assets/svg/usermanager2(ecris).svg' ?>"></span>
+		<span><img class="title-Divimg" src="<?php echo base_url() .'/assets/svg/cashier2(ecris).svg' ?>"></span>
 		<h2 class="white-text float-right title-text">Cashier Page</h2>
 	</div>
 
@@ -53,7 +53,7 @@
 										</th>
 										<th class="th-sm">DATE ADDED
 										</th>
-										
+
 									</tr>
 								</thead>
 								<tbody>
@@ -62,7 +62,7 @@
 						</div>
 
 
-				
+
 							<div class="col-lg-4">
 							<form id="saveor">
 								<div class="card">
@@ -86,11 +86,11 @@
 												</div>
 											</div>
 											<input type="text" id="cashid" name="or[user]" value= "<?php echo $this->session->userdata('user_id') ?>" hidden>
-										
+
 											<div class="col-12 text-center">
 												<button class="btn btn-sm btn-success">
 													Save
-													
+
 												</button>
 
 												<button type="reset" class="btn btn-sm btn-danger">

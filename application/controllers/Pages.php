@@ -15,6 +15,10 @@ class Pages extends CI_Controller {
       }else{
         $this->login();
       }
+
+
+
+  
     }
 
     public function login() {
