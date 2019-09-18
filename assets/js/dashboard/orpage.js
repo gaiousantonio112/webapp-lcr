@@ -85,17 +85,7 @@ notif('You cancelled the request successfully' , 'success');
   });
 
 
-  
-  
-
-
-
-  
-
-
-
-
-
+    
     
 });
 

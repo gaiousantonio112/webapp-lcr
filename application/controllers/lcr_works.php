@@ -66,6 +66,19 @@ class Lcr_works extends CI_Controller {
       echo json_encode($this->works->showMarriage());
     }
 
+    public function testTogetAllBday()
+    {
+      $array1 = $this->works->testTwoBday();
+      // $array1 = array();
+      $array2 = $this->works->testTogetAllBday();
+      // $array2 = array();
+      // echo json_encode(array_merge($array1,$array2));
+
+      echo count($array1) + count($array2);
+      
+      
+    }
+
 
     public function addBirthday()
     {
