@@ -116,6 +116,23 @@ date_default_timezone_set('Asia/Manila');
         return $data;
 
       }
+      public function testTwoBday()
+      {
+        $result = $this->db->query('SELECT * FROM lcr_bday LIMIT 20001,40000')->result();
+        
+        
+        // $result = array_merge($array1, $array2);
+        return $result;
+        
+      }
+      public function testTogetAllBday()
+      {
+        $result = $this->db->query('SELECT * FROM lcr_bday LIMIT 0,20000')->result();
+
+
+        // $result = array_merge($array1, $array2);
+        return $result;
+      }
 
       // END
       // LCR BDAY CRUD
@@ -125,7 +142,7 @@ date_default_timezone_set('Asia/Manila');
         $start = intval($this->input->get("start"));
         $length = intval($this->input->get("length"));
 
-        $query = $this->db->query("SELECT * FROM lcr_bday LIMIT 0 , 10");
+        $query = $this->db->query("SELECT * FROM lcr_bday");
         $date = date('Y-m-d');
         $data = [];
         foreach ($query->result() as $r) {
@@ -399,23 +416,30 @@ date_default_timezone_set('Asia/Manila');
               ///for certifate prin functuion
             switch ($r->type) {
               case 'birthdayform':
-                $r->btn = '<button onclick="certprintnow(\''.$r->id.'\')" type="button" class="btn btn-outline-primary btn-sm" "><img src=" '.base_url().'/assets/svg/Print (ecris).svg ">Print </button>';
+                $r->btn = '<button onclick="certprintnow(\''.$r->id.'\')" type="button" class="btn btn-outline-primary btn-sm" "><i class="fas fa-print text-primary fa-lg "></i> Print </button>
+                <button onclick="cancelor(\''.$r->id.'\')" class="btn btn-sm btn-outline-danger"><i class="fas fa-times text-danger fa-lg"></i> Cancel</button>';
                 $r->type = 'Birthday Certificate';
                   break;
                   case 'deathform':
-                    $r->btn = '<button onclick="certprintnow(\''.$r->id.'\')" type="button" class="btn btn-outline-primary btn-sm" "><img src=" '.base_url().'/assets/svg/Print (ecris).svg ">Print </button>';
+                    $r->btn = '<button onclick="certprintnow(\''.$r->id.'\')" type="button" class="btn btn-outline-primary btn-sm" "><i class="fas fa-print text-primary fa-lg "></i> Print </button>
+                    <button onclick="cancelor(\''.$r->id.'\')" class="btn btn-sm btn-outline-danger"><i class="fas fa-times text-danger fa-lg"></i> Cancel</button>';
                     $r->type = 'Death Certificate';
                       break;
                       case 'marrform':
-                        $r->btn = '<button onclick="certprintnow(\''.$r->id.'\')" type="button" class="btn btn-outline-primary btn-sm" "><img src=" '.base_url().'/assets/svg/Print (ecris).svg ">Print /button>';
+                        $r->btn = '<button onclick="certprintnow(\''.$r->id.'\')" type="button" class="btn btn-outline-primary btn-sm" "><i class="fas fa-print text-primary fa-lg "></i> Print /button>
+                        <button onclick="cancelor(\''.$r->id.'\')" class="btn btn-sm btn-outline-danger"><i class="fas fa-times text-danger fa-lg"></i> Cancel</button>';
                         $r->type = 'Marriage Certificate';
                           break;
               
                  default:
-                $r->btn = '<button onclick="printPage(\''.$r->id.'\')" type="button" class="btn btn-outline-primary btn-sm" "><img src=" '.base_url().'/assets/svg/Print (ecris).svg "> Print</button>';
+                     // <img src=" '.base_url().'/assets/svg/Print (ecris).svg ">
+                $r->btn = '<button onclick="printPage(\''.$r->id.'\'  )" type="button" class="btn btn-outline-primary btn-sm" "><i class="fas fa-print text-primary fa-lg "></i> Print</button>
+                <button onclick="cancelor(\''.$r->id.'\' ,\''.$r->or_num.'\' ,\''.$r->name.'\' )" class="btn btn-sm btn-outline-danger"><i class="fas fa-times text-danger fa-lg"></i> Cancel</button>
+                
+                ';
                 break;
             }
-
+        
 
 
           $data[] = array(

@@ -55,6 +55,11 @@ public function  updateor()
 }
 
 
+function cancelor()
+{
+    $data = $this->input->post('orcancel');
+    echo json_encode($this->model->cancelor($data));
+}
 
 
 }
