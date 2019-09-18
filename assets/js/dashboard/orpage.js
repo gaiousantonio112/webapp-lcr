@@ -1,7 +1,7 @@
 var datatable;
 $(document).ready(function(){
 
-
+    
 
     datatable = $('#ortable').DataTable({
         "ajax" : {
@@ -85,7 +85,17 @@ notif('You cancelled the request successfully' , 'success');
   });
 
 
-    
+  
+  
+
+
+
+  
+
+
+
+
+
     
 });
 
@@ -161,3 +171,6 @@ function cancelor(id , or , name){
 }
 
    
+  
+  
+  

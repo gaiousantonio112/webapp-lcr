@@ -675,6 +675,7 @@ $(document).ready(function(e){
        console.log(xhr.responseText);
       }
     });
+  
 
   });
 
@@ -682,6 +683,8 @@ $(document).ready(function(e){
 //DEATH
     $('#deathform').submit(function(e){
     e.preventDefault();
+    
+
     $.ajax({
       url : global.settings.url + '/Lcr_works/formgenDeath',
       type : 'POST',
@@ -700,12 +703,15 @@ $(document).ready(function(e){
        console.log(xhr.responseText);
       }
     });
+  
   });
 
 
 //MARR
       $('#marrform').submit(function(e){
       e.preventDefault();
+
+
         $.ajax({
           url : global.settings.url + '/Lcr_works/formgenMarriage',
           type : 'POST',
@@ -725,6 +731,7 @@ $(document).ready(function(e){
            console.log(xhr.responseText);
           }
         });
+      
       });
 
       ////////////////////////////////////////////////////////////////////////
@@ -1132,7 +1139,7 @@ function loadNotifcations() {
     success : function(res){
 
       for (var i = 1; i < res.length - 1; i++) {
-        notif_content += '<a title="Click to view" href="http://localhost:3000//pages/dash/print" class="col-12 notif  waves-effect waves-light"><small>Ref No: '+res[i].ref_no+' / Type : '+res[i].type+' / Issued : '+res[i].issued_date+' / Status : '+res[i].status+' / FROM : '+res[i].from+'</small></a>';
+        notif_content += '<a title="Click to view" href="http://192.168.100.93:3000//pages/dash/print" class="col-12 notif  waves-effect waves-light"><small>Ref No: '+res[i].ref_no+' / Type : '+res[i].type+' / Issued : '+res[i].issued_date+' / Status : '+res[i].status+' / FROM : '+res[i].from+'</small></a>';
       }
 
       // console.log(notif_content);
@@ -1191,8 +1198,9 @@ function notif(msg,type){
 ///////////////////////////////////////////////FORM GEN ONLICK FUNCTION
 
 function bdaygenreciept(){
-
-
+  if(isNaN($('#ornobday').val())){
+    notif('Please Declare New OR' , 'warning');
+  }else{
   $.ajax({
     url : global.settings.url + '/Lcr_works/formgenBdayreciept',
     type : 'POST',
@@ -1201,14 +1209,18 @@ function bdaygenreciept(){
           responseType: 'blob'
       },
     success : function(res){
+     
+      
       $('#classification').val('birthdayform');
           var url = window.URL.createObjectURL(res);
           $('#myframe').attr('src',url);
+          $('#recipet').modal('show');
     },
     error : function(xhr){
      console.log(xhr.responseText);
     }
   });
+}
 
   }
 
@@ -1218,7 +1230,9 @@ function bdaygenreciept(){
   function deathgenreciept(){
     console.log($('#deathform').serializeArray());
 
-
+    if(isNaN($('#ornodeath').val())){
+      notif('Please Declare New OR' , 'warning');
+    }else{
 
     $.ajax({
       url : global.settings.url + '/Lcr_works/deathformreciept',
@@ -1231,18 +1245,22 @@ function bdaygenreciept(){
         $('#classification').val('deathform');
             var url = window.URL.createObjectURL(res);
             $('#myframe').attr('src',url);
+            $('#recipet').modal('show');
       },
       error : function(xhr){
        console.log(xhr.responseText);
       }
     });
 
-
+  }
 
 }
 
 function marrgenreciept(){
 
+  if(isNaN($('#ormarr').val())){
+    notif('Please Declare New OR' , 'warning');
+  }else{
 $.ajax({
   url : global.settings.url + '/Lcr_works/marrformreciept',
   type : 'POST',
@@ -1259,18 +1277,24 @@ $.ajax({
         var url = window.URL.createObjectURL(res);
 
         $('#myframe').attr('src',url);
+        $('#recipet').modal('show');
 
   },
   error : function(xhr){
    console.log(xhr.responseText);
   }
+  
 });
+}
 }
 
 
 
 
 function printrecipt(){
+
+
+  
   getUserCredentials();
 var val = $('#classification').val();
 switch (val) {
@@ -1456,10 +1480,20 @@ function getnextor(){
     console.log(res);
     if(res.length == 0){
       $('#orno').val('Empty Reciepts');
+
+      $('#ornobday').val('Empty Reciepts');
+      $('#ornodeath').val('Empty Reciepts');
+      $('#ormarr').val('Empty Reciepts');
       
     }else{
       res = res[0];
       $('#orno').val(res.or_next);
+
+
+
+      $('#ornobday').val(res.or_next);
+      $('#ornodeath').val(res.or_next);
+      $('#ormarr').val(res.or_next);
     }
       },
       error: function(xhr){

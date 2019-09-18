@@ -23,8 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = (isset($_SERVER['HTTPS']) ? "https://" : "http://") .$_SERVER['HTTP_HOST'] . preg_replace('@/+$@', '', dirname($_SERVER['SCRIPT_NAME'])) . '/';
-// $config['base_url'] = 'http://d2059b99.ngrok.io/';
+ $config['base_url'] = (isset($_SERVER['HTTPS']) ? "https://" : "http://") .$_SERVER['HTTP_HOST'] . preg_replace('@/+$@', '', dirname($_SERVER['SCRIPT_NAME'])) . '/';
+// $config['base_url'] = 'http://192.168.100.93:3000/';
 
 
 /*

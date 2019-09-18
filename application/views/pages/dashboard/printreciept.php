@@ -16,20 +16,45 @@ $date = date('m - d - Y');
    $pdfv2->setPrintHeader(false);
   $pdfv2->setPrintFooter(false);
   $pdfv2->addPage($orientation);
-   $pdfv2->useTemplate($tpl, null, null, 0, 0, TRUE);
+   $pdfv2->useTemplate($tpl, null, null, $size['w'] - 7,  $size['h']-6, TRUE);
 
 
 
-  //  $pdfv2->addpage();
-  //  $pdfv2->deletePage(1);
-  $pdfv2->Text(55,50 , $date);
-  $pdfv2->Text(17,65 , ($_GET['payor'] == null ? 'no payor input!' : $_GET['payor']));
-  $pdfv2->Text(10,83 , ($_GET['what'] == null ? '0' : $_GET['what']));
+   $pdfv2->addpage();
+   $pdfv2->deletePage(1);
+  $pdfv2->Text(55,48 , $date);
+  $pdfv2->Text(17,63 , ($_GET['payor'] == null ? 'no payor input!' : $_GET['payor']));
+ 
 
-  $pdfv2->Text(47,83 , ($_GET['orno'] == null ? '0' : $_GET['orno']));
-  $pdfv2->Text(75,83 , ($_GET['totalpay'] == null ? '0' : $_GET['totalpay']));
+  switch ($_GET['what']) {
+    case 'birthday':
+     $what = 'Birth Certificate';
+      break;
 
-  $pdfv2->Text(75,125 , ($_GET['totalpay'] == null ? '0' : $_GET['totalpay']));
+      case 'death':
+      $what = 'Death Certificate';
+      break;
+
+      case 'marriage':
+      $what = 'Marriage Certificate';
+      break;
+
+
+    
+    default:
+    $what= null;
+      break;
+  }
+
+
+  $pdfv2->Text(8,80 , ($_GET['what'] == null ? '0' : $what));
+
+
+
+  $pdfv2->Text(45,80 , ($_GET['orno'] == null ? '0' : $_GET['orno']));
+  $pdfv2->Text(75,80 , ($_GET['totalpay'] == null ? '0' : $_GET['totalpay']));
+
+  $pdfv2->Text(75,122 , ($_GET['totalpay'] == null ? '0' : $_GET['totalpay']));
 
   // $js = 'print(true);';
 

@@ -170,6 +170,7 @@
             <select name="edit[type]" class="custom-select" id="edittyp">
               <option selected value="User">User</option>
               <option value="Admin">Admin</option>
+              <option value="Cashier">Cashier</option>
             </select>
           </div>
         </div>

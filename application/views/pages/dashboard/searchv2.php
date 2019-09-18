@@ -142,7 +142,12 @@ html {
 
       <div class="row">
 
-    <div class="col-6 mt-3">
+    <div class="col-6 mt-2 text-center">
+	<div class="row">
+	<div class="col-12 text-left ml-4">
+	<p>SELECT TYPE:</p>
+	</div>
+	<div class="col-12">
       <div class="custom-control custom-radio custom-control-inline">
         <input type="radio" class="custom-control-input"id="Birthday" name="lcr_type" value="birthday" onclick="show('searchbirth')" checked >
         <label class="custom-control-label" for="Birthday">Birthday</label>
@@ -157,7 +162,29 @@ html {
         <input type="radio" class="custom-control-input" id="Marriage" name="lcr_type" value="marriage"  onclick="show('searchmerage')">
         <label class="custom-control-label" for="Marriage">Marriage</label>
       </div>
-    </div>
+	  </div>
+	  </div>
+	  </div>
+<div class="col-6">
+<div class="row">
+<div class="col-8">
+<div class="md-form">
+  <input type="text" id="searchin" name="search[name]" class="form-control">
+  <label for="searchin">Search</label>
+</div>
+</div>
+<div class="col-2 mt-3">
+<button type="button" class="btn btn-primary btn-md">Execute</button>
+</div>
+</div>
+</div>
+
+	
+
+
+    
+
+
 
     <!-- <div class="col-6 m-0 py-0" style="">
       <div class="md-form custom-control-inline m-0">
@@ -184,7 +211,7 @@ html {
 <div class="card px-2" >
     <div class="card-body">
 
-  	<table id="tb_mainlcr" class="table table-responsive table-sm table-striped table-bordered " cellspacing="0" width="100%">
+  	<table id="custom_datatable" class="table table-responsive table-sm table-striped table-bordered " cellspacing="0" width="100%">
 
   	  <thead>
   	    <tr>
