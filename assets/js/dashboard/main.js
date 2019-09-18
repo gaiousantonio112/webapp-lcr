@@ -5,6 +5,7 @@ var data_seacrh_table_bday;
 var data_seacrh_table_death;
 var data_seacrh_table_marriage;
 var usertable;
+var print_datatable ;
 // ct : stackoverflow
 $(".leftDiv").hover(
     function() {
@@ -392,7 +393,7 @@ $(document).ready(function(e){
               from : full_name
             };
             updateor();
-            getnextor();
+        
             websocket.send(JSON.stringify(jsonData));
             //
             // sendNotification({
@@ -566,7 +567,7 @@ $(document).ready(function(e){
 
 //TABLE PRINT JANDEAN
     $('#printable').DataTable().clear().destroy();
-    var print_datatable = $('#printable').DataTable({
+   print_datatable = $('#printable').DataTable({
         "ajax" : {
           "url" : global.settings.url + '/Lcr_works/showprint',
           dataSrc : 'data'
@@ -1357,6 +1358,8 @@ $.ajax({
 
 
 
+
+
 $('#savedataofprint').submit(function(e){
   e.preventDefault();
    type = $('#type').val();
@@ -1390,6 +1393,7 @@ $('#savedataofprint').submit(function(e){
       notif('Invalid O.R Number','danger');
     }
   });
+
 
   });
 
@@ -1475,12 +1479,16 @@ function updateor(){
     dataType: 'json',
     success: function (res) {
   console.log(res);
+  getnextor();
     },
     error: function(xhr){
         console.log(xhr);
         
     } 
 });
+
+
+
 
 
 

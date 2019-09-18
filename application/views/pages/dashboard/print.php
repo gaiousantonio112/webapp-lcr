@@ -69,3 +69,50 @@
 		</div>
 
 	</div>
+
+
+
+
+	
+<!-- Modal -->
+<div class="modal fade" id="cancelormodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title" id="exampleModalLabel">Cancel Request</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+     <h6>Are you sure you want to cancel this request?</h6>
+	 <h6 id="name"></h6>
+	 <h6 id="ornum"></h6>
+<form id="sibmitorcancel">
+
+	 <div class="form-group">
+
+  <div class="md-form">
+  <textarea id="remarks" name="orcancel[remarks]"  class="md-textarea form-control" rows="3" required></textarea>
+  <label for="remarks">Remarks</label>
+</div>
+  <!-- <textarea class="form-control rounded-0" rows="2" required></textarea> -->
+  <div class="col-12 text-center">
+  <input type="text" id="iddel"  name="orcancel[id]" hidden>
+  <input type="text" id="orrealnum"  name="orcancel[or]" hidden>
+  <button  type="submit"  class="btn-sm btn-info btn">Submit</button>
+  <button  type="button"  data-dismiss="modal"  class="btn-sm btn-danger btn">Cancel</button>
+  </div>
+</div>
+</form>
+
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+

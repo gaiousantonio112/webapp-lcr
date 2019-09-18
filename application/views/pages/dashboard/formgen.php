@@ -138,11 +138,11 @@
                             <label for="birth_remarks">Remarks</label>
                         </div>
                         <div class="md-form mb-0 pb-0">
-                            <input required type="text" class="form-control" name="formgenbday[payor]" id="payorbirth"></input>
-                            <label for="payorbirth">Payor Name</label>
+                            <input required type="text" class="form-control" name="formgenbday[payor]" id="payor"></input>
+                            <label for="payor">Payor Name</label>
                         </div>
                         <div class="md-form mb-0 pb-0">
-                            <input required type="number" class="form-control" name="formgenbday[or]" id="payorbirth"></input>
+                            <input readonly placeholder=" " required type="text" class="form-control" name="formgenbday[or]" id="ornobday"></input>
                             <label for="payorbirth">O.R Number</label>
                         </div>
                     </div>
@@ -151,7 +151,7 @@
                         <input hidden type="text" name="formgenbday[amount]" value="50">
                     <input hidden type="text" name="formgenbday[type]" value ="Birthday Certificate">
                             <button type="submit" class="btn btn-info" name="button"  id="birthday-btn">Preview</button>
-                                <button type="button" onclick="bdaygenreciept()"  class="btn btn-success" name="button" data-toggle="modal" data-target="#recipet" >Submit</button>
+                                <button type="button" onclick="bdaygenreciept()"  class="btn btn-success" name="button"  >Submit</button>
                             <button type="reset" class="btn btn-danger" name="button">Clear All</button>
                         </div>
                     </div>
@@ -268,8 +268,8 @@
                             <label for="payordeath">Payor Name</label>
                         </div>
                         <div class="md-form mb-0 pb-0">
-                            <input required type="number" class="form-control" name="formgendeath[or]" id="payorbirth"></input>
-                            <label for="payorbirth">O.R Number</label>
+                        <input readonly placeholder=" " required type="text" class="form-control" name="formgendeath[or]" id="ornodeath"></input>
+                          <label for="payorbirth">O.R Number</label>
                         </div>
                 </div>
                 <div class="row">
@@ -277,7 +277,7 @@
                         <input hidden type="text" name="formgendeath[amount]" value="50">
                     <input hidden type="text" name="formgendeath[type]" value ="Death Certificate">
                             <button type="submit" class="btn btn-info" name="button" id="birthday-btn">Preview</button>
-                                <button type="button" onclick="deathgenreciept()"  class="btn btn-success" name="button" data-toggle="modal" data-target="#recipet" >Submit</button>
+                                <button type="button" onclick="deathgenreciept()"  class="btn btn-success" name="button" >Submit</button>
                             <button type="reset" class="btn btn-danger" name="button">Clear All</button>
                         </div>
                 </div>
@@ -431,7 +431,7 @@
                             <label for="payormarr">Payor Name</label>
                         </div>
                         <div class="md-form mb-0 pb-0">
-                            <input required type="number" class="form-control" name="marrform[or]" id="payorbirth"></input>
+                            <input readonly placeholder=" " required type="text" class="form-control" name="marrform[or]" id="ormarr"></input>
                             <label for="payorbirth">O.R Number</label>
                         </div>
 
@@ -440,7 +440,7 @@
                         <input hidden type="text" name="marrform[amount]" value="50">
                     <input hidden type="text" name="marrform[type]" value ="Marriage Certificate">
                             <button type="submit" class="btn btn-info" name="button"  id="birthday-btn">Preview</button>
-                                <button type="button" onclick="marrgenreciept()"  class="btn btn-success" name="button" data-toggle="modal" data-target="#recipet" >Submit</button>
+                                <button type="button" onclick="marrgenreciept()"  class="btn btn-success" name="button"  >Submit</button>
                             <button type="reset" class="btn btn-danger" name="button">Clear All</button>
                         </div>
                 </div>
@@ -469,16 +469,16 @@
         <!-- Birthday Modal -->
         <div class="modal fade" id="modalBirthday" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" style="max-width:950px" role="document">
-                <div class="modal-content">
-                    <div class="modal-header p-2" style="background-color: tomato">
+                <div class="modal-content p-0 m-0">
+                    <div class="modal-header pb-0 p-2" style="background-color: tomato">
                         <h4 class="modal-title white-text w-100 font-weight-bold py-2">
                     </h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true" class="white-text">&times;</span>
                         </button>
                     </div>
-                    <div class="md-form mb-4">
-                        <iframe width="100%" id="iframe_preview_formgen" height="75%" ></iframe>
+                    <div class="md-form mb-4 ">
+                        <iframe width="100%" height="490px" id="iframe_preview_formgen"  ></iframe>
 
                         <div class="modal-footer m-0 P-0">
                        <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal">Close</button>
@@ -550,7 +550,7 @@ aria-hidden="true">
 
     </div>
     <div class="modal-body p-0 m-0">
-    <iframe id="myframe" frameborder="0" width="100%" height="100%"></iframe>
+    <iframe id="myframe" frameborder="0" width="100%" height="450px"></iframe>
     </div>
     <div class="modal-footer">
 

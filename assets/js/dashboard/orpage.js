@@ -58,6 +58,35 @@ $(document).ready(function(){
 
     });
 
+    
+
+$('#sibmitorcancel').submit(function (e) {
+    e.preventDefault();
+  
+  $.ajax({
+  
+    url:  global.settings.url + '/Orpage/cancelor',
+    type : 'POST', 
+    data: $(this).serialize(),
+    dataType: 'json',
+    success: function(res){
+        console.log(res);
+        print_datatable.ajax.reload();
+        $('#cancelormodal').modal('hide');
+        
+notif('You cancelled the request successfully' , 'success');
+
+    },
+    error: function(xhr){
+        console.log(xhr);
+    }
+    });
+  
+  });
+
+
+    
+    
 });
 
 function checkordone(id){
@@ -122,3 +151,13 @@ function selectorbetween(){
         });
         return val;
 }
+
+function cancelor(id , or , name){
+    $('#cancelormodal').modal('show');
+    document.getElementById("ornum").innerHTML = 'OR#:'+' '+ or;
+    document.getElementById("name").innerHTML = 'Name:'+' '+ name;
+    $('#orrealnum').val(or);
+    $('#iddel').val(id);
+}
+
+   
