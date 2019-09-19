@@ -57,7 +57,80 @@ $(document).ready(function(){
 
 
     });
+    // $('#custom_datatable').DataTable();
 
+    
+            
+ $('#searchdatanow').submit(function (e) {
+    e.preventDefault()
+   console.log($('#searchdatanow').serializeArray());
+ 
+
+   $('#custom_datatable').DataTable().clear().destroy();
+
+    $('#custom_datatable').DataTable({
+    "ajax" : {
+
+      "url" : global.settings.url + '/Orpage/searchdatanow/'+ $('#searchin').val()  +'/'+$("input[name=lcr_type]:checked").val(),
+      dataSrc : 'data'
+    },
+    "columns" : [{
+        "data" : "id"
+    }, {
+        "data" : "refno"
+    }, {
+        "data" : "date"
+    }, {
+        "data" : "full_name"
+    }, {
+        "data" : "btn"
+    }]
+
+
+    
+
+  });
+
+notif('Searched Successfully' , 'success');
+
+
+
+
+
+
+
+
+
+
+
+
+//    $.ajax({
+  
+//     url:  global.settings.url + '/Orpage/searchdatanow/'+$('#searchin').val()  +'/'+$("input[name=lcr_type]:checked").val() ,
+//     type : 'POST', 
+//     dataType: 'json',
+//     success: function(res){
+//         console.log(res);
+
+        
+//         console.log(res.data.length);
+        
+//     },
+//     error: function(xhr){
+//         console.log(xhr);
+//     }
+//     });
+  
+
+//         print_datatable.ajax.reload();
+//         $('#cancelormodal').modal('hide');
+        
+// notif('You cancelled the request successfully' , 'success');
+
+
+
+    
+});
     
 
 $('#sibmitorcancel').submit(function (e) {

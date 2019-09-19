@@ -22,8 +22,8 @@ $date = date('m - d - Y');
 
    $pdfv2->addpage();
    $pdfv2->deletePage(1);
-  $pdfv2->Text(55,48 , $date);
-  $pdfv2->Text(17,63 , ($_GET['payor'] == null ? 'no payor input!' : $_GET['payor']));
+  $pdfv2->Text(55,46 , $date);
+  $pdfv2->Text(17,61 , ($_GET['payor'] == null ? 'no payor input!' : $_GET['payor']));
  
 
   switch ($_GET['what']) {
@@ -47,14 +47,14 @@ $date = date('m - d - Y');
   }
 
 
-  $pdfv2->Text(8,80 , ($_GET['what'] == null ? '0' : $what));
+  $pdfv2->Text(8,78 , ($_GET['what'] == null ? '0' : $what));
 
 
 
-  $pdfv2->Text(45,80 , ($_GET['orno'] == null ? '0' : $_GET['orno']));
-  $pdfv2->Text(75,80 , ($_GET['totalpay'] == null ? '0' : $_GET['totalpay']));
+  $pdfv2->Text(45,78 , ($_GET['orno'] == null ? '0' : $_GET['orno']));
+  $pdfv2->Text(75,78 , ($_GET['totalpay'] == null ? '0' : $_GET['totalpay']));
 
-  $pdfv2->Text(75,122 , ($_GET['totalpay'] == null ? '0' : $_GET['totalpay']));
+  $pdfv2->Text(75,120 , ($_GET['totalpay'] == null ? '0' : $_GET['totalpay']));
 
   // $js = 'print(true);';
 

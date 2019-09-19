@@ -210,5 +210,151 @@ return $dataArray;
 
   }
 
+
+  public function searchdatanow($name , $typeval)
+  {
+    $result =  array();
+
+   
+
+switch ($typeval) {
+  case 'birthday':
+    $type = 'lcr_bday';
+
+    $draw = intval($this->input->get("draw"));
+    $start = intval($this->input->get("start"));
+    $length = intval($this->input->get("length"));
+    $date = date('Y-m-d');
+    // $query = $this->db->query('SELECT * FROM  buss_profile WHERE buss_id = '.$inputData['search1'].  or buss_name  = .$inputData['search1']);
+        $this->db->select("*");
+        $this->db->from('lcr_bday');
+        $this->db->like('First_name', $name);
+        $this->db->or_like('Middle_name', $name);
+        $this->db->or_like('Last_name', $name);
+       
+     
+        // $this->db->or_like('buss_status', $inputData['search1']);
+        $query =$this->db->get();
+        $data = [];
+        foreach ($query->result() as $r) {
+        // array_push($result,$data);
+
+        $data[] = array(
+          'id' => $r->id,
+          'refno' => $r->refno,
+          'date' => $r->birthday,
+          'full_name' => $r->First_name.' '.$r->Middle_name.' '.$r->Last_name,
+          'btn' => $r->btn='<button onclick="view('.$r->id.',\''.$r->refno.'\',\''.$r->First_name.' '.$r->Middle_name.' '.$r->Last_name.'\',\''.$date.'\',\'---\') " data-code="'.$r->id.'" type="button" class="btn btn-outline-primary btn-sm"><!-- <img src=" '.base_url().'/assets/svg/open (ecris).svg  " style="height: 15px;"> --> Open</button>'
+          .'<button data-toggle="modal" data-target="#update" onclick="update('.$r->id.',\'lcr_bday\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-info btn-sm"><!-- <img src=" '.base_url().'/assets/svg/updatefinal.svg  " style="height: 15px;"> --> Update</button>'
+
+          );
+        }
+        $result = array(
+          "draw" => $draw,
+          "recordsTotal" => $query->num_rows(),
+          "recordsFiltered" => $query->num_rows(),
+          "data" => $data
+          );
+          return $result;
+    break;
+    case 'death':
+    $type = 'lcr_death';
+
+    $draw = intval($this->input->get("draw"));
+    $start = intval($this->input->get("start"));
+    $length = intval($this->input->get("length"));
+
+    $date = date('Y-m-d');
+
+          $this->db->select("*");
+        $this->db->from($type);
+        $this->db->like('First_name', $name);
+        $this->db->or_like('Middle_name', $name);
+        $this->db->or_like('Last_name', $name);
+       
+        $query =$this->db->get();
+        $data = [];
+        foreach ($query->result() as $r) {
+          $data[] = array(
+            'id' => $r->id,
+            'refno' => $r->refno,
+            'date' => $r->date_of_death,
+            'full_name' => $r->First_name.' '.$r->Middle_name.' '.$r->Last_name,
+            'btn' => $r->btn='<button onclick="view('.$r->id.',\''.$r->refno.'\',\''.$r->First_name.' '.$r->Middle_name.' '.$r->Last_name.'\',\''.$date.'\',\'---\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-primary btn-sm"> Open</button>'
+                              .'<button  data-toggle="modal" data-target="#update" onclick="update('.$r->id.',\'lcr_death\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-info btn-sm"> Update</button>'
+          );
+        }
+        $result = array(
+                  "draw" => $draw,
+                  "recordsTotal" => $query->num_rows(),
+                  "recordsFiltered" => $query->num_rows(),
+                  "data" => $data
+              );
+
+
+        return $result;
+
+
+
+
+    break;
+    case 'marriage':
+    $type = 'lcr_marriage';
+
+    $draw = intval($this->input->get("draw"));
+    $start = intval($this->input->get("start"));
+    $length = intval($this->input->get("length"));
+
+    $date = date('Y-m-d');
+    $data = [];
+        // $query = $this->db->query('SELECT * FROM  buss_profile WHERE buss_id = '.$inputData['search1'].  or buss_name  = .$inputData['search1']);
+        $this->db->select("*");
+        $this->db->from($type);
+        $this->db->like('First_name_h', $name);
+        $this->db->or_like('Middle_name_h', $name);
+        $this->db->or_like('Last_name_h', $name);
+        $this->db->or_like('First_name_w', $name);
+        $this->db->or_like('Middle_name_w', $name);
+        $this->db->or_like('Last_name_w', $name);
+       
+     
+        // $this->db->or_like('buss_status', $inputData['search1']);
+        $query =$this->db->get();
+        foreach ($query->result() as $r) {
+          $varWifeName = $r->First_name_w.' '.$r->Middle_name_w.' '.$r->Last_name_w;
+          $data[] = array(
+            'id' => $r->id,
+            'refno' => $r->refno,
+            'date' => $r->date_of_marriage,
+            'full_name' => $r->First_name_h.' '.$r->Middle_name_h.' '.$r->Last_name_h.' and '.$r->First_name_w.' '.$r->Middle_name_w.' '.$r->Last_name_w,
+            'btn' => $r->btn='<button onclick="view('.$r->id.',\''.$r->refno.'\',\''.$r->First_name_h.' '.$r->Middle_name_h.' '.$r->Last_name_h.'\',\''.$date.'\',\''.$varWifeName.'\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-primary btn-sm"><!-- <img src=" '.base_url().'/assets/svg/open (ecris).svg  " style="height: 15px;"> --> Open</button>'
+                              .'<button  data-toggle="modal" data-target="#update" onclick="update('.$r->id.',\'lcr_marriage\')" data-code="'.$r->id.'" type="button" class="btn btn-outline-info btn-sm"><!-- <img src=" '.base_url().'/assets/svg/updatefinal.svg  " style="height: 15px;"> --> Update</button>'
+          );
+        }
+        $result = array(
+                  "draw" => $draw,
+                  "recordsTotal" => $query->num_rows(),
+                  "recordsFiltered" => $query->num_rows(),
+                  "data" => $data
+              );
+
+
+        return $result;
+    break;
+  
+  default:
+    # code...
+    break;
+}
+
+
+  
+
+
+
+
+
+  }
+
 }
  ?>

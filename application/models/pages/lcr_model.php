@@ -142,7 +142,7 @@ date_default_timezone_set('Asia/Manila');
         $start = intval($this->input->get("start"));
         $length = intval($this->input->get("length"));
 
-        $query = $this->db->query("SELECT * FROM lcr_bday");
+        $query = $this->db->query("SELECT * FROM lcr_bday  LIMIT 0,10");
         $date = date('Y-m-d');
         $data = [];
         foreach ($query->result() as $r) {

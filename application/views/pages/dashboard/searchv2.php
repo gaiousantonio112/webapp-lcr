@@ -147,9 +147,11 @@ html {
 	<div class="col-12 text-left ml-4">
 	<p>SELECT TYPE:</p>
 	</div>
+
 	<div class="col-12">
+	<form id="searchdatanow">
       <div class="custom-control custom-radio custom-control-inline">
-        <input type="radio" class="custom-control-input"id="Birthday" name="lcr_type" value="birthday" onclick="show('searchbirth')" checked >
+        <input type="radio" class="custom-control-input" id="Birthday" name="lcr_type" value="birthday" onclick="show('searchbirth')" checked >
         <label class="custom-control-label" for="Birthday">Birthday</label>
       </div>
 
@@ -169,13 +171,14 @@ html {
 <div class="row">
 <div class="col-8">
 <div class="md-form">
-  <input type="text" id="searchin" name="search[name]" class="form-control">
+  <input type="text" id="searchin" name="search[name]" class="form-control" required>
   <label for="searchin">Search</label>
 </div>
 </div>
 <div class="col-2 mt-3">
-<button type="button" class="btn btn-primary btn-md">Execute</button>
+<button type="submit" class="btn btn-primary btn-md">Execute</button>
 </div>
+</form>
 </div>
 </div>
 
@@ -227,7 +230,7 @@ html {
   	      </th>
   	    </tr>
   	  </thead>
-  	  <tbody>
+  	  <tbody id="databody">
 
   	  </tbody>
   	  <!-- <tfoot>
