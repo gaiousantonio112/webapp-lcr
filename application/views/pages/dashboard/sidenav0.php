@@ -42,7 +42,7 @@ background-color: #EFEDDF;
 {
     background-color: #EFECE0;
 }
-.curr-name
+.break-word
 {
   overflow-wrap: break-word;
       /* font-size: calc(12px + (26 - 14) * ((100vw - 300px) / (1600 - 300))); */
@@ -86,7 +86,7 @@ background-color: #EFEDDF;
      </div>
 
       <div class = "col-9 pt-1 pb-0 px-2 ml-2">
-      <p class="white-text curr-name" id="curr_name"></p>
+      <p class="white-text break-word" id="curr_name"></p>
      </div>
    </div>
 </div>
@@ -103,22 +103,22 @@ background-color: #EFEDDF;
 
 <ul class="list-group list-group-flush pt-2 ">
   <li class="text-left list-group-item list-group-item-action pl-2"  style="border:0px solid">
-        <a href="<?php echo base_url() . 'pages/dash/index'  ?>" ><img src="<?php echo base_url() .'/assets/svg/dashboard(ecris).svg' ?>" height="25px" alt=""><span class="nav-text">Dashboard </span></a>
+        <a href="<?php echo base_url() . 'pages/dash/index'  ?>" ><img src="<?php echo base_url() .'/assets/svg/dashboard(ecris).svg' ?>" height="25px" alt=""><span class="nav-text break-word">Dashboard </span></a>
   </li>
   <li class="text-left list-group-item list-group-item-action pl-2" style="border:0px solid">
-        <a href="<?php echo base_url() . 'pages/dash/search'  ?>" ><img src="<?php echo base_url() .'/assets/svg/search(ecris).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text"> Search and Payment</span></a>
+        <a href="<?php echo base_url() . 'pages/dash/search'  ?>" ><img src="<?php echo base_url() .'/assets/svg/search(ecris).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text break-word"> Search and Payment</span></a>
   </li>
 
   <li class="text-left list-group-item list-group-item-action pl-2" style="border:0px solid">
-      	<a href="<?php echo base_url() . 'pages/dash/formgen'  ?>" ><img src="<?php echo base_url() .'/assets/svg/formgen(ecris).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text"> LCR Form Generator</span></a>
+      	<a href="<?php echo base_url() . 'pages/dash/formgen'  ?>" ><img src="<?php echo base_url() .'/assets/svg/formgen(ecris).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text break-word"> LCR Form Generator</span></a>
   </li>
   <li class="text-left list-group-item list-group-item-action pl-2" style="border:0px solid">
-        <a href="<?php echo base_url() . 'pages/dash/print'  ?>"><img src="<?php echo base_url() .'/assets/svg/print(ecris).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text"> Print</span></a>
-  </li> 
+        <a href="<?php echo base_url() . 'pages/dash/print'  ?>"><img src="<?php echo base_url() .'/assets/svg/print(ecris).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text break-word"> Print</span></a>
+  </li>
 
   <li class="text-left list-group-item list-group-item-action pl-2" style="border:0px solid">
-        <a href="<?php echo base_url() . 'pages/dash/online_requests'  ?>"><img src="<?php echo base_url() .'/assets/svg/print(ecris).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text"> Online Request</span></a>
-  </li> 
+        <a href="<?php echo base_url() . 'pages/dash/online_requests'  ?>"><img src="<?php echo base_url() .'/assets/svg/print(ecris).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text break-word"> Online Request</span></a>
+  </li>
   <!-- <li class="text-left list-group-item list-group-item-action pl-2" style="border:0px solid">
         <a href="<?php echo base_url() . 'pages/dash/users'  ?>"><img src="<?php echo base_url() .'/assets/svg/usermanager(ecris).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text"> Users Manager</span></a>
   </li>
