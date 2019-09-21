@@ -92,8 +92,12 @@
 <form id="sibmitorcancel">
 
 	 <div class="form-group">
-  <label for="exampleFormControlTextarea2">Remarks</label>
-  <textarea class="form-control rounded-0" id="remarks" name="orcancel[remarks]" rows="2" required></textarea>
+
+  <div class="md-form">
+  <textarea id="remarks" name="orcancel[remarks]"  class="md-textarea form-control" rows="3" required></textarea>
+  <label for="remarks">Remarks</label>
+</div>
+  <!-- <textarea class="form-control rounded-0" rows="2" required></textarea> -->
   <div class="col-12 text-center">
   <input type="text" id="iddel"  name="orcancel[id]" hidden>
   <input type="text" id="orrealnum"  name="orcancel[or]" hidden>

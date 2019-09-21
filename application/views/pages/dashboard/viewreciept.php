@@ -20,7 +20,29 @@ $pdf->addPage($orientation);
 
 $pdf->Text(55,50 , $date);
 $pdf->Text(17,65 , ($_GET['payor'] == null ? 'no payor input!' : $_GET['payor']));
-$pdf->Text(10,83 , ($_GET['what'] == null ? '0' : $_GET['what']));
+
+switch ($_GET['what']) {
+    case 'birthday':
+     $what = 'Birth Certificate';
+      break;
+
+      case 'death':
+      $what = 'Death Certificate';
+      break;
+
+      case 'marriage':
+      $what = 'Marriage Certificate';
+      break;
+
+
+    
+    default:
+    $what= null;
+      break;
+  }
+
+
+  $pdf->Text(8,83 , ($_GET['what'] == null ? '0' : $what));
 
 $pdf->Text(47,83 , ($_GET['orno'] == null ? '0' : $_GET['orno']));
 $pdf->Text(75,83 , ($_GET['totalpay'] == null ? '0' : $_GET['totalpay']));

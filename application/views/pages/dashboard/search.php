@@ -350,7 +350,7 @@ html {
           	<div class="col-lg-6 col-sm-12 pb-5 pr-5">
           		<div class="">
           			<div class="md-form">
-          				<input type="number" id="totalpay" name="reciept[totalpay]" class="form-control" readonly value="50">
+          				<input type="number" id="totalpay" name="reciept[totalpay]" class="form-control"  value="50">
           				<label for="totalpay">TOTAL PAYMENT.</label>
           			</div>
           			<div class="">

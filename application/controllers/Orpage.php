@@ -61,6 +61,15 @@ function cancelor()
     echo json_encode($this->model->cancelor($data));
 }
 
+function searchdatanow($data)
+{
+    $name =  $this->uri->segment(3);
+    $type =  $this->uri->segment(4);
+    // $data = $this->input->post('search');
+    // echo json_encode($type);
+     echo json_encode($this->model->searchdatanow($name , $type));
+}
+
 
 }
 
