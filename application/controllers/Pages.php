@@ -85,7 +85,7 @@ class Pages extends CI_Controller {
     {
 
         $data = $this->login->getPrintHistory($id);
-
+    
         $this->load->view('pages/dashboard/pdfmerge',$data);
     }
 

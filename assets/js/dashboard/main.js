@@ -225,19 +225,40 @@ $(document).ready(function(e){
       });
     });
 
-    $('input[name="printOption"]').change(function(){
-      // //console.log($(this).val());
-    });
+    $('input[name="reciept[print_type]"]').change(function(){
+    
 
+      switch ($(this).val()) {
+        case 'default':
+       
+         console.log('all is default');
+         $('#pageno').attr('readonly', true);
+          break;
+        case 'specific':
+          console.log('Specific page number moves same as default ');
+          $('#pageno').attr('readonly', false);
+          break;
+        case 'range':
+          console.log('range');
+          $('#pageno').attr('readonly', false);
+          break;
+    
+    }
+  });
+
+
+
+  
     $('#pageno').on('input',function(e){
       var s = $(this).val();
-
+      
+        
       ////console.log(s[0]);
 
       ////console.log(Math.abs(-345));
-      switch ($('input[name="printOption"]:checked').val()) {
+      switch ($('input[name="reciept[print_type]"]:checked').val()) {
         case 'default':
-          ////console.log('all is default');
+         console.log('all is default');
           break;
         case 'specific':
           ////console.log('Specific page number moves same as default ');
@@ -921,7 +942,8 @@ function curr_time() {
 // FOR PRINT onclick https://www.youtube.com/watch?v=ku5FEPgZY-E
 function printPage(f_id,ref_num,or_no,name_cus,name_encoder,type,paid,page,copy,print) {
     $('#reciept_print_page').modal("show");
-
+  console.log(or_no);
+  
 
     $('#lcr_history_iid').val(f_id);
     $.ajax({

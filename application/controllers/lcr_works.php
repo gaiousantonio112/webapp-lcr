@@ -118,7 +118,7 @@ class Lcr_works extends CI_Controller {
     public function printPage()
     {
       $print = $this->input->post('print');
-
+      
       echo base_url()."pages/viewpdf/".$print['f_id']."#toolbar=0&zoom=60%&navpanes=0&scrollbar=0&view=fitH,100";
     }
 

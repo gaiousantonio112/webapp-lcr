@@ -106,7 +106,7 @@ background-color: #EFEDDF;
         <a href="<?php echo base_url() . 'pages/dash/index'  ?>" ><img src="<?php echo base_url() .'/assets/svg/dashboard(ecris).svg' ?>" height="25px" alt=""><span class="nav-text">Dashboard </span></a>
   </li>
   <li class="text-left list-group-item list-group-item-action pl-2" style="border:0px solid">
-        <a href="<?php echo base_url() . 'pages/dash/search'  ?>" ><img src="<?php echo base_url() .'/assets/svg/search(ecris).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text"> Search and Payment</span></a>
+        <a href="<?php echo base_url() . 'pages/dash/searchv2'  ?>" ><img src="<?php echo base_url() .'/assets/svg/search(ecris).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text"> Search and Payment</span></a>
   </li>
 
   <li class="text-left list-group-item list-group-item-action pl-2" style="border:0px solid">
@@ -116,9 +116,9 @@ background-color: #EFEDDF;
         <a href="<?php echo base_url() . 'pages/dash/print'  ?>"><img src="<?php echo base_url() .'/assets/svg/print(ecris).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text"> Print</span></a>
   </li> 
 
-  <li class="text-left list-group-item list-group-item-action pl-2" style="border:0px solid">
+  <!-- <li class="text-left list-group-item list-group-item-action pl-2" style="border:0px solid">
         <a href="<?php echo base_url() . 'pages/dash/online_requests'  ?>"><img src="<?php echo base_url() .'/assets/svg/print(ecris).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text"> Online Request</span></a>
-  </li> 
+  </li>  -->
   <!-- <li class="text-left list-group-item list-group-item-action pl-2" style="border:0px solid">
         <a href="<?php echo base_url() . 'pages/dash/users'  ?>"><img src="<?php echo base_url() .'/assets/svg/usermanager(ecris).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text"> Users Manager</span></a>
   </li>

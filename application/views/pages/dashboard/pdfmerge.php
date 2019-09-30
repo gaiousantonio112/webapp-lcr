@@ -34,17 +34,17 @@ $reg = 'The City Civil Registar';
 
 // $stringData = 'Date Now:'.$date.' Reference Number:'.;
 switch ($print) {
-  case 'Default':
+  case 'default':
     // two pages
     $pageNo =1;
     $pageCount = 2;
     break;
-  case 'Specific':
+  case 'specific':
     // on page
     $pageNo = $page;
     $pageCount = $page;
     break;
-  case 'Ranges':
+  case 'ranges':
     // specific range
     $pageNo = substr($page, 0, 1);
     $pageCount = substr($page, -1);
@@ -137,6 +137,10 @@ $pdf->text($size['w']/2 - 20 , 10 , $city);
 $pdf->text($size['w']/2 - 20 , 15 , $reg);
 }
 //print function
+ob_start();
+  ob_clean();
+
+
 $pdf->IncludeJS('print(true)');
 
 $pdf->Output('name.pdf', 'I');
