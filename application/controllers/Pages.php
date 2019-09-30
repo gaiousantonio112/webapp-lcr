@@ -18,7 +18,7 @@ class Pages extends CI_Controller {
 
 
 
-  
+
     }
 
     public function login() {
@@ -130,7 +130,8 @@ class Pages extends CI_Controller {
     }
 
     public function book(){
-      $this->load->view('pages/turnjsbook');
+      // $this->load->view('pages/turnjsbook');
+      $this->load->view('pages/turnjs2/prewarbook');
 
     }
 
