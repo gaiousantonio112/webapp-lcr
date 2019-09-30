@@ -26,9 +26,9 @@ $pageCount = 2;
 $stringData = 'Date Now:'.$date.' Reference Number:'.$ref_num;
 $orstring = 'OR Date / OR NO:'.$date_paid.'/'.$or_num;
 $encodername = ' Processed & Verified by:'.$cs_encoder;
-$approvename = 'Approved by:';
-$requestername = 'Requester Name:';
-$remarks = 'Remarks:';
+$approvename = '';
+$requestername = '';
+$remarks = 'Remarks:'.$remarks;
 $city = 'CITY OF SAN PABLO';
 $reg = 'The City Civil Registar';
 
