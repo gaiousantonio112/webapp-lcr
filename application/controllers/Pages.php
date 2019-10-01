@@ -44,7 +44,6 @@ class Pages extends CI_Controller {
       }else{
         $this->login();
       }
-
     }
 
 
@@ -64,9 +63,6 @@ class Pages extends CI_Controller {
 
   }
 
-
-
-
     public function settings(){
         $this->load->view('pages/nav/nav');
         $this->load->view('pages/settings/settings');
@@ -75,9 +71,7 @@ class Pages extends CI_Controller {
 
     public function is_login()
     {
-
       return $this->session->userdata('user_id') ? true : false;
-
     }
 
 
@@ -131,7 +125,13 @@ class Pages extends CI_Controller {
 
     public function book(){
       // $this->load->view('pages/turnjsbook');
-      $this->load->view('pages/turnjs2/prewarbook');
+      $this->load->view('pages/prewarbook');
+    }
+
+    public function book1(){
+      // $this->load->view('pages/turnjs2/samples/steve-jobs/index');
+      // $this->load->view('pages/turnjs2/samples/book1/index');
+      $this->load->view('pages/turnjsbook');
 
     }
 

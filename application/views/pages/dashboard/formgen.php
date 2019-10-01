@@ -1,7 +1,59 @@
 
-<div class="container-fluid pt-4">
+<!-- <div class="container-fluid pt-4">
+
+  <div class="splash">
+  	<div class="center">
+
+  			<div class="bookshelf">
+  				<div class="shelf">
+  					<div class="row-1">
+  						<div class="loc">
+
+  							<div> <div class="sample thumb1" sample="steve-jobs"></div> </div>
+  							<div> <div class="sample thumb2" sample="html5"></div> </div>
+  							<div> <div class="sample thumb3" sample="docs"></div> </div>
+
+  						</div>
+  					</div>
+
+  					<div class="row-2">
+  						<div class="loc">
+  							<div> <div class="sample thumb4" sample="magazine1"></div> </div>
+  							<div> <div class="sample thumb5" sample="magazine2"></div> </div>
+  							<div> <div class="sample thumb6" sample="magazine3"></div> </div>
+  						</div>
+  					</div>
+  				</div>
 
 
+
+  <div class="samples">
+  		<div class="bar">
+  			<div class="share">
+  				<i class="icon table-contents" title="Table of contents"></i>
+  				<i class="icon zoom-in" title="Zoom in"></i>
+  				<i class="icon share-facebook" title="Share on facebook"></i>
+  				<i class="icon share-twitter" title="Share on Twitter"></i>
+  				<i class="icon share-plus" title="Share on G+"></i>
+  				<i class="icon share-pinterest" title="Share on Pinterest"></i>
+  			</div>
+  			<a class="icon quit"></a>
+  		</div>
+  		<div id="book-wrapper">
+  			<div id="book-zoom">
+
+  			</div>
+  		</div>
+  		<div id="slider-bar" class="turnjs-slider">
+  			<div id="slider"></div>
+  		</div>
+
+  	</div>
+  </div>
+
+  </div>
+  <div class="gradient"></div>
+  </div> -->
 
 <div class="card">
     <div class="card-header white">
@@ -459,8 +511,8 @@
 
 <div class=" pt-2 col-lg-6 col-md-12 col-sm-12 col-xs-12">
     <div class="sticky-top" style="position: sticky; z-index:2; top:0; position: -webkit-sticky;">
-    <!---->
-            <iframe src="<?php echo base_url() ?>/pages/book" class=" prewar_view z-depth-1 mb-4 " id="prewar_image" width="100%" height="80%" style="margin-top: 80px"></iframe>
+
+           <iframe src="<?php echo base_url() ?>/pages/book" class=" prewar_view z-depth-1 mb-4 " id="prewar_image" width="90%" height="30%" style="margin-top:10px"></iframe>
            <!-- <iframe src="<?php echo base_url() ?>/pages/book" class=" prewar_view z-depth-1 mb-4 " id="prewar_image" width="100%" height="35%" style="margin-top: 80px"></iframe> -->
             <iframe  src="<?php echo base_url() . 'pages/viewlcrform'?>#toolbar=0&navpanes=0&scrollbar=0&view=fitH,100" class="postwar_view z-depth-1 mb-5 " id="postwar_image" width="100%" height="80%" style="margin-top: 80px"></iframe>
     </div>
