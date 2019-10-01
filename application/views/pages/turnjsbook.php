@@ -2,20 +2,37 @@
 <script type="text/javascript" src="<?php echo base_url()?>/assets/turnjs/extras/modernizr.2.5.3.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url()?>/assets/turnjs/lib/hash.js"></script>
 <script type="text/javascript" src="<?php echo base_url()?>/assets/js/global.js"></script>
-<div id="canvas">
 
-<div class="zoom-icon zoom-icon-in"></div>
 
-<div class="magazine-viewport">
-	<div class="container">
-		<div class="magazine">
-			<!-- Next button -->
-			<div ignore="1" class="next-button"></div>
-			<!-- Previous button -->
-			<div ignore="1" class="previous-button"></div>
+<script type="text/javascript" src="<?php echo base_url() ?>/assets/turnjs/extras/all.js"></script>
+<script type="text/javascript" src="<?php echo base_url() ?>/assets/turnjs/lib/hash.js"></script>
+<script type="text/javascript" src="<?php echo base_url() ?>/assets/turnjs/lib/turn.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url() ?>/assets/turnjs/lib/zoom.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url() ?>/assets/turnjs/lib/bookshelf.js"></script>
+
+<link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>/assets/turnjs/css/jquery.ui.css"></link>
+<link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>/assets/turnjs/css/default.css"></link>
+
+<a href="<?php echo base_url() . 'pages/book/'  ?>" >+</a>
+
+<!-- <a class="icon quit"></a> -->
+<div class="splash">
+	<div class="center">
+		<div class="zoom-icon zoom-icon-in"></div>
+		<div class="magazine-viewport">
+			<div class="container">
+				<div class="magazine">
+					<div ignore="1" class="next-button"></div>
+					<div ignore="1" class="previous-button"></div>
+				</div>
+			</div>
 		</div>
-	</div>
-</div>
+
+			</div>
+		</div>
+
+
+
 
 <script type="text/javascript">
 
@@ -410,4 +427,5 @@ yepnope({
 });
 
 </script>
+
 </body>
