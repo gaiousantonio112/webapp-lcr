@@ -944,7 +944,6 @@ function printPage(f_id,ref_num,or_no,name_cus,name_encoder,type,paid,page,copy,
     $('#reciept_print_page').modal("show");
   console.log(or_no);
   
-
     $('#lcr_history_iid').val(f_id);
     $.ajax({
       url : global.settings.url + '/Lcr_works/printPage',
@@ -963,6 +962,9 @@ function printPage(f_id,ref_num,or_no,name_cus,name_encoder,type,paid,page,copy,
       },
       dataType : 'text',
       success : function(res){
+
+        document.getElementById('print_pageFrame').contentWindow.location.reload();
+
         $('#print_pageFrame').attr('src',res);
       },
       error : function(xhr){
