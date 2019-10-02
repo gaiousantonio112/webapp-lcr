@@ -139,7 +139,7 @@ return $dataArray;
       $this->db->select('*');
       $this->db->from('or_pool');
       $this->db->where('owned_by = ' , $id);
-      $this->db->where('or_status =' , 'READY');
+  
       $query1 = $this->db->get();
       $dataArray = array();
       foreach ($query1->result() as $r) {
@@ -168,6 +168,7 @@ return $dataArray;
             'or_status' => $status
           );
           $this->db->where('owned_by', $id);
+          $this->db->where('or_status =' , 'READY');
           $qry = $this->db->update('or_pool',$data);
   
       }else{

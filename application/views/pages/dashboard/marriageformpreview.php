@@ -42,7 +42,7 @@ $date = date('Y-m-d');
   $pdfmarriage->Text(75, 168, $date_marriage);
   $pdfmarriage->Text(75, 175, $place_marriage);
   $pdfmarriage->Text(20, 188, "THIS CERTIFICATION is issued to ".$issued." upon his/her request.");
-  $pdfmarriage->Text(149,205, "Victoria G. Maloles");
+  $pdfmarriage->Text(147,205, "VICTORIA G. MALOLES");
   $pdfmarriage->Text(78,232, "Jem Perilla Hila");
   $pdfmarriage->Text(44,242, "Php 50.00");
   $pdfmarriage->Text(44,248, $ornum);

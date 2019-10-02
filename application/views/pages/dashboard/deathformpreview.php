@@ -20,6 +20,7 @@ $date = date('Y-m-d');
   $pdfdeath->useTemplate($tpl, null, null, 0, 0, TRUE);
 
   $pdfdeath->Text(160, 12, "No. Control Number");
+ 
   $pdfdeath->Text(176, 60, "Date printed");
   $pdfdeath->Text(41, 82,  $pageno);
   $pdfdeath->Text(86, 82,  $bookno);

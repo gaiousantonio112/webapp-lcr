@@ -129,7 +129,7 @@
                             </div>
                         </div>
                         <div class="md-form ">
-                            <input  type="number" name="formgenbday[lcr_regno]" id="lcr_regno" class="form-control">
+                            <input  type="text" name="formgenbday[lcr_regno]" id="lcr_regno" class="form-control">
                             <label for="lcr_regno">LCR Registry Number</label>
                         </div>
                         <div class="dates">
@@ -181,6 +181,10 @@
                                 <input type="date" name="formgenbday[marriagedate]" id="marriagedate" class="form-control">
                                 <label for="marriagedate">Date of Marriage of Parents</label>
                             </div>
+                        </div>
+                        <div class="md-form ">
+                            <input type="text" name="formgenbday[placemarrparents]" id="placemarrparents" class="form-control">
+                            <label for="placemarrparents">Place of Marriage of Parents</label>
                         </div>
                         <div class="md-form ">
                             <input type="text" name="formgenbday[issued]" id="bdayissued" class="form-control">
@@ -253,7 +257,7 @@
                         </div>
                     </div>
                                      <div class="md-form ">
-                            <input type="number" name="formgendeath[lcr_regno]" id="lcr_regno" class="form-control">
+                            <input type="text" name="formgendeath[lcr_regno]" id="lcr_regno" class="form-control">
                             <label for="lcr_regno">LCR Registry Number</label>
                         </div>
                     <div class="md-form ">
@@ -378,7 +382,7 @@
                         </div>
                     </div>
                     <div class="md-form ">
-                            <input type="number" name="formgendeath[lcr_regno]" id="lcr_regno" class="form-control">
+                            <input type="text" name="formgendeath[lcr_regno]" id="lcr_regno" class="form-control">
                             <label for="lcr_regno">LCR Registry Number</label>
                         </div>
                     <div class="row px-3">
@@ -452,7 +456,7 @@
                         </div>
                     </div>
                     <div class="md-form ">
-                        <input type="number" name="marrform[lcr_registry_num]" id="lcr_registry_num" class="form-control">
+                        <input type="text" name="marrform[lcr_registry_num]" id="lcr_registry_num" class="form-control">
                         <label for="lcr_registry_num">LCR Registry Number</label>
                     </div>
                     <div class="dates">
@@ -636,7 +640,7 @@ aria-hidden="true">
         <div class="modal-body">
 
                 Done Printing?
-                <input type="hidden" name="history[ref_num]" id="ref_num" >
+                <input type="" name="history[ref_num]" id="ref_num" >
                 <input type="hidden" name="history[or_num]" id="or_num" >
                 <input type="hidden" name="history[req_name]" id="req_name" >
                 <input type="hidden" name="history[name]" id="name_history" >

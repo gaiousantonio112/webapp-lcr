@@ -214,6 +214,7 @@ class Lcr_works extends CI_Controller {
         'fathername' => $inputData['fathername'],
         'fathernationality' => $inputData['fathernationality'],
         'marriagedate' => $inputData['marriagedate'],
+        'place' => $inputData['placemarrparents'],
         'issued' => $inputData['issued'],
         'remarks' => $inputData['remarks'],
         'ornum' => $inputData['or']
@@ -363,6 +364,7 @@ public function deleteuser()
         'fathername' => $inputData['fathername'],
         'fathernationality' => $inputData['fathernationality'],
         'marriagedate' => $inputData['marriagedate'],
+        'place' => $inputData['placemarrparents'],
         'issued' => $inputData['issued'],
         'remarks' => $inputData['remarks'],
         'payor' => $inputData['payor'],
@@ -468,6 +470,7 @@ public function printcert()
 {
   $printdata = $this->input->post('printdata');
   $inputData = $this->input->post('data');
+
   switch ($printdata['type']) {
     case 'marrform':
       $data = array(
@@ -512,8 +515,10 @@ public function printcert()
           'fathername' => $inputData['fathername'],
           'fathernationality' => $inputData['fathernationality'],
           'marriagedate' => $inputData['marriagedate'],
+          'place' => $inputData['placemarrparents'],
           'issued' => $inputData['issued'],
           'remarks' => $inputData['remarks'],
+          'or' => $inputData['or'],
           'encoder' => $printdata['verify_by']
         );
         $this->load->view('pages/dashboard/PRINTBIRTH',$data);

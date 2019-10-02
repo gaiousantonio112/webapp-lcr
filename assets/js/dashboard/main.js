@@ -666,6 +666,7 @@ $(document).ready(function(e){
 ///BIRTHDAY
   $('#birthdayform').submit(function(e){
   e.preventDefault();
+console.log( $('#birthdayform').serializeArray());
 
     $.ajax({
       url : global.settings.url + '/Lcr_works/formgenBday',
@@ -1230,6 +1231,8 @@ function notif(msg,type){
 ///////////////////////////////////////////////FORM GEN ONLICK FUNCTION
 
 function bdaygenreciept(){
+  // console.log($('#birthdayform').serializeArray());
+  
   if(isNaN($('#ornobday').val())){
     notif('Please Declare New OR' , 'warning');
   }else{
@@ -1326,6 +1329,7 @@ $.ajax({
 function printrecipt(){
 
 
+
   
   getUserCredentials();
 var val = $('#classification').val();
@@ -1334,8 +1338,8 @@ case 'birthdayform':
   var data =   $('#birthdayform').serializeArray();
 
 $('#ref_num').val(data[3].value);
-$('#or_num').val(data[17].value);
-$('#req_name').val(data[16].value);
+$('#or_num').val(data[18].value);
+$('#req_name').val(data[17].value);
 $('#name_history').val(data[5].value);
 $('#type').val(val);
 $('#date').val(Date('Y-m-d'));
@@ -1343,7 +1347,7 @@ $('#page').val('1');
 $('#no_copy').val('1');
 $('#verify_by').val($('#cs_encoder').val());
 $('#printed_by').val($('#cs_encoder').val());
-$('#remarks').val(data[15].value);
+$('#remarks').val(data[16].value);
 $('#print').val('default');
 $('#wife_names').val('No Wife');
 $('#or_amount').val('50');
@@ -1394,6 +1398,8 @@ $('#done').modal('show');
 
       break;
 }
+console.log(data);
+
 $('#recipet').modal('hide');
 $.ajax({
   url : global.settings.url + '/Lcr_works/printgenformreciept/'+val,
@@ -1431,7 +1437,8 @@ $('#savedataofprint').submit(function(e){
       //console.log(res);
       $('#done').modal('hide');
       $('#'+type)[0].reset();
-
+      
+      
       var jsonData = {
         // from_user : 'sampleUser',
         ref_no : $('#ref_num').val(),
@@ -1443,7 +1450,9 @@ $('#savedataofprint').submit(function(e){
 
       websocket.send(JSON.stringify(jsonData));
 
+updateor();
 
+getnextor();
     },
     error : function(){
       notif('Invalid O.R Number','danger');
@@ -1520,9 +1529,6 @@ function getnextor(){
     }else{
       res = res[0];
       $('#orno').val(res.or_next);
-
-
-
       $('#ornobday').val(res.or_next);
       $('#ornodeath').val(res.or_next);
       $('#ormarr').val(res.or_next);
