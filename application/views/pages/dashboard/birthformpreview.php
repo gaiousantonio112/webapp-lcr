@@ -43,7 +43,7 @@ $pdfbirth= new TCPDI(PDF_PAGE_ORIENTATION, 'mm', PDF_PAGE_FORMAT, true, 'UTF-8',
   $pdfbirth->Text(75, 181, $place);
   $pdfbirth->Text(20, 199, "THIS CERTIFICATION is issued to ".$issued." upon his/her request.");
 
-  $pdfbirth->Text(78,241, "Jem Perilla Hila");
+  $pdfbirth->Text(78,241, "");
   $pdfbirth->Text(44,252, "Php 50.00");
   $pdfbirth->Text(44,258, $ornum);
   $pdfbirth->Text(44,264, $date);

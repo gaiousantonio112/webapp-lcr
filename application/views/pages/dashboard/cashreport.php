@@ -5,7 +5,7 @@
 		<h2 class="white-text float-right title-text">Cashier Page</h2>
 	</div>
 
-
+<!-- 
 	<div class="container pt-4">
 		<div class="card">
 			<div class="card-body">
@@ -24,7 +24,7 @@
 			</div>
 		</div>
 
-	</div>
+	</div> -->
 
 
 	<div class="container pt-4 pb-5">

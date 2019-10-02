@@ -640,7 +640,7 @@ aria-hidden="true">
         <div class="modal-body">
 
                 Done Printing?
-                <input type="" name="history[ref_num]" id="ref_num" >
+                <input type="hidden" name="history[ref_num]" id="ref_num" >
                 <input type="hidden" name="history[or_num]" id="or_num" >
                 <input type="hidden" name="history[req_name]" id="req_name" >
                 <input type="hidden" name="history[name]" id="name_history" >

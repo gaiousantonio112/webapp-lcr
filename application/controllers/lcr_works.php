@@ -233,7 +233,7 @@ class Lcr_works extends CI_Controller {
       $data = array(
         'pageno' => $inputData['pageno'],
         'bookno' => $inputData['bookno'],
-        'reference_num' => $inputData['reference_num'],
+        'reference_num' => $inputData['lcr_regno'],
         'Name' => $inputData['Name'],
         'death_date_reg' => $inputData['death_date_reg'],
         'name_deceased' => $inputData['name_deceased'],
@@ -527,7 +527,7 @@ public function printcert()
           $data = array(
             'pageno' => $inputData['pageno'],
             'bookno' => $inputData['bookno'],
-            'reference_num' => $inputData['reference_num'],
+            'reference_num' => $inputData['lcr_regno'],
             'Name' => $inputData['Name'],
             'death_date_reg' => $inputData['death_date_reg'],
             'name_deceased' => $inputData['name_deceased'],
@@ -540,6 +540,7 @@ public function printcert()
             'cause_death' => $inputData['cause_death'],
             'issued' => $inputData['issued'],
             'remarks' => $inputData['remarks'],
+            'or' => $inputData['or'],
             'encoder' => $printdata['verify_by']
           );
             $this->load->view('pages/dashboard/PRINTDEATH',$data);

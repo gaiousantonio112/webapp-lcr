@@ -185,7 +185,7 @@ $(document).ready(function(e){
 
     $('#updateDeathForm').submit(function(e){
       e.preventDefault();
-
+   
       $.ajax({
         url : global.settings.url + '/Lcr_works/updateDeath',
         type : 'POST',
@@ -705,7 +705,7 @@ console.log( $('#birthdayform').serializeArray());
 //DEATH
     $('#deathform').submit(function(e){
     e.preventDefault();
-    
+    console.log($(this).serializeArray());
 
     $.ajax({
       url : global.settings.url + '/Lcr_works/formgenDeath',
@@ -1359,7 +1359,7 @@ $('#done').modal('show');
   case "deathform":
       var data =   $('#deathform').serializeArray();
   $('#ref_num').val(data[3].value);
-$('#or_num').val(data[17]);
+$('#or_num').val(data[17].value);
 $('#req_name').val(data[16].value);
 $('#name_history').val(data[4].value);
 $('#type').val(val);
@@ -1426,6 +1426,7 @@ $('#savedataofprint').submit(function(e){
   e.preventDefault();
    type = $('#type').val();
    data = [].concat($('#savedataofprint').serializeArray() , $('#' + type).serializeArray() )
+
 
   $.ajax({
     url : global.settings.url + '/Lcr_works/savegenfromrecipthistory',
