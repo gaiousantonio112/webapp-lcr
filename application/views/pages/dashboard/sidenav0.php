@@ -107,7 +107,7 @@ background-color: #EFEDDF;
   </li>
   <li class="text-left list-group-item list-group-item-action pl-2" style="border:0px solid">
 
-        <a href="<?php echo base_url() . 'pages/dash/searchv2'  ?>" ><img src="<?php echo base_url() .'/assets/svg/search(ecris).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text"> Search and Payment</span></a>
+        <a href="<?php echo base_url() . 'pages/dash/search'  ?>" ><img src="<?php echo base_url() .'/assets/svg/search(ecris).svg' ?>" height="25px" class="mr-3" alt=""><span class="nav-text"> Search and Payment</span></a>
   </li>
 
   <li class="text-left list-group-item list-group-item-action pl-2" style="border:0px solid">
