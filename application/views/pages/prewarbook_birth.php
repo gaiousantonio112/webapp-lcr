@@ -7,28 +7,25 @@
 <script type="text/javascript" src="<?php echo base_url() ?>/application/views/pages/turnjs2/lib/turn.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url() ?>/application/views/pages/turnjs2/lib/zoom.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url() ?>/application/views/pages/turnjs2/lib/bookshelf.js"></script>
+<script src="<?php echo base_url() ?>/assets/js/dashboard/book.js"></script>
+
+
 <meta name="keywords" content="page,flip,pages,effect,flipbook,flipboard,jquery,html5,book,magazine,newspaper,ipad,iphone,android,ios" />
 
-
-<!-- <div id="canvas"> -->
-
-	<!-- <div class="splash">
-		<div class="center"> -->
-
+<div id="canvas">
 <div class="splash">
-	<div class="center">
+	<div id="turn_prewar">
 
-			<div class="bookshelf">
+			<div class="bookshelf" >
 				<div class="shelf">
 					<div class="row-1">
 						<div class="loc">
-								<div><a href="<?php echo base_url() . 'pages/book1/'  ?>" ><div class="sample thumb1" sample=""></div></a> </div>
-							<div> <div class="sample thumb2" sample="html5"></div> </div>
+								<div><a href="<?php echo base_url() . 'pages/book1/'  ?>" ><div class="sample thumb1" sample=""><img src="<?php echo base_url() .'/assets/turnjs/pages/1.jpg' ?>" height="100%" alt=""></div></a> </div>
+							<div> <div class="sample thumb2" sample="html5"><img src="<?php echo base_url() .'/assets/turnjs/pages/1.jpg' ?>" height="100%" alt=""></div> </div>
 							<div> <div class="sample thumb3" sample="docs"></div> </div>
 
 						</div>
 					</div>
-
 					<div class="row-2">
 						<div class="loc">
 							<div> <div class="sample thumb4" sample="magazine1"></div> </div>
@@ -37,39 +34,18 @@
 						</div>
 					</div>
 				</div>
+			</div>
 
-
-<div class="samples">
-		<div class="bar">
-			<!-- <div class="share">
-				<i class="icon table-contents" title="Table of contents"></i>
-				<i class="icon zoom-in" title="Zoom in"></i>
-				<i class="icon share-facebook" title="Share on facebook"></i>
-				<i class="icon share-twitter" title="Share on Twitter"></i>
-				<i class="icon share-plus" title="Share on G+"></i>
-				<i class="icon share-pinterest" title="Share on Pinterest"></i>
-			</div> -->
-			<a class="icon quit">QUIT</a>
-		</div>
-		<div id="book-wrapper">
-			<div id="book-zoom">
 
 			</div>
 		</div>
-		<div id="slider-bar" class="turnjs-slider">
-			<div id="slider"></div>
-		</div>
-
-	</div>
 </div>
 
-<div class="gradient"></div>
-</div>
+	<script type="text/javascript">
 
-			<script type="text/javascript">
+
 
 			//1953 360
-
 			yepnope({
 				test : Modernizr.csstransforms,
 
@@ -95,5 +71,3 @@
 				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 			})();
 			</script>
-
-			</body

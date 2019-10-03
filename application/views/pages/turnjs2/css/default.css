@@ -549,7 +549,7 @@ li{
 
 .bookshelf .shelf{
 	/*background:url(../pics/bookshelf.gif);*/
-	background-size:100%;
+	/* background-size:100%; */
 	width:426px;
 	height:440px;
 }
@@ -596,7 +596,7 @@ li{
 
 .bookshelf .shelf .loc > div{
 	width:33%;
-	height:100%;
+	/* height:100%; */
 	float:left;
 	text-align:center;
 	position:relative;
@@ -680,7 +680,7 @@ li{
 
 .bookshelf .thumb2,
 .bookshelf-row .thumb2{
-	background-image:url(../../turnjs2/samples/book1/pages/3-thumb.jpg);
+	/* background-image:url(/assets/turnjs/pages/1.jpg); */
 	/* background-image:url(../pics/book2.jpg); */
 	width:87px;
 	height:115px;

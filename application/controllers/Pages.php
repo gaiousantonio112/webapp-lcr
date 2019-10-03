@@ -123,9 +123,12 @@ class Pages extends CI_Controller {
       $this->login();
     }
 
-    public function book(){
-      // $this->load->view('pages/turnjsbook');
-      $this->load->view('pages/prewarbook');
+    public function book_birthday(){
+      $this->load->view('pages/prewarbook_birth');
+    }
+
+    public function book_death(){
+      $this->load->view('pages/prewarbook_death');
     }
 
     public function book1(){

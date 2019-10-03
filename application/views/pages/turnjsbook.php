@@ -13,7 +13,7 @@
 <link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>/assets/turnjs/css/jquery.ui.css"></link>
 <link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>/assets/turnjs/css/default.css"></link>
 
-<a href="<?php echo base_url() . 'pages/book/'  ?>" >+</a>
+<a href="<?php echo base_url() . 'pages/book/'  ?>" class="p-3"><img src="<?php echo base_url() .'/assets/svg/close(ecris).svg' ?>" height="25px" alt=""></a>
 
 <!-- <a class="icon quit"></a> -->
 <div class="splash">

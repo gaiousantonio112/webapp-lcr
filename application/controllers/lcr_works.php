@@ -75,8 +75,8 @@ class Lcr_works extends CI_Controller {
       // echo json_encode(array_merge($array1,$array2));
 
       echo count($array1) + count($array2);
-      
-      
+
+
     }
 
 
@@ -118,7 +118,7 @@ class Lcr_works extends CI_Controller {
     public function printPage()
     {
       $print = $this->input->post('print');
-      
+
       echo base_url()."pages/viewpdf/".$print['f_id']."#toolbar=0&zoom=60%&navpanes=0&scrollbar=0&view=fitH,100";
     }
 
@@ -538,11 +538,11 @@ public function printcert()
             'encoder' => $printdata['verify_by']
           );
             $this->load->view('pages/dashboard/PRINTDEATH',$data);
-  
+
           break;
   }
 }
-///print recipet genform recipt 
+///print recipet genform recipt
 public function printgenformreciept($type)
 {
 
@@ -574,10 +574,10 @@ switch ($type) {
         );
         $this->load->view('pages/dashboard/PDFgenformrecieptPRINT',$data);
       break;
-  
-   
+
+
 }
-} 
-//////end form gen reciept 
+}
+//////end form gen reciept
 }
  ?>

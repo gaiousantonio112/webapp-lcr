@@ -181,11 +181,11 @@ echo  '<li class="text-left list-group-item list-group-item-action pl-2" style="
                   <i class="far fa-bell pb-2" style="color:teal"></i>
                 </a>
 
-                <div class="dropdown-menu dropdown-menu-right pb-0 "  id="notif" aria-labelledby="navbarDropdown" style="background-color:tomato;">
+                <div class="dropdown-menu dropdown-menu-right pb-0"  id="notif" aria-labelledby="navbarDropdown" style="background-color:tomato;">
                   <h6 class="dropdown-header mt-0 pb-3 white-text" style="background-color:tomato; width:230px;">Notification   <i class="fas fa-bell float-right px-0"></i></h6>
-                  <div class="" style="height: 300px; overflow-y:scroll" id="notif_load">
-
+                  <div class="" style="max-height: 300px; overflow-y:scroll" id="notif_load">
                   </div>
+
                 </div>
             </li>
           </div>
