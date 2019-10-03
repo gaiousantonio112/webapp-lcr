@@ -39,8 +39,8 @@ $date = date('Y-m-d');
 
   $pdfmarriage->Text(75, 152, $refno);
   $pdfmarriage->Text(75, 160, $date_reg);
-  $pdfmarriage->Text(75, 168, $date_marriage);
-  $pdfmarriage->Text(75, 175, $place_marriage);
+  $pdfmarriage->Text(75, 168, date("F jS, Y", strtotime($date_marriage)));
+  $pdfmarriage->Text(75, 175, date("F jS, Y", strtotime($place_marriage)));
   $pdfmarriage->Text(20, 188, "THIS CERTIFICATION is issued to ".$issued." upon his/her request.");
   $pdfmarriage->Text(147,205, "VICTORIA G. MALOLES");
   $pdfmarriage->Text(78,232, "");

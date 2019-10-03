@@ -174,17 +174,17 @@ date_default_timezone_set('Asia/Manila');
         //
         // $newDate = date("m-d-Y", strtotime($origDate));
         // echo $newDate;
-        $date = date('m/d/Y');
+        $date = date('d/m/Y');
         $data = array(
           'refno' => $inputData['refno'],
-          'First_name' => $inputData['first_name'],
-          'Middle_name' => $inputData['middle_name'],
-          'Last_name' => $inputData['last_name'],
+          'First_name' => strtoupper($inputData['first_name']),
+          'Middle_name' => strtoupper($inputData['middle_name']),
+          'Last_name' => strtoupper($inputData['last_name']),
           'annex' => $inputData['annex'],
-          'birthday' => $inputData['bday_date'],
+          'birthday' => date("d/m/Y", strtotime($inputData['bday_date'])),
           'date_encoded' => $date,
           'filepath' => $filePath,
-          'encoder' => $inputData['encoder'],
+          'encoder' => strtoupper($inputData['encoder']),
         );
 
         $query = $this->db->insert('lcr_bday',$data);
@@ -198,13 +198,13 @@ date_default_timezone_set('Asia/Manila');
         $date = date('d/m/Y');
         $data = array(
           'refno' => $inputData['refno'],
-          'First_name' => $inputData['first_name'],
-          'Middle_name' => $inputData['middle_name'],
-          'Last_name' => $inputData['last_name'],
+          'First_name' => strtoupper($inputData['first_name']),
+          'Middle_name' => strtoupper($inputData['middle_name']),
+          'Last_name' => strtoupper($inputData['last_name']),
           'annex' => $inputData['annex'],
-          'birthday' => $inputData['bday_date'],
+          'birthday' => date("d/m/Y", strtotime($inputData['bday_date'])),
           'date_encoded' => $date,
-          'encoder' => $inputData['encoder'],
+          'encoder' => strtoupper($inputData['encoder']),
         );
 
         $this->db->where('id',$inputData['id']);
@@ -261,14 +261,14 @@ date_default_timezone_set('Asia/Manila');
         $date = date('d/m/Y');
         $data = array(
         'refno' => $inputData['refno'],
-        'First_name' => $inputData['first_name'],
-        'Middle_name' => $inputData['middle_name'],
-        'Last_name' => $inputData['last_name'],
+        'First_name' => strtoupper($inputData['first_name']),
+        'Middle_name' => strtoupper($inputData['middle_name']),
+        'Last_name' =>strtoupper($inputData['last_name']),
         'annex' => $inputData['annex'],
-        'date_of_death' => $inputData['death_date'],
+        'date_of_death' => date("d/m/Y", strtotime($inputData['death_date'])),
         'date_encoded' => $date,
         'filepath' => $fileName,
-        'encoder' => $inputData['encoder']
+        'encoder' => strtoupper($inputData['encoder'])
         );
 
         $qry = $this->db->insert('lcr_death',$data);
@@ -283,13 +283,13 @@ date_default_timezone_set('Asia/Manila');
         $date = date('d/m/Y');
         $data = array(
         'refno' => $inputData['refno'],
-        'First_name' => $inputData['first_name'],
-        'Middle_name' => $inputData['middle_name'],
-        'Last_name' => $inputData['last_name'],
+        'First_name' => strtoupper($inputData['first_name']),
+        'Middle_name' => strtoupper($inputData['middle_name']),
+        'Last_name' =>strtoupper($inputData['last_name']),
         'annex' => $inputData['annex'],
-        'date_of_death' => $inputData['death_date'],
+        'date_of_death' => date("d/m/Y", strtotime($inputData['death_date'])),
         'date_encoded' => $date,
-        'encoder' => $inputData['encoder']
+        'encoder' => strtoupper($inputData['encoder'])
         );
 
         $this->db->where('id',$inputData['id']);
@@ -343,18 +343,18 @@ date_default_timezone_set('Asia/Manila');
         $date = date('d/m/Y');
         $data = array(
           'refno' => $inputData['refno'],
-          'First_name_h' => $inputData['First_name_h'],
-          'Middle_name_h' => $inputData['Middle_name_h'],
-          'Last_name_h' => $inputData['Last_name_h'],
+          'First_name_h' => strtoupper($inputData['First_name_h']),
+          'Middle_name_h' => strtoupper($inputData['Middle_name_h']),
+          'Last_name_h' => strtoupper($inputData['Last_name_h']),
           'annexh' => $inputData['annexh'],
-          'First_name_w' => $inputData['First_name_w'],
-          'Middle_name_w' => $inputData['Middle_name_w'],
-          'Last_name_w' => $inputData['Last_name_w'],
+          'First_name_w' => strtoupper($inputData['First_name_w']),
+          'Middle_name_w' => strtoupper($inputData['Middle_name_w']),
+          'Last_name_w' => strtoupper($inputData['Last_name_w']),
           'annexw' => $inputData['annexw'],
-          'date_of_marriage' => $inputData['date_of_marriage'],
+          'date_of_marriage' => date("d/m/Y", strtotime($inputData['date_of_marriage'])),
           'date_encoded' => $date,
           'filepath' => $filePath,
-          'encoder' => $inputData['encoder']
+          'encoder' => strtoupper($inputData['encoder'])
         );
 
         $qry = $this->db->insert('lcr_marriage',$data);
@@ -368,17 +368,17 @@ date_default_timezone_set('Asia/Manila');
         $date = date('d/m/Y');
         $data = array(
           'refno' => $inputData['refno'],
-          'First_name_h' => $inputData['First_name_h'],
-          'Middle_name_h' => $inputData['Middle_name_h'],
-          'Last_name_h' => $inputData['Last_name_h'],
+          'First_name_h' => strtoupper($inputData['First_name_h']),
+          'Middle_name_h' => strtoupper($inputData['Middle_name_h']),
+          'Last_name_h' => strtoupper($inputData['Last_name_h']),
           'annexh' => $inputData['annexh'],
-          'First_name_w' => $inputData['First_name_w'],
-          'Middle_name_w' => $inputData['Middle_name_w'],
-          'Last_name_w' => $inputData['Last_name_w'],
+          'First_name_w' => strtoupper($inputData['First_name_w']),
+          'Middle_name_w' => strtoupper($inputData['Middle_name_w']),
+          'Last_name_w' => strtoupper($inputData['Last_name_w']),
           'annexw' => $inputData['annexw'],
-          'date_of_marriage' => $inputData['date_of_marriage'],
+          'date_of_marriage' => date("d/m/Y", strtotime($inputData['date_of_marriage'])),
           'date_encoded' => $date,
-          'encoder' => $inputData['encoder']
+          'encoder' => strtoupper($inputData['encoder'])
         );
         $this->db->where('id',$inputData['id']);
 

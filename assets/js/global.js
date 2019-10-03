@@ -1,7 +1,7 @@
 var global  = {
     settings : {
       // url : 'http://cf464a5a.ngrok.io',
-      //  url : 'http://192.168.100.93:3000/',
+      //url : 'http://192.168.100.93:3000/',
       url : 'http://localhost:3000/',
       ws_url : 'localhost'
     },
