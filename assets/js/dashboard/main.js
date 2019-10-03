@@ -731,8 +731,8 @@ console.log( $('#birthdayform').serializeArray());
 
 //MARR
       $('#marrform').submit(function(e){
-      e.preventDefault();
-
+      e.preventDefault(); 
+      console.log($(this).serializeArray());
 
         $.ajax({
           url : global.settings.url + '/Lcr_works/formgenMarriage',
@@ -747,6 +747,7 @@ console.log( $('#birthdayform').serializeArray());
             var url = window.URL.createObjectURL(res);
             // url.file_name =
             a.href = url;
+            document.getElementById('iframe_preview_formgen').contentWindow.location.reload();
             $('#iframe_preview_formgen').attr('src',url);
           },
           error : function(xhr){
@@ -1380,7 +1381,7 @@ $('#done').modal('show');
 
   ////////print function //////////
         $('#ref_num').val(data[3].value);
-        $('#or_num').val(data[23]);
+        $('#or_num').val(data[22].value);
       $('#req_name').val(data[16].value);
       $('#name_history').val(data[4].value);
       $('#type').val(val);

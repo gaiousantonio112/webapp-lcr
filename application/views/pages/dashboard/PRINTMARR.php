@@ -20,7 +20,7 @@ $date = date('Y-m-d');
   $pdfmarriage->useTemplate($tpl, null, null, 0, 0, TRUE);
 
   $pdfmarriage->Text(160, 12, "No. Control Number");
-  $pdfmarriage->Text(176, 60, "Date printed");
+  $pdfmarriage->Text(176, 60, $date);
   $pdfmarriage->Text(47, 82, $pageno);
   $pdfmarriage->Text(92, 82, $bookno);
   $pdfmarriage->Text(75, 101, $husband_name);
@@ -37,19 +37,19 @@ $date = date('Y-m-d');
   $pdfmarriage->Text(145, 131, $wife_mother);
   $pdfmarriage->Text(145, 139, $wife_father);
 
-  $pdfmarriage->Text(75, 152, $lcr_registry_num);
-  $pdfmarriage->Text(75, 160, $date_reg);
-  $pdfmarriage->Text(75, 168, $date_marriage);
+  $pdfmarriage->Text(75, 152, $refno);
+  $pdfmarriage->Text(75, 160, date("F jS, Y", strtotime($date_reg)));
+  $pdfmarriage->Text(75, 168, date("F jS, Y", strtotime($date_marriage)));
   $pdfmarriage->Text(75, 175, $place_marriage);
   $pdfmarriage->Text(20, 188, "THIS CERTIFICATION is issued to ".$issued." upon his/her request.");
   $pdfmarriage->Text(149,205, "Victoria G. Maloles");
  
   $pdfmarriage->Text(44,242, "Php 50.00");
-  $pdfmarriage->Text(44,248, " ");
+  $pdfmarriage->Text(44,248, $or);
   $pdfmarriage->Text(44,254, DATE('Y-m-d'));
 
 
-  $pdfmarriage->Text(78,232, "Jem Perilla Hila");
+  $pdfmarriage->Text(78,232, $encoder);
   $js = 'print(true);';
   // set javascript
   ob_end_clean();

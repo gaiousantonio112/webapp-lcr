@@ -259,7 +259,7 @@ class Lcr_works extends CI_Controller {
       $data = array(
           'pageno' => $inputData['pageno'],
           'bookno' => $inputData['bookno'],
-          'refno' => $inputData['refno'],
+          'refno' => $inputData['lcr_regno'],
           'husband_name' => $inputData['husband_name'],
           'wife_name' => $inputData['wife_name'],
           'hus_age' => $inputData['hus_age'],
@@ -272,7 +272,7 @@ class Lcr_works extends CI_Controller {
           'wife_mother' => $inputData['wife_mother'],
           'husband_father' => $inputData['husband_father'],
           'wife_father' => $inputData['wife_father'],
-          'lcr_registry_num' => $inputData['lcr_registry_num'],
+          // 'lcr_registry_num' => $inputData['lcr_registry_num'],
           'date_reg' => $inputData['date_reg'],
           'date_marriage' => $inputData['date_marriage'],
           'place_marriage' => $inputData['place_marriage'],
@@ -476,7 +476,7 @@ public function printcert()
       $data = array(
         'pageno' => $inputData['pageno'],
         'bookno' => $inputData['bookno'],
-        'refno' => $inputData['refno'],
+        'refno' => $inputData['lcr_regno'],
         'husband_name' => $inputData['husband_name'],
         'wife_name' => $inputData['wife_name'],
         'hus_age' => $inputData['hus_age'],
@@ -489,12 +489,13 @@ public function printcert()
         'wife_mother' => $inputData['wife_mother'],
         'husband_father' => $inputData['husband_father'],
         'wife_father' => $inputData['wife_father'],
-        'lcr_registry_num' => $inputData['lcr_registry_num'],
+        // 'lcr_registry_num' => $inputData['lcr_registry_num'],
         'date_reg' => $inputData['date_reg'],
         'date_marriage' => $inputData['date_marriage'],
         'place_marriage' => $inputData['place_marriage'],
         'issued' => $inputData['issued'],
         'Remarks' => $inputData['Remarks'],
+        'or' => $inputData['or'],
         'encoder' => $printdata['verify_by']
     );
       $this->load->view('pages/dashboard/PRINTMARR',$data);
