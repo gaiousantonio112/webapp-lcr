@@ -185,7 +185,7 @@ $(document).ready(function(e){
 
     $('#updateDeathForm').submit(function(e){
       e.preventDefault();
-
+   
       $.ajax({
         url : global.settings.url + '/Lcr_works/updateDeath',
         type : 'POST',
@@ -666,6 +666,7 @@ $(document).ready(function(e){
 ///BIRTHDAY
   $('#birthdayform').submit(function(e){
   e.preventDefault();
+console.log( $('#birthdayform').serializeArray());
 
     $.ajax({
       url : global.settings.url + '/Lcr_works/formgenBday',
@@ -704,7 +705,7 @@ $(document).ready(function(e){
 //DEATH
     $('#deathform').submit(function(e){
     e.preventDefault();
-    
+    console.log($(this).serializeArray());
 
     $.ajax({
       url : global.settings.url + '/Lcr_works/formgenDeath',
@@ -730,8 +731,8 @@ $(document).ready(function(e){
 
 //MARR
       $('#marrform').submit(function(e){
-      e.preventDefault();
-
+      e.preventDefault(); 
+      console.log($(this).serializeArray());
 
         $.ajax({
           url : global.settings.url + '/Lcr_works/formgenMarriage',
@@ -746,6 +747,7 @@ $(document).ready(function(e){
             var url = window.URL.createObjectURL(res);
             // url.file_name =
             a.href = url;
+            document.getElementById('iframe_preview_formgen').contentWindow.location.reload();
             $('#iframe_preview_formgen').attr('src',url);
           },
           error : function(xhr){
@@ -1230,6 +1232,8 @@ function notif(msg,type){
 ///////////////////////////////////////////////FORM GEN ONLICK FUNCTION
 
 function bdaygenreciept(){
+  // console.log($('#birthdayform').serializeArray());
+  
   if(isNaN($('#ornobday').val())){
     notif('Please Declare New OR' , 'warning');
   }else{
@@ -1326,6 +1330,7 @@ $.ajax({
 function printrecipt(){
 
 
+
   
   getUserCredentials();
 var val = $('#classification').val();
@@ -1334,8 +1339,8 @@ case 'birthdayform':
   var data =   $('#birthdayform').serializeArray();
 
 $('#ref_num').val(data[3].value);
-$('#or_num').val(data[17].value);
-$('#req_name').val(data[16].value);
+$('#or_num').val(data[18].value);
+$('#req_name').val(data[17].value);
 $('#name_history').val(data[5].value);
 $('#type').val(val);
 $('#date').val(Date('Y-m-d'));
@@ -1343,7 +1348,7 @@ $('#page').val('1');
 $('#no_copy').val('1');
 $('#verify_by').val($('#cs_encoder').val());
 $('#printed_by').val($('#cs_encoder').val());
-$('#remarks').val(data[15].value);
+$('#remarks').val(data[16].value);
 $('#print').val('default');
 $('#wife_names').val('No Wife');
 $('#or_amount').val('50');
@@ -1355,7 +1360,7 @@ $('#done').modal('show');
   case "deathform":
       var data =   $('#deathform').serializeArray();
   $('#ref_num').val(data[3].value);
-$('#or_num').val(data[17]);
+$('#or_num').val(data[17].value);
 $('#req_name').val(data[16].value);
 $('#name_history').val(data[4].value);
 $('#type').val(val);
@@ -1376,7 +1381,7 @@ $('#done').modal('show');
 
   ////////print function //////////
         $('#ref_num').val(data[3].value);
-        $('#or_num').val(data[23]);
+        $('#or_num').val(data[22].value);
       $('#req_name').val(data[16].value);
       $('#name_history').val(data[4].value);
       $('#type').val(val);
@@ -1394,6 +1399,8 @@ $('#done').modal('show');
 
       break;
 }
+console.log(data);
+
 $('#recipet').modal('hide');
 $.ajax({
   url : global.settings.url + '/Lcr_works/printgenformreciept/'+val,
@@ -1421,6 +1428,7 @@ $('#savedataofprint').submit(function(e){
    type = $('#type').val();
    data = [].concat($('#savedataofprint').serializeArray() , $('#' + type).serializeArray() )
 
+
   $.ajax({
     url : global.settings.url + '/Lcr_works/savegenfromrecipthistory',
     type : 'POST',
@@ -1431,7 +1439,8 @@ $('#savedataofprint').submit(function(e){
       //console.log(res);
       $('#done').modal('hide');
       $('#'+type)[0].reset();
-
+      
+      
       var jsonData = {
         // from_user : 'sampleUser',
         ref_no : $('#ref_num').val(),
@@ -1443,7 +1452,9 @@ $('#savedataofprint').submit(function(e){
 
       websocket.send(JSON.stringify(jsonData));
 
+updateor();
 
+getnextor();
     },
     error : function(){
       notif('Invalid O.R Number','danger');
@@ -1520,9 +1531,6 @@ function getnextor(){
     }else{
       res = res[0];
       $('#orno').val(res.or_next);
-
-
-
       $('#ornobday').val(res.or_next);
       $('#ornodeath').val(res.or_next);
       $('#ormarr').val(res.or_next);

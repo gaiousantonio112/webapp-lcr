@@ -214,6 +214,7 @@ class Lcr_works extends CI_Controller {
         'fathername' => $inputData['fathername'],
         'fathernationality' => $inputData['fathernationality'],
         'marriagedate' => $inputData['marriagedate'],
+        'place' => $inputData['placemarrparents'],
         'issued' => $inputData['issued'],
         'remarks' => $inputData['remarks'],
         'ornum' => $inputData['or']
@@ -232,7 +233,7 @@ class Lcr_works extends CI_Controller {
       $data = array(
         'pageno' => $inputData['pageno'],
         'bookno' => $inputData['bookno'],
-        'reference_num' => $inputData['reference_num'],
+        'reference_num' => $inputData['lcr_regno'],
         'Name' => $inputData['Name'],
         'death_date_reg' => $inputData['death_date_reg'],
         'name_deceased' => $inputData['name_deceased'],
@@ -258,7 +259,7 @@ class Lcr_works extends CI_Controller {
       $data = array(
           'pageno' => $inputData['pageno'],
           'bookno' => $inputData['bookno'],
-          'refno' => $inputData['refno'],
+          'refno' => $inputData['lcr_regno'],
           'husband_name' => $inputData['husband_name'],
           'wife_name' => $inputData['wife_name'],
           'hus_age' => $inputData['hus_age'],
@@ -271,7 +272,7 @@ class Lcr_works extends CI_Controller {
           'wife_mother' => $inputData['wife_mother'],
           'husband_father' => $inputData['husband_father'],
           'wife_father' => $inputData['wife_father'],
-          'lcr_registry_num' => $inputData['lcr_registry_num'],
+          // 'lcr_registry_num' => $inputData['lcr_registry_num'],
           'date_reg' => $inputData['date_reg'],
           'date_marriage' => $inputData['date_marriage'],
           'place_marriage' => $inputData['place_marriage'],
@@ -363,6 +364,7 @@ public function deleteuser()
         'fathername' => $inputData['fathername'],
         'fathernationality' => $inputData['fathernationality'],
         'marriagedate' => $inputData['marriagedate'],
+        'place' => $inputData['placemarrparents'],
         'issued' => $inputData['issued'],
         'remarks' => $inputData['remarks'],
         'payor' => $inputData['payor'],
@@ -468,12 +470,13 @@ public function printcert()
 {
   $printdata = $this->input->post('printdata');
   $inputData = $this->input->post('data');
+
   switch ($printdata['type']) {
     case 'marrform':
       $data = array(
         'pageno' => $inputData['pageno'],
         'bookno' => $inputData['bookno'],
-        'refno' => $inputData['refno'],
+        'refno' => $inputData['lcr_regno'],
         'husband_name' => $inputData['husband_name'],
         'wife_name' => $inputData['wife_name'],
         'hus_age' => $inputData['hus_age'],
@@ -486,12 +489,13 @@ public function printcert()
         'wife_mother' => $inputData['wife_mother'],
         'husband_father' => $inputData['husband_father'],
         'wife_father' => $inputData['wife_father'],
-        'lcr_registry_num' => $inputData['lcr_registry_num'],
+        // 'lcr_registry_num' => $inputData['lcr_registry_num'],
         'date_reg' => $inputData['date_reg'],
         'date_marriage' => $inputData['date_marriage'],
         'place_marriage' => $inputData['place_marriage'],
         'issued' => $inputData['issued'],
         'Remarks' => $inputData['Remarks'],
+        'or' => $inputData['or'],
         'encoder' => $printdata['verify_by']
     );
       $this->load->view('pages/dashboard/PRINTMARR',$data);
@@ -512,8 +516,10 @@ public function printcert()
           'fathername' => $inputData['fathername'],
           'fathernationality' => $inputData['fathernationality'],
           'marriagedate' => $inputData['marriagedate'],
+          'place' => $inputData['placemarrparents'],
           'issued' => $inputData['issued'],
           'remarks' => $inputData['remarks'],
+          'or' => $inputData['or'],
           'encoder' => $printdata['verify_by']
         );
         $this->load->view('pages/dashboard/PRINTBIRTH',$data);
@@ -522,7 +528,7 @@ public function printcert()
           $data = array(
             'pageno' => $inputData['pageno'],
             'bookno' => $inputData['bookno'],
-            'reference_num' => $inputData['reference_num'],
+            'reference_num' => $inputData['lcr_regno'],
             'Name' => $inputData['Name'],
             'death_date_reg' => $inputData['death_date_reg'],
             'name_deceased' => $inputData['name_deceased'],
@@ -535,6 +541,7 @@ public function printcert()
             'cause_death' => $inputData['cause_death'],
             'issued' => $inputData['issued'],
             'remarks' => $inputData['remarks'],
+            'or' => $inputData['or'],
             'encoder' => $printdata['verify_by']
           );
             $this->load->view('pages/dashboard/PRINTDEATH',$data);

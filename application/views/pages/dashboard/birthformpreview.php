@@ -29,35 +29,33 @@ $pdfbirth= new TCPDI(PDF_PAGE_ORIENTATION, 'mm', PDF_PAGE_FORMAT, true, 'UTF-8',
   $pdfbirth->Text(29, 82,$Pageno);
   $pdfbirth->Text(75, 82, $Bookno);
   $pdfbirth->Text(75, 93, $lcr_regno);
-  $pdfbirth->Text(75, 101, $date_reg);
+  
+  $pdfbirth->Text(75, 101,date("F jS, Y", strtotime($date_reg)) );
   $pdfbirth->Text(75, 108, $name_child);
   $pdfbirth->Text(75, 116, $sex);
-  $pdfbirth->Text(75, 123, $bday_date);
+  $pdfbirth->Text(75, 123, date("F jS, Y", strtotime($bday_date)) );
   $pdfbirth->Text(75, 131, $birthplace);
   $pdfbirth->Text(75, 139, $mothername);
   $pdfbirth->Text(75, 147, $mothernationality);
   $pdfbirth->Text(75, 154, $fathername);
   $pdfbirth->Text(75, 162, $fathernationality);
-  $pdfbirth->Text(75, 170, $marriagedate);
-  $pdfbirth->Text(75, 181, " ");
+  $pdfbirth->Text(75, 170, date("F jS, Y", strtotime($marriagedate)));
+  $pdfbirth->Text(75, 181, $place);
   $pdfbirth->Text(20, 199, "THIS CERTIFICATION is issued to ".$issued." upon his/her request.");
 
-
-
-
-  $pdfbirth->Text(78,241, "Jem Perilla Hila");
+  $pdfbirth->Text(78,241, "");
   $pdfbirth->Text(44,252, "Php 50.00");
   $pdfbirth->Text(44,258, $ornum);
   $pdfbirth->Text(44,264, $date);
 
-  $pdfbirth->SetDrawColor(255,255,255);
-  $pdfbirth->SetFillColor(255,255,255);
-  $pdfbirth->Rect(120, 240, 85, 20, 'DF');
+  // $pdfbirth->SetDrawColor(255,255,255);
+  // $pdfbirth->SetFillColor(255,255,255);
+  // $pdfbirth->Rect(120, 240, 85, 20, 'DF');
 
-  $pdfbirth->Rect(150, 220, 40, 20, 'DF');
+  // $pdfbirth->Rect(150, 220, 40, 20, 'DF');
 
-  $pdfbirth->Text(149,240, "Victoria G. Maloles");
-  $pdfbirth->Text(146,245, "CITY CIVIL REGISTAR");
+  $pdfbirth->Text(145,215, "VICTORIA G. MALOLES");
+  // $pdfbirth->Text(146,245, "City Civil Registar");
   // $js = 'print(true);';
   // set javascript
   ob_end_clean();

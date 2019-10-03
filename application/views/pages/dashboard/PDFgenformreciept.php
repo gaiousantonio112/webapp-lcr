@@ -19,6 +19,8 @@ $pdf->addPage($orientation);
  $pdf->useTemplate($tpl, null, null, 0, 0, TRUE);
 
 $pdf->Text(55,50 , date('Y-m-d'));
+$pdf->Text(17,59 , 'City Goverment of San Pablo');
+  $pdf->Text(77,59 , 'Gr A');
 $pdf->Text(17,65 , ($payor == null ? 'no payor input!' : $payor));
 $pdf->Text(10,83 , ($type == null ? '0' : $type));
 
@@ -26,6 +28,11 @@ $pdf->Text(10,83 , ($type == null ? '0' : $type));
 $pdf->Text(75,83 , ($amount == null ? '0' : $amount));
 
 $pdf->Text(75,125 , ($amount == null ? '0' : $amount));
+$pdf->Text(42,171 , 'ARJAN B. BABANI');
+$pdf->Text(42,175 , 'CITY TREASURER');
+
+ob_start();
+ob_clean();
 
  $pdf->Output('name.pdf', 'I');
   ?>

@@ -37,13 +37,13 @@ $date = date('Y-m-d');
   $pdfmarriage->Text(145, 131, $wife_mother);
   $pdfmarriage->Text(145, 139, $wife_father);
 
-  $pdfmarriage->Text(75, 152, $lcr_registry_num);
+  $pdfmarriage->Text(75, 152, $refno);
   $pdfmarriage->Text(75, 160, $date_reg);
   $pdfmarriage->Text(75, 168, $date_marriage);
   $pdfmarriage->Text(75, 175, $place_marriage);
   $pdfmarriage->Text(20, 188, "THIS CERTIFICATION is issued to ".$issued." upon his/her request.");
-  $pdfmarriage->Text(149,205, "Victoria G. Maloles");
-  $pdfmarriage->Text(78,232, "Jem Perilla Hila");
+  $pdfmarriage->Text(147,205, "VICTORIA G. MALOLES");
+  $pdfmarriage->Text(78,232, "");
   $pdfmarriage->Text(44,242, "Php 50.00");
   $pdfmarriage->Text(44,248, $ornum);
   $pdfmarriage->Text(44,254, DATE('Y-m-d'));

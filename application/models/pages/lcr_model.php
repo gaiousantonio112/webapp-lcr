@@ -426,7 +426,7 @@ date_default_timezone_set('Asia/Manila');
                     $r->type = 'Death Certificate';
                       break;
                       case 'marrform':
-                        $r->btn = '<button onclick="certprintnow(\''.$r->id.'\')" type="button" class="btn btn-outline-primary btn-sm" "><i class="fas fa-print text-primary fa-lg "></i> Print /button>
+                        $r->btn = '<button onclick="certprintnow(\''.$r->id.'\')" type="button" class="btn btn-outline-primary btn-sm" "><i class="fas fa-print text-primary fa-lg "></i> Print </button>
                         <button onclick="cancelor(\''.$r->id.'\')" class="btn btn-sm btn-outline-danger"><i class="fas fa-times text-danger fa-lg"></i> Cancel</button>';
                         $r->type = 'Marriage Certificate';
                           break;
